@@ -1,3 +1,4 @@
 # Ignore Library folder
 /Recoil/Library/*
 /Recoil/Temp/*
+/Recoil/Assets/AnimationImporter/*
