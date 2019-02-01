@@ -5,16 +5,20 @@ using UnityEngine;
 public class FireWeapon : MonoBehaviour
 {
     public GameObject bullet;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject player;
+    public int reload;
+    private int reloadCounter = 0;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (reloadCounter > 0) {
+            reloadCounter--;
+        }
+
+        // Fire on mouse click and reset reloadTimer
+        if (Input.GetMouseButton(0) && reloadCounter == 0) {
+            reloadCounter = reload;
             Shoot();
         }
     }
