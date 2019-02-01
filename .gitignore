@@ -1,0 +1,8 @@
+# Ignore Library folder
+/Recoil/Library/*
+/Recoil/Temp/*
+/Recoil/Assets/Aseprite2Unity/*
+/Recoil/.vs/*
+/Recoil/obj/*
+/Recoil/Assembly-CSharp.csproj
+/Recoil/Recoil.sln
