@@ -62,7 +62,9 @@
   <ItemGroup>
     <Compile Include="Assets\Aseprite2Unity\Examples\MegaDad\MegaDadScript.cs" />
     <Compile Include="Assets\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\BulletMovement.cs" />
     <Compile Include="Assets\Scripts\CursorMovement.cs" />
+    <Compile Include="Assets\Scripts\FireWeapon.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
