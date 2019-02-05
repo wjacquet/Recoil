@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    protected Rigidbody2D rigidBody;
+    void Start() {
+        rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+        rigidBody.freezeRotation = true;
+    }
     public void Recoil(Vector2 knockback) {
-        Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
-
         rigidBody.velocity = rigidBody.velocity + knockback;
     }
 }
