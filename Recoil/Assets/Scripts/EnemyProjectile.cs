@@ -20,7 +20,6 @@ public class EnemyProjectile : MonoBehaviour
     // Once the projectile hits a wall
     void OnCollisionEnter2D(Collision2D collision) 
     {
-        print("Colliding");
         Destroy(gameObject);
     }
 }

@@ -21,4 +21,10 @@ public class BulletMovement : MonoBehaviour
         Vector2 recoil = new Vector2(-direction.x, -direction.y) * knockback;
         player.GetComponent<PlayerMovement>().Recoil(recoil);
     }
+
+        // Once the projectile hits a wall
+    void OnCollisionEnter2D(Collision2D collision) 
+    {
+        Destroy(gameObject);
+    }
 }
