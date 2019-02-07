@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2582683149453926823}
   - component: {fileID: 2582683149453926822}
   - component: {fileID: 2582683149453926820}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: obj_projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7b9ca3a12f6be0343ad5ff6dd6f34b54, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b9ca3a12f6be0343ad5ff6dd6f34b54, type: 3}
       propertyPath: m_LocalPosition.x
