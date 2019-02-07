@@ -2467,7 +2467,7 @@ GameObject:
   - component: {fileID: 184916429}
   - component: {fileID: 184916431}
   - component: {fileID: 184916430}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: obj_sentry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2629,7 +2629,7 @@ GameObject:
   - component: {fileID: 539274057}
   - component: {fileID: 539274058}
   - component: {fileID: 539274059}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sentry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3097,6 +3097,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: obj_turret
       objectReference: {fileID: 0}
+    - target: {fileID: 4237449859877511759, guid: 72c2248fce9fc114aa18402cb283eaa4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4237449859877511756, guid: 72c2248fce9fc114aa18402cb283eaa4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3157,5 +3162,15 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1162628929}
+    - target: {fileID: 4237449859133565540, guid: 72c2248fce9fc114aa18402cb283eaa4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237449859877511755, guid: 72c2248fce9fc114aa18402cb283eaa4,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72c2248fce9fc114aa18402cb283eaa4, type: 3}
