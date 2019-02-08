@@ -16,44 +16,23 @@ public class AimedProjectile : MonoBehaviour
         rigidBody.velocity += direction;
     }
 
-    void RootyTootyFuckingShooty(int angleOffset)
+    void FireSpreadShot(int angleOffset)
     {
         Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
 
         // Find player and find the direction vector
         GameObject player = GameObject.Find("obj_player");
         Vector2 direction = player.transform.position - transform.position;
-        float angle2 = Mathf.Atan2(direction.x,direction.y);
-        angle2 = Mathf.Rad2Deg * angle2;
-        angle2 += angleOffset;
+        float angleToPlayer = Mathf.Atan2(direction.x,direction.y);
+        angleToPlayer = Mathf.Rad2Deg * angleToPlayer;
+        angleToPlayer += angleOffset;
 
-        direction.x = Mathf.Sin(Mathf.Deg2Rad * angle2);
-        direction.y = Mathf.Cos(Mathf.Deg2Rad * angle2);
+        direction.x = Mathf.Sin(Mathf.Deg2Rad * angleToPlayer);
+        direction.y = Mathf.Cos(Mathf.Deg2Rad * angleToPlayer);
 
         direction.Normalize();
         rigidBody.velocity = direction;
     }
-
-    void DiagonalOffset(bool up) 
-    {
-        Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
-        GameObject player = GameObject.Find("obj_player");
-        Vector2 dir = player.transform.position - transform.position;
-    
-        if (up) {
-            dir.y += Mathf.Sin(Mathf.Deg2Rad * 20);
-            dir.x += Mathf.Cos(Mathf.Deg2Rad * 20);
-        }
-        else { 
-            dir.y += Mathf.Sin(Mathf.Deg2Rad * -20);
-            dir.x += Mathf.Cos(Mathf.Deg2Rad * -20);
-        }
-
-        dir.Normalize();
-        rigidBody.velocity += dir;
-    }
-
-
 
     // Once the projectile hits a wall
     void OnCollisionEnter2D(Collision2D collision) 
