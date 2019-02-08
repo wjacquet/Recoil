@@ -30,7 +30,8 @@ public class SentryFire : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bullet, transform.position, transform.rotation);
+        Instantiate(bullet, transform.position, transform.rotation)
+        .SendMessage("NormalFire");
         // Shoot a projectile diagonally up
         Instantiate(bullet, transform.position, transform.rotation)
             .SendMessage("DiagonalOffset",true);
