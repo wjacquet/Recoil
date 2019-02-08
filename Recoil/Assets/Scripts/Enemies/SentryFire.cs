@@ -8,13 +8,7 @@ public class SentryFire : MonoBehaviour
     public GameObject player;
     public int recharge;
     private int rechargeCounter = 0;
-    private 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     // Update is called once per frame
     void Update()
     {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4237449859672541810}
   - component: {fileID: 4237449859133565538}
   - component: {fileID: 4237449859133565541}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,9 +111,10 @@ GameObject:
   - component: {fileID: 4237449859877511755}
   - component: {fileID: 4237449859877511754}
   - component: {fileID: 4237449859877511757}
-  m_Layer: 8
+  - component: {fileID: 1715601292}
+  m_Layer: 11
   m_Name: obj_turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +146,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0.0013333559, y: -0.025998287}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,3 +198,16 @@ MonoBehaviour:
   player: {fileID: 0}
   fireDelay: 15
   recharge: 35
+--- !u!114 &1715601292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237449859877511759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHP: 3

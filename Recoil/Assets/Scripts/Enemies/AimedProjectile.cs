@@ -5,12 +5,21 @@ using UnityEngine;
 public class AimedProjectile : MonoBehaviour
 {
     // Start is called before the first frame update
+    PlayerHealth playerHP;
+    
+    void Start() 
+    {
+        GameObject player = GameObject.Find("obj_player");
+        playerHP = player.GetComponent<PlayerHealth>();
+    }
+    
     void NormalFire()
     {
         Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
 
         // Find player and find the direction vector
         GameObject player = GameObject.Find("obj_player");
+        playerHP = player.GetComponent<PlayerHealth>();
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
         rigidBody.velocity += direction;
@@ -37,6 +46,9 @@ public class AimedProjectile : MonoBehaviour
     // Once the projectile hits a wall
     void OnCollisionEnter2D(Collision2D collision) 
     {
+        if (collision.gameObject.tag == "Player") {
+            playerHP.TakeDamage();
+        }
         Destroy(gameObject);
     }
 }
