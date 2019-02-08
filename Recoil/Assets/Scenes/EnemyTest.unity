@@ -3289,6 +3289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: obj_player
       objectReference: {fileID: 0}
+    - target: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 189614201881019739, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3372,6 +3377,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1162628928}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1162628935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162628929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfc6c74788e3414e89fbfa14c4bbf7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHP: 3
+  currHP: 3
 --- !u!1001 &1234138983
 PrefabInstance:
   m_ObjectHideFlags: 0
