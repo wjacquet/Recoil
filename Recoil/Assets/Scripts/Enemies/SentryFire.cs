@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class SentryFire : MonoBehaviour
 {
+    public GameObject bullet;
+    public GameObject player;
+    public int recharge;
+    private int rechargeCounter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
-        
+        if (rechargeCounter > 0) {
+            rechargeCounter--;
+        }
+
+        // Fire on mouse click and reset reloadTimer
+        if (rechargeCounter == 0) {
+            rechargeCounter = recharge;
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        Instantiate(bullet, transform.position, transform.rotation);
+        // Shoot a projectile diagonally up
+        Instantiate(bullet, transform.position, transform.rotation)
+            .SendMessage("DiagonalOffset",true);
+        // Shoot a projectile diagonally down
+        Instantiate(bullet, transform.position, transform.rotation)
+            .SendMessage("DiagonalOffset",false);
     }
 }

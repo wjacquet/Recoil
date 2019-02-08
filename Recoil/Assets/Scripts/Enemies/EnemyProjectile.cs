@@ -10,8 +10,8 @@ public class EnemyProjectile : MonoBehaviour
         Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
 
         // Find player and find the direction vector
-        GameObject cursor = GameObject.Find("obj_player");
-        Vector2 direction = cursor.transform.position - transform.position;
+        GameObject player = GameObject.Find("obj_player");
+        Vector2 direction = player.transform.position - transform.position;
         direction.y = 0;
         direction.Normalize();
         rigidBody.velocity = direction;
