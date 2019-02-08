@@ -1932,15 +1932,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 14, y: 5, z: 0}
-    second:
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: -9, y: 6, z: 0}
     second:
       m_TileIndex: 6
@@ -3017,7 +3008,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: b6f628e7e23439b4f86bb8f28149dbb8, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: db79fdc5a3b1961428cf11186e7f95cf, type: 2}
-  - m_RefCount: 220
+  - m_RefCount: 219
     m_Data: {fileID: 11400000, guid: 387c5b98d50980a46832d50398b6b374, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 7a101cf5334eb9a44b1fe958b67259da, type: 2}
@@ -3044,7 +3035,7 @@ Tilemap:
     m_Data: {fileID: 21300018, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300050, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
-  - m_RefCount: 220
+  - m_RefCount: 219
     m_Data: {fileID: 21300038, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300004, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
@@ -3059,7 +3050,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300006, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 310
+  - m_RefCount: 309
     m_Data:
       e00: 1
       e01: 0
@@ -3078,7 +3069,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 310
+  - m_RefCount: 309
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 0.9215687, g: 0.9215687, b: 0.9215687, a: 1}
@@ -3733,6 +3724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884943040148552589, guid: 9b8aa4b8d552dd8418cc3c633c183d7d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8aa4b8d552dd8418cc3c633c183d7d, type: 3}
