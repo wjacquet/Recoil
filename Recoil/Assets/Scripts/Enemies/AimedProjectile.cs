@@ -5,7 +5,6 @@ using UnityEngine;
 public class AimedProjectile : MonoBehaviour
 {
     // Start is called before the first frame update
-    
     void NormalFire()
     {
         Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
@@ -15,6 +14,24 @@ public class AimedProjectile : MonoBehaviour
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
         rigidBody.velocity += direction;
+    }
+
+    void RootyTootyFuckingShooty(int angleOffset)
+    {
+        Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+
+        // Find player and find the direction vector
+        GameObject player = GameObject.Find("obj_player");
+        Vector2 direction = player.transform.position - transform.position;
+        float angle2 = Mathf.Atan2(direction.x,direction.y);
+        angle2 = Mathf.Rad2Deg * angle2;
+        angle2 += angleOffset;
+
+        direction.x = Mathf.Sin(Mathf.Deg2Rad * angle2);
+        direction.y = Mathf.Cos(Mathf.Deg2Rad * angle2);
+
+        direction.Normalize();
+        rigidBody.velocity = direction;
     }
 
     void DiagonalOffset(bool up) 
@@ -35,6 +52,8 @@ public class AimedProjectile : MonoBehaviour
         dir.Normalize();
         rigidBody.velocity += dir;
     }
+
+
 
     // Once the projectile hits a wall
     void OnCollisionEnter2D(Collision2D collision) 

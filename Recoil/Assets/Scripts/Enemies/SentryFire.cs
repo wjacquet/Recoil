@@ -8,6 +8,7 @@ public class SentryFire : MonoBehaviour
     public GameObject player;
     public int recharge;
     private int rechargeCounter = 0;
+    private 
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class SentryFire : MonoBehaviour
         // Fire on mouse click and reset reloadTimer
         if (rechargeCounter == 0) {
             rechargeCounter = recharge;
-            Shoot();
+            ShootAngle();
         }
     }
 
@@ -38,5 +39,12 @@ public class SentryFire : MonoBehaviour
         // Shoot a projectile diagonally down
         Instantiate(bullet, transform.position, transform.rotation)
             .SendMessage("DiagonalOffset",false);
+    }
+
+    void ShootAngle() 
+    {
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("RootyTootyFuckingShooty", 360);
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("RootyTootyFuckingShooty", 20);
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("RootyTootyFuckingShooty", -20);
     }
 }
