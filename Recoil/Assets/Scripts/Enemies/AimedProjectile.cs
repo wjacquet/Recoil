@@ -16,25 +16,27 @@ public class AimedProjectile : MonoBehaviour
         GameObject player = GameObject.Find("obj_player");
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
+        print(direction.magnitude);
         rigidBody.velocity += direction;
     }
 
     void DiagonalOffset(bool up) 
     {
         Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
-        Vector2 dir = rigidBody.velocity;
-
+        GameObject player = GameObject.Find("obj_player");
+        Vector2 dir = player.transform.position - transform.position;
     
         if (up) {
-            dir.y += Mathf.Sin(Mathf.Deg2Rad * 15);
-            dir.x += Mathf.Cos(Mathf.Deg2Rad * 15);
+            dir.y += Mathf.Sin(Mathf.Deg2Rad * 20);
+            dir.x += Mathf.Cos(Mathf.Deg2Rad * 20);
         }
         else { 
-            dir.y += Mathf.Sin(Mathf.Deg2Rad * -15);
-            dir.x += Mathf.Cos(Mathf.Deg2Rad * -15);
+            dir.y -= Mathf.Sin(Mathf.Deg2Rad * 20);
+            dir.x -= Mathf.Cos(Mathf.Deg2Rad * 20);
         }
 
         dir.Normalize();
+        print(dir.magnitude);
         rigidBody.velocity = dir;
 
     }
