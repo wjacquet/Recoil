@@ -12,4 +12,14 @@ public class MineProjectile : MonoBehaviour
     {
         
     }
+
+    // If the mine comes into contact with anything else
+    void OnCollisionEnter2D(Collision2D collision) 
+    {
+        if (collision.gameObject.tag == "Enemy") {
+            collision.gameObject.GetComponent<EnemyHealth>().Damage();
+        }
+
+        Destroy(gameObject);
+    }
 }
