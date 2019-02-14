@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9112503544572678525}
   - component: {fileID: 1222004888261288724}
   - component: {fileID: 4586657542219547160}
-  - component: {fileID: 6186295180126338733}
+  - component: {fileID: 6211363544206007240}
   m_Layer: 12
   m_Name: obj_aimed_projectile
   m_TagString: Untagged
@@ -81,7 +81,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.055, y: 0.05}
   m_EdgeRadius: 0
---- !u!114 &6186295180126338733
+--- !u!114 &6211363544206007240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
