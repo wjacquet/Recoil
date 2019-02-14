@@ -26,7 +26,7 @@ public class SentryMovement : MonoBehaviour
     {
         Vector3 vecUp = new Vector3(0,1,0);
         Vector2 lineCast = transform.position - transform.right * width; // + vecUp * height;
-        Vector2 vecDown = new Vector2(0,-0.3f);
+        Vector2 vecDown = new Vector2(0,-3);
         bool turnAroundGround = !Physics2D.Linecast(lineCast, lineCast + vecDown, enemyMask);
 
         // Debug.DrawLine(lineCast, lineCast - new Vector2(transform.right.x, transform.right.y) * 0.02f);

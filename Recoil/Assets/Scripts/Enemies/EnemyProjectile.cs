@@ -6,6 +6,8 @@ public class EnemyProjectile : MonoBehaviour
 {
     // Start is called before the first frame update
     PlayerHealth playerHP;
+
+    private int speed = 70;
     void Start()
     {
         Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
@@ -16,7 +18,7 @@ public class EnemyProjectile : MonoBehaviour
         Vector2 direction = player.transform.position - transform.position;
         direction.y = 0;
         direction.Normalize();
-        rigidBody.velocity = direction;
+        rigidBody.velocity = direction * speed;
     }
 
     // Once the projectile hits a wall

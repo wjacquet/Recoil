@@ -7,6 +7,7 @@ public class MineProjectile : MonoBehaviour
     // Start is called before the first frame update
     public GameObject bullet;
 
+    private int speed = 100;
     // Update is called once per frame
     void Explode()
     {
@@ -26,7 +27,7 @@ public class MineProjectile : MonoBehaviour
 
             directions.Normalize();
             rigidBody = Instantiate(bullet, transform.position, transform.rotation).GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
-            rigidBody.velocity = directions;
+            rigidBody.velocity = directions * speed;
         }
     }
 

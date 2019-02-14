@@ -20,6 +20,5 @@ public class CameraMovement : MonoBehaviour
     void LateUpdate()
     {
         transform.position = player.transform.position + offset;
-        // transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
     }
 }

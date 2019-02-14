@@ -6,6 +6,7 @@ public class AimedProjectile : MonoBehaviour
 {
     // Start is called before the first frame update
     PlayerHealth playerHP;
+    private int speed = 70;
     
     void Start() 
     {
@@ -22,7 +23,7 @@ public class AimedProjectile : MonoBehaviour
         playerHP = player.GetComponent<PlayerHealth>();
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
-        rigidBody.velocity += direction;
+        rigidBody.velocity += direction * speed;
     }
 
     void FireSpreadShot(int angleOffset)
@@ -40,7 +41,7 @@ public class AimedProjectile : MonoBehaviour
         direction.y = Mathf.Cos(Mathf.Deg2Rad * angleToPlayer);
 
         direction.Normalize();
-        rigidBody.velocity = direction;
+        rigidBody.velocity = direction * speed;
     }
 
     // Once the projectile hits a wall

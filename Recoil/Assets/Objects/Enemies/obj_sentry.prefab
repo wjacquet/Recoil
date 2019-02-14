@@ -70,7 +70,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0003439188, y: -0.02760619}
+  m_Offset: {x: 0, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -81,7 +81,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09110093, y: 0.1069783}
+  m_Size: {x: 10, y: 14}
   m_EdgeRadius: 0
 --- !u!114 &4884943040148552593
 MonoBehaviour:
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6186295180126338732, guid: bc304dbf9c16e9347a57562cde89b9ef, type: 3}
   player: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
-  recharge: 60
+  recharge: 120
 --- !u!114 &4884943040148552589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfad405183818741bf9884e700a0b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.3
+  speed: -3
   enemyMask:
     serializedVersion: 2
     m_Bits: 1024
