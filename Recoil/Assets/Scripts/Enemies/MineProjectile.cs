@@ -14,10 +14,9 @@ public class MineProjectile : MonoBehaviour
 
         // Find player and find the direction vector
         Rigidbody2D rigidBody;
-        Vector2 directions = new Vector2(1.0f, 1.0f); //= player.transform.position - transform.position;
+        Vector2 directions = Vector2.one; //= player.transform.position - transform.position;
         int angleOffset = 30;
-        for (int i = 0; i <= 12; i++) {
-            print("We shoot" + i);
+        for (int i = 0; i <= 12; i++,directions = Vector2.one) {
             float angleToPlayer = Mathf.Atan2(directions.x,directions.y);
             angleToPlayer = Mathf.Rad2Deg * angleToPlayer;
             angleToPlayer += angleOffset * i;
@@ -34,7 +33,7 @@ public class MineProjectile : MonoBehaviour
     // If the mine comes into contact with anything else
     void OnCollisionEnter2D(Collision2D collision) 
     {
-        if (collision.gameObject.tag == "Bullet") {
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player") {
             print("Kaboom !!!");
             Explode();
         }
