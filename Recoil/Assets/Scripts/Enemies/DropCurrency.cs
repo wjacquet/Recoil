@@ -10,6 +10,8 @@ public class DropCurrency : MonoBehaviour
     // Update is called once per frame
     public void DropCoins()
     {
-        
+        for (int i = 0; i < amount; i++) {
+            Instantiate(coin, transform.position, transform.rotation);
+        }
     }
 }
