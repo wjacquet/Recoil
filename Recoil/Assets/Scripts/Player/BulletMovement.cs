@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    float knockback = 0.3f;
+    private int knockback = 50;
+    private int spd = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class BulletMovement : MonoBehaviour
         GameObject cursor = GameObject.Find("obj_cursor");
         Vector2 direction = cursor.transform.position - transform.position;
         direction.Normalize();
-        rigidBody.velocity = direction;
+        rigidBody.velocity = direction * spd;
 
         // Player recoil
         GameObject player = GameObject.Find("obj_player");
