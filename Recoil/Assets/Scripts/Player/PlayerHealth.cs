@@ -16,10 +16,11 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage() 
     {
         if (iFrames != 0) return;
-        currHP--;
-        if (currHP <= 0) {
+
+        if (--currHP <= 0) {
             // Dead
             Die();
+            return;
         }
         iFrames = 20;
     }
