@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    private int knockback = 50;
+    private int knockback = 80;
     private int speed = 100;
     // Start is called before the first frame update
     void Start()

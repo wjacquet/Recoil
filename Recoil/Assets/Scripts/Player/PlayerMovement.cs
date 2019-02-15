@@ -10,6 +10,6 @@ public class PlayerMovement : MonoBehaviour
         rigidBody.freezeRotation = true;
     }
     public void Recoil(Vector2 knockback) {
-        rigidBody.velocity = rigidBody.velocity + knockback;
+        rigidBody.velocity = knockback;
     }
 }
