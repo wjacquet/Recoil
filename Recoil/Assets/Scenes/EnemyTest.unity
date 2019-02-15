@@ -4283,16 +4283,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1383589517549857600, guid: 9914a4d12a5d5fa429506c42f05511f2,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1383589517549857600, guid: 9914a4d12a5d5fa429506c42f05511f2,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.75
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
 --- !u!1001 &2589368596627730908
@@ -4526,4 +4516,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: {fileID: 1383589517549857606, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
-  amount: 1
+  amount: 3

@@ -25,7 +25,8 @@ public class CoinCollection : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") {
             playerCurr.AddCurrency(value);
+            Destroy(gameObject);
         }
-        //Destroy(gameObject);
+        
     }
 }
