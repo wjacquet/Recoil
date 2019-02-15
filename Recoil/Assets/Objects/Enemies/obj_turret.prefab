@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 4237449859877511754}
   - component: {fileID: 4237449859877511757}
   - component: {fileID: 1715601292}
+  - component: {fileID: 821430190}
   m_Layer: 11
   m_Name: obj_turret
   m_TagString: Enemy
@@ -211,3 +212,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialHP: 3
+--- !u!114 &821430190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237449859877511759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52835962b9ceb8f4ca34d33df565b65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 1383589517549857606, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
+  amount: 2
