@@ -112,12 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!50 &31971925 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7755780320044596886, guid: 3edc421dfddedec45b0aa5afeafe8580,
-    type: 3}
-  m_PrefabInstance: {fileID: 329606639}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &207705381 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759,
@@ -139,12 +133,12 @@ PrefabInstance:
     - target: {fileID: 7755780319048573234, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.6
+      value: 16.4
       objectReference: {fileID: 0}
     - target: {fileID: 7755780319048573234, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 7755780319048573234, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
@@ -154,17 +148,17 @@ PrefabInstance:
     - target: {fileID: 7755780319048573234, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7755780319048573234, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7755780319048573234, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7755780319048573234, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
@@ -196,17 +190,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 207705381}
-    - target: {fileID: 7755780319048573235, guid: 3edc421dfddedec45b0aa5afeafe8580,
-        type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 2600662282960497286, guid: 891e40f96dcee08438dcd786e1235dda,
-        type: 3}
-    - target: {fileID: 7755780319048573235, guid: 3edc421dfddedec45b0aa5afeafe8580,
-        type: 3}
-      propertyPath: reload
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3edc421dfddedec45b0aa5afeafe8580, type: 3}
 --- !u!1001 &692511475
@@ -275,46 +258,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 189614201881019737, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: m_ConnectedRigidBody
-      value: 
-      objectReference: {fileID: 31971925}
-    - target: {fileID: 189614201881019737, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: m_Anchor.x
-      value: -1.1152515
-      objectReference: {fileID: 0}
-    - target: {fileID: 189614201881019737, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: m_Anchor.y
-      value: -1.2421842
-      objectReference: {fileID: 0}
-    - target: {fileID: 189614201881019737, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -7.1152515
-      objectReference: {fileID: 0}
-    - target: {fileID: 189614201881019737, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -2.2421842
-      objectReference: {fileID: 0}
-    - target: {fileID: 189614201881019740, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 189614201881019740, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 189614201881019740, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: m_EdgeRadius
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
