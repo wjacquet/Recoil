@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
             Die();
             return;
         }
-        iFrames = 20;
+        iFrames = 35;
     }
 
     public void UpgradeHP() 
