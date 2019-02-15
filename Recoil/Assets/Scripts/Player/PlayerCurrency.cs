@@ -7,7 +7,6 @@ public class PlayerCurrency : MonoBehaviour
     private int wealth = 0;
     // Start is called before the first frame update
 
-
     public void AddCurrency(int pickUp = 0) 
     {
         wealth += pickUp;

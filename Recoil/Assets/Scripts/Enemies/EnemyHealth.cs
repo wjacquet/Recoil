@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Death() 
     {
-        //dropCurr.DropCoins();
         Destroy(gameObject);
+        dropCurr.DropCoins();
     }
 }
