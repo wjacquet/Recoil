@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (iFrames != 0) return;
 
+        print(currHP);
         if (--currHP <= 0) {
             // Dead
             Die();

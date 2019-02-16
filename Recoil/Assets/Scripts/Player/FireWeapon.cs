@@ -8,6 +8,11 @@ public class FireWeapon : MonoBehaviour
     public GameObject player;
     public int reload;
     private int reloadCounter = 0;
+    private Vector3 offset;
+
+    void Start() {
+        offset = transform.position - player.transform.position;
+    }
 
     // Update is called once per frame
     void Update()
@@ -21,6 +26,20 @@ public class FireWeapon : MonoBehaviour
             reloadCounter = reload;
             Shoot();
         }
+
+        // rotate gun
+        GameObject cursor = GameObject.Find("obj_cursor");
+        Vector2 direction = cursor.transform.position - transform.position;
+        int aimLow = 1; // we need to negate the angle if the cursor is below the gun
+        if (cursor.transform.position.y < transform.position.y) {
+            aimLow = -1;
+        }
+        transform.rotation = Quaternion.Euler(0, 0, Vector2.Angle(Vector2.right, direction) * aimLow);
+    }
+
+    void LateUpdate() {
+        // Gun stays in player's hand
+        transform.position = player.transform.position + offset;
     }
 
     void Shoot()
