@@ -2,8 +2,8 @@ fileFormatVersion: 2
 guid: 1048fd4535fc106498b4ff383af031cf
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: _main/LobberProjectile
-    400000: _main/LobberProjectile/Transform
+    100002: _main/exploding_projectile
+    400002: _main/exploding_projectile/Transform
     2800000: tex2d_0
     2800002: tex2d_1
     2800004: tex2d_2
@@ -11,8 +11,8 @@ ScriptedImporter:
     2800008: tex2d_4
     2800010: tex2d_5
     7400000: anim_Untagged
-    9500000: _main/LobberProjectile/Animator
-    21200000: _main/LobberProjectile/SpriteRenderer
+    9500002: _main/exploding_projectile/Animator
+    21200002: _main/exploding_projectile/SpriteRenderer
     21300000: sprite_0
     21300002: sprite_1
     21300004: sprite_2
@@ -25,7 +25,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: b1577cdc41d01fa4dbf68ad51122a765, type: 3}
-  pixelsPerUnit: 100
+  pixelsPerUnit: 1
   spriteAtlas: {instanceID: 0}
   frameRate: 60
   sortingLayerName: 
