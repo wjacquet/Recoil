@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 1173c7c203932cc45b11e43ef18ac874
+guid: d6cb02fedb280de4caff109cd4ffe62c
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: _main/spaceman-m
-    400000: _main/spaceman-m/Transform
+    100000: _main/tutorialBackground
+    400000: _main/tutorialBackground/Transform
     2800000: tex2d_0
     7400000: anim_Untagged
-    9500000: _main/spaceman-m/Animator
-    21200000: _main/spaceman-m/SpriteRenderer
+    9500000: _main/tutorialBackground/Animator
+    21200000: _main/tutorialBackground/SpriteRenderer
     21300000: sprite_0
     100100000: _main
   externalObjects: {}

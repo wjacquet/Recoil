@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: b7ae39686e333c14ea855f85cce3d7c3
+guid: 78ba2c797a8aef64590a7f6950bacda4
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: _main/solider-m
-    400000: _main/solider-m/Transform
+    100000: _main/gunslinger-m-02
+    400000: _main/gunslinger-m-02/Transform
     2800000: tex2d_0
     7400000: anim_Untagged
-    9500000: _main/solider-m/Animator
-    21200000: _main/solider-m/SpriteRenderer
+    9500000: _main/gunslinger-m-02/Animator
+    21200000: _main/gunslinger-m-02/SpriteRenderer
     21300000: sprite_0
     100100000: _main
   externalObjects: {}

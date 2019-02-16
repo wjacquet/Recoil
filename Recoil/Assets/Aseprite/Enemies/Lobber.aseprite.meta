@@ -1,14 +1,20 @@
 fileFormatVersion: 2
-guid: 4a402f614c962a64cabdf30a6da2a7ff
+guid: ace187785ed1e9542b1ead402f0de14e
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: _main/gunslinger-m
-    400000: _main/gunslinger-m/Transform
+    100000: _main/Lobber
+    400000: _main/Lobber/Transform
     2800000: tex2d_0
+    2800002: tex2d_1
+    2800004: tex2d_2
+    2800006: tex2d_3
     7400000: anim_Untagged
-    9500000: _main/gunslinger-m/Animator
-    21200000: _main/gunslinger-m/SpriteRenderer
+    9500000: _main/Lobber/Animator
+    21200000: _main/Lobber/SpriteRenderer
     21300000: sprite_0
+    21300002: sprite_1
+    21300004: sprite_2
+    21300006: sprite_3
     100100000: _main
   externalObjects: {}
   userData: 
