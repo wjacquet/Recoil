@@ -16,8 +16,8 @@ public class SpikeDamage : MonoBehaviour
     // Hurt the player on contact
     void OnCollisionEnter2D(Collision2D collision) 
     {
+        // Hurt player on contact
         if (collision.gameObject.tag == "Player") {
-            print("ouchie");
             playerHP.TakeDamage();
         }
     }
