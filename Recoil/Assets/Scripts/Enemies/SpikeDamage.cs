@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class SpikeDamage : MonoBehaviour
 {
-    public GameObject player;
+    GameObject player;
     PlayerHealth playerHP;
     // Start is called before the first frame update
     void Start()
     {
-        // Find player
+        GameObject player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
     }
 
     // Hurt the player on contact
     void OnCollisionEnter2D(Collision2D collision) 
     {
-        print(collision);
         if (collision.gameObject.tag == "Player") {
+            print("ouchie");
             playerHP.TakeDamage();
         }
     }
