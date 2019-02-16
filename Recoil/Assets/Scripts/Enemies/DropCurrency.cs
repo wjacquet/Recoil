@@ -6,6 +6,12 @@ public class DropCurrency : MonoBehaviour
 {
     public GameObject coin;
     public int amount;
+    GameObject player;
+
+    void Start() 
+    {
+        player = GameObject.Find("obj_player");
+    }
 
     // Update is called once per frame
     public void DropCoins()

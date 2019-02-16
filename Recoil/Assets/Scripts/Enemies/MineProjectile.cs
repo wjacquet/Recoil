@@ -37,8 +37,9 @@ public class MineProjectile : MonoBehaviour
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player") {
             print("Kaboom !!!");
             Explode();
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+
     }
 }
