@@ -19214,7 +19214,6 @@ GameObject:
   - component: {fileID: 1497970106}
   - component: {fileID: 1497970108}
   - component: {fileID: 1497970107}
-  - component: {fileID: 1497970109}
   m_Layer: 0
   m_Name: BG Tiles
   m_TagString: Untagged
@@ -22783,20 +22782,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &1497970109
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497970105}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
 --- !u!1001 &1562791044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24515,8 +24500,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 43, y: 0, z: 0}
     second:
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -25077,9 +25062,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: aa7fce8b4fb42eb4e97359439aaaafad, type: 2}
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: 0f485c16aca437d4e8e0e8cbbb955912, type: 2}
-  - m_RefCount: 11
+  - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 37c63c08e278afe44acf7cf89c8edb84, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 619e0a7f3b4bec84c81f1dcba8150bbf, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 24e75e8e5516d1b4cb249572b2f60138, type: 2}
@@ -25102,9 +25087,9 @@ Tilemap:
     m_Data: {fileID: 21300040, guid: d37081dbb73de7d4c93d560508bb7102, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: 21300038, guid: d37081dbb73de7d4c93d560508bb7102, type: 3}
-  - m_RefCount: 11
+  - m_RefCount: 10
     m_Data: {fileID: 21300062, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 21300072, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 21300012, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
