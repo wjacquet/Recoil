@@ -27,6 +27,6 @@ public class CoinCollection : MonoBehaviour
             playerCurr.AddCurrency(value);
             Destroy(gameObject);
         }
-        
+       
     }
 }
