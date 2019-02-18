@@ -1034,6 +1034,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 428894402}
+    - target: {fileID: 655025686777531500, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: minX
+      value: -2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 655025686777531500, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: minY
+      value: -28.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 655025686777531500, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: maxX
+      value: 716
+      objectReference: {fileID: 0}
+    - target: {fileID: 655025686777531500, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: maxY
+      value: 535
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996700304d007554b958ea23ff599d6e, type: 3}
 --- !u!1001 &1007065688

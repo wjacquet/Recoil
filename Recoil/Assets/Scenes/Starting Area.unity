@@ -20296,6 +20296,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 207705381}
+    - target: {fileID: 655025686777531500, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: minX
+      value: -78
+      objectReference: {fileID: 0}
+    - target: {fileID: 655025686777531500, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: minY
+      value: -58
+      objectReference: {fileID: 0}
+    - target: {fileID: 655025686777531500, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: maxX
+      value: 1375
+      objectReference: {fileID: 0}
+    - target: {fileID: 655025686777531500, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: maxY
+      value: 67
+      objectReference: {fileID: 0}
     - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
         type: 3}
       propertyPath: orthographic size
