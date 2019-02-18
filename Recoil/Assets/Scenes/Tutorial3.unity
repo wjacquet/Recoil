@@ -2100,6 +2100,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6808366960727207239, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: mapUI
+      value: 
+      objectReference: {fileID: 1156199916}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fad6a87bd18ef4bb67c08e7cc8b802, type: 3}
 --- !u!4 &368524497 stripped
@@ -25466,6 +25471,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5311291867723542539, guid: a12cae74a461a3441b0aae6db7ab4e4e,
     type: 3}
   m_PrefabInstance: {fileID: 1508106739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1156199916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1719171330383669967, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+    type: 3}
+  m_PrefabInstance: {fileID: 348592344}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1169854527
 PrefabInstance:
