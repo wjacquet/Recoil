@@ -11,14 +11,14 @@ public class PlayerCurrency : MonoBehaviour
 
     void Start() 
     {
-        coinText.text = "Coins: " + wealth;
+        coinText.text = "" + wealth;
     }
 
     public void AddCurrency(int pickUp = 0) 
     {
         wealth += pickUp;
-        coinText.text = "Coins: " + wealth;
+        coinText.text = "" + wealth;
     }
 
-    void setCoinText() {coinText.text = "Coins: " + wealth;}
+    void setCoinText() {coinText.text = "" + wealth;}
 }
