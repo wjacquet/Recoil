@@ -20247,6 +20247,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause-Map-Screens
       objectReference: {fileID: 0}
+    - target: {fileID: 4266475598679152214, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4266475598679152218, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20355,7 +20360,7 @@ PrefabInstance:
     - target: {fileID: 1719171330383669967, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2144547237446164731, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
