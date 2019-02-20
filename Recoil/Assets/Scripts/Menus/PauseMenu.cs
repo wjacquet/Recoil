@@ -33,11 +33,17 @@ public class PauseMenu : MonoBehaviour {
     }
 
     public void LoadMenu() {
+        if (!SceneManager.GetActiveScene().name.Equals("StartingArea")) {
+            DataControl.Save();
+        }   
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame() {   
+        if (!SceneManager.GetActiveScene().name.Equals("StartingArea")) {
+            DataControl.Save();
+        }   
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #else
