@@ -5,11 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     public void PlayeGame() {
-        SceneManager.LoadScene("Scenes/Starting Area");
+        //SceneManager.LoadScene("Scenes/Starting Area");
+        DataControl.NewGame();
+        DataControl.Load();
+    }
+
+    public void LoadGame() 
+    {
+        DataControl.Load();
     }
 
     public void EndGame() {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit(); 
+        #endif
         Debug.Log("Exiting Game!");
-        Application.Quit();
     }
 }
