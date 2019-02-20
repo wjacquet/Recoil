@@ -41,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
         maxHP++;
         currHP++;
         setHealthText(currHP);
+
     }
 
     public void Heal() 
@@ -58,7 +59,9 @@ public class PlayerHealth : MonoBehaviour
     void setHealthText(int health)
     {
         healthText.text = "H P : " + health +" / " + maxHP;
+        healthSlider.maxValue = maxHP;
         healthSlider.value = health;
+        
     }
 
 }
