@@ -11,7 +11,11 @@ public class PlayerHealth : MonoBehaviour
 
     public Text healthText;
     public Slider healthSlider;
-   
+
+    void Start()
+    {
+        setHealthText(currHP);
+    }   
 
     void Update() 
     {
@@ -32,15 +36,17 @@ public class PlayerHealth : MonoBehaviour
         iFrames = 35;
     }
 
-    public static void UpgradeHP() 
+    public void UpgradeHP() 
     {
         maxHP++;
         currHP++;
+        setHealthText(currHP);
     }
 
-    public static void Heal() 
+    public void Heal() 
     {
         currHP = maxHP;
+        setHealthText(currHP);
     }
 
     void Die() 
@@ -49,15 +55,9 @@ public class PlayerHealth : MonoBehaviour
         //Destroy(gameObject);
     }
 
-    void Start()
-    {
-        setHealthText(currHP);
-    }
-
-
     void setHealthText(int health)
     {
-        healthText.text = "H P : " + health +" / " + initialHP;
+        healthText.text = "H P : " + health +" / " + maxHP;
         healthSlider.value = health;
     }
 

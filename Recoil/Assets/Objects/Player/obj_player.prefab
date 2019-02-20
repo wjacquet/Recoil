@@ -110,6 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebfc6c74788e3414e89fbfa14c4bbf7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthText: {fileID: 0}
+  healthSlider: {fileID: 0}
 --- !u!114 &2047555795353223369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,12 +371,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 189614201881019751}
-    - target: {fileID: 7755780319048573235, guid: 3edc421dfddedec45b0aa5afeafe8580,
-        type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 2600662282960497286, guid: 891e40f96dcee08438dcd786e1235dda,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3edc421dfddedec45b0aa5afeafe8580, type: 3}
 --- !u!4 &7755780319438194397 stripped
