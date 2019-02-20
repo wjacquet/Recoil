@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class DataControl : MonoBehaviour
 {
@@ -18,11 +20,11 @@ public class DataControl : MonoBehaviour
         string dataPath = Path.Combine(folderPath, saveFile);   
         
         PlayerMetaData player = new PlayerMetaData();
-        player.maxHP = 4;
-        player.currHP = 2;
-        player.wealth = 9999999;
-        player.scene = "Scenes/EnemyTest";
-        player.position = new[] { -136f, -64f, 0f };
+        player.maxHP = PlayerHealth.maxHP;
+        player.currHP = PlayerHealth.currHP;
+        player.wealth = PlayerCurrency.wealth;
+        player.scene = SceneManager.GetActiveScene().name;//"Scenes/EnemyTest";
+        player.position = FindCheckpointPos();//new[] { -136f, -64f, 0f };
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         using (FileStream fileStream = File.Open (dataPath, FileMode.OpenOrCreate))
         {
@@ -41,12 +43,18 @@ public class DataControl : MonoBehaviour
         {
             player = (PlayerMetaData)binaryFormatter.Deserialize (fileStream);
         }
-        print(player.maxHP + " " + player.currHP + " " + player.wealth);
         PlayerInit.SetPlayer(player);
     }
 
     public static void Respawn() 
     {
+        // For now respawn will just work the same way as Loading untill we polish it by adding a death screen / menu
+        Load();
+    }
 
+    public static float[] FindCheckpointPos() 
+    {
+        GameObject checkpoint = GameObject.Find("obj_checkpoint");
+        return new[] {checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z};
     }
 }

@@ -12,7 +12,7 @@ public class PlayerInit : MonoBehaviour
         SceneManager.LoadScene(data.scene);
         playerPos = new Vector3(data.position[0], data.position[1], data.position[2]);
         SceneManager.sceneLoaded += OnSceneLoaded;
-        PlayerHealth.initialHP = data.maxHP;
+        PlayerHealth.maxHP = data.maxHP;
         PlayerHealth.currHP = data.currHP;
         PlayerCurrency.wealth = data.wealth;
     }

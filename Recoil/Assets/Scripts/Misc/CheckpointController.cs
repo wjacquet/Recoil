@@ -6,9 +6,8 @@ public class CheckpointController : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
-            print("Saving game");
+            PlayerHealth.Heal();
             DataControl.Save();
-            //DataControl.Load();
         }
     }
 }

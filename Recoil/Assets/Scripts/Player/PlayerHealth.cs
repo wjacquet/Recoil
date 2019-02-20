@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static int initialHP = 3;
+    public static int maxHP = 3;
     public static int currHP = 3;
     private int iFrames = 0;
 
@@ -19,7 +19,6 @@ public class PlayerHealth : MonoBehaviour
     {
         if (iFrames != 0) return;
 
-        print(currHP);
         if (--currHP <= 0) {
             // Dead
             Die();
@@ -28,15 +27,21 @@ public class PlayerHealth : MonoBehaviour
         iFrames = 35;
     }
 
-    public void UpgradeHP() 
+    public static void UpgradeHP() 
     {
-        initialHP++;
+        maxHP++;
         currHP++;
+    }
+
+    public static void Heal() 
+    {
+        currHP = maxHP;
     }
 
     void Die() 
     {
-        Destroy(gameObject);
+        DataControl.Respawn();
+        //Destroy(gameObject);
     }
 
 }
