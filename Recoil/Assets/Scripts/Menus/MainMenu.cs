@@ -9,7 +9,11 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void EndGame() {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit(); 
+        #endif
         Debug.Log("Exiting Game!");
-        Application.Quit();
     }
 }
