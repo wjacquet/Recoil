@@ -44,6 +44,7 @@ public class PlayerHealth : MonoBehaviour
         currHP++;
         setHealthText(currHP);
         sceneIDForUpgrade = SceneManager.GetActiveScene().buildIndex;
+
     }
 
     public void Heal() 
@@ -61,7 +62,9 @@ public class PlayerHealth : MonoBehaviour
     void setHealthText(int health)
     {
         healthText.text = "H P : " + health +" / " + maxHP;
+        healthSlider.maxValue = maxHP;
         healthSlider.value = health;
+        
     }
 
 }

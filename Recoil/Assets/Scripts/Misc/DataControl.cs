@@ -82,6 +82,7 @@ public class DataControl : MonoBehaviour
                                     "Scenes/Starting Area",
                                     new[] { 9.6f, -4.1f, 0f },
                                     new bool[SceneManager.sceneCountInBuildSettings]);
+
         
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         using (FileStream fileStream = File.Open (dataPath, FileMode.OpenOrCreate))
