@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System;
 
 public class DataControl : MonoBehaviour
 {
@@ -18,12 +18,21 @@ public class DataControl : MonoBehaviour
             Directory.CreateDirectory (folderPath);            
 
         string dataPath = Path.Combine(folderPath, saveFile);   
-        
+        bool[] newUpgradeIndexes = new bool[SceneManager.sceneCountInBuildSettings];
+
+        Array.Copy(PlayerInit.loadedUpgradesFound, newUpgradeIndexes, PlayerInit.loadedUpgradesFound.Length);
+        //print(string.Join(", ", newUpgradeIndexes));
+
+        if (PlayerHealth.sceneIDForUpgrade != -1) {
+            newUpgradeIndexes[PlayerHealth.sceneIDForUpgrade] = true;
+        }
+
         PlayerMetaData player = new PlayerMetaData(
                         PlayerHealth.maxHP,
                         PlayerCurrency.wealth,
                         SceneManager.GetActiveScene().name,
-                        FindCheckpointPos()
+                        FindCheckpointPos(),
+                        newUpgradeIndexes
         );
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -71,7 +80,8 @@ public class DataControl : MonoBehaviour
                                     0,
                                     0,
                                     "Scenes/Starting Area",
-                                    new[] { 9.6f, -4.1f, 0f });
+                                    new[] { 9.6f, -4.1f, 0f },
+                                    new bool[SceneManager.sceneCountInBuildSettings]);
         
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         using (FileStream fileStream = File.Open (dataPath, FileMode.OpenOrCreate))

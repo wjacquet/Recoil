@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public static int maxHP = 3;
     public static int currHP = 3;
     private int iFrames = 0;
+    public static int sceneIDForUpgrade = -1;
 
     public Text healthText;
     public Slider healthSlider;
@@ -41,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
         maxHP++;
         currHP++;
         setHealthText(currHP);
+        sceneIDForUpgrade = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void Heal() 
