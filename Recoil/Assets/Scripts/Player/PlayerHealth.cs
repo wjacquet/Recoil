@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
 
     public Text healthText;
     public Slider healthSlider;
+   
 
     void Update() 
     {
@@ -46,6 +47,11 @@ public class PlayerHealth : MonoBehaviour
     {
         DataControl.Respawn();
         //Destroy(gameObject);
+    }
+
+    void Start()
+    {
+        setHealthText(currHP);
     }
 
 
