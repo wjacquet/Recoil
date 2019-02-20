@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class DataControl : MonoBehaviour
 {
-    const string saveFolder = "SaveddData";
+    const string saveFolder = "SavedData";
     const string saveFile = "Save.dat";
     
     public static void Save() 
@@ -19,12 +19,13 @@ public class DataControl : MonoBehaviour
 
         string dataPath = Path.Combine(folderPath, saveFile);   
         
-        PlayerMetaData player = new PlayerMetaData();
-        player.maxHP = PlayerHealth.maxHP;
-        player.currHP = PlayerHealth.currHP;
-        player.wealth = PlayerCurrency.wealth;
-        player.scene = SceneManager.GetActiveScene().name;//"Scenes/EnemyTest";
-        player.position = FindCheckpointPos();//new[] { -136f, -64f, 0f };
+        PlayerMetaData player = new PlayerMetaData(
+                        PlayerHealth.maxHP,
+                        PlayerCurrency.wealth,
+                        SceneManager.GetActiveScene().name,
+                        FindCheckpointPos()
+        );
+
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         using (FileStream fileStream = File.Open (dataPath, FileMode.OpenOrCreate))
         {
@@ -38,7 +39,7 @@ public class DataControl : MonoBehaviour
         string dataPath = Path.Combine(folderPath, saveFile);
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
-        PlayerMetaData player = new PlayerMetaData();
+        PlayerMetaData player;// = new PlayerMetaData();
         using (FileStream fileStream = File.Open (dataPath, FileMode.Open))
         {
             player = (PlayerMetaData)binaryFormatter.Deserialize (fileStream);
@@ -56,5 +57,26 @@ public class DataControl : MonoBehaviour
     {
         GameObject checkpoint = GameObject.Find("obj_checkpoint");
         return new[] {checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z};
+    }
+
+    public static void NewGame() 
+    {
+        string folderPath = Path.Combine(Application.persistentDataPath, saveFolder);
+        if (!Directory.Exists (folderPath))
+            Directory.CreateDirectory (folderPath);            
+
+        string dataPath = Path.Combine(folderPath, saveFile);   
+        
+        PlayerMetaData player = new PlayerMetaData(
+                                    0,
+                                    0,
+                                    "Scenes/StartingArea",
+                                    new[] { 9.6f, -4.1f, 0f });
+        
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        using (FileStream fileStream = File.Open (dataPath, FileMode.OpenOrCreate))
+        {
+            binaryFormatter.Serialize (fileStream, player);
+        }  
     }
 }
