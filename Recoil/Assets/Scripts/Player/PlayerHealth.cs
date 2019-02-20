@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int initialHP = 3;
-    public int currHP = 3;
+    public static int maxHP = 3;
+    public static int currHP = 3;
     private int iFrames = 0;
 
     public Text healthText;
@@ -22,7 +22,6 @@ public class PlayerHealth : MonoBehaviour
     {
         if (iFrames != 0) return;
 
-        print(currHP);
         if (--currHP <= 0) {
             setHealthText(currHP);
             // Dead
@@ -33,15 +32,21 @@ public class PlayerHealth : MonoBehaviour
         iFrames = 35;
     }
 
-    public void UpgradeHP() 
+    public static void UpgradeHP() 
     {
-        initialHP++;
+        maxHP++;
         currHP++;
+    }
+
+    public static void Heal() 
+    {
+        currHP = maxHP;
     }
 
     void Die() 
     {
-        Destroy(gameObject);
+        DataControl.Respawn();
+        //Destroy(gameObject);
     }
 
     void Start()
@@ -49,9 +54,11 @@ public class PlayerHealth : MonoBehaviour
         setHealthText(currHP);
     }
 
+
     void setHealthText(int health)
     {
         healthText.text = "H P : " + health +" / " + initialHP;
         healthSlider.value = health;
     }
+
 }
