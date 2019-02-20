@@ -70,7 +70,7 @@ public class DataControl : MonoBehaviour
         PlayerMetaData player = new PlayerMetaData(
                                     0,
                                     0,
-                                    "Scenes/StartingArea",
+                                    "Scenes/Starting Area",
                                     new[] { 9.6f, -4.1f, 0f });
         
         BinaryFormatter binaryFormatter = new BinaryFormatter();
