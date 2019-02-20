@@ -8,6 +8,11 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene("Scenes/Starting Area");
     }
 
+    public void LoadGame() 
+    {
+        DataControl.Load();
+    }
+
     public void EndGame() {
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;

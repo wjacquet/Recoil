@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     void Start() {
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         rigidBody.freezeRotation = true;
+        if (PlayerInit.playerPos != null) {
+            gameObject.transform.position = PlayerInit.playerPos;
+        }
     }
     public void Recoil(Vector2 knockback) {
         rigidBody.velocity = rigidBody.velocity + knockback;
