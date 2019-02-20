@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int initialHP = 3;
-    public int currHP = 3;
+    public static int initialHP = 3;
+    public static int currHP = 3;
     private int iFrames = 0;
+
+    
 
     void Update() 
     {
@@ -36,4 +38,5 @@ public class PlayerHealth : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }
