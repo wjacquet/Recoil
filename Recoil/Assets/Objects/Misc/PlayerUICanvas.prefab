@@ -73,7 +73,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 840271440272746605}
   m_HandleRect: {fileID: 0}
@@ -121,8 +121,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 6.37, y: 2.51}
-  m_SizeDelta: {x: 17.09, y: 4.43}
+  m_AnchoredPosition: {x: 6.5, y: 2.51}
+  m_SizeDelta: {x: 7, y: 4.43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6744610452408937999
 CanvasRenderer:
@@ -382,7 +382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 23.97, y: 18.99}
+  m_AnchoredPosition: {x: 23.96997, y: 18.99}
   m_SizeDelta: {x: 41, y: 36.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4495151087784109193
@@ -682,8 +682,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 2.5, y: 0}
-  m_SizeDelta: {x: -5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8297872211230666330
 GameObject:
