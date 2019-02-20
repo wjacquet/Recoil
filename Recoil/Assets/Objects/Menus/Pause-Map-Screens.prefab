@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1342796266783975262}
   - component: {fileID: 8618726972607286897}
   m_Layer: 5
-  m_Name: Level2Gold
+  m_Name: Tutorial2Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5028349815240654621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 1829409404938425412}
   - component: {fileID: 6323665916385145159}
   m_Layer: 5
-  m_Name: Level6Gold
+  m_Name: TutorialBossGold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 7605695012371512312}
   - component: {fileID: 4453943578898605062}
   m_Layer: 5
-  m_Name: Level1Gold
+  m_Name: StartingAreaGold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 7942510412554991223}
   - component: {fileID: 2045748997587021315}
   m_Layer: 5
-  m_Name: Level3Gold
+  m_Name: Tutorial3Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1085,18 +1085,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapUI: {fileID: 1719171330383669967}
-  levelOne: {fileID: 5217595673490204708}
-  levelOneGold: {fileID: 2807234425441306599}
-  levelTwo: {fileID: 8820737128502195823}
-  levelTwoGold: {fileID: 597814622863298924}
-  levelThree: {fileID: 7371117863703228739}
-  levelThreeGold: {fileID: 3998808586853247203}
-  levelFour: {fileID: 6988486862160009025}
-  levelFourGold: {fileID: 6616043185775027706}
-  levelFive: {fileID: 2693427135449873924}
-  levelFiveGold: {fileID: 4849897324109490110}
-  levelSix: {fileID: 3378091504666362740}
-  levelSixGold: {fileID: 2132398463810278589}
+  StartingArea: {fileID: 5217595673490204708}
+  StartingAreaGold: {fileID: 2807234425441306599}
+  Tutorial2: {fileID: 8820737128502195823}
+  Tutorial2Gold: {fileID: 597814622863298924}
+  Tutorial3: {fileID: 7371117863703228739}
+  Tutorial3Gold: {fileID: 3998808586853247203}
+  Tutorial4: {fileID: 6988486862160009025}
+  Tutorial4Gold: {fileID: 6616043185775027706}
+  Tutorial5: {fileID: 2693427135449873924}
+  Tutorial5Gold: {fileID: 4849897324109490110}
+  TutorialBoss: {fileID: 3378091504666362740}
+  TutorialBossGold: {fileID: 2132398463810278589}
 --- !u!1 &4266475598898969121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,7 +1814,7 @@ GameObject:
   - component: {fileID: 619400728970206996}
   - component: {fileID: 8172179242338978917}
   m_Layer: 5
-  m_Name: Level5Gold
+  m_Name: Tutorial5Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1886,7 +1886,7 @@ GameObject:
   - component: {fileID: 260215820689624630}
   - component: {fileID: 5516934204822675013}
   m_Layer: 5
-  m_Name: Starting Area
+  m_Name: StartingArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2024,7 +2024,7 @@ GameObject:
   - component: {fileID: 4824629434988824377}
   - component: {fileID: 7567671431011124368}
   m_Layer: 5
-  m_Name: Level4Gold
+  m_Name: Tutorial4Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
