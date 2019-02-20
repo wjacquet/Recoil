@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public static int currHP = 3;
     private int iFrames = 0;
 
-    
+    public Text healthText;
+    public Slider healthSlider;
 
     void Update() 
     {
@@ -20,10 +22,12 @@ public class PlayerHealth : MonoBehaviour
         if (iFrames != 0) return;
 
         if (--currHP <= 0) {
+            setHealthText(currHP);
             // Dead
             Die();
             return;
         }
+        setHealthText(currHP);
         iFrames = 35;
     }
 
@@ -42,6 +46,13 @@ public class PlayerHealth : MonoBehaviour
     {
         DataControl.Respawn();
         //Destroy(gameObject);
+    }
+
+
+    void setHealthText(int health)
+    {
+        healthText.text = "H P : " + health +" / " + initialHP;
+        healthSlider.value = health;
     }
 
 }
