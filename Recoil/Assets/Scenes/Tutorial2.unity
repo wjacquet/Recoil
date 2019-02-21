@@ -323,6 +323,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1162628935, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 212614496690645560}
+    - target: {fileID: 1162628935, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 212614496690645561}
     - target: {fileID: 2047555795353223369, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: coinText
@@ -22234,11 +22242,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6808366960727207239, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
-        type: 3}
-      propertyPath: mapUI
-      value: 
-      objectReference: {fileID: 1553731412}
     - target: {fileID: 2144547237446164731, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -22249,11 +22252,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6256614624251380472, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+    - target: {fileID: 6808366960727207239, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.08999634
-      objectReference: {fileID: 0}
+      propertyPath: mapUI
+      value: 
+      objectReference: {fileID: 1553731412}
     - target: {fileID: 1071143608694939095, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -22268,6 +22271,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256614624251380472, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.08999634
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fad6a87bd18ef4bb67c08e7cc8b802, type: 3}
@@ -28266,6 +28274,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 40, y: 28, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 2, y: 29, z: 0}
     second:
       m_TileIndex: 5
@@ -28684,6 +28701,24 @@ Tilemap:
     second:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 2, y: 32, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 6, y: 32, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -29229,6 +29264,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 38, y: 36, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 44, y: 36, z: 0}
     second:
       m_TileIndex: 0
@@ -29285,7 +29329,7 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 220
+  - m_RefCount: 224
     m_Data: {fileID: 11400000, guid: 9b49814d361ab8b48b9ba4c3263f92ec, type: 2}
   - m_RefCount: 63
     m_Data: {fileID: 11400000, guid: 37c63c08e278afe44acf7cf89c8edb84, type: 2}
@@ -29312,7 +29356,7 @@ Tilemap:
   - m_RefCount: 18
     m_Data: {fileID: 11400000, guid: 742ea8bf198f36f46a789412e7765f70, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 220
+  - m_RefCount: 224
     m_Data: {fileID: 21300060, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   - m_RefCount: 63
     m_Data: {fileID: 21300062, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
@@ -29339,7 +29383,7 @@ Tilemap:
   - m_RefCount: 18
     m_Data: {fileID: 21300042, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 617
+  - m_RefCount: 621
     m_Data:
       e00: 1
       e01: 0
@@ -29358,7 +29402,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 617
+  - m_RefCount: 621
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -31167,16 +31211,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2306162872196700093, guid: a767859450106194097377cd6d504200,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 23.96997
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306162872196700093, guid: a767859450106194097377cd6d504200,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 18.990005
-      objectReference: {fileID: 0}
     - target: {fileID: 840271440272746605, guid: a767859450106194097377cd6d504200,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -31187,8 +31221,42 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2306162872196700093, guid: a767859450106194097377cd6d504200,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 23.96997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306162872196700093, guid: a767859450106194097377cd6d504200,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 18.990005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a767859450106194097377cd6d504200, type: 3}
+--- !u!114 &212614496690645560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2666734671809730419, guid: a767859450106194097377cd6d504200,
+    type: 3}
+  m_PrefabInstance: {fileID: 212614496690645559}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &212614496690645561 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
+    type: 3}
+  m_PrefabInstance: {fileID: 212614496690645559}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1630143602451619856
 PrefabInstance:
   m_ObjectHideFlags: 0

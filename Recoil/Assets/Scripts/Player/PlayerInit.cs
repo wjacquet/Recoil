@@ -11,6 +11,7 @@ public class PlayerInit : MonoBehaviour
 {
     public static Vector3 playerPos;
     public static bool[] loadedUpgradesFound = new bool[SceneManager.sceneCountInBuildSettings];
+    public static bool[] scenesVisited = new bool[SceneManager.sceneCountInBuildSettings];
     public static void SetPlayer(PlayerMetaData data) 
     {
         SceneManager.LoadScene(data.scene);
@@ -25,6 +26,8 @@ public class PlayerInit : MonoBehaviour
     static void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         GameObject playerModel = GameObject.Find("obj_player");
         playerModel.transform.position = playerPos;
+
+        scenesVisited[scene.buildIndex] = true;
 
         GameObject hpUpgrade = GameObject.Find("obj_health_upgrade");
         if (hpUpgrade && loadedUpgradesFound[scene.buildIndex]) {
