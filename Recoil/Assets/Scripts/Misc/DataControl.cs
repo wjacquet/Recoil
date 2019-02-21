@@ -12,12 +12,8 @@ public class DataControl : MonoBehaviour
     const string saveFile = "Save.dat";
     
     public static void Save() 
-    {
-        string folderPath = Path.Combine(Application.persistentDataPath, saveFolder);
-        if (!Directory.Exists (folderPath))
-            Directory.CreateDirectory (folderPath);            
-
-        string dataPath = Path.Combine(folderPath, saveFile);   
+    {          
+        string dataPath = BuildPath();   
         bool[] newUpgradeIndexes = new bool[SceneManager.sceneCountInBuildSettings];
 
         Array.Copy(PlayerInit.loadedUpgradesFound, newUpgradeIndexes, PlayerInit.loadedUpgradesFound.Length);
@@ -29,10 +25,12 @@ public class DataControl : MonoBehaviour
 
         PlayerMetaData player = new PlayerMetaData(
                         PlayerHealth.maxHP,
+                        PlayerHealth.currHP,
                         PlayerCurrency.wealth,
                         SceneManager.GetActiveScene().name,
                         FindCheckpointPos(),
-                        newUpgradeIndexes
+                        newUpgradeIndexes,
+                        PlayerInit.scenesVisited
         );
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -44,8 +42,7 @@ public class DataControl : MonoBehaviour
 
     public static void Load() 
     {
-        string folderPath = Path.Combine(Application.persistentDataPath, saveFolder);           
-        string dataPath = Path.Combine(folderPath, saveFile);
+        string dataPath = BuildPath();
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         PlayerMetaData player;// = new PlayerMetaData();
@@ -70,17 +67,15 @@ public class DataControl : MonoBehaviour
 
     public static void NewGame() 
     {
-        string folderPath = Path.Combine(Application.persistentDataPath, saveFolder);
-        if (!Directory.Exists (folderPath))
-            Directory.CreateDirectory (folderPath);            
-
-        string dataPath = Path.Combine(folderPath, saveFile);   
+        string dataPath = BuildPath();   
         
         PlayerMetaData player = new PlayerMetaData(
-                                    0,
+                                    3,
+                                    3,
                                     0,
                                     "Scenes/StartingArea",
                                     new[] { 9.6f, -4.1f, 0f },
+                                    new bool[SceneManager.sceneCountInBuildSettings],
                                     new bool[SceneManager.sceneCountInBuildSettings]);
 
         
@@ -89,5 +84,14 @@ public class DataControl : MonoBehaviour
         {
             binaryFormatter.Serialize (fileStream, player);
         }  
+    }
+
+    public static string BuildPath() 
+    {
+        string folderPath = Path.Combine(Application.persistentDataPath, saveFolder);
+        if (!Directory.Exists (folderPath))
+            Directory.CreateDirectory (folderPath);            
+
+        return Path.Combine(folderPath, saveFile);   
     }
 }

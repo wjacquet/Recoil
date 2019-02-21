@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ExplodingProjectile : MonoBehaviour
 {
+    public GameObject explosion;
     PlayerHealth playerHP;
     private int speed = 85;
     private int maxDist = 250;
+
+
     void Start() 
     {
         GameObject player = GameObject.Find("obj_player");
@@ -42,9 +45,10 @@ public class ExplodingProjectile : MonoBehaviour
     // Once the projectile hits a wall
     void OnCollisionEnter2D(Collision2D collision) 
     {
-        if (collision.gameObject.tag == "Player") {
-            playerHP.TakeDamage();
-        }
+        Instantiate(explosion, transform.position, transform.rotation);
+        //if (collision.gameObject.tag == "Player") {
+        //    playerHP.TakeDamage();
+        //}
         Destroy(gameObject);
     }
 }
