@@ -79,7 +79,7 @@ public class DataControl : MonoBehaviour
         PlayerMetaData player = new PlayerMetaData(
                                     0,
                                     0,
-                                    "Scenes/Starting Area",
+                                    "Scenes/StartingArea",
                                     new[] { 9.6f, -4.1f, 0f },
                                     new bool[SceneManager.sceneCountInBuildSettings]);
 
