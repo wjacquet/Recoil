@@ -9,6 +9,7 @@ public class DragonMovement : MonoBehaviour
     private Vector3 lowLocation = new Vector3(-920, 128, 0);
     private bool bossStarted = false;
     public GameObject fireball;
+    public GameObject bomb;
 
     // Update is called once per frame
     void Update()
@@ -26,12 +27,14 @@ public class DragonMovement : MonoBehaviour
     IEnumerator BossPatterns() {
         while (true) {
             yield return ShootFireballs();
+            yield return new WaitForSeconds(2.0f);
             yield return ShootExplosion();
         }
     }
 
     IEnumerator ShootExplosion() {
-        yield return null;
+        Instantiate(bomb, transform.position, transform.rotation);
+        yield return new WaitForSeconds(6.0f);
     }
 
     IEnumerator ShootFireballs() {
