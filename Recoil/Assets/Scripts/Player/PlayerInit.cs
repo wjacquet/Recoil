@@ -29,6 +29,9 @@ public class PlayerInit : MonoBehaviour
 
         scenesVisited[scene.buildIndex] = true;
 
+        GameObject camera = GameObject.Find("Main Camera");
+        camera.transform.position = playerPos;
+
         GameObject hpUpgrade = GameObject.Find("obj_health_upgrade");
         if (hpUpgrade && loadedUpgradesFound[scene.buildIndex]) {
             Destroy(hpUpgrade);
