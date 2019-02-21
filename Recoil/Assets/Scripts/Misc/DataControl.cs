@@ -32,7 +32,8 @@ public class DataControl : MonoBehaviour
                         PlayerCurrency.wealth,
                         SceneManager.GetActiveScene().name,
                         FindCheckpointPos(),
-                        newUpgradeIndexes
+                        newUpgradeIndexes,
+                        PlayerInit.scenesVisited
         );
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -81,6 +82,7 @@ public class DataControl : MonoBehaviour
                                     0,
                                     "Scenes/StartingArea",
                                     new[] { 9.6f, -4.1f, 0f },
+                                    new bool[SceneManager.sceneCountInBuildSettings],
                                     new bool[SceneManager.sceneCountInBuildSettings]);
 
         
