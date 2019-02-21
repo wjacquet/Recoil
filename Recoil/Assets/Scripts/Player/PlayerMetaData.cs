@@ -12,9 +12,9 @@ public class PlayerMetaData
     public bool[] upgradesFound;
     public bool[] scenesVisited;
 
-    public PlayerMetaData(int maxHP, int wealth, string scene, float[] pos, bool[] upgradesFound, bool[] scenesVisited) {
+    public PlayerMetaData(int maxHP, int currHP, int wealth, string scene, float[] pos, bool[] upgradesFound, bool[] scenesVisited) {
         this.maxHP = maxHP;
-        this.currHP = maxHP;
+        this.currHP = currHP;
         this.wealth = wealth;
         this.scene = scene;
         this.position = pos;

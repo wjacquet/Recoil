@@ -25,6 +25,7 @@ public class DataControl : MonoBehaviour
 
         PlayerMetaData player = new PlayerMetaData(
                         PlayerHealth.maxHP,
+                        PlayerHealth.currHP,
                         PlayerCurrency.wealth,
                         SceneManager.GetActiveScene().name,
                         FindCheckpointPos(),
@@ -69,6 +70,7 @@ public class DataControl : MonoBehaviour
         string dataPath = BuildPath();   
         
         PlayerMetaData player = new PlayerMetaData(
+                                    3,
                                     3,
                                     0,
                                     "Scenes/StartingArea",

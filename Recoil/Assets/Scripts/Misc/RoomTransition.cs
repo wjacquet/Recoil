@@ -22,6 +22,7 @@ public class RoomTransition : MonoBehaviour
             // Build current player metadata
             PlayerMetaData player = new PlayerMetaData(
                 PlayerHealth.maxHP,
+                PlayerHealth.currHP,
                 PlayerCurrency.wealth,
                 warpScene,
                 new[] {warpPosition.x, warpPosition.y, warpPosition.z},
