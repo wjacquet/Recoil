@@ -50,9 +50,35 @@ public class Map : MonoBehaviour {
         // Set basic map scene to disapear and gold scene to appear
         SetActiveScene(SceneManager.GetActiveScene().name);
 
+        for (int i = 0; i < PlayerInit.scenesVisited.Length; i++) {
+            // Hide Scene!
+            if (!PlayerInit.scenesVisited[i]) {
+                string sceneName = GetSceneFromIndex(i);
+                Debug.Log(sceneName);
+                HideScene(sceneName);
+            }
+        }
+
         mapUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
+    }
+
+    public string GetSceneFromIndex(int index) {
+        string path = SceneUtility.GetScenePathByBuildIndex(index);
+        int slash = path.LastIndexOf('/');
+        string name = path.Substring(slash + 1);
+        int dot = name.LastIndexOf('.');
+        return name.Substring(0, dot);
+    }
+
+    public void HideScene(string level) {
+        GameObject[] array = FindScene(level);
+
+        if (array != null) {
+            array[0].SetActive(false);
+            array[1].SetActive(false);
+        }
     }
 
     public void SetActiveScene(string level) {
