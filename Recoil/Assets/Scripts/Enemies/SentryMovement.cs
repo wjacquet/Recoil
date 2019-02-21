@@ -6,14 +6,16 @@ public class SentryMovement : MonoBehaviour
 {
     public float speed;
     public LayerMask enemyMask;
-    private Rigidbody2D rigidBody;
+    private Rigidbody2D body;
+    private Transform trans;
     private float width,height;
     // Start is called before the first frame update
     void Start()
     {
-        rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+        body = gameObject.GetComponent<Rigidbody2D>();
+        trans = this.transform;
         SpriteRenderer sprit = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
-        width = sprit.bounds.extents.x;
+        width = trans.GetChild(0).GetComponent<SpriteRenderer>().bounds.extents.x;//this.GetComponent<SpriteRenderer>().bounds.extents.x;//sprit.bounds.extents.x;
         //height = sprit.bounds.extents.y;
     }
 
@@ -24,22 +26,23 @@ public class SentryMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 vecUp = new Vector3(0,1,0);
-        Vector2 lineCast = transform.position - transform.right * width; // + vecUp * height;
-        Vector2 vecDown = new Vector2(0,-3);
-        bool turnAroundGround = !Physics2D.Linecast(lineCast, lineCast + vecDown, enemyMask);
+        Vector2 lineCastPos = trans.position - trans.right * width;
+        Vector3 lineCastV3 = lineCastPos;
+        Vector2 transRightV2 = trans.right;
+        Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down * 10);
+        bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down * 10, enemyMask);
+        bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - transRightV2, enemyMask);
+        Debug.DrawLine(lineCastPos, lineCastPos + transRightV2);
 
-        // Debug.DrawLine(lineCast, lineCast - new Vector2(transform.right.x, transform.right.y) * 0.02f);
-        // bool turnAroundWall = !Physics2D.Linecast(lineCast, lineCast - new Vector2(transform.right.x, transform.right.y) * 0.02f, enemyMask);
-
-        if (turnAroundGround) { //|| turnAroundWall) {
-            Vector3 currRotation = transform.eulerAngles;
+        if (!isGrounded || isBlocked) {
+            //trans.GetChild(0).GetComponent<SpriteRenderer>().flipX = true;
+            Vector3 currRotation = trans.eulerAngles;
             currRotation.y += 180;
-            transform.eulerAngles = currRotation;
+            trans.eulerAngles = currRotation;
         }
 
-        Vector2 sentryVel = rigidBody.velocity;
-        sentryVel.x = transform.right.x * speed;
-        rigidBody.velocity = sentryVel;
+        Vector2 vel = body.velocity;
+        vel.x = -trans.right.x * speed;
+        body.velocity = vel;
     }
 }
