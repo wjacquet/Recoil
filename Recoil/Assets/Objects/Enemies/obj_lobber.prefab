@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5540591476936727189}
   - component: {fileID: 5540591476936727190}
   - component: {fileID: 6302233801227522611}
+  - component: {fileID: 444557901}
   m_Layer: 11
   m_Name: obj_lobber
   m_TagString: Enemy
@@ -125,6 +126,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coin: {fileID: 1383589517549857606, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
   amount: 4
+--- !u!114 &444557901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5540591476936727184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfad405183818741bf9884e700a0b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1001 &5540591476059533229
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4613,6 +4613,16 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: orthographic size
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 9129270991663252113, guid: 996700304d007554b958ea23ff599d6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4673,16 +4683,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1162628929}
-    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
-        type: 3}
-      propertyPath: m_AllowMSAA
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
-        type: 3}
-      propertyPath: orthographic size
-      value: 128
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996700304d007554b958ea23ff599d6e, type: 3}
 --- !u!4 &184916429 stripped
@@ -5387,11 +5387,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUICanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 947805220776385026, guid: a767859450106194097377cd6d504200,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5497,11 +5492,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2306162872196700093, guid: a767859450106194097377cd6d504200,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 23.96997
-      objectReference: {fileID: 0}
     - target: {fileID: 840271440272746605, guid: a767859450106194097377cd6d504200,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -5526,6 +5516,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Interactable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306162872196700093, guid: a767859450106194097377cd6d504200,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 23.96997
       objectReference: {fileID: 0}
     - target: {fileID: 2306162872196700093, guid: a767859450106194097377cd6d504200,
         type: 3}
