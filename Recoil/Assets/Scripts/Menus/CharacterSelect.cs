@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class CharacterSelect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public GameObject obj_player;
     // Update is called once per frame
-    void Update()
+    void changeSprite()
     {
-        
+        obj_player.player.GetComponent<SpriteRenderer>().sprite = null;
     }
 }
