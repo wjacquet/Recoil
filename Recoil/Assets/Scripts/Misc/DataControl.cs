@@ -12,12 +12,8 @@ public class DataControl : MonoBehaviour
     const string saveFile = "Save.dat";
     
     public static void Save() 
-    {
-        string folderPath = Path.Combine(Application.persistentDataPath, saveFolder);
-        if (!Directory.Exists (folderPath))
-            Directory.CreateDirectory (folderPath);            
-
-        string dataPath = Path.Combine(folderPath, saveFile);   
+    {          
+        string dataPath = BuildPath();   
         bool[] newUpgradeIndexes = new bool[SceneManager.sceneCountInBuildSettings];
 
         Array.Copy(PlayerInit.loadedUpgradesFound, newUpgradeIndexes, PlayerInit.loadedUpgradesFound.Length);
@@ -45,8 +41,7 @@ public class DataControl : MonoBehaviour
 
     public static void Load() 
     {
-        string folderPath = Path.Combine(Application.persistentDataPath, saveFolder);           
-        string dataPath = Path.Combine(folderPath, saveFile);
+        string dataPath = BuildPath();
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         PlayerMetaData player;// = new PlayerMetaData();
@@ -71,11 +66,7 @@ public class DataControl : MonoBehaviour
 
     public static void NewGame() 
     {
-        string folderPath = Path.Combine(Application.persistentDataPath, saveFolder);
-        if (!Directory.Exists (folderPath))
-            Directory.CreateDirectory (folderPath);            
-
-        string dataPath = Path.Combine(folderPath, saveFile);   
+        string dataPath = BuildPath();   
         
         PlayerMetaData player = new PlayerMetaData(
                                     0,
@@ -91,5 +82,14 @@ public class DataControl : MonoBehaviour
         {
             binaryFormatter.Serialize (fileStream, player);
         }  
+    }
+
+    public static string BuildPath() 
+    {
+        string folderPath = Path.Combine(Application.persistentDataPath, saveFolder);
+        if (!Directory.Exists (folderPath))
+            Directory.CreateDirectory (folderPath);            
+
+        return Path.Combine(folderPath, saveFile);   
     }
 }
