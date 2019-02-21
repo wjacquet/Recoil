@@ -4,6 +4,16 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 
+// How to Add new parts to the map.
+// 1. Make the map in google drive and save a normal version and a gold highlited version
+// 2. Put both images into Objects/Menus
+// 3. Add "public GameObject TutorialXY" and "public GameObject TutorialXYGold" directly below the rest 
+// 4. Go to the map Prefab and click Pause-Map-Screens
+// 5. On the Inspector tab scroll to the bottom and connect the map comonents to the corresponding link
+// 6. Add an if check to the method "FindScene" at the bottom of this file (Yes I know that if statement is ugly, 
+//    but I don't know how to find the GameObject specific as the global, by the name inputed into the method) 
+// 7. Test to make sure everything works, if not ask Kyle 
+
 public class Map : MonoBehaviour {
 
     public static bool gameIsPaused = false;
