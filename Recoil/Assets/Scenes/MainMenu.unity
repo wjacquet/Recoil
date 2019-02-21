@@ -1061,7 +1061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &219351857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2161,7 +2161,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -3233,7 +3233,7 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -3907,46 +3907,87 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &781904850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4237,7 +4278,7 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -9185,7 +9226,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -9229,7 +9270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1971138999
 RectTransform:
   m_ObjectHideFlags: 0
