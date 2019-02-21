@@ -4845,7 +4845,7 @@ GameObject:
   - component: {fileID: 1041333660}
   - component: {fileID: 1041333659}
   - component: {fileID: 1041333658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FG Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34572,6 +34572,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2047555795353223369, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 697214428}
     - target: {fileID: 1162628935, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
       propertyPath: healthText
       value: 
@@ -34580,11 +34585,6 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 697214430}
-    - target: {fileID: 2047555795353223369, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: coinText
-      value: 
-      objectReference: {fileID: 697214428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
 --- !u!1001 &1813222484
