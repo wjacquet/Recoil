@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class PlayerCurrency : MonoBehaviour
 {
     public Text coinText;
-    private int wealth = 0;
-    // Start is called before the first frame update
+    public static int wealth = 0;
 
     void Start() 
     {
