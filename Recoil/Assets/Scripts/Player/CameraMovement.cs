@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
     public float maxY = float.MaxValue;
     
 
-    private Vector3 offset = new Vector3(0, 0, -10);
+    private Vector3 offset = new Vector3(0, 0, -20);
 
     // LateUpdate is called once per frame after Update
     void LateUpdate()
