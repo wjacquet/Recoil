@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
+
+    
+
     public void PlayeGame() {
         //SceneManager.LoadScene("Scenes/Starting Area");
         DataControl.NewGame();
@@ -23,4 +26,5 @@ public class MainMenu : MonoBehaviour {
         #endif
         Debug.Log("Exiting Game!");
     }
+
 }
