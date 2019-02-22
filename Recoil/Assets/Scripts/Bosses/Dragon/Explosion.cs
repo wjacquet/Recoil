@@ -10,6 +10,9 @@ public class Explosion : MonoBehaviour
         GameObject player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
         StartCoroutine(Timer());
+
+        // Fix z ordering
+        transform.position = new Vector3(transform.position.x, transform.position.y, -14);
     }
 
     IEnumerator Timer() {
