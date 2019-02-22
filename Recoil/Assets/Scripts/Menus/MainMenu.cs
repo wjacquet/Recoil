@@ -27,9 +27,4 @@ public class MainMenu : MonoBehaviour {
         Debug.Log("Exiting Game!");
     }
 
-    public void Start()
-    {
-        CharacterSelect characterSelect = new CharacterSelect();
-        characterSelect.Start();
-    }
 }

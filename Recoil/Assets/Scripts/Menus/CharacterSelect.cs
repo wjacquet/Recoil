@@ -15,8 +15,9 @@ public class CharacterSelect : MonoBehaviour
     {
         GameObject player = GameObject.Find("player");
         rend = player.GetComponent<SpriteRenderer>();
-        selectedSkin = rend.sprite;
-        Debug.Log("switched sprite to " + selectedSkin);
+        Sprite sprite = Resources.Load<Sprite>("Assets/Resources/spaceman-m.aseprite");
+        selectedSkin = clickedButton.GetComponent<Image>().sprite;
+        Debug.Log("defaulted sprite to " + selectedSkin);
     }
 
     public void changeSprite()
