@@ -7,12 +7,27 @@ public class CharacterSelect : MonoBehaviour
 {
     public GameObject obj_player;
     public Button clickedButton;
-    // Update is called once per frame
+    public SpriteRenderer rend;
+
+    public static Sprite selectedSkin;
+
+    public void Start()
+    {
+        GameObject player = GameObject.Find("player");
+        rend = player.GetComponent<SpriteRenderer>();
+        selectedSkin = rend.sprite;
+        Debug.Log("switched sprite to " + selectedSkin);
+    }
+
     public void changeSprite()
     {
         GameObject player = GameObject.Find("player");
-        SpriteRenderer rend = player.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
-        rend.sprite = clickedButton.GetComponent<Image>().sprite;
-        Debug.Log("switched sprite to" + rend.sprite);
+        rend = player.GetComponent<SpriteRenderer>();
+
+        //rend.sprite = clickedButton.GetComponent<Image>().sprite;
+        selectedSkin = clickedButton.GetComponent<Image>().sprite;
+
+        Debug.Log("switched sprite to " + selectedSkin.texture);
     }
+
 }
