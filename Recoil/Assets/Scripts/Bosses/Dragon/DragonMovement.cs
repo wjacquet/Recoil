@@ -10,7 +10,7 @@ public class DragonMovement : MonoBehaviour
     private bool bossStarted = false;
     public GameObject fireball;
     public GameObject bomb;
-
+    public GameObject laser;
     // Update is called once per frame
     void Update()
     {
@@ -29,6 +29,47 @@ public class DragonMovement : MonoBehaviour
             yield return ShootFireballs();
             yield return new WaitForSeconds(2.0f);
             yield return ShootExplosion();
+            yield return ShootLaser();
+        }
+    }
+
+    IEnumerator ShootLaser() {
+        // choose a different position randomly
+        Vector3 newPosition = startLocation;
+        Vector3 nextPosition = startLocation;
+        switch (Random.Range(0, 2)) {
+            case 0:
+                newPosition = highLocation;
+                nextPosition = lowLocation;
+                break;
+            case 1:
+                newPosition = lowLocation;
+                nextPosition = highLocation;
+                break;
+        }
+
+        // Move to top or bottom
+        while (transform.position != newPosition) {
+            transform.position = Vector2.MoveTowards(transform.position, newPosition, 30 * Time.deltaTime);
+            yield return null;
+        }
+
+        // Shoot laser
+        GameObject laserObj = Instantiate(laser, transform.position, transform.rotation);
+
+        // Move up/down
+        while (transform.position != nextPosition) {
+            transform.position = Vector2.MoveTowards(transform.position, nextPosition, 40 * Time.deltaTime);
+            if (laserObj != null) {
+                laserObj.transform.position = new Vector3(transform.position.x + 256, transform.position.y, transform.position.z);
+            }
+            yield return null;
+        }
+        
+        // Return to middle
+        while (transform.position != startLocation) {
+            transform.position = Vector2.MoveTowards(transform.position, startLocation, 30 * Time.deltaTime);
+            yield return null;
         }
     }
 

@@ -49,6 +49,7 @@ MonoBehaviour:
   fireball: {fileID: 8035257951994581352, guid: ce704eff26af6d34f9a052568177525a,
     type: 3}
   bomb: {fileID: 6501629919255957928, guid: b87de5062879fbe4ca476f423586a3c9, type: 3}
+  laser: {fileID: 5212093798031321459, guid: 3904d9139ce09e342aa939be6ef1210d, type: 3}
 --- !u!114 &3320613216670871654
 MonoBehaviour:
   m_ObjectHideFlags: 0
