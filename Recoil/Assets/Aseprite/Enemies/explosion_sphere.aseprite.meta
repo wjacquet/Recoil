@@ -25,9 +25,9 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: b1577cdc41d01fa4dbf68ad51122a765, type: 3}
   pixelsPerUnit: 1
   spriteAtlas: {instanceID: 0}
-  frameRate: 60
+  frameRate: 30
   sortingLayerName: 
   sortingOrder: 0
   animatorCullingMode: 0
-  animatorController: {instanceID: 0}
+  animatorController: {fileID: 9100000, guid: e904bccb99036954b8fcee6056eef822, type: 2}
   errors: []
