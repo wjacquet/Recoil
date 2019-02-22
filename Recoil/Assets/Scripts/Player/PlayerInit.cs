@@ -16,6 +16,7 @@ public class PlayerInit : MonoBehaviour
     {
         SceneManager.LoadScene(data.scene);
         loadedUpgradesFound = data.upgradesFound;
+        scenesVisited = data.scenesVisited;
         playerPos = new Vector3(data.position[0], data.position[1], data.position[2]);
         SceneManager.sceneLoaded += OnSceneLoaded;
         PlayerHealth.maxHP = data.maxHP;

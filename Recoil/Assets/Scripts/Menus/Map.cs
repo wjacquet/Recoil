@@ -64,7 +64,6 @@ public class Map : MonoBehaviour {
             // Hide Scene!
             if (!PlayerInit.scenesVisited[i]) {
                 string sceneName = GetSceneFromIndex(i);
-                Debug.Log(sceneName);
                 HideScene(sceneName);
             }
         }
