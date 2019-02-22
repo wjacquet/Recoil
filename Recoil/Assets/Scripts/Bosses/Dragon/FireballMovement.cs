@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireballMovement : MonoBehaviour
 {
-    PlayerHealth playerHP;
+    private PlayerHealth playerHP;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +19,8 @@ public class FireballMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x + 1, yVal, transform.position.z);
     }
 
-    // Once the projectile hits a wall
-    void OnCollisionEnter2D(Collision2D collision) 
+    // Fireball damages player
+    void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.gameObject.tag == "Player") {
             playerHP.TakeDamage();

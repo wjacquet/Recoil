@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
             return;
         }
         setHealthText(currHP);
-        iFrames = 35;
+        iFrames = 60;
     }
 
     public void UpgradeHP() 

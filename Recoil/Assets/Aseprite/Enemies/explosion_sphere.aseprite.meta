@@ -10,6 +10,7 @@ ScriptedImporter:
     2800006: tex2d_3
     2800008: tex2d_4
     7400000: anim_Untagged
+    7400002: anim_Explosion
     9500000: _main/explosion_sphere/Animator
     21200000: _main/explosion_sphere/SpriteRenderer
     21300000: sprite_0
@@ -25,9 +26,9 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: b1577cdc41d01fa4dbf68ad51122a765, type: 3}
   pixelsPerUnit: 1
   spriteAtlas: {instanceID: 0}
-  frameRate: 30
+  frameRate: 20
   sortingLayerName: 
   sortingOrder: 0
   animatorCullingMode: 0
-  animatorController: {fileID: 9100000, guid: e904bccb99036954b8fcee6056eef822, type: 2}
+  animatorController: {fileID: 9100000, guid: 95aa064e7a7c5e44e95438476bebc10d, type: 2}
   errors: []
