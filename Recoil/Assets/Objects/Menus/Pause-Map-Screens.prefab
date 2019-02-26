@@ -5228,6 +5228,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: GunBox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8063800965736739393}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: gunPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.26666668
+      objectReference: {fileID: 0}
     - target: {fileID: 1577357734463711734, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5333,41 +5368,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8063800965736739393}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: buttonClicked
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.69411767
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.26666668
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a148f7fd05c4486195ad26fdbb4c49a, type: 3}
 --- !u!224 &2015385029944957398 stripped
@@ -5393,6 +5393,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GunBox (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8063800965736739393}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: gunPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.26666668
       objectReference: {fileID: 0}
     - target: {fileID: 1577357734463711734, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
         type: 3}
@@ -5499,41 +5534,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8063800965736739393}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: buttonClicked
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.69411767
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.26666668
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a148f7fd05c4486195ad26fdbb4c49a, type: 3}
 --- !u!1 &6399309389610396930 stripped
@@ -5559,6 +5559,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GunBox (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8063800965736739393}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: gunPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.26666668
       objectReference: {fileID: 0}
     - target: {fileID: 1577357734463711734, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
         type: 3}
@@ -5665,41 +5700,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8063800965736739393}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: buttonClicked
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.69411767
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.26666668
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a148f7fd05c4486195ad26fdbb4c49a, type: 3}
 --- !u!224 &4566385501811692441 stripped
@@ -5725,6 +5725,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GunBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8063800965736739393}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: gunPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.26666668
       objectReference: {fileID: 0}
     - target: {fileID: 1577357734463711734, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
         type: 3}
@@ -5831,41 +5866,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8063800965736739393}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: buttonClicked
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.69411767
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.26666668
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a148f7fd05c4486195ad26fdbb4c49a, type: 3}
 --- !u!224 &2549653391610070581 stripped
@@ -5891,6 +5891,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GunBox (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8063800965736739393}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: gunPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.26666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1577357734463711734, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
         type: 3}
@@ -5996,56 +6046,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8063800965736739393}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: buttonClicked
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.69411767
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.26666668
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103382735114494681, guid: 3a148f7fd05c4486195ad26fdbb4c49a,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a148f7fd05c4486195ad26fdbb4c49a, type: 3}
