@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b18906e24b4c404cae48b94b65c553b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6186295180126338732, guid: bc304dbf9c16e9347a57562cde89b9ef, type: 3}
+  bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
   player: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
   recharge: 120
 --- !u!114 &2129246216383394319
