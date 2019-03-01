@@ -10,7 +10,6 @@ public class HatcherMovement : MonoBehaviour {
 
     private bool jump = false;
     private int timer = 100;
-    private Vector2 direction;
     
     // Start is called before the first frame update
     void Start() {
@@ -32,7 +31,6 @@ public class HatcherMovement : MonoBehaviour {
 
                 // Stop Movement once timer ends
                 Rigidbody2D rigidBody = hatcher.GetComponent<Rigidbody2D>();
-                direction.Normalize();
                 rigidBody.velocity = new Vector2(0, 0);
             }
         
@@ -48,10 +46,8 @@ public class HatcherMovement : MonoBehaviour {
         if (collision.gameObject.tag == "Player") {
             playerHP.TakeDamage();
             jump = true;  
-            
-           
+                       
             StandardFireFunctions.FireDegreeOffsetFromPlayer(hatcher, 180);
-
 
         } 
     }
