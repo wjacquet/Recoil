@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8021212294114592736}
   - component: {fileID: 629251345301553677}
   - component: {fileID: 7644672611883307409}
-  - component: {fileID: 3271165901747956181}
+  - component: {fileID: 8958062307910010627}
   m_Layer: 11
   m_Name: obj_hatcher
   m_TagString: Enemy
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hatcher: {fileID: 6821459327224281505}
---- !u!50 &3271165901747956181
+--- !u!50 &8958062307910010627
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6821459327224281505}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -135,14 +135,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6821459327224281506}
     m_Modifications:
-    - target: {fileID: 100000, guid: 6f7784dfd70194fe181d068356a0050c, type: 3}
-      propertyPath: m_Name
-      value: Hatcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 6f7784dfd70194fe181d068356a0050c, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6f7784dfd70194fe181d068356a0050c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -186,6 +178,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 6f7784dfd70194fe181d068356a0050c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6f7784dfd70194fe181d068356a0050c, type: 3}
+      propertyPath: m_Name
+      value: Hatcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6f7784dfd70194fe181d068356a0050c, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7784dfd70194fe181d068356a0050c, type: 3}

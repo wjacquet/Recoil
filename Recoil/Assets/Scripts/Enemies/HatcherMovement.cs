@@ -10,6 +10,7 @@ public class HatcherMovement : MonoBehaviour {
 
     private bool jump = false;
     private int timer = 100;
+    private Vector2 direction;
     
     // Start is called before the first frame update
     void Start() {
@@ -22,12 +23,17 @@ public class HatcherMovement : MonoBehaviour {
         if (jump) {
             if (timer > 0) {
                 timer--;
-        
+
             }
 
             if (timer == 0) {
                 timer = 100;
                 jump = false;
+
+                // Stop Movement once timer ends
+                Rigidbody2D rigidBody = hatcher.GetComponent<Rigidbody2D>();
+                direction.Normalize();
+                rigidBody.velocity = new Vector2(0, 0);
             }
         
         } else {
@@ -43,16 +49,9 @@ public class HatcherMovement : MonoBehaviour {
             playerHP.TakeDamage();
             jump = true;  
             
-            Rigidbody2D rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
-            // Find the cursor and find the direction vector
-            player = GameObject.Find("obj_player");
-            Vector2 direction = player.transform.position - transform.position;
-            direction.Normalize();
-            rigidBody.velocity = direction * speed;
+           
+            StandardFireFunctions.FireDegreeOffsetFromPlayer(hatcher, 180);
 
-            // Player recoil
-            Vector2 recoil = new Vector2(-direction.x, -direction.y) * 30;
-            player.GetComponent<PlayerMovement>().Recoil(recoil);
 
         } 
     }
