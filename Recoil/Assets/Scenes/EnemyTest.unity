@@ -4770,11 +4770,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2047555795353223369, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: coinText
-      value: 
-      objectReference: {fileID: 6287366575188219685}
     - target: {fileID: 1162628935, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
       propertyPath: healthText
       value: 
@@ -4783,6 +4778,11 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1271688258}
+    - target: {fileID: 2047555795353223369, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 6287366575188219685}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
 --- !u!1 &1162628929 stripped
@@ -5218,11 +5218,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4237449859877511757, guid: 72c2248fce9fc114aa18402cb283eaa4,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1162628929}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72c2248fce9fc114aa18402cb283eaa4, type: 3}
 --- !u!1001 &4884943040333455937
@@ -5387,6 +5382,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 947805220776385026, guid: a767859450106194097377cd6d504200,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5511,16 +5516,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2306162872196700093, guid: a767859450106194097377cd6d504200,
         type: 3}

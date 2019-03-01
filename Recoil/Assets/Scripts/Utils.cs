@@ -4,18 +4,5 @@ using UnityEngine;
 
 public class Utils : MonoBehaviour
 {
-    public void GenericFireAtPlayer() 
-    {
 
-    }
-
-    public void FireHorizontally() 
-    {
-
-    }
-
-    public void FireAngle() 
-    {
-
-    }
 }
