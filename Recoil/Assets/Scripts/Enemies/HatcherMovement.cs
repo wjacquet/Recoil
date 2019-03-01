@@ -10,11 +10,15 @@ public class HatcherMovement : MonoBehaviour {
 
     private bool jump = false;
     private int timer = 100;
+    Rigidbody2D rigidBody;
     
     // Start is called before the first frame update
     void Start() {
         GameObject player = GameObject.Find("obj_player");
-        playerHP = player.GetComponent<PlayerHealth>();   
+        playerHP = player.GetComponent<PlayerHealth>();
+
+        rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+        rigidBody.freezeRotation = true;   
     }
 
     // Update is called once per frame
@@ -38,9 +42,8 @@ public class HatcherMovement : MonoBehaviour {
             }
         
         } else {
-            // player = GameObject.Find("obj_player");
-            Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
-            transform.position = Vector2.MoveTowards(transform.position, playerPos, 75 * Time.deltaTime);
+          
+            StandardFireFunctions.FireAtPlayer(hatcher);
 
         }    
     }
@@ -57,7 +60,6 @@ public class HatcherMovement : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Player") {
-            print("test");
             playerHP.TakeDamage();
             jump = true;  
                        
