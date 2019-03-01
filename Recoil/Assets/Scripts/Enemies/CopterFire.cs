@@ -25,7 +25,6 @@ public class CopterFire : MonoBehaviour
 
     void Shoot()
     {
-        GameObject proj = Instantiate(bullet, transform.position, transform.rotation);
-        StandardFireFunctions.FireAtPlayer(proj);
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("FireSpreadShot", 360);
     }
 }

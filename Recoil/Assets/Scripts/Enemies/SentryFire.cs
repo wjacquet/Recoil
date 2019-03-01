@@ -25,8 +25,8 @@ public class SentryFire : MonoBehaviour
 
     void Shoot()
     {
-        StandardFireFunctions.FireAtPlayer(Instantiate(bullet, transform.position, transform.rotation));
-        StandardFireFunctions.FireDegreeOffsetFromPlayer(Instantiate(bullet, transform.position, transform.rotation), 20);
-        StandardFireFunctions.FireDegreeOffsetFromPlayer(Instantiate(bullet, transform.position, transform.rotation), -20);
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("FireSpreadShot", 360);
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("FireSpreadShot", 20);
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("FireSpreadShot", -20);
     }
 }

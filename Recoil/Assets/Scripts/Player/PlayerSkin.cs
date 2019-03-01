@@ -11,12 +11,10 @@ public class PlayerSkin : MonoBehaviour
         GameObject player = GameObject.Find("player");
         SpriteRenderer rend = player.GetComponent<SpriteRenderer>();
         
-        if (CharacterSelect.selectedSkin != null) {
-            Sprite theSkin = CharacterSelect.selectedSkin;
-            rend.sprite = theSkin;
-            player.transform.localScale = new Vector3(100, 100, 1);
-            Debug.Log("vectored up " + theSkin);
-        }
+        Sprite theSkin = CharacterSelect.selectedSkin;
+        rend.sprite = theSkin;
+        player.transform.localScale = new Vector3(100, 100, 1);
+        Debug.Log("vectored up " + theSkin);
     }
 
     void Update()

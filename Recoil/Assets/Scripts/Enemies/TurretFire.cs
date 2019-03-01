@@ -52,7 +52,6 @@ public class TurretFire : MonoBehaviour
 
     void Shoot() 
     {
-        GameObject proj = Instantiate(projectile, transform.position, transform.rotation);
-        StandardFireFunctions.FireHorizontallyAtPlayer(proj);
+        Instantiate(projectile, transform.position, transform.rotation);
     }
 }
