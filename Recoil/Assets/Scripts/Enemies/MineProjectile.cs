@@ -32,7 +32,7 @@ public class MineProjectile : MonoBehaviour
     }
 
     // If the mine comes into contact with anything else
-    void OnCollisionEnter2D(Collision2D collision) 
+    void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player") {
             print("Kaboom !!!");
