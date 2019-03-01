@@ -7,16 +7,14 @@ public class HatcherMovement : MonoBehaviour {
     public GameObject hatcher;
     GameObject player;
     PlayerHealth playerHP;
+    Rigidbody2D rigidBody;
 
     private bool jump = false;
-    private int timer = 100;
-    Rigidbody2D rigidBody;
     
     // Start is called before the first frame update
     void Start() {
         GameObject player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
-
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         rigidBody.freezeRotation = true;   
     }
@@ -24,29 +22,19 @@ public class HatcherMovement : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        // Make spider face player at all times
         facePlayer();
-       
-        if (jump) {
-            if (timer > 0) {
-                timer--;
-
-            }
-
-            if (timer == 0) {
-                timer = 100;
-                jump = false;
-
-                // Stop Movement once timer ends
-                Rigidbody2D rigidBody = hatcher.GetComponent<Rigidbody2D>();
-                rigidBody.velocity = new Vector2(0, 0);
-            }
-        
-        } else {
-          
+  
+        // Move towards player
+        if (!jump)  
             StandardFireFunctions.FireAtPlayer(hatcher);
-
-        }    
     }
+
+    IEnumerator Timer() {
+        yield return new WaitForSeconds(1.2f);
+        jump = false;
+    }
+
 
     void facePlayer() {
         player = GameObject.Find("obj_player");
@@ -62,9 +50,8 @@ public class HatcherMovement : MonoBehaviour {
         if (collision.gameObject.tag == "Player") {
             playerHP.TakeDamage();
             jump = true;  
-                       
             StandardFireFunctions.FireDegreeOffsetFromPlayer(hatcher, 180);
-
+            StartCoroutine(Timer());
         } 
     }
 
