@@ -14,7 +14,6 @@ public class CocoonExplosion : MonoBehaviour {
 
     // If the pod comes into contact with anything else
     void OnTriggerEnter2D(Collider2D collision) {
-        print("oof");
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player") {
             // print("Kaboom !!!");
             Destroy(gameObject);

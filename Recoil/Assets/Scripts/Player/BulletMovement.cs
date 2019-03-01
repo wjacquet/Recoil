@@ -33,12 +33,12 @@ public class BulletMovement : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // void OnTriggerEnter2D(Collider2D collision) 
-    // {
-    //     if (collision.gameObject.tag == "Enemy") {
-    //         collision.gameObject.GetComponent<EnemyHealth>().Damage();
-    //     }
+    void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if (collision.gameObject.tag == "Enemy") {
+            collision.gameObject.GetComponent<EnemyHealth>().Damage();
+        }
 
-    //     Destroy(gameObject);
-    // }
+        Destroy(gameObject);
+    }
 }
