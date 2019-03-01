@@ -19,6 +19,9 @@ public class HatcherMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        facePlayer();
+       
         if (jump) {
             if (timer > 0) {
                 timer--;
@@ -35,11 +38,21 @@ public class HatcherMovement : MonoBehaviour {
             }
         
         } else {
-            player = GameObject.Find("obj_player");
+            // player = GameObject.Find("obj_player");
             Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, playerPos, 75 * Time.deltaTime);
 
         }    
+    }
+
+    void facePlayer() {
+        player = GameObject.Find("obj_player");
+        Vector2 direction = new Vector2(
+            player.transform.position.x - transform.position.x,
+            player.transform.position.y - transform.position.y
+        );
+
+        transform.up = direction;
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
