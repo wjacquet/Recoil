@@ -8,8 +8,7 @@ public class EnemyHealth : MonoBehaviour
     private int currHP;
     DropCurrency dropCurr;
     
-    void Start() 
-    {
+    void Start() {
         dropCurr = gameObject.GetComponent<DropCurrency>();
         currHP = initialHP;
     }
@@ -20,8 +19,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void Death() 
-    {
+    void Death() {
         Destroy(gameObject);
         dropCurr.DropCoins();
     }
