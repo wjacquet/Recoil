@@ -6,11 +6,10 @@ public class CocoonExplosion : MonoBehaviour {
 
     public GameObject hatcher;
 
-
-    void Explode() {
-
-        StandardFireFunctions.FireAtPlayer(Instantiate(hatcher, transform.position, transform.rotation));
-
+    // Hatch the spider, movement of spider is in HatcherMovement
+    void Hatch() {
+        Rigidbody2D rigidBody;
+        rigidBody = Instantiate(hatcher, transform.position, transform.rotation).GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
     }
 
     // If the pod comes into contact with anything else
@@ -18,7 +17,7 @@ public class CocoonExplosion : MonoBehaviour {
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player") {
             // print("Kaboom !!!");
             Destroy(gameObject);
-            Explode();
+            Hatch();
         }
     }
 

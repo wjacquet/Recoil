@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1347272424459085076}
   - component: {fileID: 1347272424459085077}
   - component: {fileID: 1347272424459085082}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: obj_cocoon
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c116954c1395438680bf3ff42f1121f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hatcher: {fileID: 0}
+  hatcher: {fileID: 6821459327224281505, guid: 8f5f1abe8ea0c49f7a0bdcaf05d0fb06, type: 3}
 --- !u!1001 &1347272425134295107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,6 +87,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d90ef3bb4e0ef441fa4f5cf417629486, type: 3}
       propertyPath: m_Name
       value: Cocoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d90ef3bb4e0ef441fa4f5cf417629486, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d90ef3bb4e0ef441fa4f5cf417629486, type: 3}
       propertyPath: m_LocalPosition.x

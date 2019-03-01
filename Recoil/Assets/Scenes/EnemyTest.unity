@@ -5032,6 +5032,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: obj_cocoon
       objectReference: {fileID: 0}
+    - target: {fileID: 1347272424459085079, guid: 388a82d71a7da4c75968150d9b476ac2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347272424459085079, guid: 388a82d71a7da4c75968150d9b476ac2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 1347272424459085076, guid: 388a82d71a7da4c75968150d9b476ac2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5093,6 +5103,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6821459327224281505, guid: 8f5f1abe8ea0c49f7a0bdcaf05d0fb06,
         type: 3}
+    - target: {fileID: 1347272425134264035, guid: 388a82d71a7da4c75968150d9b476ac2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 388a82d71a7da4c75968150d9b476ac2, type: 3}
 --- !u!1001 &2589368596627730908
