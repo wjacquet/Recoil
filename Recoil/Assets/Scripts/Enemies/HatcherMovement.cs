@@ -21,7 +21,7 @@ public class HatcherMovement : MonoBehaviour {
         transform.position = Vector2.MoveTowards(transform.position, playerPos, 75 * Time.deltaTime);    
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
+    void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             playerHP.TakeDamage();
         } 
