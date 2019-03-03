@@ -12,9 +12,9 @@ public class BeeMovement : MonoBehaviour {
     
     // True = Clockwise
     // False = CounterClockwise
-    private bool rotateClockwiseBool = true;
-    private float rotateSpeed = 3f;
-    private float radius = 40f;
+    public bool rotateClockwiseBool = true;
+    public float rotateSpeed = 3f;
+    public float radius = 40f;
  
     private Vector2 center;
     private float angle;
