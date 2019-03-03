@@ -130,6 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpriteRenderer: {fileID: 5600372058634941745}
+  rotateClockwiseBool: 1
+  rotateSpeed: 3
+  radius: 40
 --- !u!50 &3169380139407911890
 Rigidbody2D:
   serializedVersion: 4

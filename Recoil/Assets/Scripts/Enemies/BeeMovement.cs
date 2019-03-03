@@ -12,7 +12,7 @@ public class BeeMovement : MonoBehaviour {
     
     // True = Clockwise
     // False = CounterClockwise
-    public bool rotateClockwiseBool = true;
+    public bool clockwise = true;
     public float rotateSpeed = 3f;
     public float radius = 40f;
  
@@ -29,7 +29,7 @@ public class BeeMovement : MonoBehaviour {
     }
 
     void Update() {
-        if(rotateClockwiseBool)
+        if(clockwise)
             rotateClockwise();
         else    
             rotateCounterClockwise();
