@@ -131,8 +131,8 @@ MonoBehaviour:
   rigidBody: {fileID: 8771553185151290047}
   firstSpreadDegree: 25
   secondSpreadDegree: 15
-  hoverDistance: 70
-  distanceFromCenter: 20
+  hoverDistance: 20
+  distanceFromCenter: 30
 --- !u!50 &8771553185151290047
 Rigidbody2D:
   serializedVersion: 4
