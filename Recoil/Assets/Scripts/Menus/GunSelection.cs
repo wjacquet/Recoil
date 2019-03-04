@@ -7,7 +7,7 @@ public class GunSelection : MonoBehaviour {
 
     public static bool gameIsPaused = false;
     public GameObject gunSelectionUI;
-    public GameObject gun;
+    private GameObject gun;
     GameObject player;
 
     private int[] selectedGuns = new int[] {0, 0};
@@ -15,6 +15,7 @@ public class GunSelection : MonoBehaviour {
 
     void Start() {
         player = GameObject.Find("obj_player");
+        gun = GameObject.Find("obj_gun");
     }
 
     void Update() {
@@ -46,9 +47,11 @@ public class GunSelection : MonoBehaviour {
 
         PlayerInit.selectedGuns[selection] = index;
         // selectedGuns[selection] = index;
+        
         RemoveGuns();
         
-        gun = player.transform.GetChild(PlayerInit.selectedGuns[selection]).gameObject;
+        Debug.Log(selection);
+        gun = player.transform.GetChild(PlayerInit.selectedGuns[0]).gameObject;
         gun.SetActive(true);    
 
         SwitchIndex();
@@ -67,10 +70,22 @@ public class GunSelection : MonoBehaviour {
     }
 
     void RemoveGuns() {
-        gun = player.transform.GetChild(PlayerInit.selectedGuns[0]).gameObject;
+        gun = player.transform.GetChild(0).gameObject;
         gun.SetActive(false);
 
-        gun = player.transform.GetChild(PlayerInit.selectedGuns[1]).gameObject;
+        gun = player.transform.GetChild(1).gameObject;
+        gun.SetActive(false);
+
+        gun = player.transform.GetChild(2).gameObject;
+        gun.SetActive(false);
+
+        gun = player.transform.GetChild(3).gameObject;
+        gun.SetActive(false);
+
+        gun = player.transform.GetChild(4).gameObject;
+        gun.SetActive(false);
+
+        gun = player.transform.GetChild(5).gameObject;
         gun.SetActive(false);
     }
 
