@@ -14,10 +14,11 @@ public class BugGunner : MonoBehaviour {
     public int firstSpreadDegree = 25;
     public int secondSpreadDegree = 15;
     public float hoverDistance = 50;
+    public float distanceFromCenter = 30;
 
     void Start() {
         StartCoroutine(BugGunnerPattern());
-        // StartCoroutine(HoverPattern());
+        StartCoroutine(HoverPattern());
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         center = transform.position;
     }
@@ -29,20 +30,25 @@ public class BugGunner : MonoBehaviour {
         else
             mySpriteRenderer.flipX = false;
 
-        Vector2 movement = new Vector2(Random.Range(-hoverDistance, hoverDistance), Random.Range(-hoverDistance, hoverDistance));
-        transform.Translate(movement * Time.deltaTime);
     }
 
     IEnumerator Hover() {
-        Vector2 movement = new Vector2(Random.Range(-50f, 50f), Random.Range(-50f, 50f));
-        transform.Translate(movement * Time.deltaTime);
-        yield return new WaitForSeconds(0.1f);
+        Debug.Log(Vector2.Distance(transform.position, center));
+        Vector2 movement = new Vector2(Random.Range(-hoverDistance, hoverDistance), Random.Range(-hoverDistance, hoverDistance));
+        rigidBody.velocity = movement * 1/5;
+        if (Vector2.Distance(transform.position, center) > distanceFromCenter) {
+            rigidBody.velocity = new Vector2(0, 0);
+            transform.position = center;
+        }
+        yield return null;
+        
     }
 
     IEnumerator HoverPattern() {
         while (true) {
             yield return Hover();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
+            
         }
     }
 
