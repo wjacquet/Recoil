@@ -40,6 +40,12 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     } 
 
+    public static void StopFire(GameObject projectile) 
+    {
+        Vector2 direction = new Vector2(0, 0);
+        direction.x = 0;
+        SetVelocity(direction, projectile);
+    }    
 
     public static void FireVeticallyDegreeOffset(GameObject projectile, int angleOffset) 
     {

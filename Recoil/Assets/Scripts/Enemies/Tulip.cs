@@ -10,6 +10,7 @@ public class Tulip : MonoBehaviour {
     public int FirstDegreeOffset = 20;
     public int SecondDegreeOffset = 40; 
     public float timeBetweenShoots = 1.0f;
+    public float floatTime = 0.5f;
 
     private GameObject bullet1;
     private GameObject bullet2;
@@ -25,6 +26,8 @@ public class Tulip : MonoBehaviour {
         while (true) {
             yield return Shoot();
             yield return new WaitForSeconds(timeBetweenShoots);
+            yield return StopFire();
+            yield return new WaitForSeconds(floatTime);
             yield return Drop();
             yield return new WaitForSeconds(timeBetweenShoots);
         }
@@ -42,6 +45,16 @@ public class Tulip : MonoBehaviour {
         StandardFireFunctions.FireVeticallyDegreeOffset(bullet3, -FirstDegreeOffset);
         StandardFireFunctions.FireVeticallyDegreeOffset(bullet4, SecondDegreeOffset);
         StandardFireFunctions.FireVeticallyDegreeOffset(bullet5, -SecondDegreeOffset);
+
+        yield return null;
+    }
+
+    IEnumerator StopFire() {
+        StandardFireFunctions.StopFire(bullet1);
+        StandardFireFunctions.StopFire(bullet2);
+        StandardFireFunctions.StopFire(bullet3);
+        StandardFireFunctions.StopFire(bullet4);
+        StandardFireFunctions.StopFire(bullet5);
 
         yield return null;
     }
