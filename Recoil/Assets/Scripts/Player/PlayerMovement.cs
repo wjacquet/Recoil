@@ -9,7 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer mySpriteRenderer;
     public GameObject gun;
 
+    // Indexs of which guns they have selected
+    // Will load this from save file
     int[] selectedGuns = new int[] {4, 5};
+    // Index of current gun holding from array above
+    // Will load this from save file
     int currentGunIndex = 0;
 
     void Start() {
@@ -17,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         rigidBody.freezeRotation = true;
     }
     
+    // Switch between 0 and 1
     void SwitchIndex() {
         if (currentGunIndex == 0)
             currentGunIndex = 1;
@@ -27,16 +32,9 @@ public class PlayerMovement : MonoBehaviour
     void Update() {
         GameObject cursor = GameObject.Find("obj_cursor");
 
+        // If user pushes S
         if (Input.GetKeyDown(KeyCode.S)) {
-
-            // gun = GameObject.Find("obj_bolt_gun");
-            gun = this.gameObject.transform.GetChild(selectedGuns[currentGunIndex]).gameObject;
-            gun.SetActive(false);
-            SwitchIndex();
-            gun = this.gameObject.transform.GetChild(selectedGuns[currentGunIndex]).gameObject;
-            gun.SetActive(true);
-
-            
+            SwitchGuns();
         }
 
         // Check which direction to face sprite
@@ -47,6 +45,21 @@ public class PlayerMovement : MonoBehaviour
         
         // Make gun direction match player direction
         gun.GetComponent<FireWeapon>().FlipGun(mySpriteRenderer.flipX);
+    }
+
+    void SwitchGuns() {
+        // gun = GameObject.Find("obj_bolt_gun");
+            
+        // Hide Current Gun 
+        gun = this.gameObject.transform.GetChild(selectedGuns[currentGunIndex]).gameObject;
+        gun.SetActive(false);
+
+        // Switch to new index
+        SwitchIndex();
+        
+        // Show new gun
+        gun = this.gameObject.transform.GetChild(selectedGuns[currentGunIndex]).gameObject;
+        gun.SetActive(true);
     }
 
     public void Recoil(Vector2 knockback) {
