@@ -9,24 +9,34 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer mySpriteRenderer;
     public GameObject gun;
 
-    
+    int[] selectedGuns = new int[] {4, 5};
+    int currentGunIndex = 0;
 
     void Start() {
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         rigidBody.freezeRotation = true;
+    }
+    
+    void SwitchIndex() {
+        if (currentGunIndex == 0)
+            currentGunIndex = 1;
+        else 
+            currentGunIndex = 0;
     }
 
     void Update() {
         GameObject cursor = GameObject.Find("obj_cursor");
 
         if (Input.GetKeyDown(KeyCode.S)) {
-            Debug.Log("switch!");
+
             // gun = GameObject.Find("obj_bolt_gun");
-            gun = this.gameObject.transform.GetChild(4).gameObject;
+            gun = this.gameObject.transform.GetChild(selectedGuns[currentGunIndex]).gameObject;
             gun.SetActive(false);
-            gun = this.gameObject.transform.GetChild(5).gameObject;
+            SwitchIndex();
+            gun = this.gameObject.transform.GetChild(selectedGuns[currentGunIndex]).gameObject;
             gun.SetActive(true);
-            // gun = GameObject.Find();
+
+            
         }
 
         // Check which direction to face sprite
