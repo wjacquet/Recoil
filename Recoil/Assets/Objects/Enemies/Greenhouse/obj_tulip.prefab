@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3552524782729843821}
   - component: {fileID: 8477691174048722013}
   - component: {fileID: 5615149799584166645}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: obj_tulip
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52835962b9ceb8f4ca34d33df565b65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: {fileID: 0}
+  coin: {fileID: 1383589517549857606, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
   amount: 1
 --- !u!60 &5615149799584166645
 PolygonCollider2D:
@@ -124,6 +124,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 658e752652bce894baeabfebab966a43, type: 3}
       propertyPath: m_Name
       value: tulip
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 658e752652bce894baeabfebab966a43, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 658e752652bce894baeabfebab966a43, type: 3}
       propertyPath: m_LocalPosition.x
