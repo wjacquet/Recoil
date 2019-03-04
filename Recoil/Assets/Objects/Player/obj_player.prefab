@@ -73,6 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLimit: 80
+  mySpriteRenderer: {fileID: 189614202612184666}
+  gun: {fileID: 7755780319438194399}
 --- !u!61 &189614201881019740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -386,6 +388,12 @@ PrefabInstance:
       objectReference: {fileID: 189614201881019751}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3edc421dfddedec45b0aa5afeafe8580, type: 3}
+--- !u!1 &7755780319438194399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7755780319048573232, guid: 3edc421dfddedec45b0aa5afeafe8580,
+    type: 3}
+  m_PrefabInstance: {fileID: 1758423023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7755780319438194397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7755780319048573234, guid: 3edc421dfddedec45b0aa5afeafe8580,
