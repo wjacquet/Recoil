@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Indexs of which guns they have selected
     // Will load this from save file
-    int[] selectedGuns = new int[] {4, 5};
+    int[] selectedGuns = new int[] {5, 4};
     // Index of current gun holding from array above
     // Will load this from save file
     int currentGunIndex = 0;
