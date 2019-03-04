@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3552524782729843821}
   - component: {fileID: 8477691174048722013}
   - component: {fileID: 5615149799584166645}
+  - component: {fileID: 598041752457023868}
   m_Layer: 11
   m_Name: obj_tulip
   m_TagString: Enemy
@@ -114,6 +115,20 @@ PolygonCollider2D:
       - {x: 7.000189, y: 4.0391045}
       - {x: 6.0117073, y: 3.9274127}
       - {x: 6.071619, y: 5.0489964}
+--- !u!114 &598041752457023868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437196473750458077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8024610e1ef78431492834b0780b8d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
+  player: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
 --- !u!1001 &8788726247778290292
 PrefabInstance:
   m_ObjectHideFlags: 0
