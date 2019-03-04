@@ -126,7 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
   player: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
-  recharge: 120
+  mySpriteRenderer: {fileID: 2534518761790129970}
+  firstSpreadDegree: 25
+  secondSpreadDegree: 15
 --- !u!1001 &2534518761777740722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -191,6 +193,12 @@ PrefabInstance:
 --- !u!4 &2534518761777865010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4759d4272fc23e0458610d77de3a98ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 2534518761777740722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2534518761790129970 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 21200000, guid: 4759d4272fc23e0458610d77de3a98ac,
     type: 3}
   m_PrefabInstance: {fileID: 2534518761777740722}
   m_PrefabAsset: {fileID: 0}

@@ -6,12 +6,21 @@ public class BugGunner : MonoBehaviour {
 
     public GameObject bullet;
     public GameObject player;
+    public SpriteRenderer mySpriteRenderer;
  
     public int firstSpreadDegree = 25;
     public int secondSpreadDegree = 15;
 
     void Start() {
         StartCoroutine(BugGunnerPattern());
+    }
+
+    void Update() {
+        player = GameObject.Find("obj_player");
+        if (player.transform.position.x <= 0) 
+            mySpriteRenderer.flipX = true;
+        else
+            mySpriteRenderer.flipX = false;
     }
 
     IEnumerator BugGunnerPattern() {
