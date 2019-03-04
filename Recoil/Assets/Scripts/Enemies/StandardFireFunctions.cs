@@ -26,6 +26,41 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     }
 
+    public static void FireVetically(GameObject projectile) 
+    {
+        Vector2 direction = new Vector2(0, 180);
+        direction.x = 0;
+        SetVelocity(direction, projectile);
+    } 
+
+    public static void FireDown(GameObject projectile) 
+    {
+        Vector2 direction = new Vector2(0, -180);
+        direction.x = 0;
+        SetVelocity(direction, projectile);
+    } 
+
+    public static void StopFire(GameObject projectile) 
+    {
+        Vector2 direction = new Vector2(0, 0);
+        direction.x = 0;
+        SetVelocity(direction, projectile);
+    }    
+
+    public static void FireVeticallyDegreeOffset(GameObject projectile, int angleOffset) 
+    {
+        Vector2 direction = new Vector2(0, 180);
+
+        float angleToPlayer = Mathf.Atan2(direction.x, direction.y);
+        angleToPlayer = Mathf.Rad2Deg * angleToPlayer;
+        angleToPlayer += angleOffset;
+
+        direction.x = Mathf.Sin(Mathf.Deg2Rad * angleToPlayer);
+        direction.y = Mathf.Cos(Mathf.Deg2Rad * angleToPlayer);
+
+        SetVelocity(direction, projectile);
+    }
+
     public static void FireDegreeOffsetFromPlayer(GameObject projectile, int angleOffset) 
     {
         Vector2 direction = GetVectorToPlayer(projectile);
