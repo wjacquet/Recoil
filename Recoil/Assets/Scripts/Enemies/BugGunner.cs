@@ -13,6 +13,7 @@ public class BugGunner : MonoBehaviour {
  
     public int firstSpreadDegree = 25;
     public int secondSpreadDegree = 15;
+    public float hoverDistance = 50;
 
     void Start() {
         StartCoroutine(BugGunnerPattern());
@@ -28,7 +29,7 @@ public class BugGunner : MonoBehaviour {
         else
             mySpriteRenderer.flipX = false;
 
-        Vector2 movement = new Vector2(Random.Range(-50f, 50f), Random.Range(-50f, 50f));
+        Vector2 movement = new Vector2(Random.Range(-hoverDistance, hoverDistance), Random.Range(-hoverDistance, hoverDistance));
         transform.Translate(movement * Time.deltaTime);
     }
 
