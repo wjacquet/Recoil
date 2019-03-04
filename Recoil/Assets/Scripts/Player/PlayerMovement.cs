@@ -8,7 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public float speedLimit;
     public SpriteRenderer mySpriteRenderer;
     public GameObject gun;
+
     
+
     void Start() {
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         rigidBody.freezeRotation = true;
@@ -16,6 +18,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update() {
         GameObject cursor = GameObject.Find("obj_cursor");
+
+        if (Input.GetKeyDown(KeyCode.S)) {
+            Debug.Log("switch!");
+            // gun = GameObject.Find("obj_bolt_gun");
+            gun = this.gameObject.transform.GetChild(4).gameObject;
+            gun.SetActive(false);
+            gun = this.gameObject.transform.GetChild(5).gameObject;
+            gun.SetActive(true);
+            // gun = GameObject.Find();
+        }
 
         // Check which direction to face sprite
         if (cursor.transform.position.x <= transform.position.x) 
