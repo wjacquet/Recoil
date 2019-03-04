@@ -12,11 +12,17 @@ public class PlayerInit : MonoBehaviour
     public static Vector3 playerPos;
     public static bool[] loadedUpgradesFound = new bool[SceneManager.sceneCountInBuildSettings];
     public static bool[] scenesVisited = new bool[SceneManager.sceneCountInBuildSettings];
+    public static bool[] gunsFound = new bool[5];
+    public static int[] selectedGuns = new int[2];
+    public static int currentGunIndex = 0;
     public static void SetPlayer(PlayerMetaData data) 
     {
         SceneManager.LoadScene(data.scene);
         loadedUpgradesFound = data.upgradesFound;
         scenesVisited = data.scenesVisited;
+        gunsFound = data.gunsFound;
+        selectedGuns = data.selectedGuns;
+        currentGunIndex = data.currentGunIndex;
         playerPos = new Vector3(data.position[0], data.position[1], data.position[2]);
         SceneManager.sceneLoaded += OnSceneLoaded;
         PlayerHealth.maxHP = data.maxHP;

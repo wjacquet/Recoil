@@ -11,10 +11,10 @@ public class PlayerMovement : MonoBehaviour
 
     // Indexs of which guns they have selected
     // Will load this from save file
-    int[] selectedGuns = new int[] {5, 4};
+    // int[] selectedGuns = new int[] {0, 1};
     // Index of current gun holding from array above
     // Will load this from save file
-    int currentGunIndex = 0;
+    // int currentGunIndex = 0;
 
     void Start() {
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
@@ -23,10 +23,10 @@ public class PlayerMovement : MonoBehaviour
     
     // Switch between 0 and 1
     void SwitchIndex() {
-        if (currentGunIndex == 0)
-            currentGunIndex = 1;
+        if (PlayerInit.currentGunIndex == 0)
+            PlayerInit.currentGunIndex = 1;
         else 
-            currentGunIndex = 0;
+            PlayerInit.currentGunIndex = 0;
     }
 
     void Update() {
@@ -51,14 +51,14 @@ public class PlayerMovement : MonoBehaviour
         // gun = GameObject.Find("obj_bolt_gun");
             
         // Hide Current Gun 
-        gun = this.gameObject.transform.GetChild(selectedGuns[currentGunIndex]).gameObject;
+        gun = this.gameObject.transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).gameObject;
         gun.SetActive(false);
 
         // Switch to new index
         SwitchIndex();
         
         // Show new gun
-        gun = this.gameObject.transform.GetChild(selectedGuns[currentGunIndex]).gameObject;
+        gun = this.gameObject.transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).gameObject;
         gun.SetActive(true);
     }
 
