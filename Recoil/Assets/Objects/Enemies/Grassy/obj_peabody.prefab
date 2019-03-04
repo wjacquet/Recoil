@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3265583544179868643}
   - component: {fileID: 5228088446492811302}
   - component: {fileID: 5166786703079972132}
+  - component: {fileID: 7114660231757696073}
   m_Layer: 11
   m_Name: obj_peabody
   m_TagString: Enemy
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHP: 0
+  initialHP: 2
 --- !u!114 &5228088446492811302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,8 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52835962b9ceb8f4ca34d33df565b65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: {fileID: 0}
-  amount: 0
+  coin: {fileID: 1383589517549857606, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
+  amount: 1
 --- !u!60 &5166786703079972132
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -122,6 +123,20 @@ PolygonCollider2D:
       - {x: 2.0406513, y: 4.9920926}
       - {x: 2.9734492, y: 4.9890537}
       - {x: 2.9736156, y: 5.994046}
+--- !u!114 &7114660231757696073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4603197936711447959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b28eb1965c05459eb9c7f6eb5b21e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
+  player: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
 --- !u!1001 &4165763665064056750
 PrefabInstance:
   m_ObjectHideFlags: 0

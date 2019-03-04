@@ -13,14 +13,14 @@ public class BugGunner : MonoBehaviour {
  
     public int firstSpreadDegree = 25;
     public int secondSpreadDegree = 15;
-    public float hoverDistance = 50;
+    public float hoverDistance = 5;
     public float distanceFromCenter = 30;
 
     void Start() {
+        center = transform.position;
         StartCoroutine(BugGunnerPattern());
         StartCoroutine(HoverPattern());
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
-        center = transform.position;
     }
 
     void Update() {
@@ -34,7 +34,9 @@ public class BugGunner : MonoBehaviour {
     }
 
     IEnumerator Hover() {
-        Vector2 movement = new Vector2(Random.Range(-hoverDistance, hoverDistance), Random.Range(-hoverDistance, hoverDistance));
+        // Debug.Log(Vector2.Distance(transform.position, center));
+        Debug.Log(Random.Range(-hoverDistance, hoverDistance));
+        Vector2 movement = new Vector2(Random.Range(-hoverDistance, hoverDistance),Random.Range(-hoverDistance, hoverDistance));
         rigidBody.velocity = movement * 1/5;
         // Reset Back to center if he flaots too far (public distanceFromCenter)
         if (Vector2.Distance(transform.position, center) > distanceFromCenter) {
