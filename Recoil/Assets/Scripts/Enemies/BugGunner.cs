@@ -25,17 +25,18 @@ public class BugGunner : MonoBehaviour {
 
     void Update() {
         player = GameObject.Find("obj_player");
+
+        // Check which direction to face sprite
         if (player.transform.position.x <= 0) 
             mySpriteRenderer.flipX = true;
         else
             mySpriteRenderer.flipX = false;
-
     }
 
     IEnumerator Hover() {
-        Debug.Log(Vector2.Distance(transform.position, center));
         Vector2 movement = new Vector2(Random.Range(-hoverDistance, hoverDistance), Random.Range(-hoverDistance, hoverDistance));
         rigidBody.velocity = movement * 1/5;
+        // Reset Back to center if he flaots too far (public distanceFromCenter)
         if (Vector2.Distance(transform.position, center) > distanceFromCenter) {
             rigidBody.velocity = new Vector2(0, 0);
             transform.position = center;
@@ -47,8 +48,7 @@ public class BugGunner : MonoBehaviour {
     IEnumerator HoverPattern() {
         while (true) {
             yield return Hover();
-            yield return new WaitForSeconds(0.1f);
-            
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
