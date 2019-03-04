@@ -187,9 +187,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 20200751}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &178423991 stripped
+--- !u!1 &63484219 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6963326934501887760, guid: 4f770c16140c66a4d919231ee1123759,
+  m_CorrespondingSourceObject: {fileID: 3732477594172421649, guid: 4f770c16140c66a4d919231ee1123759,
     type: 3}
   m_PrefabInstance: {fileID: 692511475}
   m_PrefabAsset: {fileID: 0}
@@ -507,7 +507,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gun
       value: 
-      objectReference: {fileID: 178423991}
+      objectReference: {fileID: 63484219}
     - target: {fileID: 1162628935, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
       propertyPath: healthText
       value: 
@@ -527,6 +527,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 686103009707292071, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 207705381}
+    - target: {fileID: 2468789691925367887, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: player
       value: 
