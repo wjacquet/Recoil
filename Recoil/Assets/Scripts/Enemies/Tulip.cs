@@ -10,7 +10,7 @@ public class Tulip : MonoBehaviour {
     public int FirstDegreeOffset = 20;
     public int SecondDegreeOffset = 40; 
     public float timeBetweenShoots = 1.0f;
-    public float floatTime = 0.5f;
+    public float floatTime = 0.08f;
 
     private GameObject bullet1;
     private GameObject bullet2;
