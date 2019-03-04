@@ -501,7 +501,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gun
       value: 
-      objectReference: {fileID: 739966039}
+      objectReference: {fileID: 785346403}
     - target: {fileID: 1162628935, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
       propertyPath: healthText
       value: 
@@ -520,11 +520,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7625055031995366421, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963326934501887760, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 686103009707292071, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 207705381}
+    - target: {fileID: 3732477594172421649, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2468789691925367887, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: player
@@ -535,6 +550,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 207705381}
+    - target: {fileID: 9041608469132298551, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6802277960099396332, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: player
@@ -616,12 +636,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5311291867723542539, guid: a12cae74a461a3441b0aae6db7ab4e4e,
     type: 3}
   m_PrefabInstance: {fileID: 730391020}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &739966039 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9041608469132298551, guid: 4f770c16140c66a4d919231ee1123759,
-    type: 3}
-  m_PrefabInstance: {fileID: 692511475}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &760455229
 PrefabInstance:
@@ -19591,6 +19605,12 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!1 &785346403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7625055031995366421, guid: 4f770c16140c66a4d919231ee1123759,
+    type: 3}
+  m_PrefabInstance: {fileID: 692511475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &785758316
 PrefabInstance:
   m_ObjectHideFlags: 0

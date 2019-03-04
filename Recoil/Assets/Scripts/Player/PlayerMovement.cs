@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speedLimit;
     public SpriteRenderer mySpriteRenderer;
     public GameObject gun;
+    
     void Start() {
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         rigidBody.freezeRotation = true;
