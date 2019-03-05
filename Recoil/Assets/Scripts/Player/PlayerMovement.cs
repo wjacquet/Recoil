@@ -8,13 +8,15 @@ public class PlayerMovement : MonoBehaviour
     public float speedLimit;
     public SpriteRenderer mySpriteRenderer;
     public GameObject gun;
+
     void Start() {
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         rigidBody.freezeRotation = true;
     }
-
+    
     void Update() {
         GameObject cursor = GameObject.Find("obj_cursor");
+
 
         // Check which direction to face sprite
         if (cursor.transform.position.x <= transform.position.x) 
