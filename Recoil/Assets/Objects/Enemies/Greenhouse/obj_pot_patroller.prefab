@@ -163,6 +163,10 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 1024
+  floor: 1
+  cieling: 0
+  right: 0
+  left: 0
 --- !u!1001 &7940482208533180729
 PrefabInstance:
   m_ObjectHideFlags: 0
