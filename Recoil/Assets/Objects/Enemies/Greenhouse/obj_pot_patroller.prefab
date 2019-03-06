@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
-  timeBetweenShoots: 0.2
+  timeBetweenShoots: 0.15
   timeBetweenBurst: 2
 --- !u!50 &2137401788101404296
 Rigidbody2D:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfad405183818741bf9884e700a0b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 4
   enemyMask:
     serializedVersion: 2
     m_Bits: 1024

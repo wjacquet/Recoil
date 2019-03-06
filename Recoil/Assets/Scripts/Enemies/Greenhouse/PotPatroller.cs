@@ -6,7 +6,7 @@ public class PotPatroller : MonoBehaviour {
 
     public GameObject bullet;
 
-    public float timeBetweenShoots = 0.2f;
+    public float timeBetweenShoots = 0.05f;
     public float timeBetweenBurst = 2.0f;
     
     void Start() {
