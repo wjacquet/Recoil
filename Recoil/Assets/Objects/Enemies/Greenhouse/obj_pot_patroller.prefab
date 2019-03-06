@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4439420209426612383}
   - component: {fileID: 6021716335095902448}
   - component: {fileID: 2312457622125955960}
+  - component: {fileID: 2137401788101404296}
+  - component: {fileID: 547363980337031008}
   m_Layer: 11
   m_Name: obj_pot_patroller
   m_TagString: Enemy
@@ -124,6 +126,43 @@ MonoBehaviour:
   bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
   timeBetweenShoots: 0.2
   timeBetweenBurst: 2
+--- !u!50 &2137401788101404296
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135088219689941444}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &547363980337031008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135088219689941444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfad405183818741bf9884e700a0b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1001 &7940482208533180729
 PrefabInstance:
   m_ObjectHideFlags: 0
