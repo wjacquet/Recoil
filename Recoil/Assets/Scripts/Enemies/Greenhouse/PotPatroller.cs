@@ -6,7 +6,8 @@ public class PotPatroller : MonoBehaviour {
 
     public GameObject bullet;
 
-    public float timeBetweenShoots = 2.0f;
+    public float timeBetweenShoots = 0.2f;
+    public float timeBetweenBurst = 2.0f;
     
     void Start() {
         StartCoroutine(PotFirePattern());
@@ -16,6 +17,11 @@ public class PotPatroller : MonoBehaviour {
         while (true) {
             yield return Shoot();
             yield return new WaitForSeconds(timeBetweenShoots);
+            yield return Shoot();
+            yield return new WaitForSeconds(timeBetweenShoots);
+            yield return Shoot();
+            yield return new WaitForSeconds(timeBetweenBurst);
+
         }
     }
     
