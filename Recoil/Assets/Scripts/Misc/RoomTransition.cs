@@ -27,7 +27,10 @@ public class RoomTransition : MonoBehaviour
                 warpScene,
                 new[] {warpPosition.x, warpPosition.y, warpPosition.z},
                 newUpgradeIndexes,
-                PlayerInit.scenesVisited
+                PlayerInit.scenesVisited,
+                PlayerInit.gunsFound,
+                PlayerInit.selectedGuns,
+                PlayerInit.currentGunIndex
             );
 
             // Warp player to next scene

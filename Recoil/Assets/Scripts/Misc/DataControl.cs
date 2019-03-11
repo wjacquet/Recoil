@@ -30,7 +30,10 @@ public class DataControl : MonoBehaviour
                         SceneManager.GetActiveScene().name,
                         FindCheckpointPos(),
                         newUpgradeIndexes,
-                        PlayerInit.scenesVisited
+                        PlayerInit.scenesVisited,
+                        PlayerInit.gunsFound,
+                        PlayerInit.selectedGuns,
+                        PlayerInit.currentGunIndex
         );
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -76,7 +79,10 @@ public class DataControl : MonoBehaviour
                                     "Scenes/StartingArea",
                                     new[] { 9.6f, -4.1f, 0f },
                                     new bool[SceneManager.sceneCountInBuildSettings],
-                                    new bool[SceneManager.sceneCountInBuildSettings]);
+                                    new bool[SceneManager.sceneCountInBuildSettings],
+                                    new bool[5] {true, true, true, true, true},
+                                    new int[2] {0, 0},
+                                    0);
 
         
         BinaryFormatter binaryFormatter = new BinaryFormatter();
