@@ -23,7 +23,7 @@ public class StandardFireFunctions : MonoBehaviour
     public static void FireHorizontallyAtPlayer(GameObject projectile) 
     {
         Vector2 direction = GetVectorToPlayer(projectile);
-        direction.x = 0;
+        direction.y = 0;
         SetVelocity(direction, projectile);
     }
 
