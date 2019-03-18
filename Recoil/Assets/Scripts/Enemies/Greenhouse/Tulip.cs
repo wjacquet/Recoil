@@ -50,21 +50,25 @@ public class Tulip : MonoBehaviour {
     }
 
     IEnumerator StopFire() {
-        StandardFireFunctions.StopFire(bullet1);
-        StandardFireFunctions.StopFire(bullet2);
-        StandardFireFunctions.StopFire(bullet3);
-        StandardFireFunctions.StopFire(bullet4);
-        StandardFireFunctions.StopFire(bullet5);
+        if (bullet1 != null && bullet2 != null && bullet3 != null && bullet4 != null && bullet5 != null) {
+            StandardFireFunctions.StopFire(bullet1);
+            StandardFireFunctions.StopFire(bullet2);
+            StandardFireFunctions.StopFire(bullet3);
+            StandardFireFunctions.StopFire(bullet4);
+            StandardFireFunctions.StopFire(bullet5);
+        }
 
         yield return null;
     }
 
     IEnumerator Drop() {
-        StandardFireFunctions.FireDown(bullet1);
-        StandardFireFunctions.FireDown(bullet2);
-        StandardFireFunctions.FireDown(bullet3);
-        StandardFireFunctions.FireDown(bullet4);
-        StandardFireFunctions.FireDown(bullet5);
+        if (bullet1 != null && bullet2 != null && bullet3 != null && bullet4 != null && bullet5 != null) {
+            StandardFireFunctions.FireDown(bullet1);
+            StandardFireFunctions.FireDown(bullet2);
+            StandardFireFunctions.FireDown(bullet3);
+            StandardFireFunctions.FireDown(bullet4);
+            StandardFireFunctions.FireDown(bullet5);
+        }
 
         yield return null;
     }
