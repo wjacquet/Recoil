@@ -12,18 +12,18 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     }
 
-    public static void MagnetTowardsPlayer(GameObject projectile, int speed) {
+    public static void MagnetTowardsPlayer(GameObject projectile, float speed) {
         Vector2 direction = GetVectorToPlayer(projectile);
 
         Rigidbody2D rigidBody = projectile.GetComponent<Rigidbody2D>();
-        direction.Normalize();
+        direction.y = 0;
         rigidBody.velocity = direction * speed;
     }
 
     public static void FireHorizontallyAtPlayer(GameObject projectile) 
     {
         Vector2 direction = GetVectorToPlayer(projectile);
-        direction.y = 0;
+        direction.x = 0;
         SetVelocity(direction, projectile);
     }
 
@@ -53,7 +53,7 @@ public class StandardFireFunctions : MonoBehaviour
         Vector2 direction = new Vector2(0, 0);
         direction.x = 0;
         SetVelocity(direction, projectile);
-    }    
+    }   
 
     public static void FireVeticallyDegreeOffset(GameObject projectile, int angleOffset) 
     {

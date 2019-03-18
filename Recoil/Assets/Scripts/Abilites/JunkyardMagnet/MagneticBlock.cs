@@ -6,6 +6,7 @@ public class MagneticBlock : MonoBehaviour {
 
     public GameObject block;
     private bool magnet = false;
+    private bool touching;
 
     Rigidbody2D rigidBody;
 
@@ -15,22 +16,20 @@ public class MagneticBlock : MonoBehaviour {
     
     void Update() {
         // If Right clicked, flip bool
-        // if(Input.GetMouseButtonDown(1)) {
-        //     magnet = !magnet;
-        // }
-
-        if (magnet) {
-            StandardFireFunctions.MagnetTowardsPlayer(block, 10);
-        } else {
-            // StandardFireFunctions.StopFire(block);            
+        if(Input.GetMouseButtonDown(1)) {
+            magnet = !magnet;
         }
+
+        if (magnet && touching) {
+            StandardFireFunctions.MagnetTowardsPlayer(block, 0.1f);
+        } 
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        magnet = true;
+        touching = true;
     }
 
     void OnCollisionExit2D(Collision2D collision) {
-        magnet = false;
+        touching = false;
     }
 }
