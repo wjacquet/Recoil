@@ -34,7 +34,7 @@ public class BugGunner : MonoBehaviour {
     }
 
     IEnumerator Hover() {
-        Debug.Log(Vector2.Distance(transform.position, center));
+        // Debug.Log(Vector2.Distance(transform.position, center));
         Vector2 movement = new Vector2(Random.Range(-hoverDistance, hoverDistance),Random.Range(-hoverDistance, hoverDistance));
         rigidBody.velocity = movement * 1/5;
         // Reset Back to center if he flaots too far (public distanceFromCenter)
