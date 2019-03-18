@@ -44,6 +44,11 @@ public class PlayerInit : MonoBehaviour
         if (hpUpgrade && loadedUpgradesFound[scene.buildIndex]) {
             Destroy(hpUpgrade);
         }
+
+        GameObject magnetAbility = GameObject.Find("obj_magnet");
+        if (PlayerAbilities.magnet) {
+            Destroy(magnetAbility);
+        }
     }
 // TODO : This may need to be made asynchronous but depending on if triggering this function on every scene load becomes a problem or not
 // if it does go back to trying to figure out LoadSceneAsycn and trying to set the player object on completion of that
