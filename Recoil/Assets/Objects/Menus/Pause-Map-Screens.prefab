@@ -162,7 +162,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.23, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 8059146710464671564}
   - component: {fileID: 3339482012684856945}
   m_Layer: 5
-  m_Name: Image
+  m_Name: secondImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 4636744155779781118}
   - component: {fileID: 984868609365316479}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: DamageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1637,8 +1637,8 @@ RectTransform:
   m_Father: {fileID: 1601029548735453859}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.73, y: 0}
+  m_AnchorMax: {x: 0.73, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2148,7 +2148,7 @@ GameObject:
   - component: {fileID: 8041973704155375031}
   - component: {fileID: 7358890050955802944}
   m_Layer: 5
-  m_Name: TextMeshPro Text (1)
+  m_Name: FireRateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3073,6 +3073,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunSelectionUI: {fileID: 7721897219682540309}
+  firstImage: {fileID: 1805927904382886124}
+  secondImage: {fileID: 3339482012684856945}
+  obj_gun: {fileID: 21300000, guid: 5670370b50279b54c85ce1a3682e582a, type: 3}
+  obj_bolt_gun: {fileID: 21300000, guid: 32772a7c94f262a46ba50eea5f3b182e, type: 3}
+  obj_fire_spitter: {fileID: 21300000, guid: 1972317dd891f38459b2c81aa934f41b, type: 3}
+  obj_photon_launcher: {fileID: 21300000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf,
+    type: 3}
+  obj_machine_blaster: {fileID: 21300000, guid: 9a45a495560a1464fa129677ebe9fe80,
+    type: 3}
+  obj_cluster_gun_mkII: {fileID: 21300000, guid: a1cec706890a1417f8166604ca50b7e6,
+    type: 3}
 --- !u!1 &4266475598898969121
 GameObject:
   m_ObjectHideFlags: 0
@@ -3811,7 +3822,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.73, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4211,7 +4222,7 @@ GameObject:
   - component: {fileID: 803142092325665854}
   - component: {fileID: 7957399248528736303}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: DamageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4458,8 +4469,8 @@ RectTransform:
   m_Father: {fileID: 5421454060194135394}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.23, y: 0}
+  m_AnchorMax: {x: 0.23, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4642,8 +4653,8 @@ RectTransform:
   m_Father: {fileID: 3760460919086105686}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.23, y: 0}
+  m_AnchorMax: {x: 0.23, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4696,7 +4707,7 @@ GameObject:
   - component: {fileID: 7840019671312816113}
   - component: {fileID: 2505062215946367284}
   m_Layer: 5
-  m_Name: TextMeshPro Text (1)
+  m_Name: FireRateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5036,7 +5047,7 @@ GameObject:
   - component: {fileID: 1720226408273138342}
   - component: {fileID: 4687219227242316580}
   m_Layer: 5
-  m_Name: DamageSlider (1)
+  m_Name: FireRateSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5274,10 +5285,10 @@ RectTransform:
   m_Father: {fileID: 4392279368754626330}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.23700002}
-  m_AnchorMin: {x: 0.6184375, y: 0.074229166}
+  m_AnchorMin: {x: 0.62270314, y: 0.074229166}
   m_AnchorMax: {x: 0.9751094, y: 0.95060426}
-  m_AnchoredPosition: {x: -26.64, y: -7.800049}
-  m_SizeDelta: {x: -53.900024, y: -16.400002}
+  m_AnchoredPosition: {x: -28.64, y: -7.800049}
+  m_SizeDelta: {x: -49.900024, y: -16.400002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7824453433066415754
 CanvasRenderer:
@@ -5550,7 +5561,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.23, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5624,7 +5635,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.73, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5683,7 +5694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4392279368754626330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5925,7 +5936,7 @@ GameObject:
   - component: {fileID: 5281426262860398922}
   - component: {fileID: 1169452370234778762}
   m_Layer: 5
-  m_Name: DamageSlider (1)
+  m_Name: FireRateSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6180,8 +6191,8 @@ RectTransform:
   m_Father: {fileID: 8070934070161927300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.73, y: 0}
+  m_AnchorMax: {x: 0.73, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6234,7 +6245,7 @@ GameObject:
   - component: {fileID: 5748433453462106623}
   - component: {fileID: 1805927904382886124}
   m_Layer: 5
-  m_Name: Image
+  m_Name: firstImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
