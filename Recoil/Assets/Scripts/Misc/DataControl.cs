@@ -33,7 +33,8 @@ public class DataControl : MonoBehaviour
                         PlayerInit.scenesVisited,
                         PlayerInit.gunsFound,
                         PlayerInit.selectedGuns,
-                        PlayerInit.currentGunIndex
+                        PlayerInit.currentGunIndex,
+                        PlayerAbilities.magnet
         );
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -82,7 +83,8 @@ public class DataControl : MonoBehaviour
                                     new bool[SceneManager.sceneCountInBuildSettings],
                                     new bool[5] {true, true, true, true, true},
                                     new int[2] {0, 0},
-                                    0);
+                                    0,
+                                    false);
 
         
         BinaryFormatter binaryFormatter = new BinaryFormatter();
