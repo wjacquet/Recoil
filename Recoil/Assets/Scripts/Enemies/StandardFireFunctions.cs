@@ -12,6 +12,14 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     }
 
+    public static void MagnetTowardsPlayer(GameObject projectile, int speed) {
+        Vector2 direction = GetVectorToPlayer(projectile);
+
+        Rigidbody2D rigidBody = projectile.GetComponent<Rigidbody2D>();
+        direction.Normalize();
+        rigidBody.velocity = direction * speed;
+    }
+
     public static void FireHorizontallyAtPlayer(GameObject projectile) 
     {
         Vector2 direction = GetVectorToPlayer(projectile);
