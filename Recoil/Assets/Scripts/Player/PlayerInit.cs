@@ -28,6 +28,7 @@ public class PlayerInit : MonoBehaviour
         PlayerHealth.maxHP = data.maxHP;
         PlayerHealth.currHP = data.currHP;
         PlayerCurrency.wealth = data.wealth;
+        PlayerAbilities.magnet = data.magnet;
     }
 
     static void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
