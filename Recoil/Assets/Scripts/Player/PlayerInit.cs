@@ -45,6 +45,7 @@ public class PlayerInit : MonoBehaviour
             Destroy(hpUpgrade);
         }
 
+        // Hide Magnet on Each Scene if they already have the ability
         GameObject magnetAbility = GameObject.Find("obj_magnet");
         if (PlayerAbilities.magnet) {
             Destroy(magnetAbility);
