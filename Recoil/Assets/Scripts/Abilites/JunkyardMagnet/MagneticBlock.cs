@@ -22,7 +22,7 @@ public class MagneticBlock : MonoBehaviour {
     }
 
     void Update() {
-        if (magnet && touching) {
+        if (magnet && touching && PlayerAbilities.magnet) {
             StandardFireFunctions.MagnetTowardsPlayer(block, magnetStrength);
         } 
     }
