@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class MagneticBlock : MonoBehaviour {
 
+    // To use the magnet, right click and the object will fly towards you with gravity
+
+    public float magnetStrength = 0.3f;
     public GameObject block;
+
     private bool magnet = false;
     private bool touching;
 
-    Rigidbody2D rigidBody;
-
-    void Start() {
-        rigidBody = block.GetComponent<Rigidbody2D>();
-    }
-    
-    void Update() {
+    void OnMouseOver(){
         // If Right clicked, flip bool
         if(Input.GetMouseButtonDown(1)) {
             magnet = !magnet;
         }
+    }
 
+    void Update() {
         if (magnet && touching) {
-            StandardFireFunctions.MagnetTowardsPlayer(block, 0.1f);
+            StandardFireFunctions.MagnetTowardsPlayer(block, magnetStrength);
         } 
     }
 
