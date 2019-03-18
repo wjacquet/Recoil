@@ -39,7 +39,7 @@ public class Tulip : MonoBehaviour {
             bulletsArray[i] = Instantiate(bullet, transform.position, transform.rotation);
         }
 
-        StandardFireFunctions.FireVetically( bulletsArray[0]);
+        StandardFireFunctions.FireVetically(bulletsArray[0]);
         StandardFireFunctions.FireVeticallyDegreeOffset( bulletsArray[1], FirstDegreeOffset);
         StandardFireFunctions.FireVeticallyDegreeOffset( bulletsArray[2], -FirstDegreeOffset);
         StandardFireFunctions.FireVeticallyDegreeOffset( bulletsArray[3], SecondDegreeOffset);
@@ -55,16 +55,6 @@ public class Tulip : MonoBehaviour {
                 StandardFireFunctions.StopFire(bulletsArray[i]);
         }
 
-        // if (bullet1 != null && bullet2 != null && bullet3 != null && bullet4 != null && bullet5 != null) {
-        // if (bullet1 != null) {
-        //     StandardFireFunctions.StopFire(bullet1);
-        // }
-        //     StandardFireFunctions.StopFire(bullet2);
-        //     StandardFireFunctions.StopFire(bullet3);
-        //     StandardFireFunctions.StopFire(bullet4);
-        //     StandardFireFunctions.StopFire(bullet5);
-        // }
-
         yield return null;
     }
 
@@ -73,13 +63,6 @@ public class Tulip : MonoBehaviour {
             if (bulletsArray[i] != null)
                 StandardFireFunctions.FireDown(bulletsArray[i]);
         }
-        // if (bullet1 != null && bullet2 != null && bullet3 != null && bullet4 != null && bullet5 != null) {
-        //     StandardFireFunctions.FireDown(bullet1);
-        //     StandardFireFunctions.FireDown(bullet2);
-        //     StandardFireFunctions.FireDown(bullet3);
-        //     StandardFireFunctions.FireDown(bullet4);
-        //     StandardFireFunctions.FireDown(bullet5);
-        // }
 
         yield return null;
     }
