@@ -6,6 +6,8 @@ public class MagneticBlock : MonoBehaviour {
 
     // To use the magnet, right click and the object will fly towards you with gravity
 
+    // TODO Magnet block works, now only allow when player has the magnet ability
+
     public float magnetStrength = 0.3f;
     public GameObject block;
 
