@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class FanController : MonoBehaviour
 {
-    Transform blades;
+    private Transform blades;
+    public GameObject push;
     // Start is called before the first frame update
     void Start()
     {
         blades = gameObject.transform.GetChild(0);
-        print("BLADES");
-        print(blades);
+        Instantiate(push, transform.position, transform.rotation)
+            .GetComponent<PushController>()
+            .SetSpeed(0, -1);
     }
 
     // Update is called once per frame
