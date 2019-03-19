@@ -47,14 +47,7 @@ public class GunSelection : MonoBehaviour {
         }    
 
         // // Flip Gun...Again
-        GameObject cursor = GameObject.Find("obj_cursor");
-        if (cursor.transform.position.x <= player.transform.position.x) {
-            spriteRen.flipX = true;
-            gun.GetComponent<PivotGun>().FlipGun(true);
-        } else {
-            spriteRen.flipX = false;
-            gun.GetComponent<PivotGun>().FlipGun(false);
-        }
+        CheckFlip();
     }
 
     // Method called when gun is clicked in gun selction menu
@@ -69,17 +62,16 @@ public class GunSelection : MonoBehaviour {
         // Set new gun in selected guns array
         PlayerInit.selectedGuns[selection] = index;
 
-        spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[selection]).GetChild(0).GetComponent<SpriteRenderer>();
-        Transform tmp1 =  player.transform.GetChild(0).transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
-        gun.GetComponent<PivotGun>().SetSprite(tmp1);
-
+        spriteRen = player.transform.GetChild(0).GetChild(index).GetChild(0).GetComponent<SpriteRenderer>();
+        SetSpriteInPivot();
+        CheckFlip();
         
         // Remove all guns from players hand
         RemoveGuns();
         
         // Set first gun as current
         // gun = player.transform.GetChild(PlayerInit.selectedGuns[0]).gameObject;
-        GameObject tmp = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[selection]).gameObject;
+        GameObject tmp = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).gameObject;
         tmp.SetActive(true);    
 
         // Show Gun Stats
@@ -93,6 +85,9 @@ public class GunSelection : MonoBehaviour {
 
         // Updated selected
         SwitchIndex();
+
+        SwitchGuns();
+        SwitchGuns();
     }
 
     // Method called when players click 's' to switch guns
@@ -106,9 +101,26 @@ public class GunSelection : MonoBehaviour {
         // Show new gun
         GameObject tmp = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).gameObject;
         spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).GetChild(0).GetComponent<SpriteRenderer>();
+        tmp.SetActive(true);
+
+        SetSpriteInPivot();
+        CheckFlip();
+    }
+
+    void CheckFlip() {
+        GameObject cursor = GameObject.Find("obj_cursor");
+        if (cursor.transform.position.x <= player.transform.position.x) {
+            spriteRen.flipX = true;
+            gun.GetComponent<PivotGun>().FlipGun(true);
+        } else {
+            spriteRen.flipX = false;
+            gun.GetComponent<PivotGun>().FlipGun(false);
+        }
+    }
+
+    void SetSpriteInPivot() {
         Transform tmp1 =  player.transform.GetChild(0).transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
         gun.GetComponent<PivotGun>().SetSprite(tmp1);
-        tmp.SetActive(true);
     }
 
     // Removes all guns from players hand
