@@ -7,20 +7,24 @@ public class PivotGun : MonoBehaviour {
     public GameObject bullet;
     public GameObject player;
     
+    public GameObject gun; 
     private Vector3 offset;
     private Vector3 originalPosition;
     private Vector3 flippedPosition;
     private bool flipped = false;
     public SpriteRenderer mySpriteRenderer;
 
+    Transform sprit;
+
     void Start() {
+        sprit = gameObject.transform.GetChild(0).GetChild(0).transform;
         offset = transform.position - player.transform.position;
         originalPosition = offset;
-        flippedPosition = new Vector3(offset.x - 16, offset.y, offset.z);
+        flippedPosition = new Vector3(offset.x - 10, offset.y, offset.z);
     }
 
     // Update is called once per frame
-    void Update() {         
+    void Update() {  
 
         // rotate gun
         GameObject cursor = GameObject.Find("obj_cursor");
@@ -41,9 +45,20 @@ public class PivotGun : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
+    void LateUpdate() {
+        // Gun stays in player's hand
+        transform.position = player.transform.position + offset;
+    }
+
     public void FlipGun(bool flip) {
         mySpriteRenderer.flipX = flip;
         flipped = flip;
+
+        if (flipped) {
+            sprit.localPosition = new Vector3(-10f, 0f, 0f);
+        } else {
+            sprit.localPosition = new Vector3(0f, 0f, 0f);
+        }      
 
         // move gun to player's hand
         offset = flip ? flippedPosition : originalPosition;

@@ -43,13 +43,13 @@ public class GunSelection : MonoBehaviour {
             SwitchGuns();
         }    
 
-        // Flip Gun...Again
-        GameObject cursor = GameObject.Find("obj_cursor");
-        if (cursor.transform.position.x <= player.transform.position.x) {
-            gun.GetComponent<PivotGun>().FlipGun(true);
-        } else {
-            gun.GetComponent<PivotGun>().FlipGun(false);
-        }
+        // // Flip Gun...Again
+        // GameObject cursor = GameObject.Find("obj_cursor");
+        // if (cursor.transform.position.x <= player.transform.position.x) {
+        //     gun.GetComponent<PivotGun>().FlipGun(true);
+        // } else {
+        //     gun.GetComponent<PivotGun>().FlipGun(false);
+        // }
 
     }
 
