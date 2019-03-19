@@ -27,22 +27,26 @@ public class LaserCrystal : MonoBehaviour {
  
         while (Input.GetButton("Fire1")) {
             Ray2D ray = new Ray2D(transform.position, transform.right);
-            RaycastHit2D hit;
+            RaycastHit2D[] hits;
+            hits = Physics2D.RaycastAll(ray.origin, Vector2.right, 200);
 
             line.SetPosition(0, ray.origin);
-
-            hit = Physics2D.Raycast(ray.origin, Vector2.right, 200);
-            if (hit.collider) {
-                if (hit.collider.gameObject.tag == "Player") {
-                    playerHP.TakeDamage();
-                } else {
-                    Debug.Log("Hit Wall");
-                }
-                line.SetPosition(1, hit.point);
-            } else {
-                line.SetPosition(1, ray.GetPoint(200));
-            }
             
+            for (int i = 0; i < hits.Length; ++i) {
+                if (!(hits[i].collider.gameObject.tag == "Enemy")) {
+                    if (hits[i].collider.gameObject.tag == "Player") {
+                        playerHP.TakeDamage();
+                        line.SetPosition(1, hits[i].point);
+                        break;
+                    } else {
+                        line.SetPosition(1, hits[i].point);
+                        break;
+                    }
+                } else {
+                    line.SetPosition(1, ray.GetPoint(200));
+                }
+            }
+
             yield return null;
         }
 
