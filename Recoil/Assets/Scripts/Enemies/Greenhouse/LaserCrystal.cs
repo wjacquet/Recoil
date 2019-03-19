@@ -7,6 +7,10 @@ public class LaserCrystal : MonoBehaviour {
     private PlayerHealth playerHP;
     LineRenderer line;
 
+    private Vector2 rotateVector = new Vector2(0, 1); 
+    private int angle = 0;
+
+
     void Start() {
         GameObject player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
@@ -16,40 +20,40 @@ public class LaserCrystal : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetButtonDown("Fire1")) {
-            StopCoroutine("FireLaser");
-            StartCoroutine("FireLaser");
-        }
+        FireLaser();
     }
 
-    IEnumerator FireLaser(){
+    void FireLaser(){
         line.enabled = true;
  
-        while (Input.GetButton("Fire1")) {
-            Ray2D ray = new Ray2D(transform.position, transform.right);
-            RaycastHit2D[] hits;
-            hits = Physics2D.RaycastAll(ray.origin, Vector2.right, 200);
+        Ray2D ray = new Ray2D(transform.position, transform.right);
+        RaycastHit2D[] hits;
 
-            line.SetPosition(0, ray.origin);
-            
-            for (int i = 0; i < hits.Length; ++i) {
-                if (!(hits[i].collider.gameObject.tag == "Enemy")) {
-                    if (hits[i].collider.gameObject.tag == "Player") {
-                        playerHP.TakeDamage();
-                        line.SetPosition(1, hits[i].point);
-                        break;
-                    } else {
-                        line.SetPosition(1, hits[i].point);
-                        break;
-                    }
+        Debug.Log(angle);
+        rotateVector = Quaternion.AngleAxis(angle++, Vector3.forward) * Vector3.right;
+        hits = Physics2D.RaycastAll(ray.origin, rotateVector, 200);
+        if (angle >= 360)
+            angle = 0;
+
+
+        line.SetPosition(0, ray.origin);
+        
+        for (int i = 0; i < hits.Length; ++i) {
+            if (!(hits[i].collider.gameObject.tag == "Enemy")) {
+                if (hits[i].collider.gameObject.tag == "Player") {
+                    playerHP.TakeDamage();
+                    line.SetPosition(1, hits[i].point);
+                    break;
                 } else {
-                    line.SetPosition(1, ray.GetPoint(200));
+                    line.SetPosition(1, hits[i].point);
+                    break;
                 }
+            } else {
+                line.SetPosition(1, ray.GetPoint(200));
             }
-
-            yield return null;
         }
 
-        line.enabled = false;
+        // yield return null;
+
     }
 }
