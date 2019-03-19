@@ -503,6 +503,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 189614201881019736, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 349211102}
     - target: {fileID: 1162628935, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
       propertyPath: healthText
       value: 
@@ -516,15 +521,10 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 1574921732}
-    - target: {fileID: 189614201881019736, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 349211102}
     - target: {fileID: 7755780319438194399, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9041608469132298551, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
@@ -544,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 3732477594172421649, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2468789691925367887, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
@@ -20873,6 +20873,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572342737545108532, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.591919
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fad6a87bd18ef4bb67c08e7cc8b802, type: 3}

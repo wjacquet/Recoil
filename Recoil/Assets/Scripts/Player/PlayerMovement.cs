@@ -19,13 +19,13 @@ public class PlayerMovement : MonoBehaviour
 
 
         // Check which direction to face sprite
-        if (cursor.transform.position.x <= transform.position.x) 
-            mySpriteRenderer.flipX = true;
-        else
-            mySpriteRenderer.flipX = false;
+        // if (cursor.transform.position.x <= transform.position.x) 
+        //     mySpriteRenderer.flipX = true;
+        // else
+        //     mySpriteRenderer.flipX = false;
         
-        // Make gun direction match player direction
-        gun.GetComponent<FireWeapon>().FlipGun(mySpriteRenderer.flipX);
+        // // Make gun direction match player direction
+        // gun.GetComponent<FireWeapon>().FlipGun(mySpriteRenderer.flipX);
     }
 
     public void Recoil(Vector2 knockback) {
