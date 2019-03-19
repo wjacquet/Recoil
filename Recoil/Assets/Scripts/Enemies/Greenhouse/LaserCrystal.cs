@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class LaserCrystal : MonoBehaviour {
 
+    private PlayerHealth playerHP;
     LineRenderer line;
 
     void Start() {
+        GameObject player = GameObject.Find("obj_player");
+        playerHP = player.GetComponent<PlayerHealth>();
+
         line = gameObject.GetComponent<LineRenderer>();
         line.enabled = false;
-
     }
 
     void Update() {
@@ -29,7 +32,12 @@ public class LaserCrystal : MonoBehaviour {
             line.SetPosition(0, ray.origin);
 
             hit = Physics2D.Raycast(ray.origin, Vector2.right, 200);
-            if (hit.collider){
+            if (hit.collider) {
+                if (hit.collider.gameObject.tag == "Player") {
+                    playerHP.TakeDamage();
+                } else {
+                    Debug.Log("Hit Wall");
+                }
                 line.SetPosition(1, hit.point);
             } else {
                 line.SetPosition(1, ray.GetPoint(200));
