@@ -70,6 +70,8 @@ public class GunSelection : MonoBehaviour {
         PlayerInit.selectedGuns[selection] = index;
 
         spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[selection]).GetChild(0).GetComponent<SpriteRenderer>();
+        Transform tmp1 =  player.transform.GetChild(0).transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
+        gun.GetComponent<PivotGun>().SetSprite(tmp1);
 
         
         // Remove all guns from players hand
@@ -104,6 +106,8 @@ public class GunSelection : MonoBehaviour {
         // Show new gun
         GameObject tmp = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).gameObject;
         spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).GetChild(0).GetComponent<SpriteRenderer>();
+        Transform tmp1 =  player.transform.GetChild(0).transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
+        gun.GetComponent<PivotGun>().SetSprite(tmp1);
         tmp.SetActive(true);
     }
 
