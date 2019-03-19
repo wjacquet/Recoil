@@ -31,7 +31,7 @@ public class LaserCrystal : MonoBehaviour {
 
         Debug.Log(angle);
         rotateVector = Quaternion.AngleAxis(angle++, Vector3.forward) * Vector3.right;
-        hits = Physics2D.RaycastAll(ray.origin, rotateVector, 200);
+        hits = Physics2D.RaycastAll(ray.origin, rotateVector, 20000);
         if (angle >= 360)
             angle = 0;
 
@@ -49,7 +49,7 @@ public class LaserCrystal : MonoBehaviour {
                     break;
                 }
             } else {
-                line.SetPosition(1, ray.GetPoint(200));
+                line.SetPosition(1, ray.GetPoint(20000));
             }
         }
 
