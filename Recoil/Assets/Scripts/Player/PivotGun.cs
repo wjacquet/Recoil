@@ -6,18 +6,17 @@ public class PivotGun : MonoBehaviour {
 
     public GameObject bullet;
     public GameObject player;
-    
-    public GameObject gun; 
+    public SpriteRenderer mySpriteRenderer;
+
     private Vector3 offset;
     private Vector3 originalPosition;
     private Vector3 flippedPosition;
     private bool flipped = false;
-    public SpriteRenderer mySpriteRenderer;
 
-    Transform sprit;
+    Transform gunSprite;
 
     void Start() {
-        sprit = gameObject.transform.GetChild(0).GetChild(0).transform;
+        gunSprite = gameObject.transform.GetChild(0).GetChild(0).transform;
         offset = transform.position - player.transform.position;
         originalPosition = offset;
         flippedPosition = new Vector3(offset.x - 10, offset.y, offset.z);
@@ -54,10 +53,11 @@ public class PivotGun : MonoBehaviour {
         mySpriteRenderer.flipX = flip;
         flipped = flip;
 
+        // Fix the Pivot (I hate localPosition)
         if (flipped) {
-            sprit.localPosition = new Vector3(-10f, 0f, 0f);
+            gunSprite.localPosition = new Vector3(-10f, 0f, 0f);
         } else {
-            sprit.localPosition = new Vector3(0f, 0f, 0f);
+            gunSprite.localPosition = new Vector3(0f, 0f, 0f);
         }      
 
         // move gun to player's hand

@@ -20,6 +20,7 @@ public class GunSelection : MonoBehaviour {
     public Sprite obj_cluster_gun_mkII;
 
     private GameObject gun;
+    private SpriteRenderer spriteRen;
     GameObject player;
     
     private bool first = true;
@@ -28,6 +29,7 @@ public class GunSelection : MonoBehaviour {
     void Start() {
         player = GameObject.Find("obj_player");
         gun = GameObject.Find("obj_gun_pivot");
+        spriteRen = gameObject.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).GetComponent<SpriteRenderer>();
     }
 
     void Update() {
@@ -44,13 +46,15 @@ public class GunSelection : MonoBehaviour {
         }    
 
         // // Flip Gun...Again
-        // GameObject cursor = GameObject.Find("obj_cursor");
-        // if (cursor.transform.position.x <= player.transform.position.x) {
-        //     gun.GetComponent<PivotGun>().FlipGun(true);
-        // } else {
-        //     gun.GetComponent<PivotGun>().FlipGun(false);
-        // }
-
+        Debug.Log("UPDATE RUNNING");
+        GameObject cursor = GameObject.Find("obj_cursor");
+        if (cursor.transform.position.x <= player.transform.position.x) {
+            spriteRen.flipX = true;
+            gun.GetComponent<PivotGun>().FlipGun(true);
+        } else {
+            spriteRen.flipX = false;
+            gun.GetComponent<PivotGun>().FlipGun(false);
+        }
     }
 
     // Method called when gun is clicked in gun selction menu
@@ -64,12 +68,16 @@ public class GunSelection : MonoBehaviour {
 
         // Set new gun in selected guns array
         PlayerInit.selectedGuns[selection] = index;
+
+        spriteRen = gameObject.transform.GetChild(0).GetChild(index).GetComponent<SpriteRenderer>();
+
         
         // Remove all guns from players hand
         RemoveGuns();
         
         // Set first gun as current
-        gun = player.transform.GetChild(PlayerInit.selectedGuns[0]).gameObject;
+        // gun = player.transform.GetChild(PlayerInit.selectedGuns[0]).gameObject;
+        gun = player.transform.GetChild(0).GetChild(0).gameObject;
         gun.SetActive(true);    
 
         // Show Gun Stats
@@ -94,14 +102,15 @@ public class GunSelection : MonoBehaviour {
         SwitchSavedIndex();
         
         // Show new gun
-        gun = player.transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).gameObject;
+        gun = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).gameObject;
+        spriteRen = gameObject.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).GetComponent<SpriteRenderer>();
         gun.SetActive(true);
     }
 
     // Removes all guns from players hand
     void RemoveGuns() {
         for (int i = 0; i < 6; i++) {
-            gun = player.transform.GetChild(i).gameObject;
+            gun = player.transform.GetChild(0).GetChild(i).gameObject;
             gun.SetActive(false);  
         }
     }
