@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1513930803762904830}
   - component: {fileID: 8360355910219559244}
   m_Layer: 5
-  m_Name: obj_cluster_gun_mkII
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 288903938509976011}
   - component: {fileID: 8834557675295360772}
   m_Layer: 5
-  m_Name: obj_machine_blaster
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2384,7 +2384,7 @@ GameObject:
   - component: {fileID: 330467702371721004}
   - component: {fileID: 6820331668191408652}
   m_Layer: 5
-  m_Name: obj_gun
+  m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4022,7 +4022,7 @@ GameObject:
   - component: {fileID: 6872389753346252310}
   - component: {fileID: 1396951227910008068}
   m_Layer: 5
-  m_Name: obj_fire_spitter
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5137,7 +5137,7 @@ GameObject:
   - component: {fileID: 2579332006799641175}
   - component: {fileID: 1324451760191163337}
   m_Layer: 5
-  m_Name: obj_bolt_gun
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5340,7 +5340,7 @@ GameObject:
   - component: {fileID: 4851425629303411720}
   - component: {fileID: 3842673426109745251}
   m_Layer: 5
-  m_Name: obj_photon_launcher
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
