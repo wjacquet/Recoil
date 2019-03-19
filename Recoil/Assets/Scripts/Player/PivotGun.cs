@@ -14,6 +14,59 @@ public class PivotGun : MonoBehaviour {
     private bool flipped = false;
 
     Transform gunSprite;
+    /*  Bolt Gun
+        gunSprite.localPosition = new Vector3(-10.0f, 0f, 0f);
+        } else {
+        gunSprite.localPosition = new Vector3(0.0f, 0f, 0f);
+        */
+
+/*  Bolt Gun
+        gunSprite.localPosition = new Vector3(-6.0f, 1f, 0f);
+        } else {
+        gunSprite.localPosition = new Vector3(6.0f, 1f, 0f);
+        */
+
+/*  Fire Spitter
+        gunSprite.localPosition = new Vector3(-8.0f, 2f, 0f);
+        } else {
+        gunSprite.localPosition = new Vector3(8.0f, 2f, 0f);
+        */
+
+/*  Photon Launcher
+        gunSprite.localPosition = new Vector3(-8.0f, 0f, 0f);
+        } else {
+        gunSprite.localPosition = new Vector3(8.0f, 0f, 0f);
+        */
+
+/*  Machine Blaster
+        gunSprite.localPosition = new Vector3(-4.0f, 1f, 0f);
+        } else {
+        gunSprite.localPosition = new Vector3(4.0f, 1f, 0f);
+        */
+
+/*  Cluster Gun
+        gunSprite.localPosition = new Vector3(-8.0f, 1f, 0f);
+        } else {
+        gunSprite.localPosition = new Vector3(8.0f, 1f, 0f);
+        */
+
+    private Vector3[] gunPlacementsNeg = new Vector3[6] {
+                                                            new Vector3(-10.0f, 0f, 0f),
+                                                            new Vector3(-6.0f, 1f, 0f),
+                                                            new Vector3(-8.0f, 2f, 0f),
+                                                            new Vector3(-8.0f, 0f, 0f),
+                                                            new Vector3(-4.0f, 1f, 0f),
+                                                            new Vector3(-8.0f, 1f, 0f),
+                                                        };
+
+    private Vector3[] gunPlacementsPos = new Vector3[6] {
+                                                            new Vector3(0.0f, 0f, 0f),
+                                                            new Vector3(6.0f, 1f, 0f),
+                                                            new Vector3(8.0f, 2f, 0f),
+                                                            new Vector3(8.0f, 0f, 0f),
+                                                            new Vector3(4.0f, 1f, 0f),
+                                                            new Vector3(8.0f, 1f, 0f),
+                                                        };
 
 
 
@@ -65,10 +118,13 @@ public class PivotGun : MonoBehaviour {
         flipped = flip;
 
         // Fix the Pivot (I hate localPosition)
+        Debug.Log(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]);
         if (flipped) {
-            gunSprite.localPosition = new Vector3(-8.0f, 1f, 0f);
+            gunSprite.localPosition = gunPlacementsNeg[PlayerInit.selectedGuns[PlayerInit.currentGunIndex]];
+            // gunSprite.localPosition = new Vector3(-10.0f, 0f, 0f);
         } else {
-            gunSprite.localPosition = new Vector3(8.0f, 1f, 0f);
+            gunSprite.localPosition = gunPlacementsPos[PlayerInit.selectedGuns[PlayerInit.currentGunIndex]];
+            // gunSprite.localPosition = new Vector3(0.0f, 0f, 0f);
         }      
 
         // move gun to player's hand
@@ -76,38 +132,4 @@ public class PivotGun : MonoBehaviour {
     }
 }
 
-/*  Bolt Gun
-        gunSprite.localPosition = new Vector3(-10.0f, 0f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(0.0f, 0f, 0f);
-        */
 
-/*  Bolt Gun
-        gunSprite.localPosition = new Vector3(-6.0f, 1f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(6.0f, 1f, 0f);
-        */
-
-/*  Fire Spitter
-        gunSprite.localPosition = new Vector3(-8.0f, 2f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(8.0f, 2f, 0f);
-        */
-
-/*  Photon Launcher
-        gunSprite.localPosition = new Vector3(-8.0f, 0f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(8.0f, 0f, 0f);
-        */
-
-/*  Machine Blaster
-        gunSprite.localPosition = new Vector3(-4.0f, 1f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(4.0f, 1f, 0f);
-        */
-
-/*  Cluster Gun
-        gunSprite.localPosition = new Vector3(-8.0f, 1f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(8.0f, 1f, 0f);
-        */
