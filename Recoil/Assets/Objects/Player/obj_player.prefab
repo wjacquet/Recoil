@@ -303,7 +303,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2600662282960497286, guid: 891e40f96dcee08438dcd786e1235dda, type: 3}
   player: {fileID: 189614201881019751}
-  mySpriteRenderer: {fileID: 7755780318224293269}
 --- !u!1001 &214120487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -456,15 +455,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 189614201881019751}
+    - target: {fileID: 6975702468314320811, guid: 3edc421dfddedec45b0aa5afeafe8580,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7755780320044596886, guid: 3edc421dfddedec45b0aa5afeafe8580, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3edc421dfddedec45b0aa5afeafe8580, type: 3}
---- !u!212 &7755780318224293269 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7755780319964756602, guid: 3edc421dfddedec45b0aa5afeafe8580,
-    type: 3}
-  m_PrefabInstance: {fileID: 1758423023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7755780319438194397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7755780319048573234, guid: 3edc421dfddedec45b0aa5afeafe8580,
@@ -650,6 +648,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5030223471111358597}
     m_Modifications:
+    - target: {fileID: 6403322233665507450, guid: 28a35a79ce8d44863b94fb5b9c32f4c4,
+        type: 3}
+      propertyPath: m_Name
+      value: obj_cluster_gun_mkII
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403322233665507450, guid: 28a35a79ce8d44863b94fb5b9c32f4c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403322233665507450, guid: 28a35a79ce8d44863b94fb5b9c32f4c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1900083646593866632, guid: 28a35a79ce8d44863b94fb5b9c32f4c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,17 +718,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6403322233665507450, guid: 28a35a79ce8d44863b94fb5b9c32f4c4,
-        type: 3}
-      propertyPath: m_Name
-      value: obj_cluster_gun_mkII
-      objectReference: {fileID: 0}
-    - target: {fileID: 6403322233665507450, guid: 28a35a79ce8d44863b94fb5b9c32f4c4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6403322233665507450, guid: 28a35a79ce8d44863b94fb5b9c32f4c4,
+    - target: {fileID: 3490479598113694198, guid: 28a35a79ce8d44863b94fb5b9c32f4c4,
         type: 3}
       propertyPath: m_Layer
       value: 9
@@ -725,11 +728,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 189614201881019751}
-    - target: {fileID: 3490479598113694198, guid: 28a35a79ce8d44863b94fb5b9c32f4c4,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6200598520740065343, guid: 28a35a79ce8d44863b94fb5b9c32f4c4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 28a35a79ce8d44863b94fb5b9c32f4c4, type: 3}
@@ -837,6 +835,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5030223471111358597}
     m_Modifications:
+    - target: {fileID: 4204565053028590969, guid: 8aead92cddeec42398ceca99c639df8b,
+        type: 3}
+      propertyPath: m_Name
+      value: obj_photon_launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204565053028590969, guid: 8aead92cddeec42398ceca99c639df8b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5559265765905296910, guid: 8aead92cddeec42398ceca99c639df8b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -890,16 +898,6 @@ PrefabInstance:
     - target: {fileID: 5559265765905296910, guid: 8aead92cddeec42398ceca99c639df8b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204565053028590969, guid: 8aead92cddeec42398ceca99c639df8b,
-        type: 3}
-      propertyPath: m_Name
-      value: obj_photon_launcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204565053028590969, guid: 8aead92cddeec42398ceca99c639df8b,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1820906291450631842, guid: 8aead92cddeec42398ceca99c639df8b,

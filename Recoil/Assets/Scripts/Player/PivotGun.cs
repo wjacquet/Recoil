@@ -51,7 +51,7 @@ public class PivotGun : MonoBehaviour {
         */
 
     private Vector3[] gunPlacementsNeg = new Vector3[6] {
-                                                            new Vector3(-10.0f, 0f, 0f),
+                                                            new Vector3(-5.0f, 1f, 0f),
                                                             new Vector3(-6.0f, 1f, 0f),
                                                             new Vector3(-8.0f, 2f, 0f),
                                                             new Vector3(-8.0f, 0f, 0f),
@@ -60,7 +60,7 @@ public class PivotGun : MonoBehaviour {
                                                         };
 
     private Vector3[] gunPlacementsPos = new Vector3[6] {
-                                                            new Vector3(10.0f, 0f, 0f),
+                                                            new Vector3(5.0f, 1f, 0f),
                                                             new Vector3(6.0f, 1f, 0f),
                                                             new Vector3(8.0f, 2f, 0f),
                                                             new Vector3(8.0f, 0f, 0f),
@@ -74,7 +74,7 @@ public class PivotGun : MonoBehaviour {
 
         player = GameObject.Find("obj_player");
         // gunSprite = gameObject.transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
-        gunSprite = gameObject.transform.GetChild(0).GetChild(0).transform;
+        gunSprite = gameObject.transform.GetChild(0).transform;
         offset = transform.position - player.transform.position;
         originalPosition = offset;
         flippedPosition = new Vector3(offset.x - 10, offset.y, offset.z);
@@ -117,7 +117,6 @@ public class PivotGun : MonoBehaviour {
         // mySpriteRenderer.flipX = flip;
         flipped = flip;
 
-        // Fix the Pivot (I hate localPosition)
         Debug.Log(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]);
         if (flipped) {
             gunSprite.localPosition = gunPlacementsNeg[PlayerInit.selectedGuns[PlayerInit.currentGunIndex]];

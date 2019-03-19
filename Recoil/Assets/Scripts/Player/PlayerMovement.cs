@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
         else
             mySpriteRenderer.flipX = false;
         
-        // Make gun direction match player direction
-        gun.GetComponent<PivotGun>().FlipGun(mySpriteRenderer.flipX);
+        // // Make gun direction match player direction
+        // gun.GetComponent<PivotGun>().FlipGun(mySpriteRenderer.flipX);
     }
 
     public void Recoil(Vector2 knockback) {
