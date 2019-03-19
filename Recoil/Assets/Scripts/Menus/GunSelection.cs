@@ -28,8 +28,9 @@ public class GunSelection : MonoBehaviour {
 
     void Start() {
         player = GameObject.Find("obj_player");
+        // possibly remove (gun)
         gun = GameObject.Find("obj_gun_pivot");
-        // spriteRen = gameObject.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).GetComponent<SpriteRenderer>();
+        spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     void Update() {
@@ -48,10 +49,10 @@ public class GunSelection : MonoBehaviour {
         // // Flip Gun...Again
         GameObject cursor = GameObject.Find("obj_cursor");
         if (cursor.transform.position.x <= player.transform.position.x) {
-            // spriteRen.flipX = true;
+            spriteRen.flipX = true;
             gun.GetComponent<PivotGun>().FlipGun(true);
         } else {
-            // spriteRen.flipX = false;
+            spriteRen.flipX = false;
             gun.GetComponent<PivotGun>().FlipGun(false);
         }
     }
@@ -68,7 +69,7 @@ public class GunSelection : MonoBehaviour {
         // Set new gun in selected guns array
         PlayerInit.selectedGuns[selection] = index;
 
-        // spriteRen = gameObject.transform.GetChild(0).GetChild(index).GetComponent<SpriteRenderer>();
+        spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[selection]).GetChild(0).GetComponent<SpriteRenderer>();
 
         
         // Remove all guns from players hand
@@ -102,7 +103,7 @@ public class GunSelection : MonoBehaviour {
         
         // Show new gun
         GameObject tmp = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).gameObject;
-        // spriteRen = gameObject.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).GetComponent<SpriteRenderer>();
+        spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).GetChild(0).GetComponent<SpriteRenderer>();
         tmp.SetActive(true);
     }
 
