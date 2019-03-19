@@ -21,14 +21,15 @@ public class GunSelection : MonoBehaviour {
 
     private GameObject gun;
     private SpriteRenderer spriteRen;
-    GameObject player;
-    
+    private GameObject player;
+    private Sprite[] sprites;
     private bool first = true;
     private int selection = 0;
 
     void Start() {
+        sprites = new Sprite[6] {obj_gun, obj_bolt_gun, obj_fire_spitter, obj_photon_launcher, obj_machine_blaster, obj_cluster_gun_mkII};
+
         player = GameObject.Find("obj_player");
-        // possibly remove (gun)
         gun = GameObject.Find("obj_gun_pivot");
         spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).GetChild(0).GetComponent<SpriteRenderer>();
     }
@@ -46,31 +47,27 @@ public class GunSelection : MonoBehaviour {
             SwitchGuns();
         }    
 
-        // // Flip Gun...Again
+        // Flip Gun
         CheckFlip();
     }
 
     // Method called when gun is clicked in gun selction menu
     public void GunSelected() {
-        // Get gun name from button name
-        string gunName = EventSystem.current.currentSelectedGameObject.name;
 
         // Get index from selected guns array 
-        int index = FindIndexOfGun(gunName);
-        Sprite newImage = GetNewImage(gunName);
+        string indexStr = EventSystem.current.currentSelectedGameObject.name;
+        int index = int.Parse(indexStr);
+
+        // Get Sprite Image for gun stats panel
+        Sprite newImage = sprites[index];
 
         // Set new gun in selected guns array
         PlayerInit.selectedGuns[selection] = index;
-
-        spriteRen = player.transform.GetChild(0).GetChild(index).GetChild(0).GetComponent<SpriteRenderer>();
-        SetSpriteInPivot();
-        CheckFlip();
         
         // Remove all guns from players hand
         RemoveGuns();
         
         // Set first gun as current
-        // gun = player.transform.GetChild(PlayerInit.selectedGuns[0]).gameObject;
         GameObject tmp = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).gameObject;
         tmp.SetActive(true);    
 
@@ -86,6 +83,7 @@ public class GunSelection : MonoBehaviour {
         // Updated selected
         SwitchIndex();
 
+        // Swappy Swappy 
         SwitchGuns();
         SwitchGuns();
     }
@@ -119,9 +117,10 @@ public class GunSelection : MonoBehaviour {
     }
 
     void SetSpriteInPivot() {
-        Transform tmp1 =  player.transform.GetChild(0).transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
-        gun.GetComponent<PivotGun>().SetSprite(tmp1);
+        Transform tmp =  player.transform.GetChild(0).transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
+        gun.GetComponent<PivotGun>().SetSprite(tmp);
     }
+    
 
     // Removes all guns from players hand
     void RemoveGuns() {
@@ -146,51 +145,12 @@ public class GunSelection : MonoBehaviour {
 
     // Switch between 0 and 1
     void SwitchIndex() {
-        if (selection == 0)
-            selection = 1;
-        else 
-            selection = 0;
+        selection = 1 - selection;
     }
     
     // Switch between 0 and 1
     void SwitchSavedIndex() {
-        if (PlayerInit.currentGunIndex == 0)
-            PlayerInit.currentGunIndex = 1;
-        else 
-            PlayerInit.currentGunIndex = 0;
+        PlayerInit.currentGunIndex = 1 - PlayerInit.currentGunIndex;
     }
 
-    int FindIndexOfGun(string gunName) {
-        if (gunName.Equals("obj_gun")) {
-            return 0;
-        } else if (gunName.Equals("obj_bolt_gun")) {
-            return 1;
-        } else if (gunName.Equals("obj_fire_spitter")) {
-            return 2;
-        } else if (gunName.Equals("obj_photon_launcher")) {
-            return 3;
-        } else if (gunName.Equals("obj_machine_blaster")) {
-            return 4;
-        } else if (gunName.Equals("obj_cluster_gun_mkII")) {
-            return 5;
-        }
-        return 0;
-    }
-
-    Sprite GetNewImage(string gunName) {
-        if (gunName.Equals("obj_gun")) {
-            return obj_gun;
-        } else if (gunName.Equals("obj_bolt_gun")) {
-            return obj_bolt_gun;
-        } else if (gunName.Equals("obj_fire_spitter")) {
-            return obj_fire_spitter;
-        } else if (gunName.Equals("obj_photon_launcher")) {
-            return obj_photon_launcher;
-        } else if (gunName.Equals("obj_machine_blaster")) {
-            return obj_machine_blaster;
-        } else if (gunName.Equals("obj_cluster_gun_mkII")) {
-            return obj_cluster_gun_mkII;
-        }
-        return null;
-    }
 }

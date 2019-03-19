@@ -6,7 +6,6 @@ public class PivotGun : MonoBehaviour {
 
     public GameObject bullet;
     public GameObject player;
-    // public SpriteRenderer mySpriteRenderer;
 
     private Vector3 offset;
     private Vector3 originalPosition;
@@ -14,41 +13,7 @@ public class PivotGun : MonoBehaviour {
     private bool flipped = false;
 
     Transform gunSprite;
-    /*  Bolt Gun
-        gunSprite.localPosition = new Vector3(-10.0f, 0f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(0.0f, 0f, 0f);
-        */
 
-/*  Bolt Gun
-        gunSprite.localPosition = new Vector3(-6.0f, 1f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(6.0f, 1f, 0f);
-        */
-
-/*  Fire Spitter
-        gunSprite.localPosition = new Vector3(-8.0f, 2f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(8.0f, 2f, 0f);
-        */
-
-/*  Photon Launcher
-        gunSprite.localPosition = new Vector3(-8.0f, 0f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(8.0f, 0f, 0f);
-        */
-
-/*  Machine Blaster
-        gunSprite.localPosition = new Vector3(-4.0f, 1f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(4.0f, 1f, 0f);
-        */
-
-/*  Cluster Gun
-        gunSprite.localPosition = new Vector3(-8.0f, 1f, 0f);
-        } else {
-        gunSprite.localPosition = new Vector3(8.0f, 1f, 0f);
-        */
 
     private Vector3[] gunPlacementsNeg = new Vector3[6] {
                                                             new Vector3(-5.0f, 1f, 0f),
@@ -71,9 +36,7 @@ public class PivotGun : MonoBehaviour {
 
 
     void Start() {
-
         player = GameObject.Find("obj_player");
-        // gunSprite = gameObject.transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
         gunSprite = gameObject.transform.GetChild(0).transform;
         offset = transform.position - player.transform.position;
         originalPosition = offset;
@@ -82,8 +45,6 @@ public class PivotGun : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {  
-
-        // gunSprite = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
 
         // rotate gun
         GameObject cursor = GameObject.Find("obj_cursor");
@@ -114,16 +75,13 @@ public class PivotGun : MonoBehaviour {
     }
 
     public void FlipGun(bool flip) {
-        // mySpriteRenderer.flipX = flip;
         flipped = flip;
 
         Debug.Log(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]);
         if (flipped) {
             gunSprite.localPosition = gunPlacementsNeg[PlayerInit.selectedGuns[PlayerInit.currentGunIndex]];
-            // gunSprite.localPosition = new Vector3(-10.0f, 0f, 0f);
         } else {
             gunSprite.localPosition = gunPlacementsPos[PlayerInit.selectedGuns[PlayerInit.currentGunIndex]];
-            // gunSprite.localPosition = new Vector3(0.0f, 0f, 0f);
         }      
 
         // move gun to player's hand
