@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: acc439f188961554992703772b54b77b
+guid: ee5d891f8a5e5424e97f088ceb6df8a4
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: _main/Magnet
-    400000: _main/Magnet/Transform
+    100000: _main/enemy_laser
+    400000: _main/enemy_laser/Transform
     2800000: tex2d_0
     7400000: anim_Untagged
-    9500000: _main/Magnet/Animator
-    21200000: _main/Magnet/SpriteRenderer
+    9500000: _main/enemy_laser/Animator
+    21200000: _main/enemy_laser/SpriteRenderer
     21300000: sprite_0
     100100000: _main
   externalObjects: {}

@@ -1,15 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class GunSelection : MonoBehaviour {
 
     public static bool gameIsPaused = false;
     public GameObject gunSelectionUI;
+
+    public Image firstImage;
+    public Image secondImage;
+
+    public Sprite obj_gun;
+    public Sprite obj_bolt_gun;
+    public Sprite obj_fire_spitter;
+    public Sprite obj_photon_launcher;
+    public Sprite obj_machine_blaster;
+    public Sprite obj_cluster_gun_mkII;
+
     private GameObject gun;
     GameObject player;
-
+    
+    private bool first = true;
     private int selection = 0;
 
     void Start() {
@@ -47,6 +60,7 @@ public class GunSelection : MonoBehaviour {
 
         // Get index from selected guns array 
         int index = FindIndexOfGun(gunName);
+        Sprite newImage = GetNewImage(gunName);
 
         // Set new gun in selected guns array
         PlayerInit.selectedGuns[selection] = index;
@@ -58,11 +72,20 @@ public class GunSelection : MonoBehaviour {
         gun = player.transform.GetChild(PlayerInit.selectedGuns[0]).gameObject;
         gun.SetActive(true);    
 
+        // Show Gun Stats
+        if (first) {
+            firstImage.sprite = newImage;
+            first = false;
+        } else {
+            secondImage.sprite = newImage;
+            first = true;
+        }
+
         // Updated selected
         SwitchIndex();
     }
 
-    // Method called when players click 's' to swithc guns
+    // Method called when players click 's' to switch guns
     void SwitchGuns() { 
         // Remove all guns from hand     
         RemoveGuns();
@@ -127,5 +150,22 @@ public class GunSelection : MonoBehaviour {
             return 5;
         }
         return 0;
+    }
+
+    Sprite GetNewImage(string gunName) {
+        if (gunName.Equals("obj_gun")) {
+            return obj_gun;
+        } else if (gunName.Equals("obj_bolt_gun")) {
+            return obj_bolt_gun;
+        } else if (gunName.Equals("obj_fire_spitter")) {
+            return obj_fire_spitter;
+        } else if (gunName.Equals("obj_photon_launcher")) {
+            return obj_photon_launcher;
+        } else if (gunName.Equals("obj_machine_blaster")) {
+            return obj_machine_blaster;
+        } else if (gunName.Equals("obj_cluster_gun_mkII")) {
+            return obj_cluster_gun_mkII;
+        }
+        return null;
     }
 }

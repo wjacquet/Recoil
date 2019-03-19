@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: acc439f188961554992703772b54b77b
+guid: 020aa9d7e9738d14fb6b816758b0df0c
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: _main/Magnet
-    400000: _main/Magnet/Transform
+    100000: _main/magnet_block
+    400000: _main/magnet_block/Transform
     2800000: tex2d_0
     7400000: anim_Untagged
-    9500000: _main/Magnet/Animator
-    21200000: _main/Magnet/SpriteRenderer
+    9500000: _main/magnet_block/Animator
+    21200000: _main/magnet_block/SpriteRenderer
     21300000: sprite_0
     100100000: _main
   externalObjects: {}

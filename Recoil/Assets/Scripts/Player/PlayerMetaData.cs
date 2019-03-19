@@ -14,8 +14,9 @@ public class PlayerMetaData
     public bool[] gunsFound;
     public int[] selectedGuns;
     public int currentGunIndex;
+    public bool magnet;
 
-    public PlayerMetaData(int maxHP, int currHP, int wealth, string scene, float[] pos, bool[] upgradesFound, bool[] scenesVisited, bool[] gunsFound, int[] selectedGuns, int currentGunIndex) {
+    public PlayerMetaData(int maxHP, int currHP, int wealth, string scene, float[] pos, bool[] upgradesFound, bool[] scenesVisited, bool[] gunsFound, int[] selectedGuns, int currentGunIndex, bool magnet) {
         this.maxHP = maxHP;
         this.currHP = currHP;
         this.wealth = wealth;
@@ -26,5 +27,6 @@ public class PlayerMetaData
         this.gunsFound = gunsFound;
         this.selectedGuns = selectedGuns;
         this.currentGunIndex = currentGunIndex;
+        this.magnet = magnet;
     }
 }
