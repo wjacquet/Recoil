@@ -12,11 +12,11 @@ public class Tulip : MonoBehaviour {
     public float timeBetweenShoots = 1.0f;
     public float floatTime = 0.08f;
 
-    private static GameObject bullet1;
-    private static GameObject bullet2;
-    private static GameObject bullet3;
-    private static GameObject bullet4;
-    private static GameObject bullet5;
+    private static GameObject bullet1 = null;
+    private static GameObject bullet2 = null;
+    private static GameObject bullet3 = null;
+    private static GameObject bullet4 = null;
+    private static GameObject bullet5 = null;
     private GameObject[] bulletsArray = new GameObject[5] {bullet1, bullet2, bullet3, bullet4, bullet5};
 
     void Start() {

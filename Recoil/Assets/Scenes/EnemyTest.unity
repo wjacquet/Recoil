@@ -4973,6 +4973,21 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 6287366575188219685}
+    - target: {fileID: 6963326934501887760, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 580739924644069020, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468789691925367887, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1162628929}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
 --- !u!1 &1162628929 stripped
