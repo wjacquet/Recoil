@@ -20,7 +20,7 @@ public class PivotGun : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update() {         
 
         // rotate gun
         GameObject cursor = GameObject.Find("obj_cursor");

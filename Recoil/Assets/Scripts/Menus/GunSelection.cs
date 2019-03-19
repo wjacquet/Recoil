@@ -27,7 +27,7 @@ public class GunSelection : MonoBehaviour {
 
     void Start() {
         player = GameObject.Find("obj_player");
-        gun = GameObject.Find("obj_gun");
+        gun = GameObject.Find("obj_gun_pivot");
     }
 
     void Update() {
