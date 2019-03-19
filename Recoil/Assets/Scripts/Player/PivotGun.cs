@@ -48,10 +48,4 @@ public class PivotGun : MonoBehaviour {
         // move gun to player's hand
         offset = flip ? flippedPosition : originalPosition;
     }
-
-
-    void LateUpdate() {
-        // Gun stays in player's hand
-        transform.position = player.transform.position + offset;
-    }
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireWeapon : MonoBehaviour {
-
+    
     public GameObject bullet;
-    // public GameObject player;
+    public GameObject player;
     public int reload;
     private int reloadCounter = 0;
-  
+
     // // Update is called once per frame
     void Update()
     {
@@ -22,6 +22,7 @@ public class FireWeapon : MonoBehaviour {
             Shoot();
         }
     }
+
 
     void Shoot()
     {
