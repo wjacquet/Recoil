@@ -20,19 +20,30 @@ public class GunSelection : MonoBehaviour {
     public Sprite obj_machine_blaster;
     public Sprite obj_cluster_gun_mkII;
 
+    public GameObject gunBox1;
+    public GameObject gunBox2;
+    public GameObject gunBox3;
+    public GameObject gunBox4;
+    public GameObject gunBox5;
+    public GameObject gunBox6;
+
+
     private GameObject gun;
     private SpriteRenderer spriteRen;
     private GameObject player;
     private Sprite[] sprites;
+    private GameObject[] gunBoxes;
     private bool first = true;
     private int selection = 0;
 
     void Start() {
+        gunBoxes = new GameObject[6] {gunBox1, gunBox2, gunBox3, gunBox4, gunBox5, gunBox6};
         sprites = new Sprite[6] {obj_gun, obj_bolt_gun, obj_fire_spitter, obj_photon_launcher, obj_machine_blaster, obj_cluster_gun_mkII};
 
         player = GameObject.Find("obj_player");
         gun = GameObject.Find("obj_gun_pivot");
         spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).GetChild(0).GetComponent<SpriteRenderer>();
+
     }
 
     void Update() {
@@ -40,6 +51,7 @@ public class GunSelection : MonoBehaviour {
             if (gameIsPaused) {
                 Resume();
             } else {
+                ShowGunsUnlocked();
                 Pause();
             }
         }
@@ -87,6 +99,16 @@ public class GunSelection : MonoBehaviour {
         // Swappy Swappy 
         SwitchGuns();
         SwitchGuns();
+    }
+
+    void ShowGunsUnlocked() {
+        for (int i = 0; i < gunBoxes.Length; i++) {
+            if (!PlayerInit.gunsFound[i]) {
+                gunBoxes[i].SetActive(false);
+            } else {
+                gunBoxes[i].SetActive(true);
+            }
+        }
     }
 
     // Method called when players click 's' to switch guns
