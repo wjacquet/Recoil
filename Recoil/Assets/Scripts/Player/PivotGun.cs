@@ -77,7 +77,6 @@ public class PivotGun : MonoBehaviour {
     public void FlipGun(bool flip) {
         flipped = flip;
 
-        Debug.Log(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]);
         if (flipped) {
             gunSprite.localPosition = gunPlacementsNeg[PlayerInit.selectedGuns[PlayerInit.currentGunIndex]];
         } else {
