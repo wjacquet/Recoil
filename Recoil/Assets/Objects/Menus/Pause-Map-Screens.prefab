@@ -3084,6 +3084,12 @@ MonoBehaviour:
     type: 3}
   obj_cluster_gun_mkII: {fileID: 21300000, guid: a1cec706890a1417f8166604ca50b7e6,
     type: 3}
+  gunBox1: {fileID: 4179634893444712615}
+  gunBox2: {fileID: 7188691054279745475}
+  gunBox3: {fileID: 5160449269258288127}
+  gunBox4: {fileID: 7293894019740090735}
+  gunBox5: {fileID: 3392111661081266384}
+  gunBox6: {fileID: 29494678202583024}
 --- !u!1 &4266475598898969121
 GameObject:
   m_ObjectHideFlags: 0
