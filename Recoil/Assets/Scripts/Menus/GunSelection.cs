@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class GunSelection : MonoBehaviour {
 
     public static bool gameIsPaused = false;
+    public static bool onCheckpoint = false;
     public GameObject gunSelectionUI;
 
     public Image firstImage;
@@ -35,7 +36,7 @@ public class GunSelection : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.G)) {
+        if (Input.GetKeyDown(KeyCode.G) && onCheckpoint) {
             if (gameIsPaused) {
                 Resume();
             } else {
@@ -151,6 +152,10 @@ public class GunSelection : MonoBehaviour {
     // Switch between 0 and 1
     void SwitchSavedIndex() {
         PlayerInit.currentGunIndex = 1 - PlayerInit.currentGunIndex;
+    }
+
+    public void FlipCheckpoint(bool value) {
+        onCheckpoint = value;
     }
 
 }
