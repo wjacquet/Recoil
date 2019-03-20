@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class LaserCrystal : MonoBehaviour {
 
+    public GameObject crystal;
     public LineRenderer line;
     public LineRenderer line1;
     public LineRenderer line2;
     public LineRenderer line3;
+
+    // public float speed = 0.1f; 
 
     private PlayerHealth playerHP;
 
@@ -16,10 +19,10 @@ public class LaserCrystal : MonoBehaviour {
     private Vector2 rotateVector2 = new Vector2(0, 0); 
     private Vector2 rotateVector3 = new Vector2(0, 0); 
     
-    private int angle = 0;
-    private int angle1 = 90;
-    private int angle2 = 180;
-    private int angle3 = 270;
+    private int angle = 45;
+    private int angle1 = 135;
+    private int angle2 = 225;
+    private int angle3 = 315;
 
 
     void Start() {
@@ -29,6 +32,7 @@ public class LaserCrystal : MonoBehaviour {
 
     void Update() {
         FireLaser();
+        crystal.transform.Rotate(0, 0, 0.2f);
     }
 
     void FireLaser(){

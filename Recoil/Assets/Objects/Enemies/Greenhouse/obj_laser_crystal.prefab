@@ -81,10 +81,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712289c1d6e70194e9d38a0897778d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crystal: {fileID: 3880444071888059735}
   line: {fileID: 4978516021882518635}
   line1: {fileID: 3631303524378877154}
   line2: {fileID: 1640665439545621384}
   line3: {fileID: 6089044852654305742}
+  speed: 10
 --- !u!114 &5817964789003414923
 MonoBehaviour:
   m_ObjectHideFlags: 0
