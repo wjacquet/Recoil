@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668997623554858408}
   - component: {fileID: 668997623554858406}
-  - component: {fileID: 668997623554858409}
+  - component: {fileID: 3453412732738479187}
   m_Layer: 12
   m_Name: obj_laser
   m_TagString: Untagged
@@ -127,7 +127,7 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &668997623554858409
+--- !u!114 &3453412732738479187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,6 +136,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 668997623554858411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 712289c1d6e70194e9d38a0897778d02, type: 3}
+  m_Script: {fileID: 11500000, guid: a1b2ce1d3460caa4694ac5556e033b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
