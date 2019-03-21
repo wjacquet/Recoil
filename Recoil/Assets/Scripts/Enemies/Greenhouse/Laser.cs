@@ -14,13 +14,21 @@ public class Laser : MonoBehaviour{
         playerHP = player.GetComponent<PlayerHealth>();
 
         line = gameObject.transform.GetComponent<LineRenderer>();
+
+        StartCoroutine(LaserPattern());
     }
 
-    void Update() {
-        FireLaser();
+    // void Update() {
+    //     FireLaser();
+    // }
+
+    IEnumerator LaserPattern() {
+        while (true) {
+            yield return FireLaser();
+        }
     }
 
-    void FireLaser(){
+    IEnumerator FireLaser(){
  
         Ray2D ray = new Ray2D(transform.position, transform.right);
         RaycastHit2D[] hits;
@@ -30,9 +38,11 @@ public class Laser : MonoBehaviour{
        
         angle = ResetAngle(angle);
         HandleCollisions(hits, line, ray);
-        
+
+        yield return new WaitForSeconds(0.03f); 
     }
 
+    // TODO Only if hits ground
     void HandleCollisions(RaycastHit2D[] hits, LineRenderer line,  Ray2D ray) {
 
         line.SetPosition(0, ray.origin);
