@@ -42,15 +42,12 @@ public class GunSelection : MonoBehaviour {
 
         player = GameObject.Find("obj_player");
         gun = GameObject.Find("obj_gun_pivot");
-        spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).GetChild(0).GetComponent<SpriteRenderer>();
+        spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).GetChild(0).GetComponent<SpriteRenderer>();
 
         SwitchGuns();
         SwitchGuns();
 
         SetGunSelected();
-
-        // Debug.Log(PlayerInit.currentGunIndex);
-
     }
 
     void Update() {
@@ -115,7 +112,6 @@ public class GunSelection : MonoBehaviour {
         // Show Gun Stats
         firstImage.sprite = newImage;
         secondImage.sprite = newImage2;
-        
     }
 
     void ShowGunsUnlocked() {
