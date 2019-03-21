@@ -19,9 +19,9 @@ public class CharacterSelect : MonoBehaviour
         {
             Sprite sprite = Resources.Load<Sprite>("Assets/Resources/spaceman-m.aseprite");
             selectedSkin = clickedButton.GetComponent<Image>().sprite;
-            Debug.Log("was null");
+            // Debug.Log("was null");
         }
-        Debug.Log("defaulted sprite to " + selectedSkin);
+        // Debug.Log("defaulted sprite to " + selectedSkin);
     }
 
     public void changeSprite()
@@ -32,7 +32,7 @@ public class CharacterSelect : MonoBehaviour
         //rend.sprite = clickedButton.GetComponent<Image>().sprite;
         selectedSkin = clickedButton.GetComponent<Image>().sprite;
 
-        Debug.Log("switched sprite to " + selectedSkin.texture);
+        // Debug.Log("switched sprite to " + selectedSkin.texture);
     }
 
 }

@@ -37,7 +37,7 @@ public class PivotGun : MonoBehaviour {
 
     void Start() {
         player = GameObject.Find("obj_player");
-        gunSprite = gameObject.transform.GetChild(0).transform;
+        gunSprite = gameObject.transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
         offset = transform.position - player.transform.position;
         originalPosition = offset;
         flippedPosition = new Vector3(offset.x - 10, offset.y, offset.z);
@@ -72,6 +72,7 @@ public class PivotGun : MonoBehaviour {
 
     public void SetSprite(Transform sprite) {
         gunSprite = sprite;
+
     }
 
     public void FlipGun(bool flip) {

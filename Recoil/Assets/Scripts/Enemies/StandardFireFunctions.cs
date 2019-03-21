@@ -41,12 +41,29 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     } 
 
+    public static void FireVerticallyFakeGravity(GameObject projectile, float speed) {
+
+        Vector2 direction = new Vector2(0, 180);
+        direction.x = 0;
+
+        SetVelocityWithSpeed(direction, projectile, speed);
+    }
+
     public static void FireDown(GameObject projectile) 
     {
         Vector2 direction = new Vector2(0, -180);
         direction.x = 0;
         SetVelocity(direction, projectile);
     } 
+
+    public static void FireDownFakeGravity(GameObject projectile, float speed) {
+
+        Vector2 direction = new Vector2(0, -180);
+        direction.x = 0;
+
+        SetVelocityWithSpeed(direction, projectile, speed);
+    }
+
 
     public static void StopFire(GameObject projectile) 
     {
@@ -95,5 +112,11 @@ public class StandardFireFunctions : MonoBehaviour
         Rigidbody2D rigidBody = projectile.GetComponent<Rigidbody2D>();
         direction.Normalize();
         rigidBody.velocity = direction * speed;
+    }
+
+    static void SetVelocityWithSpeed(Vector2 direction, GameObject projectile, float mySpeed) {
+        Rigidbody2D rigidBody = projectile.GetComponent<Rigidbody2D>();
+        direction.Normalize();
+        rigidBody.velocity = direction * mySpeed;
     }
 }
