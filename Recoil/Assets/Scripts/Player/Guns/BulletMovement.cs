@@ -61,4 +61,7 @@ public class BulletMovement : MonoBehaviour
     public void SetDamage(int dam) {
         damage = dam;
     }
+    public void SetSpeed(int spd) {
+        speed = spd;
+    }
 }
