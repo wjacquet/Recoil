@@ -6,8 +6,22 @@ public class Pot : MonoBehaviour {
 
     public GameObject cactus;
 
+    public float SpawnRate = 3.0f;
+
     void Start() {
+        StartCoroutine(PotPattern());
+    }
+
+    IEnumerator PotPattern() {
+        while (true) {
+            yield return Create();
+        }
+    }
+
+    IEnumerator Create() {
         Vector3 tmp = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
-        cactus = Instantiate(cactus, tmp, transform.rotation);
+        Instantiate(cactus, tmp, transform.rotation);
+
+        yield return new WaitForSeconds(SpawnRate);
     }
 }

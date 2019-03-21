@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8302050258925085609}
   m_Layer: 11
   m_Name: obj_pot
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cactus: {fileID: 3737338315215009373, guid: 41990f4f02f5a4fd9a7de697002c6a6d, type: 3}
+  SpawnRate: 3
 --- !u!1001 &7408135232762749499
 PrefabInstance:
   m_ObjectHideFlags: 0
