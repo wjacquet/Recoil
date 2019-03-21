@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject gun;
 
     void Start() {
-        rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+        rigidBody = gameObject.GetComponent<Rigidbody2D>();
         rigidBody.freezeRotation = true;
     }
     

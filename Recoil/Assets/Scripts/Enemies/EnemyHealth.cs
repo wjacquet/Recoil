@@ -13,8 +13,10 @@ public class EnemyHealth : MonoBehaviour
         currHP = initialHP;
     }
 
-    public void Damage() {
-        if (--currHP <= 0) {
+    public void Damage(int amount) {
+        amount = amount < 1 ? 1 : amount;
+        currHP -= amount;
+        if (currHP <= 0) {
             Death();
         }
     }

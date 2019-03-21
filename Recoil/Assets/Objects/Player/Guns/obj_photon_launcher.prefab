@@ -68,8 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2600662282960497286, guid: 891e40f96dcee08438dcd786e1235dda, type: 3}
   player: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
-  reload: 25
-  mySpriteRenderer: {fileID: 21200000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf, type: 3}
+  reload: 50
 --- !u!1001 &5976673192063780044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77,14 +76,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5559265765905296910}
     m_Modifications:
-    - target: {fileID: 100000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf, type: 3}
-      propertyPath: m_Name
-      value: PhotonLauncher
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -128,6 +119,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf, type: 3}
+      propertyPath: m_Name
+      value: PhotonLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf, type: 3}
