@@ -5,11 +5,11 @@ using UnityEngine;
 public class FireCluster : MonoBehaviour
 {
     public GameObject bullet;
-    public GameObject player;
     public int reload;
     public int damage;
-    public int knockback = 30;
+    public int knockback = 50;
     private int reloadCounter = 0;
+    private GameObject player;
 
     void Start() 
     {
@@ -33,10 +33,15 @@ public class FireCluster : MonoBehaviour
 
     void Shoot()
     {
-        GameObject newBull = Instantiate(bullet, transform.position, transform.rotation);
-        newBull.GetComponent<BulletMovement>().SetDamage(damage);
+        Vector2 recoil = new Vector2(0,0);
+        GameObject newBull;
+        for (int i = 0; i < 8; i++) {
+            newBull = Instantiate(bullet, transform.position, transform.rotation);
+            
+            newBull.GetComponent<BulletMovement>().SetDamage(damage);
         
-        Vector2 recoil = newBull.GetComponent<BulletMovement>().FireBullet() * knockback;
+            recoil = newBull.GetComponent<BulletMovement>().FireClusterBullet() * knockback;
+        }
         player.GetComponent<PlayerMovement>().Recoil(recoil);
     }
 }
