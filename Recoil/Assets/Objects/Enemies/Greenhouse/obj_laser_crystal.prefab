@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crystal: {fileID: 3880444071888059735}
-  laser: {fileID: 0}
+  laser: {fileID: 668997623554858411, guid: 89a3d9be1a867dd4db413be26ccff993, type: 3}
 --- !u!114 &5817964789003414923
 MonoBehaviour:
   m_ObjectHideFlags: 0
