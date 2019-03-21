@@ -44,6 +44,10 @@ public class GunSelection : MonoBehaviour {
         gun = GameObject.Find("obj_gun_pivot");
         spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).GetChild(0).GetComponent<SpriteRenderer>();
 
+        SwitchGuns();
+        SwitchGuns();
+
+        SetGunSelected();
     }
 
     void Update() {
@@ -59,7 +63,7 @@ public class GunSelection : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.S)) {  
             SwitchGuns();
         }    
-
+ 
         // Flip Gun
         CheckFlip();
     }
@@ -101,6 +105,15 @@ public class GunSelection : MonoBehaviour {
         SwitchGuns();
     }
 
+    void SetGunSelected() {
+        Sprite newImage = sprites[PlayerInit.selectedGuns[0]];
+        Sprite newImage2 = sprites[PlayerInit.selectedGuns[1]];
+
+        // Show Gun Stats
+        firstImage.sprite = newImage;
+        secondImage.sprite = newImage2;
+    }
+
     void ShowGunsUnlocked() {
         for (int i = 0; i < gunBoxes.Length; i++) {
             if (!PlayerInit.gunsFound[i]) {
@@ -112,7 +125,7 @@ public class GunSelection : MonoBehaviour {
     }
 
     // Method called when players click 's' to switch guns
-    void SwitchGuns() { 
+    public void SwitchGuns() { 
         // Remove all guns from hand     
         RemoveGuns();
 
