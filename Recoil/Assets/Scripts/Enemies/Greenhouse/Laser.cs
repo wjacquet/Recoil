@@ -18,10 +18,6 @@ public class Laser : MonoBehaviour{
         StartCoroutine(LaserPattern());
     }
 
-    // void Update() {
-    //     FireLaser();
-    // }
-
     IEnumerator LaserPattern() {
         while (true) {
             yield return FireLaser();
@@ -48,19 +44,34 @@ public class Laser : MonoBehaviour{
         line.SetPosition(0, ray.origin);
 
         for (int i = 0; i < hits.Length; ++i) {
-            if (!(hits[i].collider.gameObject.tag == "Enemy")) {
-                if (hits[i].collider.gameObject.tag == "Player") {
-                    playerHP.TakeDamage();
-                    line.SetPosition(1, hits[i].point);
-                    break;
-                } else {
-                    line.SetPosition(1, hits[i].point);
-                    break;
-                }
+            if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Ground") {
+                line.SetPosition(1, hits[i].point);
+                break;
+            } else if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Player") {
+                playerHP.TakeDamage();
             } else {
                 line.SetPosition(1, ray.GetPoint(20000));
             }
         }
+
+
+        //     if (!(hits[i].collider.gameObject.tag == "Enemy")) {
+        //         if (hits[i].collider.gameObject.tag == "Player") {
+        //             playerHP.TakeDamage();
+        //             line.SetPosition(1, hits[i].point);
+        //             break;
+
+        //         } else if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Ground") {
+        //             line.SetPosition(1, hits[i].point);
+        //         } else {
+        //             // line.SetPosition(1, hits[i].point);
+        //             break;
+        //         }
+        //     } else {
+        //         line.SetPosition(1, ray.GetPoint(20000));
+        //     }
+        // }
+
     }
 
     public void SetAngle(int newAngle) {
