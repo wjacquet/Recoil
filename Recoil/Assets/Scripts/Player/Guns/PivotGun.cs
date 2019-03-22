@@ -77,11 +77,30 @@ public class PivotGun : MonoBehaviour {
 
     public void FlipGun(bool flip) {
         flipped = flip;
-
         if (flipped) {
             gunSprite.localPosition = gunPlacementsNeg[PlayerInit.selectedGuns[PlayerInit.currentGunIndex]];
+            
+            // MAY NEED TO BE UPDATED IF GUNS HAVE MORE THAN 1 VISUAL CHILDREN
+            if (gunSprite.childCount > 1 && gunSprite.GetChild(1).transform.localPosition.x >= 0) {
+                Transform childTrans = gunSprite.GetChild(1).transform;
+                Vector3 childPos = childTrans.localPosition;
+                childPos.x *= -1;
+                childTrans.localPosition = childPos;
+                childTrans.Rotate(new Vector3(0,180,0));
+            }
+
         } else {
             gunSprite.localPosition = gunPlacementsPos[PlayerInit.selectedGuns[PlayerInit.currentGunIndex]];
+            
+            // MAY NEED TO BE UPDATED IF GUNS HAVE MORE THAN 1 VISUAL CHILDREN
+            if (gunSprite.childCount > 1 && gunSprite.GetChild(1).transform.localPosition.x <= 0) {
+                Transform childTrans = gunSprite.GetChild(1).transform;
+                Vector3 childPos = childTrans.localPosition;
+                childPos.x *= -1;
+                childTrans.localPosition = childPos;
+                childTrans.Rotate(new Vector3(0,180,0));
+            }
+            
         }      
 
         // move gun to player's hand
