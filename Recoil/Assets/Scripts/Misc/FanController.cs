@@ -10,9 +10,11 @@ public class FanController : MonoBehaviour
     void Start()
     {
         blades = gameObject.transform.GetChild(0);
-        Instantiate(push, transform.position, transform.rotation)
+
+        Vector3 pushPosition = new Vector3(transform.position.x, transform.position.y - 9, transform.position.z);
+        Instantiate(push, pushPosition, transform.rotation)
             .GetComponent<PushController>()
-            .SetSpeed(0, -1);
+            .Init(Vector2.down, pushPosition);
     }
 
     // Update is called once per frame

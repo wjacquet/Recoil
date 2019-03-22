@@ -37,8 +37,7 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy") {
             collision.gameObject.GetComponent<EnemyHealth>().Damage();
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject);
     }
 }
