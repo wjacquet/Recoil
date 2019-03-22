@@ -18,16 +18,13 @@ public class Flame : MonoBehaviour
     //     }
     // }
 
-    // void OnTriggerEnter2D(Collider2D collision) 
-    // {
-    //     string tag = collision.gameObject.tag;
-    //     if (collision.gameObject.tag == "Enemy") {
-    //         collision.gameObject.GetComponent<EnemyHealth>().Damage(damage);
-    //     }
-    //     if (tag != "Player" && tag != "Gun" && tag != "Bullet") {
-    //         Destroy(gameObject);
-    //     }
-    // }
+    void OnTriggerEnter2D(Collider2D collision) 
+    {
+        string tag = collision.gameObject.tag;
+        if (collision.gameObject.tag == "Enemy") {
+            collision.gameObject.GetComponent<EnemyHealth>().Damage(damage);
+        }
+    }
 
     public void SetDamage(int dam) {
         damage = dam;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FirePhoton : MonoBehaviour
 {
     public GameObject bullet;
-    public GameObject player;
+    private GameObject player;
     public int reload;
     public int damage;
     public int speed;

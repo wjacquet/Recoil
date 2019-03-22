@@ -5,38 +5,38 @@ using UnityEngine;
 public class FireFire : MonoBehaviour
 {
     public GameObject flame;
-    public GameObject player;
+    private GameObject player;
     public int reload;
     public int damage;
     public int knockback = 30;
-    private int reloadCounter = 0;
 
     void Start() 
     {
         player = GameObject.Find("obj_player");
+        flame.SetActive(false);
     }
 
     // // Update is called once per frame
     void Update()
     {
-        if (reloadCounter > 0) {
-            reloadCounter--;
-        }
-
         // Fire on mouse click and reset reloadTimer
-        if (Input.GetMouseButton(0) && reloadCounter == 0) {
-            reloadCounter = reload;
-            Shoot();
+        if (Input.GetMouseButton(0)) {
+            flame.SetActive(true);
+            AddRecoil();
+        } else {
+            flame.SetActive(false);
         }
+        
     }
 
 
-    void Shoot()
+    void AddRecoil()
     {
-        // GameObject newBull = Instantiate(bullet, transform.position, transform.rotation);
-        // newBull.GetComponent<BulletMovement>().SetDamage(damage);
-        
-        // Vector2 recoil = newBull.GetComponent<BulletMovement>().FireBullet() * knockback;
-        // player.GetComponent<PlayerMovement>().Recoil(recoil);
+        GameObject cursor = GameObject.Find("obj_cursor");
+        Vector2 direction = cursor.transform.position - transform.position;
+        direction.Normalize();
+
+        Vector2 recoil = new Vector2(-direction.x, -direction.y) * knockback;
+        player.GetComponent<PlayerMovement>().Recoil(recoil);
     }
 }
