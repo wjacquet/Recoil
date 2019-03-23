@@ -12,7 +12,7 @@ public class PlayerInit : MonoBehaviour
     public static Vector3 playerPos;
     public static bool[] loadedUpgradesFound = new bool[SceneManager.sceneCountInBuildSettings];
     public static bool[] scenesVisited = new bool[SceneManager.sceneCountInBuildSettings];
-    public static bool[] gunsFound = new bool[5];
+    public static bool[] gunsFound = new bool[6];
     public static int[] selectedGuns = new int[2];
     public static int currentGunIndex = 0;
     public static void SetPlayer(PlayerMetaData data) 
@@ -28,6 +28,7 @@ public class PlayerInit : MonoBehaviour
         PlayerHealth.maxHP = data.maxHP;
         PlayerHealth.currHP = data.currHP;
         PlayerCurrency.wealth = data.wealth;
+        PlayerAbilities.magnet = data.magnet;
     }
 
     static void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
@@ -42,6 +43,12 @@ public class PlayerInit : MonoBehaviour
         GameObject hpUpgrade = GameObject.Find("obj_health_upgrade");
         if (hpUpgrade && loadedUpgradesFound[scene.buildIndex]) {
             Destroy(hpUpgrade);
+        }
+
+        // Hide Magnet on Each Scene if they already have the ability
+        GameObject magnetAbility = GameObject.Find("obj_magnet");
+        if (PlayerAbilities.magnet) {
+            Destroy(magnetAbility);
         }
     }
 // TODO : This may need to be made asynchronous but depending on if triggering this function on every scene load becomes a problem or not

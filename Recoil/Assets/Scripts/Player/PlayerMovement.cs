@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject gun;
 
     void Start() {
-        rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+        rigidBody = gameObject.GetComponent<Rigidbody2D>();
         rigidBody.freezeRotation = true;
     }
     
@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
         else
             mySpriteRenderer.flipX = false;
         
-        // Make gun direction match player direction
-        gun.GetComponent<FireWeapon>().FlipGun(mySpriteRenderer.flipX);
+        // // Make gun direction match player direction
+        // gun.GetComponent<PivotGun>().FlipGun(mySpriteRenderer.flipX);
     }
 
     public void Recoil(Vector2 knockback) {
