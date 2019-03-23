@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHP: 1
+  initialHP: 15
 --- !u!60 &8207140656868632654
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451c8db914bb04aab94fd13dcc612361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopWaitTime: 0.2
+  timeBetweenSpeedChanges: 0.1
+  startingSpeed: 100
 --- !u!114 &9073089706102144195
 MonoBehaviour:
   m_ObjectHideFlags: 0
