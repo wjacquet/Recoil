@@ -6,30 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/MenuScenes/MainMenu.unity
     guid: 564d85bca1cd74122a424c58b0e86060
   - enabled: 1
-    path: Assets/Scenes/PlayerTest.unity
+    path: Assets/Scenes/TestScenes/PlayerTest.unity
     guid: 7ebc655f5d4ddf84ba65873f207b26a3
   - enabled: 1
-    path: Assets/Scenes/StartingArea.unity
+    path: Assets/Scenes/TutorialScenes/StartingArea.unity
     guid: e7b372e5cfd5ee8428538983b19b73ec
   - enabled: 1
-    path: Assets/Scenes/Tutorial2.unity
+    path: Assets/Scenes/TutorialScenes/Tutorial2.unity
     guid: 27e9f5e13ff8c474f904452a76411524
   - enabled: 1
-    path: Assets/Scenes/Tutorial3.unity
+    path: Assets/Scenes/TutorialScenes/Tutorial3.unity
     guid: a9325d7dc69ab9d47818960bf616f79c
   - enabled: 1
-    path: Assets/Scenes/Tutorial4.unity
+    path: Assets/Scenes/TutorialScenes/Tutorial4.unity
     guid: 796a907c00cbdde43afece687e2525d0
   - enabled: 1
-    path: Assets/Scenes/Tutorial5.unity
+    path: Assets/Scenes/TutorialScenes/Tutorial5.unity
     guid: 48a6f43c79918a04a9559e69b505c99b
   - enabled: 1
-    path: Assets/Scenes/TutorialBoss.unity
+    path: Assets/Scenes/TutorialScenes/TutorialBoss.unity
     guid: 98b757560cf4e01468322400be319855
   - enabled: 1
-    path: Assets/Scenes/EnemyTest.unity
+    path: Assets/Scenes/TestScenes/EnemyTest.unity
     guid: 35c69498d0e156c42b21028e9dbde7a6
   m_configObjects: {}
