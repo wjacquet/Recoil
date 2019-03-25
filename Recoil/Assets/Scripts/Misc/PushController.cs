@@ -16,7 +16,7 @@ public class PushController : MonoBehaviour
         StartCoroutine(SpawnWind());
     }
 
-    void Update() {
+    void FixedUpdate() {
         // calculate width/height of air current
         Ray2D ray = new Ray2D(origin, transform.right);
         RaycastHit2D[] hits;
