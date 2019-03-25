@@ -26,7 +26,7 @@ public class Tulip : MonoBehaviour {
     IEnumerator TulipPattern() {
         while (true) {
             yield return Shoot();
-            yield return new WaitForSeconds(timeBetweenShoots);
+            yield return new WaitForSeconds(1.0f);
             yield return StopFire();
             yield return new WaitForSeconds(floatTime);
             yield return Drop();
