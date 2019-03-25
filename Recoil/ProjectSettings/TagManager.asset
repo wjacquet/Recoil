@@ -10,6 +10,7 @@ TagManager:
   - HealthUpgrade
   - Ability
   - Gun
+  - Fan
   layers:
   - Default
   - TransparentFX
