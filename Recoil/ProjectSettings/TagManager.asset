@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - HealthUpgrade
   - Ability
+  - Gun
   layers:
   - Default
   - TransparentFX

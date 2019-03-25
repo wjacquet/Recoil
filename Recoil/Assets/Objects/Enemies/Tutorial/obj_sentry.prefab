@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHP: 2
+  initialHP: 22
 --- !u!114 &4884943040333455939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +142,10 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 1024
+  floor: 1
+  cieling: 0
+  right: 0
+  left: 0
 --- !u!1 &4884943040872122633
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5559265765905296910}
   - component: {fileID: 1035313279730470260}
-  - component: {fileID: 1820906291450631842}
+  - component: {fileID: 5264079017335569035}
   m_Layer: 9
   m_Name: obj_photon_launcher
   m_TagString: Untagged
@@ -54,7 +54,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1820906291450631842
+--- !u!114 &5264079017335569035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,13 +63,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4204565053028590969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12a7498f4d9ada40848359e32c23d38, type: 3}
+  m_Script: {fileID: 11500000, guid: c76823cf6b16cfb458e9d315b425894a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2600662282960497286, guid: 891e40f96dcee08438dcd786e1235dda, type: 3}
+  bullet: {fileID: 1396358931084712682, guid: 89f44106c3fd19b488e583741607d9f4, type: 3}
   player: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
-  reload: 25
-  mySpriteRenderer: {fileID: 21200000, guid: 52a1959a7e8fbc84b8311ae49b78d9cf, type: 3}
+  reload: 65
+  damage: 25
+  speed: 50
+  knockback: 50
 --- !u!1001 &5976673192063780044
 PrefabInstance:
   m_ObjectHideFlags: 0

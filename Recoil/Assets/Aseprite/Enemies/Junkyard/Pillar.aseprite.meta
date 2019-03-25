@@ -1,0 +1,95 @@
+fileFormatVersion: 2
+guid: 00fa4b83150c64a9d86117a26a258dc0
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: _main/Pillar
+    400000: _main/Pillar/Transform
+    2800000: tex2d_0
+    2800002: tex2d_1
+    2800004: tex2d_2
+    2800006: tex2d_3
+    2800008: tex2d_4
+    2800010: tex2d_5
+    2800012: tex2d_6
+    2800014: tex2d_7
+    2800016: tex2d_8
+    2800018: tex2d_9
+    2800020: tex2d_10
+    2800022: tex2d_11
+    2800024: tex2d_12
+    2800026: tex2d_13
+    2800028: tex2d_14
+    2800030: tex2d_15
+    2800032: tex2d_16
+    2800034: tex2d_17
+    2800036: tex2d_18
+    2800038: tex2d_19
+    2800040: tex2d_20
+    2800042: tex2d_21
+    2800044: tex2d_22
+    2800046: tex2d_23
+    2800048: tex2d_24
+    2800050: tex2d_25
+    2800052: tex2d_26
+    2800054: tex2d_27
+    2800056: tex2d_28
+    2800058: tex2d_29
+    2800060: tex2d_30
+    2800062: tex2d_31
+    2800064: tex2d_32
+    2800066: tex2d_33
+    2800068: tex2d_34
+    2800070: tex2d_35
+    7400000: anim_Untagged
+    9500000: _main/Pillar/Animator
+    21200000: _main/Pillar/SpriteRenderer
+    21300000: sprite_0
+    21300002: sprite_1
+    21300004: sprite_2
+    21300006: sprite_3
+    21300008: sprite_4
+    21300010: sprite_5
+    21300012: sprite_6
+    21300014: sprite_7
+    21300016: sprite_8
+    21300018: sprite_9
+    21300020: sprite_10
+    21300022: sprite_11
+    21300024: sprite_12
+    21300026: sprite_13
+    21300028: sprite_14
+    21300030: sprite_15
+    21300032: sprite_16
+    21300034: sprite_17
+    21300036: sprite_18
+    21300038: sprite_19
+    21300040: sprite_20
+    21300042: sprite_21
+    21300044: sprite_22
+    21300046: sprite_23
+    21300048: sprite_24
+    21300050: sprite_25
+    21300052: sprite_26
+    21300054: sprite_27
+    21300056: sprite_28
+    21300058: sprite_29
+    21300060: sprite_30
+    21300062: sprite_31
+    21300064: sprite_32
+    21300066: sprite_33
+    21300068: sprite_34
+    21300070: sprite_35
+    100100000: _main
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b1577cdc41d01fa4dbf68ad51122a765, type: 3}
+  pixelsPerUnit: 100
+  spriteAtlas: {instanceID: 0}
+  frameRate: 60
+  sortingLayerName: 
+  sortingOrder: 0
+  animatorCullingMode: 0
+  animatorController: {instanceID: 0}
+  errors: []

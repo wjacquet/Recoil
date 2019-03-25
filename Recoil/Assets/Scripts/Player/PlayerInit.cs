@@ -12,7 +12,7 @@ public class PlayerInit : MonoBehaviour
     public static Vector3 playerPos;
     public static bool[] loadedUpgradesFound = new bool[SceneManager.sceneCountInBuildSettings];
     public static bool[] scenesVisited = new bool[SceneManager.sceneCountInBuildSettings];
-    public static bool[] gunsFound = new bool[5];
+    public static bool[] gunsFound = new bool[6];
     public static int[] selectedGuns = new int[2];
     public static int currentGunIndex = 0;
     public static void SetPlayer(PlayerMetaData data) 
@@ -49,6 +49,22 @@ public class PlayerInit : MonoBehaviour
         GameObject magnetAbility = GameObject.Find("obj_magnet");
         if (PlayerAbilities.magnet) {
             Destroy(magnetAbility);
+        }
+
+        CheckForGuns();
+    }
+
+    static void CheckForGuns() 
+    {
+        for (int i = 1; i < PlayerInit.gunsFound.Length; i++) 
+        {
+            if (PlayerInit.gunsFound[i]) { //This gun should be deleted if true, it has been found
+                GameObject gunPickup = GameObject.Find("obj_drop_gun" + i);
+                if (gunPickup) {
+                    Destroy(gunPickup);
+                }
+            } 
+            
         }
     }
 // TODO : This may need to be made asynchronous but depending on if triggering this function on every scene load becomes a problem or not

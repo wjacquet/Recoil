@@ -336,6 +336,12 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 6287366575188219685}
+    - target: {fileID: 1034670570447179569, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
 --- !u!1 &306162371
@@ -22617,6 +22623,21 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6778037884185861050, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.09198
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572342737545108532, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -14.324951
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572342737545108532, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.591919
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fad6a87bd18ef4bb67c08e7cc8b802, type: 3}
 --- !u!1001 &1388804009
@@ -25387,7 +25408,7 @@ Tilemap:
   - first: {x: 16, y: 0, z: 0}
     second:
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -29713,8 +29734,8 @@ Tilemap:
     m_Data: {fileID: 21300062, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   - m_RefCount: 19
     m_Data: {fileID: 21300046, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300028, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 40
     m_Data: {fileID: 21300044, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   - m_RefCount: 59
@@ -29731,8 +29752,8 @@ Tilemap:
     m_Data: {fileID: 21300068, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: 21300072, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300028, guid: 5455f5979bc5f8641a7cefcdd183def3, type: 3}
   - m_RefCount: 42
     m_Data: {fileID: 21300028, guid: 8fceb4fa761596c46a8f411985405e9b, type: 3}
   - m_RefCount: 37

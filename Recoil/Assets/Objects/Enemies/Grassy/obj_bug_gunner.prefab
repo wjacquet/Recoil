@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHP: 2
+  initialHP: 20
 --- !u!114 &1579928216798414454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: {fileID: 1383589517549857606, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
-  amount: 1
+  amount: 3
 --- !u!60 &7766615428704889716
 PolygonCollider2D:
   m_ObjectHideFlags: 0

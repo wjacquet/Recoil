@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class GunSelection : MonoBehaviour {
 
     public static bool gameIsPaused = false;
+    public static bool onCheckpoint = false;
     public GameObject gunSelectionUI;
 
     public Image firstImage;
@@ -19,22 +20,42 @@ public class GunSelection : MonoBehaviour {
     public Sprite obj_machine_blaster;
     public Sprite obj_cluster_gun_mkII;
 
+    public GameObject gunBox1;
+    public GameObject gunBox2;
+    public GameObject gunBox3;
+    public GameObject gunBox4;
+    public GameObject gunBox5;
+    public GameObject gunBox6;
+
+
     private GameObject gun;
-    GameObject player;
-    
+    private SpriteRenderer spriteRen;
+    private GameObject player;
+    private Sprite[] sprites;
+    private GameObject[] gunBoxes;
     private bool first = true;
     private int selection = 0;
 
     void Start() {
+        gunBoxes = new GameObject[6] {gunBox1, gunBox2, gunBox3, gunBox4, gunBox5, gunBox6};
+        sprites = new Sprite[6] {obj_gun, obj_bolt_gun, obj_fire_spitter, obj_photon_launcher, obj_machine_blaster, obj_cluster_gun_mkII};
+
         player = GameObject.Find("obj_player");
-        gun = GameObject.Find("obj_gun");
+        gun = GameObject.Find("obj_gun_pivot");
+        spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).GetChild(0).GetComponent<SpriteRenderer>();
+
+        SwitchGuns();
+        SwitchGuns();
+
+        SetGunSelected();
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.G)) {
+        if (Input.GetKeyDown(KeyCode.G) && onCheckpoint) {
             if (gameIsPaused) {
                 Resume();
             } else {
+                //ShowGunsUnlocked();
                 Pause();
             }
         }
@@ -42,25 +63,20 @@ public class GunSelection : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.S)) {  
             SwitchGuns();
         }    
-
-        // Flip Gun...Again
-        GameObject cursor = GameObject.Find("obj_cursor");
-        if (cursor.transform.position.x <= player.transform.position.x) {
-            gun.GetComponent<FireWeapon>().FlipGun(true);
-        } else {
-            gun.GetComponent<FireWeapon>().FlipGun(false);
-        }
-
+ 
+        // Flip Gun
+        CheckFlip();
     }
 
     // Method called when gun is clicked in gun selction menu
     public void GunSelected() {
-        // Get gun name from button name
-        string gunName = EventSystem.current.currentSelectedGameObject.name;
 
         // Get index from selected guns array 
-        int index = FindIndexOfGun(gunName);
-        Sprite newImage = GetNewImage(gunName);
+        string indexStr = EventSystem.current.currentSelectedGameObject.name;
+        int index = int.Parse(indexStr);
+
+        // Get Sprite Image for gun stats panel
+        Sprite newImage = sprites[index];
 
         // Set new gun in selected guns array
         PlayerInit.selectedGuns[selection] = index;
@@ -69,8 +85,8 @@ public class GunSelection : MonoBehaviour {
         RemoveGuns();
         
         // Set first gun as current
-        gun = player.transform.GetChild(PlayerInit.selectedGuns[0]).gameObject;
-        gun.SetActive(true);    
+        GameObject tmp = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[0]).gameObject;
+        tmp.SetActive(true);    
 
         // Show Gun Stats
         if (first) {
@@ -83,10 +99,33 @@ public class GunSelection : MonoBehaviour {
 
         // Updated selected
         SwitchIndex();
+
+        // Swappy Swappy 
+        SwitchGuns();
+        SwitchGuns();
+    }
+
+    void SetGunSelected() {
+        Sprite newImage = sprites[PlayerInit.selectedGuns[0]];
+        Sprite newImage2 = sprites[PlayerInit.selectedGuns[1]];
+
+        // Show Gun Stats
+        firstImage.sprite = newImage;
+        secondImage.sprite = newImage2;
+    }
+
+    void ShowGunsUnlocked() {
+        for (int i = 0; i < gunBoxes.Length; i++) {
+            if (!PlayerInit.gunsFound[i]) {
+                gunBoxes[i].SetActive(false);
+            } else {
+                gunBoxes[i].SetActive(true);
+            }
+        }
     }
 
     // Method called when players click 's' to switch guns
-    void SwitchGuns() { 
+    public void SwitchGuns() { 
         // Remove all guns from hand     
         RemoveGuns();
 
@@ -94,15 +133,36 @@ public class GunSelection : MonoBehaviour {
         SwitchSavedIndex();
         
         // Show new gun
-        gun = player.transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).gameObject;
-        gun.SetActive(true);
+        GameObject tmp = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).gameObject;
+        spriteRen = player.transform.GetChild(0).GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).GetChild(0).GetComponent<SpriteRenderer>();
+        tmp.SetActive(true);
+
+        SetSpriteInPivot();
+        CheckFlip();
     }
+
+    void CheckFlip() {
+        GameObject cursor = GameObject.Find("obj_cursor");
+        if (cursor.transform.position.x <= player.transform.position.x) {
+            spriteRen.flipX = true;
+            gun.GetComponent<PivotGun>().FlipGun(true);
+        } else {
+            spriteRen.flipX = false;
+            gun.GetComponent<PivotGun>().FlipGun(false);
+        }
+    }
+
+    void SetSpriteInPivot() {
+        Transform tmp =  player.transform.GetChild(0).transform.GetChild(PlayerInit.selectedGuns[PlayerInit.currentGunIndex]).transform;
+        gun.GetComponent<PivotGun>().SetSprite(tmp);
+    }
+    
 
     // Removes all guns from players hand
     void RemoveGuns() {
         for (int i = 0; i < 6; i++) {
-            gun = player.transform.GetChild(i).gameObject;
-            gun.SetActive(false);  
+            GameObject tmp = player.transform.GetChild(0).GetChild(i).gameObject;
+            tmp.SetActive(false);  
         }
     }
 
@@ -121,51 +181,16 @@ public class GunSelection : MonoBehaviour {
 
     // Switch between 0 and 1
     void SwitchIndex() {
-        if (selection == 0)
-            selection = 1;
-        else 
-            selection = 0;
+        selection = 1 - selection;
     }
     
     // Switch between 0 and 1
     void SwitchSavedIndex() {
-        if (PlayerInit.currentGunIndex == 0)
-            PlayerInit.currentGunIndex = 1;
-        else 
-            PlayerInit.currentGunIndex = 0;
+        PlayerInit.currentGunIndex = 1 - PlayerInit.currentGunIndex;
     }
 
-    int FindIndexOfGun(string gunName) {
-        if (gunName.Equals("obj_gun")) {
-            return 0;
-        } else if (gunName.Equals("obj_bolt_gun")) {
-            return 1;
-        } else if (gunName.Equals("obj_fire_spitter")) {
-            return 2;
-        } else if (gunName.Equals("obj_photon_launcher")) {
-            return 3;
-        } else if (gunName.Equals("obj_machine_blaster")) {
-            return 4;
-        } else if (gunName.Equals("obj_cluster_gun_mkII")) {
-            return 5;
-        }
-        return 0;
+    public void FlipCheckpoint(bool value) {
+        onCheckpoint = value;
     }
 
-    Sprite GetNewImage(string gunName) {
-        if (gunName.Equals("obj_gun")) {
-            return obj_gun;
-        } else if (gunName.Equals("obj_bolt_gun")) {
-            return obj_bolt_gun;
-        } else if (gunName.Equals("obj_fire_spitter")) {
-            return obj_fire_spitter;
-        } else if (gunName.Equals("obj_photon_launcher")) {
-            return obj_photon_launcher;
-        } else if (gunName.Equals("obj_machine_blaster")) {
-            return obj_machine_blaster;
-        } else if (gunName.Equals("obj_cluster_gun_mkII")) {
-            return obj_cluster_gun_mkII;
-        }
-        return null;
-    }
 }
