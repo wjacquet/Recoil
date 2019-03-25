@@ -34,7 +34,7 @@ public class PlayerInit : MonoBehaviour
     static void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         GameObject playerModel = GameObject.Find("obj_player");
         playerModel.transform.position = playerPos;
-
+        Debug.Log(scene.buildIndex);
         scenesVisited[scene.buildIndex] = true;
 
         GameObject camera = GameObject.Find("Main Camera");
