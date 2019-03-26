@@ -55,10 +55,6 @@ public class pillarHead : MonoBehaviour
             playerHP.TakeDamage();
             
         }
-        else if (collision.gameObject.name == "obj_pot")
-        {
-            flipDirection();
-        }
         flipDirection();
     }
 }
