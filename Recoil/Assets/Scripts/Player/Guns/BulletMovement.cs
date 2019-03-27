@@ -42,7 +42,7 @@ public class BulletMovement : MonoBehaviour
         if (collision.gameObject.tag == "Enemy") {
             collision.gameObject.GetComponent<EnemyHealth>().Damage(damage);
         }
-        if (tag != "Player" && tag != "Gun" && tag != "Bullet") {
+        if (tag != "Player" && tag != "Gun" && tag != "Bullet" && tag != "Fan") {
             Destroy(gameObject);
         }
     }
@@ -53,7 +53,7 @@ public class BulletMovement : MonoBehaviour
         if (collision.gameObject.tag == "Enemy") {
             collision.gameObject.GetComponent<EnemyHealth>().Damage(damage);
         }
-        if (tag != "Player" && tag != "Gun" && tag != "Bullet") {
+        if (tag != "Player" && tag != "Gun" && tag != "Bullet" && tag != "Fan") {
             Destroy(gameObject);
         }
     }
