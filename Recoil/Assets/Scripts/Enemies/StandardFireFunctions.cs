@@ -82,7 +82,6 @@ public class StandardFireFunctions : MonoBehaviour
 
         direction.x = Mathf.Sin(Mathf.Deg2Rad * angleToPlayer);
         direction.y = Mathf.Cos(Mathf.Deg2Rad * angleToPlayer);
-
         SetVelocity(direction, projectile);
     }
 
