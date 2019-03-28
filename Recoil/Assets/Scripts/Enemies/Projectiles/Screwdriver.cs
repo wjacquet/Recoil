@@ -5,9 +5,8 @@ using UnityEngine;
 public class Screwdriver : MonoBehaviour
 {
     PlayerHealth playerHP;
-    private int speed = 350;
-    private int maxDist = 50;
-
+    private int speed = 250;
+    private int maxDist = 250;
 
     void Start()
     {
@@ -32,6 +31,11 @@ public class Screwdriver : MonoBehaviour
             direction.y = ((Vector2.one).normalized).y;
 
             dist = Vector2.Distance(transform.position, player.transform.position);
+            if (dist > 200)
+            {
+                dist = 200;
+            }
+            //Debug.Log(dist);
             distRatio = dist > maxDist ? 1 : dist / maxDist;
 
             rigidBody.velocity += direction * (speed * (distRatio < 0.4f ? 0.45f : distRatio));

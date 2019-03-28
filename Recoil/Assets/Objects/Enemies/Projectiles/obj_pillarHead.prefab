@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 7899269513247773110}
   m_Layer: 12
   m_Name: obj_pillarHead
-  m_TagString: Untagged
+  m_TagString: PillarHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623708391b6ee2848b4685650842417d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  body: {fileID: 0}
 --- !u!114 &7899269513247773110
 MonoBehaviour:
   m_ObjectHideFlags: 0
