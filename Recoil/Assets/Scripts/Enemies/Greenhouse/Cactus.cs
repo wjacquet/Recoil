@@ -60,7 +60,7 @@ public class Cactus : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             playerHP.TakeDamage();   
-        } else if (collision.gameObject.name == "obj_pot") {
+        } else if (collision.gameObject.name.Substring(0, 7) == "obj_pot") {
             Destroy(gameObject);
         }
     }

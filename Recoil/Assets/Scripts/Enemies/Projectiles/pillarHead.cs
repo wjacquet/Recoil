@@ -5,7 +5,7 @@ using UnityEngine;
 public class pillarHead : MonoBehaviour
 {
     PlayerHealth playerHP;
-
+    public GameObject body;
     private int speed = 60;
     private Vector2 direction;
     // Start is called before the first frame update
@@ -27,6 +27,7 @@ public class pillarHead : MonoBehaviour
         direction.Normalize();
         rigidBody.velocity += direction * speed;
     }
+
 
     void flipDirection ()
     {

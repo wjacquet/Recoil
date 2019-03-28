@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7369880464410043096}
   - component: {fileID: 7369880464410043099}
   - component: {fileID: 7369880464410043098}
+  - component: {fileID: 8444206839549373223}
+  - component: {fileID: 502723811508608843}
   m_Layer: 0
   m_Name: obj_megaMag
   m_TagString: Untagged
@@ -96,6 +98,33 @@ MonoBehaviour:
   angle: -90
   spread: 20
   range: 8
+--- !u!114 &8444206839549373223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369880464410043101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHP: 50
+--- !u!114 &502723811508608843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369880464410043101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52835962b9ceb8f4ca34d33df565b65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 0}
+  amount: 1
 --- !u!1001 &7369880464133286684
 PrefabInstance:
   m_ObjectHideFlags: 0

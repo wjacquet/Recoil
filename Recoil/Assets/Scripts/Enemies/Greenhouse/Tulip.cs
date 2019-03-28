@@ -35,8 +35,9 @@ public class Tulip : MonoBehaviour {
     }
     
     IEnumerator Shoot() {
+        Vector3 shootLower = new Vector3(transform.position.x, transform.position.y - 5, transform.position.z);
         for (int i = 0; i < bulletsArray.Length; i++) {
-            bulletsArray[i] = Instantiate(bullet, transform.position, transform.rotation);
+            bulletsArray[i] = Instantiate(bullet, shootLower, transform.rotation);
         }
 
         StandardFireFunctions.FireVetically(bulletsArray[0]);
