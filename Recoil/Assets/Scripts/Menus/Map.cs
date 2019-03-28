@@ -38,6 +38,21 @@ public class Map : MonoBehaviour {
     public GameObject TutorialBoss;
     public GameObject TutorialBossGold;
 
+    public GameObject Greenhouse1;
+    public GameObject Greenhouse1Gold;
+
+    public GameObject Greenhouse2;
+    public GameObject Greenhouse2Gold;
+
+    public GameObject Greenhouse3;
+    public GameObject Greenhouse3Gold;
+
+    public GameObject Greenhouse4;
+    public GameObject Greenhouse4Gold;
+
+    public GameObject GreenhouseBoss;
+    public GameObject GreenhouseBossGold;
+
 
     // Update is called once per frame
     void Update() {
@@ -114,6 +129,22 @@ public class Map : MonoBehaviour {
 
         } else if (level.Equals(TutorialBoss.name)) {
             return  (new[] {TutorialBoss, TutorialBossGold});
+
+        } else if (level.Equals(Greenhouse1.name)) {
+            return  (new[] {Greenhouse1, Greenhouse1Gold});
+
+        } else if (level.Equals(Greenhouse2.name)) {
+            return  (new[] {Greenhouse2, Greenhouse2Gold});
+
+        } else if (level.Equals(Greenhouse3.name)) {
+            return  (new[] {Greenhouse3, Greenhouse3Gold});
+
+        } else if (level.Equals(Greenhouse4.name)) {
+            return  (new[] {Greenhouse4, Greenhouse4Gold});
+
+        } else if (level.Equals(GreenhouseBoss.name)) {
+            return  (new[] {GreenhouseBoss, GreenhouseBossGold});
+
         } else {
             return null;
         }
