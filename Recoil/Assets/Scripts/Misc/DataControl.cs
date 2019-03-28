@@ -77,7 +77,7 @@ public class DataControl : MonoBehaviour
                                     3,
                                     3,
                                     0,
-                                    "Scenes/StartingArea",
+                                    "Scenes/TutorialScenes/StartingArea",
                                     new[] { 9.6f, -4.1f, 0f },
                                     new bool[SceneManager.sceneCountInBuildSettings],
                                     new bool[SceneManager.sceneCountInBuildSettings],
