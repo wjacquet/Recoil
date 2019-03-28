@@ -14,13 +14,13 @@ public class popPillar : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnDestroy()
     {
-        
+        Destroy(GameObject.FindWithTag("PillarHead"));
     }
 
     void Shoot()
     {
-        Instantiate(bullet, transform.position, transform.rotation).SendMessage("PopPillar"); ;
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("PopPillar");
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Ability
   - Gun
   - Fan
+  - PillarHead
   layers:
   - Default
   - TransparentFX
