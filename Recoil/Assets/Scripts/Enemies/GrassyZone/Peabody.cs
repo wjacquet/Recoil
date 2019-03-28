@@ -17,20 +17,20 @@ public class Peabody : MonoBehaviour {
     }
 
     void Update() {
-        StandardFireFunctions.FireAtPlayer(proj);
+        if (proj != null)
+            StandardFireFunctions.FireAtPlayer(proj);
     }
 
     IEnumerator PeabodyPattern() {
         while (true) {
             yield return Shoot();
-            yield return new WaitForSeconds(timePerShot);
-            Destroy(proj);
         }
     }
 
     IEnumerator Shoot() {
         proj = Instantiate(bullet, transform.position, transform.rotation);
-        yield return null;
+        yield return new WaitForSeconds(timePerShot);
+        Destroy(proj);
     }
 
 }
