@@ -6,9 +6,7 @@ public class MagneticBlock : MonoBehaviour {
 
     // To use the magnet, right click and the object will fly towards you with gravity
 
-    // TODO Magnet block works, now only allow when player has the magnet ability
-
-    public float magnetStrength = 0.3f;
+    public float magnetStrength = 900f;
     public GameObject block;
 
     private bool magnet = false;
@@ -24,8 +22,8 @@ public class MagneticBlock : MonoBehaviour {
     void Update() {
         if (magnet && touching && PlayerAbilities.magnet) {
             StandardFireFunctions.MagnetTowardsPlayer(block, magnetStrength);
-        } 
-    }
+        }  
+    } 
 
     void OnCollisionEnter2D(Collision2D collision) {
         touching = true;
