@@ -12,6 +12,11 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     }
 
+    public static void FireAtPlayerWithSetSpeed(GameObject projectile, float speed) {
+        Vector2 direction = GetVectorToPlayer(projectile);
+        SetVelocityWithSpeed(direction, projectile, speed);
+    }
+
     public static void MagnetTowardsPlayer(GameObject projectile, float speed) {
         Vector2 direction = GetVectorToPlayer(projectile);
 

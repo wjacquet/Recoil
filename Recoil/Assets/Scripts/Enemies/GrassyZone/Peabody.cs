@@ -9,7 +9,8 @@ public class Peabody : MonoBehaviour {
 
     private GameObject proj;
 
-    public float timePerShot = 2.0f;
+    public float timePerShot = 4.0f;
+    public float shotSpeed = 40.0f;
 
     // Start is called before the first frame update
     void Start() {
@@ -18,7 +19,7 @@ public class Peabody : MonoBehaviour {
 
     void Update() {
         if (proj != null)
-            StandardFireFunctions.FireAtPlayer(proj);
+            StandardFireFunctions.FireAtPlayerWithSetSpeed(proj, shotSpeed);
     }
 
     IEnumerator PeabodyPattern() {
