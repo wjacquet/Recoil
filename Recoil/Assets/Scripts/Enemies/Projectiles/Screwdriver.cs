@@ -44,7 +44,7 @@ public class Screwdriver : MonoBehaviour
     }
 
     // Once the projectile hits a wall
-    IEnumerator OnCollisionEnter2D(Collision2D collision)
+    IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -52,7 +52,7 @@ public class Screwdriver : MonoBehaviour
             Destroy(gameObject);
         } else
         {
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.25f);
             Destroy(gameObject);
         }
         
