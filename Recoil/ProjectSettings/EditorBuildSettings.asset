@@ -32,4 +32,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScenes/EnemyTest.unity
     guid: 35c69498d0e156c42b21028e9dbde7a6
+  - enabled: 1
+    path: Assets/Scenes/GrassyZoneScenes/GrassyZoneEntrance.unity
+    guid: e06ec26ac1658d54d8f730d10a0be29a
+  - enabled: 1
+    path: Assets/Scenes/GrassyZoneScenes/GrassyZoneGreenhouse.unity
+    guid: 10d62e48dc38e314198ca020eb102176
+  - enabled: 1
+    path: Assets/Scenes/GrassyZoneScenes/GrassyZoneJunkyard.unity
+    guid: 7e08d11a8b714614d8b419ceeac295a3
+  - enabled: 1
+    path: Assets/Scenes/GrassyZoneScenes/GrassyZoneRainy.unity
+    guid: 24ddb48d7fd089b4b9a4fe0a1d26e0f7
+  - enabled: 1
+    path: Assets/Scenes/GreenhouseScenes/Greenhouse1.unity
+    guid: 6b179c1f0b15e3d459b0260a2c2039b0
+  - enabled: 1
+    path: Assets/Scenes/GreenhouseScenes/Greenhouse2.unity
+    guid: e4a0a40f5afdfa845ad45852c6130a62
+  - enabled: 1
+    path: Assets/Scenes/GreenhouseScenes/Greenhouse3.unity
+    guid: ff8b3875581d6454b824babc037d958c
+  - enabled: 1
+    path: Assets/Scenes/GreenhouseScenes/Greenhouse4.unity
+    guid: 9652f04080f4d174ea8b4b4cd3ae0c40
+  - enabled: 1
+    path: Assets/Scenes/GreenhouseScenes/GreenhouseBoss.unity
+    guid: d0a5b06e89c141c499f7311defbcbef1
   m_configObjects: {}
