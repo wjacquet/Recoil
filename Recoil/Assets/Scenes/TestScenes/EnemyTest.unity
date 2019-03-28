@@ -4609,26 +4609,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
-        type: 3}
-      propertyPath: m_AllowMSAA
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
-        type: 3}
-      propertyPath: orthographic size
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
-        type: 3}
-      propertyPath: m_AllowMSAA
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
-        type: 3}
-      propertyPath: orthographic size
-      value: 128
-      objectReference: {fileID: 0}
     - target: {fileID: 9129270991663252113, guid: 996700304d007554b958ea23ff599d6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4689,6 +4669,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1162628929}
+    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: orthographic size
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129270991663252112, guid: 996700304d007554b958ea23ff599d6e,
+        type: 3}
+      propertyPath: orthographic size
+      value: 128
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996700304d007554b958ea23ff599d6e, type: 3}
 --- !u!4 &184916429 stripped
@@ -5194,6 +5194,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: obj_laser_crystal
       objectReference: {fileID: 0}
+    - target: {fileID: 3880444071888059735, guid: 75fe5028efd71d949873decc1133a73d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3880444071888059735, guid: 75fe5028efd71d949873decc1133a73d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 8642583444200385668, guid: 75fe5028efd71d949873decc1133a73d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5248,6 +5258,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592685533999263219, guid: 75fe5028efd71d949873decc1133a73d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75fe5028efd71d949873decc1133a73d, type: 3}
@@ -6231,16 +6246,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUICanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 947805220776385026, guid: a767859450106194097377cd6d504200,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6375,6 +6380,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 23.96997
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387914029551435870, guid: a767859450106194097377cd6d504200,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7869719182818855189, guid: a767859450106194097377cd6d504200,
         type: 3}
