@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 0a13c3ade47c2974f92887a5b0b65487
+guid: 5dddf53a9ea7dce48979062a47ac291f
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: _main/JunkBucket
-    400000: _main/JunkBucket/Transform
+    100000: _main/JunkBuckeMK2t
+    400000: _main/JunkBuckeMK2t/Transform
     2800000: tex2d_0
     7400000: anim_Untagged
-    9500000: _main/JunkBucket/Animator
-    21200000: _main/JunkBucket/SpriteRenderer
+    9500000: _main/JunkBuckeMK2t/Animator
+    21200000: _main/JunkBuckeMK2t/SpriteRenderer
     21300000: sprite_0
     100100000: _main
   externalObjects: {}
@@ -15,7 +15,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: b1577cdc41d01fa4dbf68ad51122a765, type: 3}
-  pixelsPerUnit: 0.65
+  pixelsPerUnit: 0.75
   spriteAtlas: {instanceID: 0}
   frameRate: 60
   sortingLayerName: 
