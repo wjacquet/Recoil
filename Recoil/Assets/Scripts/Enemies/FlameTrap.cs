@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlameTrap : MonoBehaviour
 {
     public GameObject flame;
+    public bool isFlaming = true;
 
 
     void Start()
@@ -14,9 +15,9 @@ public class FlameTrap : MonoBehaviour
 
     IEnumerator FireFlame() {
         while (true) {
-            flame.SetActive(true);
+            flame.SetActive(isFlaming);
             yield return new WaitForSeconds(3f);
-            flame.SetActive(false);
+            flame.SetActive(!isFlaming);
             yield return new WaitForSeconds(2f);
 
         }
