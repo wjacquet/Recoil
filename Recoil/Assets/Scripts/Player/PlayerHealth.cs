@@ -26,16 +26,16 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage() 
     {
-        // if (iFrames != 0) return;
+        if (iFrames != 0) return;
 
-        // if (--currHP <= 0) {
-        //     setHealthText(currHP);
-        //     // Dead
-        //     Die();
-        //     return;
-        // }
-        // setHealthText(currHP);
-        // iFrames = 60;
+        if (--currHP <= 0) {
+            setHealthText(currHP);
+            // Dead
+            Die();
+            return;
+        }
+        setHealthText(currHP);
+        iFrames = 60;
     }
 
     public void UpgradeHP() 
