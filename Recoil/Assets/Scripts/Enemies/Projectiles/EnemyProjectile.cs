@@ -13,7 +13,7 @@ public class EnemyProjectile : MonoBehaviour
     }
 
     // Once the projectile hits a wall
-    void OnCollisionEnter2D(Collision2D collision) 
+    void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.gameObject.tag == "Player") {
             playerHP.TakeDamage();
