@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 133883602}
   - component: {fileID: 133883601}
   - component: {fileID: 133883600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FG Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
