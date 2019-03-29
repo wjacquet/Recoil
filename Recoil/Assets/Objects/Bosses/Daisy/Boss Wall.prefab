@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8185289667229862940}
   - component: {fileID: 8185289667229862941}
   - component: {fileID: 8185289667229862938}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boss Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
