@@ -19,6 +19,9 @@ public class GunSelection : MonoBehaviour {
     public Slider dSlider2;
     public Slider frSlider2;
 
+    public Text projText1;
+    public Text projText2;
+
     public Sprite obj_gun;
     public Sprite obj_bolt_gun;
     public Sprite obj_fire_spitter;
@@ -40,6 +43,7 @@ public class GunSelection : MonoBehaviour {
     private Sprite[] sprites;
     private int[] damageVals;
     private int[] fireRateVals;
+    private string[] projTypes;
     private GameObject[] gunBoxes;
     private bool first = true;
     private int selection = 0;
@@ -49,6 +53,7 @@ public class GunSelection : MonoBehaviour {
         sprites = new Sprite[6] {obj_gun, obj_bolt_gun, obj_fire_spitter, obj_photon_launcher, obj_machine_blaster, obj_cluster_gun_mkII};
         damageVals = new int[6] { 50, 50, 100, 80, 20, 65};
         fireRateVals = new int[6] {60, 50, 100, 30, 90, 40 };
+        projTypes = new string[6] { "Semi Auto", "Bolt Action", "Incendiary", "Launcher", "Rapid Fire", "Spread" };
 
         player = GameObject.Find("obj_player");
         gun = GameObject.Find("obj_gun_pivot");
@@ -104,11 +109,13 @@ public class GunSelection : MonoBehaviour {
             firstImage.sprite = newImage;
             dSlider1.value = damageVals[i];
             frSlider1.value = fireRateVals[i];
+            projText1.text = "Projectile: " + projTypes[i];
             first = false;
         } else {
             secondImage.sprite = newImage;
             dSlider2.value = damageVals[i];
             frSlider2.value = fireRateVals[i];
+            projText2.text = "Projectile: " + projTypes[i];
             first = true;
         }
 
@@ -128,10 +135,12 @@ public class GunSelection : MonoBehaviour {
         firstImage.sprite = newImage;
         dSlider1.value = damageVals[PlayerInit.selectedGuns[0]];
         frSlider1.value = fireRateVals[PlayerInit.selectedGuns[0]];
+        projText1.text = "Projectile: " + projTypes[PlayerInit.selectedGuns[0]];
 
         secondImage.sprite = newImage2;
         dSlider2.value = damageVals[PlayerInit.selectedGuns[1]];
         frSlider2.value = fireRateVals[PlayerInit.selectedGuns[1]];
+        projText2.text = "Projectile: " + projTypes[PlayerInit.selectedGuns[1]];
     }
 
     void ShowGunsUnlocked() {
