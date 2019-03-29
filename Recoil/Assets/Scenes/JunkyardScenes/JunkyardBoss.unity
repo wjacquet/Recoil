@@ -17100,6 +17100,10 @@ PrefabInstance:
       propertyPath: initialHP
       value: 585
       objectReference: {fileID: 0}
+    - target: {fileID: 2141618140, guid: a43ba5d1e2e89304d84597e96aa95759, type: 3}
+      propertyPath: bossWalls
+      value: 
+      objectReference: {fileID: 787938590}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a43ba5d1e2e89304d84597e96aa95759, type: 3}
 --- !u!4 &1903072734 stripped
