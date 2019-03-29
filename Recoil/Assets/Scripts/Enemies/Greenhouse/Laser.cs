@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour{
 
+    public bool isWarning = false;
     private LineRenderer line;
     private PlayerHealth playerHP;
     private Vector2 rotateVector = new Vector2(0, 0); 
@@ -47,7 +48,7 @@ public class Laser : MonoBehaviour{
             if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Ground") {
                 line.SetPosition(1, hits[i].point);
                 break;
-            } else if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Player") {
+            } else if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Player" && !isWarning) {
                 playerHP.TakeDamage();
             } else {
                 line.SetPosition(1, ray.GetPoint(20000));
@@ -76,6 +77,7 @@ public class Laser : MonoBehaviour{
 
     public void SetAngle(int newAngle) {
         angle = newAngle;
+        angle = newAngle % 360;
     }
 
     int ResetAngle(int angle) {

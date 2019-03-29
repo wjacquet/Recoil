@@ -6,6 +6,8 @@ public class DaisyMovement : MonoBehaviour
 {
     public GameObject petals;
     public GameObject bullet;
+    public GameObject laser;
+    public GameObject warningLaser;
     private PlayerHealth playerHP;
     private float angle = 0;
     private float rotationSpeed = 1f;
@@ -40,6 +42,7 @@ public class DaisyMovement : MonoBehaviour
             // bounce attack
             yield return BounceAttack();
             // laser attack
+            yield return LaserAttack();
             // wind attack
             // pedal attack
         }
@@ -108,6 +111,41 @@ public class DaisyMovement : MonoBehaviour
         while (transform.position != origin) {
             transform.position = Vector2.MoveTowards(transform.position, origin, 60 * Time.deltaTime);
             yield return null;
+        }
+
+        yield return new WaitForSeconds(2.0f);
+    }
+
+    IEnumerator LaserAttack() {
+        rotationSpeed = 0.5f;
+        int angleOffset = 45;
+
+        // spawn warning lasers
+        GameObject[] lasers = new GameObject[8];
+        Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + 3);
+        for (int i = 0; i < 8; i++) {
+            lasers[i] = Instantiate(warningLaser, transform.position, transform.rotation);
+            lasers[i].GetComponent<Laser>().SetAngle((angleOffset * i) + (int)angle);
+        }
+
+        yield return new WaitForSeconds(2.0f);
+
+        // delete warning lasers
+        for (int i = 0; i < 8; i++) {
+            Destroy(lasers[i]);
+        }
+
+        // spawn lasers
+        for (int i = 0; i < 8; i++) {
+            lasers[i] = Instantiate(laser, transform.position, transform.rotation);
+            lasers[i].GetComponent<Laser>().SetAngle((angleOffset * i) + (int)angle);
+        }
+
+        yield return new WaitForSeconds(8.0f);
+
+        // delete lasers
+        for (int i = 0; i < 8; i++) {
+            Destroy(lasers[i]);
         }
 
         yield return new WaitForSeconds(2.0f);

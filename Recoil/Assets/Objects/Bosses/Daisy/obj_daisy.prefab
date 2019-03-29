@@ -81,6 +81,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   petals: {fileID: 2301128459585043155}
   bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
+  laser: {fileID: 668997623554858411, guid: 89a3d9be1a867dd4db413be26ccff993, type: 3}
+  warningLaser: {fileID: 668997623554858411, guid: 0f1478c21b2260547bbaab7d5ed3985b,
+    type: 3}
 --- !u!114 &5626929872449125194
 MonoBehaviour:
   m_ObjectHideFlags: 0
