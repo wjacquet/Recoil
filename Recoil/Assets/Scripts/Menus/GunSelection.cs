@@ -13,6 +13,12 @@ public class GunSelection : MonoBehaviour {
     public Image firstImage;
     public Image secondImage;
 
+    public Slider dSlider1;
+    public Slider frSlider1;
+
+    public Slider dSlider2;
+    public Slider frSlider2;
+
     public Sprite obj_gun;
     public Sprite obj_bolt_gun;
     public Sprite obj_fire_spitter;
@@ -32,6 +38,8 @@ public class GunSelection : MonoBehaviour {
     private SpriteRenderer spriteRen;
     private GameObject player;
     private Sprite[] sprites;
+    private int[] damageVals;
+    private int[] fireRateVals;
     private GameObject[] gunBoxes;
     private bool first = true;
     private int selection = 0;
@@ -39,6 +47,8 @@ public class GunSelection : MonoBehaviour {
     void Start() {
         gunBoxes = new GameObject[6] {gunBox1, gunBox2, gunBox3, gunBox4, gunBox5, gunBox6};
         sprites = new Sprite[6] {obj_gun, obj_bolt_gun, obj_fire_spitter, obj_photon_launcher, obj_machine_blaster, obj_cluster_gun_mkII};
+        damageVals = new int[6] { 50, 50, 100, 80, 20, 65};
+        fireRateVals = new int[6] {60, 50, 100, 30, 90, 40 };
 
         player = GameObject.Find("obj_player");
         gun = GameObject.Find("obj_gun_pivot");
@@ -55,7 +65,7 @@ public class GunSelection : MonoBehaviour {
             if (gameIsPaused) {
                 Resume();
             } else {
-                ShowGunsUnlocked();
+                //ShowGunsUnlocked();
                 Pause();
             }
         }
@@ -74,6 +84,7 @@ public class GunSelection : MonoBehaviour {
         // Get index from selected guns array 
         string indexStr = EventSystem.current.currentSelectedGameObject.name;
         int index = int.Parse(indexStr);
+        int i = index;
 
         // Get Sprite Image for gun stats panel
         Sprite newImage = sprites[index];
@@ -91,9 +102,13 @@ public class GunSelection : MonoBehaviour {
         // Show Gun Stats
         if (first) {
             firstImage.sprite = newImage;
+            dSlider1.value = damageVals[i];
+            frSlider1.value = fireRateVals[i];
             first = false;
         } else {
             secondImage.sprite = newImage;
+            dSlider2.value = damageVals[i];
+            frSlider2.value = fireRateVals[i];
             first = true;
         }
 
@@ -111,7 +126,12 @@ public class GunSelection : MonoBehaviour {
 
         // Show Gun Stats
         firstImage.sprite = newImage;
+        dSlider1.value = damageVals[PlayerInit.selectedGuns[0]];
+        frSlider1.value = fireRateVals[PlayerInit.selectedGuns[0]];
+
         secondImage.sprite = newImage2;
+        dSlider2.value = damageVals[PlayerInit.selectedGuns[1]];
+        frSlider2.value = fireRateVals[PlayerInit.selectedGuns[1]];
     }
 
     void ShowGunsUnlocked() {
