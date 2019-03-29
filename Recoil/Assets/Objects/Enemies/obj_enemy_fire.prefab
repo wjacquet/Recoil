@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1187682318512428170}
   - component: {fileID: 1187682318512428172}
   - component: {fileID: 1187682318512428171}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: obj_enemy_fire
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -99,6 +99,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 425a23a4a5f828049ba87de4946bb0ea, type: 3}
       propertyPath: m_Name
       value: TrapFlame
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 425a23a4a5f828049ba87de4946bb0ea, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 425a23a4a5f828049ba87de4946bb0ea, type: 3}
       propertyPath: m_LocalPosition.x
