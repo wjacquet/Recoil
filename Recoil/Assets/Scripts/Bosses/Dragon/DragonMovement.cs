@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class DragonMovement : MonoBehaviour
 {
@@ -11,6 +12,17 @@ public class DragonMovement : MonoBehaviour
     public GameObject fireball;
     public GameObject bomb;
     public GameObject laser;
+    public Tilemap bossWalls;
+    public Camera mainCamera;
+    public Camera bossCamera;
+
+    void OnDestroy()
+    {
+        bossWalls.transform.position = new Vector3(0, -400, 0);
+        bossCamera.enabled = false;
+        mainCamera.enabled = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
