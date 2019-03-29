@@ -59,4 +59,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GreenhouseScenes/GreenhouseBoss.unity
     guid: d0a5b06e89c141c499f7311defbcbef1
+  - enabled: 1
+    path: Assets/Scenes/JunkyardScenes/Junkyard1.unity
+    guid: 3efa26d449d67e84aad6dc4c87dc3b4d
+  - enabled: 1
+    path: Assets/Scenes/JunkyardScenes/Junkyard2.unity
+    guid: e2a756b4c042b7a4fad473f19c944286
+  - enabled: 1
+    path: Assets/Scenes/JunkyardScenes/Junkyard3.unity
+    guid: d6689b474b9025e4bb685a6bd4fc9114
+  - enabled: 1
+    path: Assets/Scenes/JunkyardScenes/JunkyardBoss.unity
+    guid: 406ee86e466e1434db3d33b5203861cd
+  - enabled: 1
+    path: Assets/Scenes/JunkyardScenes/JunkyardEntrance.unity
+    guid: 8400d0f0748130d45bb504862d26529a
   m_configObjects: {}
