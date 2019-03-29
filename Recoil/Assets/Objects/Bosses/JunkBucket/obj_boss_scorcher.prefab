@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 4176638693601112155}
   m_Layer: 0
   m_Name: obj_boss_scorcher
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1823003900677753376
 Transform:
   m_ObjectHideFlags: 0
@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flame: {fileID: 7932845010869138217}
-  bucket: {fileID: 5857308271529642456, guid: a43ba5d1e2e89304d84597e96aa95759, type: 3}
 --- !u!1001 &963215280120602695
 PrefabInstance:
   m_ObjectHideFlags: 0

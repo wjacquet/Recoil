@@ -17328,7 +17328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHP: 800
+  initialHP: 777
 --- !u!114 &2141618140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17341,8 +17341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d62cf82e0bc794eae095b86b6534ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonShot: {fileID: 0}
-  projectile: {fileID: 0}
+  photonShot: {fileID: 2069269300673616015, guid: 4820e3ac0ab66514490cb1001c70291c,
+    type: 3}
+  projectile: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb,
+    type: 3}
   enemySpawn: {fileID: 0}
 --- !u!1001 &1823003900374316301
 PrefabInstance:

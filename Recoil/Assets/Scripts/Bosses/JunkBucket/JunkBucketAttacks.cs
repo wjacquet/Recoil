@@ -9,14 +9,29 @@ public class JunkBucketAttacks : MonoBehaviour
     public GameObject enemySpawn;
 
     private bool shouldScorchers = false;
+    private bool shot = false;
+
+    private Vector3 projectileSpawnPos = new Vector3(288.5f, 341f, 0f);
+
+    void Start() 
+    {
+        //shootPhoton();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        startScorch();
+        
+        if (!shot) shootPhoton();
+        shot = true;
     }
 
 
+    public void shootPhoton() 
+    {        
+        GameObject proj = Instantiate(photonShot, projectileSpawnPos, transform.rotation);
+        StandardFireFunctions.FireAtPlayer(proj);
+    }
 
     public void startScorch() 
     {
