@@ -27,6 +27,6 @@ public class throwScrewdrivers : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bullet, transform.position, transform.rotation).SendMessage("NormalToss"); ;
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("NormalToss");
     }
 }
