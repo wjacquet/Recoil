@@ -7,6 +7,7 @@ public class DaisyMovement : MonoBehaviour
     public GameObject petals;
     public GameObject bullet;
     public GameObject laser;
+    private GameObject[] lasers;
     public GameObject warningLaser;
     private PlayerHealth playerHP;
     private float angle = 0;
@@ -34,6 +35,14 @@ public class DaisyMovement : MonoBehaviour
         angle += rotationSpeed;
         if (angle >= 360)
             angle = angle % 360;
+    }
+
+    void OnDestroy() {
+        if (lasers[0] != null) {
+            for (int i = 0; i < 8; i++) {
+                Destroy(lasers[i]);
+            }
+        }
     }
 
     IEnumerator FlowerPatterns() {
@@ -134,7 +143,7 @@ public class DaisyMovement : MonoBehaviour
         int angleOffset = 45;
 
         // spawn warning lasers
-        GameObject[] lasers = new GameObject[8];
+        lasers = new GameObject[8];
         Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + 3);
         for (int i = 0; i < 8; i++) {
             lasers[i] = Instantiate(warningLaser, transform.position, transform.rotation);
