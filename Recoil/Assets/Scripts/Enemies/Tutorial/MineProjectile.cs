@@ -35,7 +35,6 @@ public class MineProjectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player") {
-            print("Kaboom !!!");
             Explode();
             Destroy(gameObject);
         }
