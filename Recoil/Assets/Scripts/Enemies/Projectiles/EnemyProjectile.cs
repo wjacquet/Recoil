@@ -18,7 +18,9 @@ public class EnemyProjectile : MonoBehaviour
         if (collision.gameObject.tag == "Player") {
             playerHP.TakeDamage();
         }
-        Destroy(gameObject);
+        if (collision.gameObject.tag != "Enemy" && collision.gameObject.tag != "Fan") {
+            Destroy(gameObject);
+        }
     }
 
 }
