@@ -70,7 +70,7 @@ public class GunSelection : MonoBehaviour {
             if (gameIsPaused) {
                 Resume();
             } else {
-                ShowGunsUnlocked();
+                // ShowGunsUnlocked();
                 Pause();
             }
         }

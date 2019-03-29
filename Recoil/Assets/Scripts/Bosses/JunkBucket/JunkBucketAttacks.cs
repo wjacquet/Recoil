@@ -15,7 +15,7 @@ public class JunkBucketAttacks : MonoBehaviour
     private int secondSpreadDegree = 15;
 
     private int atkSelector;
-    private Vector3 projectileSpawnPos = new Vector3(288.5f, 341f, 0f);
+    private Vector3 projectileSpawnPos = new Vector3(288.5f, 366f, 0f);
 
     void OnEnable()
     {
