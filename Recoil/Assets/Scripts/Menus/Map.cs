@@ -179,7 +179,7 @@ public class Map : MonoBehaviour {
             return  (new[] {GrassyZoneGreenhouse, GrassyZoneGreenhouseGold});
 
         } else if (level.Equals(GrassyZoneJunkyard.name)) {
-            return  (new[] {GrassyZoneJunkyard, GrassyZoneJunkyard});
+            return  (new[] {GrassyZoneJunkyard, GrassyZoneJunkyardGold});
 
         } else if (level.Equals(GrassyZoneRainy.name)) {
             return  (new[] {GrassyZoneRainy, GrassyZoneRainyGold});
