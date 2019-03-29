@@ -78,7 +78,7 @@ public class DataControl : MonoBehaviour
                                     3,
                                     3,
                                     0,
-                                    "Scenes/TutorialScenes/StartingArea",
+                                    "Scenes/GrassyZoneScenes/GrassyZoneEntrance",
                                     new[] { 9.6f, -4.1f, 0f },
                                     new bool[SceneManager.sceneCountInBuildSettings],
                                     new bool[SceneManager.sceneCountInBuildSettings],
