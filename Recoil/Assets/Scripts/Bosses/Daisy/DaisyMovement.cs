@@ -6,35 +6,48 @@ public class DaisyMovement : MonoBehaviour
 {
     public GameObject petals;
     public GameObject bullet;
+    private PlayerHealth playerHP;
     private float angle = 0;
+    private float rotationSpeed = 1f;
+    private int minX = 272;
+    private int maxX = 488;
+    private int minY = -72;
+    private int maxY = 72;
+    private Vector3 origin;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(FlowerPatterns());
+        origin = transform.position;
+
+        GameObject player = GameObject.Find("obj_player");
+        playerHP = player.GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        petals.transform.Rotate(0, 0, 1f);
-        angle += 1f;
+        petals.transform.Rotate(0, 0, rotationSpeed);
+        angle += rotationSpeed;
         if (angle >= 360)
             angle = angle % 360;
     }
 
     IEnumerator FlowerPatterns() {
         while (true) {
-            // shooting attack
+            // shooting burst attack
             yield return CircularBurst();
-            yield return new WaitForSeconds(1.0f);
-            // laser attack
             // bounce attack
+            yield return BounceAttack();
+            // laser attack
             // wind attack
             // pedal attack
         }
     }
 
     IEnumerator CircularBurst() {
+        rotationSpeed = 1f;
+
         Rigidbody2D rigidBody;
         Vector2 directions = Vector2.one; 
         int angleOffset = 45;
@@ -52,7 +65,8 @@ public class DaisyMovement : MonoBehaviour
                 directions.y = Mathf.Cos(Mathf.Deg2Rad * angleToPlayer);
 
                 directions.Normalize();
-                rigidBody = Instantiate(bullet, transform.position, transform.rotation).GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+                Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
+                rigidBody = Instantiate(bullet, spawnPosition, transform.rotation).GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
                 rigidBody.velocity = directions * 60;
             }
 
@@ -60,5 +74,49 @@ public class DaisyMovement : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2.0f);
+    }
+
+    IEnumerator BounceAttack() {
+        rotationSpeed = 4f;
+
+        float xComponent = 1.0f;
+        float yComponent = 4.0f;
+        Rigidbody2D rigidBody = gameObject.GetComponent<Rigidbody2D>();
+
+        for (int i = 0; i < 1200; i++) {
+            // bounce off of walls
+            if (transform.position.x > maxX)
+                xComponent = Mathf.Abs(xComponent) * -1;
+            if (transform.position.y > maxY)
+                yComponent = Mathf.Abs(yComponent) * -1;
+            if (transform.position.x < minX)
+                xComponent = Mathf.Abs(xComponent);
+            if (transform.position.y < minY)
+                yComponent = Mathf.Abs(yComponent);
+            
+            // set velocity
+            Vector2 direction = new Vector2(xComponent, yComponent);
+            direction.Normalize();
+            rigidBody.velocity = direction * 160;
+
+            yield return null;
+        }
+
+        // move back to origin
+        rigidBody.velocity = new Vector2(0, 0);
+        yield return new WaitForSeconds(0.5f);
+        while (transform.position != origin) {
+            transform.position = Vector2.MoveTowards(transform.position, origin, 60 * Time.deltaTime);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(2.0f);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if (collision.gameObject.tag == "Player") {
+            playerHP.TakeDamage();
+        }
     }
 }
