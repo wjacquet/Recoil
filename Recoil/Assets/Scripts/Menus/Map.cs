@@ -53,6 +53,33 @@ public class Map : MonoBehaviour {
     public GameObject GreenhouseBoss;
     public GameObject GreenhouseBossGold;
 
+    public GameObject GrassyZoneEntrance;
+    public GameObject GrassyZoneEntranceGold;
+
+    public GameObject GrassyZoneGreenhouse;
+    public GameObject GrassyZoneGreenhouseGold;
+
+    public GameObject GrassyZoneJunkyard;
+    public GameObject GrassyZoneJunkyardGold;
+
+    public GameObject GrassyZoneRainy;
+    public GameObject GrassyZoneRainyGold;
+
+    public GameObject Junkyard1;
+    public GameObject Junkyard1Gold;
+    
+    public GameObject Junkyard2;
+    public GameObject Junkyard2Gold;
+
+    public GameObject Junkyard3;
+    public GameObject Junkyard3Gold;
+
+    public GameObject Junkyard4;
+    public GameObject Junkyard4Gold;
+
+    public GameObject JunkyardBoss;
+    public GameObject JunkyardBossGold;
+
 
     // Update is called once per frame
     void Update() {
@@ -144,6 +171,33 @@ public class Map : MonoBehaviour {
 
         } else if (level.Equals(GreenhouseBoss.name)) {
             return  (new[] {GreenhouseBoss, GreenhouseBossGold});
+
+        } else if (level.Equals(GrassyZoneEntrance.name)) {
+            return  (new[] {GrassyZoneEntrance, GrassyZoneEntranceGold});
+
+        } else if (level.Equals(GrassyZoneGreenhouse.name)) {
+            return  (new[] {GrassyZoneGreenhouse, GrassyZoneGreenhouseGold});
+
+        } else if (level.Equals(GrassyZoneJunkyard.name)) {
+            return  (new[] {GrassyZoneJunkyard, GrassyZoneJunkyard});
+
+        } else if (level.Equals(GrassyZoneRainy.name)) {
+            return  (new[] {GrassyZoneRainy, GrassyZoneRainyGold});
+
+        } else if (level.Equals(Junkyard1.name)) {
+            return  (new[] {Junkyard1, Junkyard1Gold});
+
+        } else if (level.Equals(Junkyard2.name)) {
+            return  (new[] {Junkyard2, Junkyard2Gold});
+
+        } else if (level.Equals(Junkyard3.name)) {
+            return  (new[] {Junkyard3, Junkyard3Gold});
+
+        } else if (level.Equals(Junkyard4.name)) {
+            return  (new[] {Junkyard4, Junkyard4Gold});
+
+        } else if (level.Equals(JunkyardBoss.name)) {
+            return  (new[] {JunkyardBoss, JunkyardBossGold});
 
         } else {
             return null;
