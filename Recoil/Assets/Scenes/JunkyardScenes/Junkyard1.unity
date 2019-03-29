@@ -39790,6 +39790,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3572342737545108532, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -14.32494
+      objectReference: {fileID: 0}
     - target: {fileID: 293781098453422000, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -40052,17 +40057,17 @@ PrefabInstance:
     - target: {fileID: 6659150092604363151, guid: 15a4b3418af7d424ea3f35427f7ca14c,
         type: 3}
       propertyPath: warpPosition.x
-      value: -482
+      value: 1104
       objectReference: {fileID: 0}
     - target: {fileID: 6659150092604363151, guid: 15a4b3418af7d424ea3f35427f7ca14c,
         type: 3}
       propertyPath: warpScene
-      value: GrassyZoneJunkyard
+      value: JunkyardEntrance
       objectReference: {fileID: 0}
     - target: {fileID: 6659150092604363151, guid: 15a4b3418af7d424ea3f35427f7ca14c,
         type: 3}
       propertyPath: warpPosition.y
-      value: 1095
+      value: -455
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15a4b3418af7d424ea3f35427f7ca14c, type: 3}
