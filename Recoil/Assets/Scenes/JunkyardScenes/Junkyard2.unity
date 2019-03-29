@@ -5493,7 +5493,7 @@ PrefabInstance:
     - target: {fileID: 6659150092604363151, guid: 15a4b3418af7d424ea3f35427f7ca14c,
         type: 3}
       propertyPath: warpPosition.x
-      value: 1080
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 6659150092604363151, guid: 15a4b3418af7d424ea3f35427f7ca14c,
         type: 3}
@@ -5503,7 +5503,7 @@ PrefabInstance:
     - target: {fileID: 6659150092604363151, guid: 15a4b3418af7d424ea3f35427f7ca14c,
         type: 3}
       propertyPath: warpPosition.y
-      value: 100
+      value: -7.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15a4b3418af7d424ea3f35427f7ca14c, type: 3}
