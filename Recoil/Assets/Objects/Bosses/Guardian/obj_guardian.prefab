@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4201566566309680311}
   - component: {fileID: 4201566566309680304}
   - component: {fileID: 4201566566309680305}
+  - component: {fileID: 6171948342456316647}
   m_Layer: 11
   m_Name: obj_guardian
   m_TagString: Enemy
@@ -50,6 +51,7 @@ MonoBehaviour:
   eyeshot: {fileID: 4005316025860103797, guid: 12629124d5799c24c856684e401e97b2, type: 3}
   homingBall: {fileID: 1354417903180297357, guid: 4260a8df6ab9b1c49a4577c4f1b13f76,
     type: 3}
+  bossWalls: {fileID: 0}
 --- !u!114 &4201566566309680311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +107,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.927368, y: 8.006165}
   m_EdgeRadius: 0
+--- !u!114 &6171948342456316647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4201566566309680309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52835962b9ceb8f4ca34d33df565b65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 1383589517549857606, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
+  amount: 10
 --- !u!1001 &4201566565059274973
 PrefabInstance:
   m_ObjectHideFlags: 0
