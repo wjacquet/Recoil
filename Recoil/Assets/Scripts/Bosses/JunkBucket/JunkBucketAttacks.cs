@@ -6,9 +6,8 @@ public class JunkBucketAttacks : MonoBehaviour
 {
     public GameObject photonShot;
     public GameObject projectile;
-    public GameObject enemySpawn;
+    //public GameObject enemySpawn;
 
-    // private bool shouldScorchers = false;
     private bool newAttack = false;
     private bool allowStream = false;
 
@@ -64,7 +63,7 @@ public class JunkBucketAttacks : MonoBehaviour
     public void shootStream() 
     {
         GameObject proj = Instantiate(projectile, projectileSpawnPos, transform.rotation);
-        StandardFireFunctions.FireAtPlayerWithSetSpeed(proj, 75);
+        StandardFireFunctions.FireAtPlayer(proj);
     }
 
     IEnumerator startStream() 
