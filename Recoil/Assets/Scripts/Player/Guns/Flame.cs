@@ -20,7 +20,6 @@ public class Flame : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) 
     {
-        print(collision.gameObject.tag);
         string tag = collision.gameObject.tag;
         if (collision.gameObject.tag == "Enemy") {
             collision.gameObject.GetComponent<EnemyHealth>().Damage(damage);
@@ -29,7 +28,6 @@ public class Flame : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision) 
     {
-        print(collision.gameObject.tag);
         string tag = collision.gameObject.tag;
         if (collision.gameObject.tag == "Enemy") {
             collision.gameObject.GetComponent<EnemyHealth>().Damage(damage);
