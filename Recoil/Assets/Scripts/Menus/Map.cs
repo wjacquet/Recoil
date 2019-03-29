@@ -38,6 +38,48 @@ public class Map : MonoBehaviour {
     public GameObject TutorialBoss;
     public GameObject TutorialBossGold;
 
+    public GameObject Greenhouse1;
+    public GameObject Greenhouse1Gold;
+
+    public GameObject Greenhouse2;
+    public GameObject Greenhouse2Gold;
+
+    public GameObject Greenhouse3;
+    public GameObject Greenhouse3Gold;
+
+    public GameObject Greenhouse4;
+    public GameObject Greenhouse4Gold;
+
+    public GameObject GreenhouseBoss;
+    public GameObject GreenhouseBossGold;
+
+    public GameObject GrassyZoneEntrance;
+    public GameObject GrassyZoneEntranceGold;
+
+    public GameObject GrassyZoneGreenhouse;
+    public GameObject GrassyZoneGreenhouseGold;
+
+    public GameObject GrassyZoneJunkyard;
+    public GameObject GrassyZoneJunkyardGold;
+
+    public GameObject GrassyZoneRainy;
+    public GameObject GrassyZoneRainyGold;
+
+    public GameObject Junkyard1;
+    public GameObject Junkyard1Gold;
+    
+    public GameObject Junkyard2;
+    public GameObject Junkyard2Gold;
+
+    public GameObject Junkyard3;
+    public GameObject Junkyard3Gold;
+
+    public GameObject Junkyard4;
+    public GameObject Junkyard4Gold;
+
+    public GameObject JunkyardBoss;
+    public GameObject JunkyardBossGold;
+
 
     // Update is called once per frame
     void Update() {
@@ -114,6 +156,49 @@ public class Map : MonoBehaviour {
 
         } else if (level.Equals(TutorialBoss.name)) {
             return  (new[] {TutorialBoss, TutorialBossGold});
+
+        } else if (level.Equals(Greenhouse1.name)) {
+            return  (new[] {Greenhouse1, Greenhouse1Gold});
+
+        } else if (level.Equals(Greenhouse2.name)) {
+            return  (new[] {Greenhouse2, Greenhouse2Gold});
+
+        } else if (level.Equals(Greenhouse3.name)) {
+            return  (new[] {Greenhouse3, Greenhouse3Gold});
+
+        } else if (level.Equals(Greenhouse4.name)) {
+            return  (new[] {Greenhouse4, Greenhouse4Gold});
+
+        } else if (level.Equals(GreenhouseBoss.name)) {
+            return  (new[] {GreenhouseBoss, GreenhouseBossGold});
+
+        } else if (level.Equals(GrassyZoneEntrance.name)) {
+            return  (new[] {GrassyZoneEntrance, GrassyZoneEntranceGold});
+
+        } else if (level.Equals(GrassyZoneGreenhouse.name)) {
+            return  (new[] {GrassyZoneGreenhouse, GrassyZoneGreenhouseGold});
+
+        } else if (level.Equals(GrassyZoneJunkyard.name)) {
+            return  (new[] {GrassyZoneJunkyard, GrassyZoneJunkyard});
+
+        } else if (level.Equals(GrassyZoneRainy.name)) {
+            return  (new[] {GrassyZoneRainy, GrassyZoneRainyGold});
+
+        } else if (level.Equals(Junkyard1.name)) {
+            return  (new[] {Junkyard1, Junkyard1Gold});
+
+        } else if (level.Equals(Junkyard2.name)) {
+            return  (new[] {Junkyard2, Junkyard2Gold});
+
+        } else if (level.Equals(Junkyard3.name)) {
+            return  (new[] {Junkyard3, Junkyard3Gold});
+
+        } else if (level.Equals(Junkyard4.name)) {
+            return  (new[] {Junkyard4, Junkyard4Gold});
+
+        } else if (level.Equals(JunkyardBoss.name)) {
+            return  (new[] {JunkyardBoss, JunkyardBossGold});
+
         } else {
             return null;
         }

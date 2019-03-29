@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1572800708695567972}
   - component: {fileID: 7041844377563836355}
+  - component: {fileID: 7332146048482025059}
   m_Layer: 10
   m_Name: obj_flower_block
   m_TagString: Untagged
@@ -58,6 +59,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16, y: 16}
   m_EdgeRadius: 0
+--- !u!114 &7332146048482025059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4062305201011776823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f405d0cae9354fb44937e939dae35aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6719910691311480
 PrefabInstance:
   m_ObjectHideFlags: 0
