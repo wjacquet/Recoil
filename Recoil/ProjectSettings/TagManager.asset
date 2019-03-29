@@ -12,6 +12,7 @@ TagManager:
   - Gun
   - Fan
   - PillarHead
+  - Scenery
   layers:
   - Default
   - TransparentFX
