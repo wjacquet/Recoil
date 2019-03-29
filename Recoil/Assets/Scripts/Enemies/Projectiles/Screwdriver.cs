@@ -31,14 +31,14 @@ public class Screwdriver : MonoBehaviour
             direction.y = ((Vector2.one).normalized).y;
 
             dist = Vector2.Distance(transform.position, player.transform.position);
-            if (dist > 200)
+            if (dist > 180)
             {
-                dist = 200;
+                dist = 180;
             }
             //Debug.Log(dist);
             distRatio = dist > maxDist ? 1 : dist / maxDist;
 
-            rigidBody.velocity += direction * (speed * (distRatio < 0.4f ? 0.45f : distRatio));
+            rigidBody.velocity += direction * (speed * (distRatio));
         }
         else
         {
@@ -47,8 +47,9 @@ public class Screwdriver : MonoBehaviour
 
     }
 
+
     // Once the projectile hits a wall
-    IEnumerator OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -56,7 +57,6 @@ public class Screwdriver : MonoBehaviour
             Destroy(gameObject);
         } else
         {
-            yield return new WaitForSeconds(.5f);
             Destroy(gameObject);
         }
         
