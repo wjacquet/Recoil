@@ -3369,6 +3369,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -7.800049
       objectReference: {fileID: 0}
+    - target: {fileID: 6778037884185861050, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.1639099
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fad6a87bd18ef4bb67c08e7cc8b802, type: 3}
 --- !u!1001 &887542754
@@ -29220,8 +29225,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -47, y: 31, z: 0}
     second:
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -48189,7 +48194,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 5fa192df5363ed84185adc8717f5258b, type: 2}
   - m_RefCount: 117
     m_Data: {fileID: 11400000, guid: 6bfd23f481fbbfd44a55a3a29c44dd60, type: 2}
-  - m_RefCount: 4131
+  - m_RefCount: 4130
     m_Data: {fileID: 11400000, guid: 06403ff339743094788474258904d339, type: 2}
   - m_RefCount: 19
     m_Data: {fileID: 11400000, guid: 47412bdd989fcde478c3ede2476ab415, type: 2}
@@ -48225,7 +48230,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: dadfd92773fa86841b4c061482ddd735, type: 2}
   - m_RefCount: 27
     m_Data: {fileID: 11400000, guid: aafd9001cf40eb6439fcf5ec3799bb2d, type: 2}
-  - m_RefCount: 21
+  - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: ca9210a5158aa6e428c62991608e17f1, type: 2}
   - m_RefCount: 32
     m_Data: {fileID: 11400000, guid: 1930b15f02c2e7243a7da16c1900d605, type: 2}
@@ -48238,7 +48243,7 @@ Tilemap:
     m_Data: {fileID: 21300016, guid: 8fceb4fa761596c46a8f411985405e9b, type: 3}
   - m_RefCount: 117
     m_Data: {fileID: 21300000, guid: 8fceb4fa761596c46a8f411985405e9b, type: 3}
-  - m_RefCount: 4131
+  - m_RefCount: 4130
     m_Data: {fileID: 21300038, guid: 8fceb4fa761596c46a8f411985405e9b, type: 3}
   - m_RefCount: 19
     m_Data: {fileID: 21300046, guid: d37081dbb73de7d4c93d560508bb7102, type: 3}
@@ -48274,7 +48279,7 @@ Tilemap:
     m_Data: {fileID: 21300022, guid: 8fceb4fa761596c46a8f411985405e9b, type: 3}
   - m_RefCount: 27
     m_Data: {fileID: 21300050, guid: 8fceb4fa761596c46a8f411985405e9b, type: 3}
-  - m_RefCount: 21
+  - m_RefCount: 22
     m_Data: {fileID: 21300004, guid: 8fceb4fa761596c46a8f411985405e9b, type: 3}
   - m_RefCount: 32
     m_Data: {fileID: 21300048, guid: 8fceb4fa761596c46a8f411985405e9b, type: 3}
