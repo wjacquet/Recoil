@@ -21,6 +21,7 @@ public class DaisyMovement : MonoBehaviour
     {
         StartCoroutine(FlowerPatterns());
         origin = new Vector3(384, 8, 0);
+        petals.SetActive(false);
 
         GameObject player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
@@ -37,10 +38,17 @@ public class DaisyMovement : MonoBehaviour
 
     IEnumerator FlowerPatterns() {
         while (transform.position != origin) {
-            transform.position = Vector2.MoveTowards(transform.position, origin, 60 * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, origin, 40 * Time.deltaTime);
             yield return null;
         }
-        
+
+        yield return new WaitForSeconds(1.0f);
+
+        petals.SetActive(true);
+        rotationSpeed = 4f;
+
+        yield return new WaitForSeconds(2.0f);
+
         while (true) {
             // shooting burst attack
             yield return CircularBurst();
