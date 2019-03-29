@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class JunkBucketAttacks : MonoBehaviour
 {
@@ -17,9 +18,16 @@ public class JunkBucketAttacks : MonoBehaviour
     private int atkSelector;
     private Vector3 projectileSpawnPos = new Vector3(288.5f, 366f, 0f);
 
+    public Tilemap bossWalls;
+
     void OnEnable()
     {
         StartCoroutine(startScorch());
+    }
+
+    void OnDestroy()
+    {
+        bossWalls.transform.position = new Vector3(0, -400, 0);
     }
 
     // Update is called once per frame

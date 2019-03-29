@@ -687,6 +687,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -7.800049
       objectReference: {fileID: 0}
+    - target: {fileID: 6778037884185861050, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.1639099
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fad6a87bd18ef4bb67c08e7cc8b802, type: 3}
 --- !u!1 &372254656 stripped
@@ -22041,5 +22046,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3320613216670871655, guid: 829b4bae5c48673448815c896614ceec,
+        type: 3}
+      propertyPath: bossWalls
+      value: 
+      objectReference: {fileID: 516482223}
+    - target: {fileID: 3320613216670871655, guid: 829b4bae5c48673448815c896614ceec,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 191862410}
+    - target: {fileID: 3320613216670871655, guid: 829b4bae5c48673448815c896614ceec,
+        type: 3}
+      propertyPath: bossCamera
+      value: 
+      objectReference: {fileID: 1442054476}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 829b4bae5c48673448815c896614ceec, type: 3}
