@@ -31,7 +31,8 @@ public class RoomTransition : MonoBehaviour
                 PlayerInit.gunsFound,
                 PlayerInit.selectedGuns,
                 PlayerInit.currentGunIndex,
-                PlayerAbilities.magnet
+                PlayerAbilities.magnet,
+                PlayerAbilities.flower
             );
 
             // Warp player to next scene
