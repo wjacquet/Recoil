@@ -53,7 +53,7 @@ public class BulletMovement : MonoBehaviour
         if (collision.gameObject.tag == "Enemy") {
             collision.gameObject.GetComponent<EnemyHealth>().Damage(damage);
         }
-        if (tag != "Player" && tag != "Gun" && tag != "Bullet" && tag != "Fan") {
+        if (tag != "Player" && tag != "Gun" && tag != "Bullet" && tag != "Fan" && tag != "Scenery") {
             Destroy(gameObject);
         }
     }
