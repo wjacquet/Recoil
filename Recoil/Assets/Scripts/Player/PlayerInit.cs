@@ -29,6 +29,7 @@ public class PlayerInit : MonoBehaviour
         PlayerHealth.currHP = data.currHP;
         PlayerCurrency.wealth = data.wealth;
         PlayerAbilities.magnet = data.magnet;
+        PlayerAbilities.flower = data.flower;
     }
 
     static void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
@@ -49,6 +50,12 @@ public class PlayerInit : MonoBehaviour
         GameObject magnetAbility = GameObject.Find("obj_magnet");
         if (PlayerAbilities.magnet) {
             Destroy(magnetAbility);
+        }
+
+        // Hide Flower on Each Scene if they already have the ability
+        GameObject flowerAbility = GameObject.Find("obj_flower_power");
+        if (PlayerAbilities.flower) {
+            Destroy(flowerAbility);
         }
 
         CheckForGuns();

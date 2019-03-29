@@ -24,6 +24,7 @@ public class GuardianEyeShot : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerHP.TakeDamage();
+            Destroy(gameObject);
         }
     }
 }

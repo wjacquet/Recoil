@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3503087565285124013}
   - component: {fileID: 2882438752300591827}
+  - component: {fileID: 7645543492425296482}
   m_Layer: 0
   m_Name: obj_flower_power
   m_TagString: Untagged
@@ -58,6 +59,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9, y: 16}
   m_EdgeRadius: 0
+--- !u!114 &7645543492425296482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8046782006992259489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199bd4e79c067eb428bb52c8ac16a7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2230727803656985200
 PrefabInstance:
   m_ObjectHideFlags: 0

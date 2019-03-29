@@ -34,7 +34,8 @@ public class DataControl : MonoBehaviour
                         PlayerInit.gunsFound,
                         PlayerInit.selectedGuns,
                         PlayerInit.currentGunIndex,
-                        PlayerAbilities.magnet
+                        PlayerAbilities.magnet,
+                        PlayerAbilities.flower
         );
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -81,9 +82,10 @@ public class DataControl : MonoBehaviour
                                     new[] { 9.6f, -4.1f, 0f },
                                     new bool[SceneManager.sceneCountInBuildSettings],
                                     new bool[SceneManager.sceneCountInBuildSettings],
-                                    new bool[6] {true, true, true, true, true, true},
+                                    new bool[6] {true, false, false, false, false, false},
                                     new int[2] {0, 0},
                                     0,
+                                    false,
                                     false);
 
         
