@@ -41,7 +41,7 @@ public class JunkBucketAttacks : MonoBehaviour
                     StartCoroutine(shootPhoton());
                     break;
                 case 3:
-                    StartCoroutine(startStream());
+                    StartCoroutine(shootSpread());
                     break;
                 case 4:
                     StartCoroutine(startStream());
@@ -68,7 +68,7 @@ public class JunkBucketAttacks : MonoBehaviour
         allowStream = true;
         yield return new WaitForSeconds(2.0f);
         newAttack = true;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         allowStream = false;
     }
 
@@ -78,7 +78,7 @@ public class JunkBucketAttacks : MonoBehaviour
         StandardFireFunctions.FireAtPlayerWithSetSpeed(proj, 120);    
         yield return new WaitForSeconds(2.0f);
         newAttack = true;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
     }
 
     IEnumerator startScorch() 
@@ -86,13 +86,13 @@ public class JunkBucketAttacks : MonoBehaviour
         JunkScorchers.shouldFlame = true;
         yield return new WaitForSeconds(2.0f);
         newAttack = true;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         JunkScorchers.shouldFlame = false;
     }
 
 
     
-    IEnumerator FirstSpread() {
+    IEnumerator shootSpread() {
         StandardFireFunctions.FireAtPlayer(Instantiate(projectile, projectileSpawnPos, transform.rotation));
         StandardFireFunctions.FireDegreeOffsetFromPlayer(Instantiate(projectile, projectileSpawnPos, transform.rotation), firstSpreadDegree);
         StandardFireFunctions.FireDegreeOffsetFromPlayer(Instantiate(projectile, projectileSpawnPos, transform.rotation), -firstSpreadDegree);
