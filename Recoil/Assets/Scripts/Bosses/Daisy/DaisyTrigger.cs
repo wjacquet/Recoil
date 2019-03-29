@@ -43,6 +43,7 @@ public class DaisyTrigger : MonoBehaviour
             daisy.SetActive(true);
 
             triggered = true;
+            transform.position = new Vector3(0, 300, 0);
         }
     }
 }
