@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
+
 public class GunSelection : MonoBehaviour {
 
     public static bool gameIsPaused = false;
@@ -67,7 +68,7 @@ public class GunSelection : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.G) && onCheckpoint) {
+        if (Input.GetKeyDown(KeyCode.M) && onCheckpoint) {
             if (gameIsPaused) {
                 Resume();
             } else {
