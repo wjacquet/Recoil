@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
+
 
 public class GunSelection : MonoBehaviour {
 
@@ -19,8 +21,8 @@ public class GunSelection : MonoBehaviour {
     public Slider dSlider2;
     public Slider frSlider2;
 
-    public Text projText1;
-    public Text projText2;
+    public TextMeshProUGUI projText1;
+    public TextMeshProUGUI projText2;
 
     public Sprite obj_gun;
     public Sprite obj_bolt_gun;
@@ -66,7 +68,7 @@ public class GunSelection : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.G) && onCheckpoint) {
+        if (Input.GetKeyDown(KeyCode.M) && onCheckpoint) {
             if (gameIsPaused) {
                 Resume();
             } else {
