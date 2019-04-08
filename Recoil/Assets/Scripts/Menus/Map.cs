@@ -18,8 +18,6 @@ public class Map : MonoBehaviour {
 
     public static bool gameIsPaused = false;
 
-    public GameObject mapUI;
-
     public GameObject StartingArea;
     public GameObject StartingAreaGold;
 
@@ -90,12 +88,6 @@ public class Map : MonoBehaviour {
         }
     }
 
-    // public void Resume() {
-    //     mapUI.SetActive(false);
-    //     Time.timeScale = 1f;
-    //     gameIsPaused = false;
-    // }
-
     public void Pause() {
         // Set basic map scene to disapear and gold scene to appear
         SetActiveScene(SceneManager.GetActiveScene().name);
@@ -107,10 +99,6 @@ public class Map : MonoBehaviour {
                 HideScene(sceneName);
             }
         }
-
-        // mapUI.SetActive(true);
-        // Time.timeScale = 0f;
-        // gameIsPaused = true;
     }
 
     public string GetSceneFromIndex(int index) {

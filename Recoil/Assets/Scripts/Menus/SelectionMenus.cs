@@ -5,7 +5,6 @@ using UnityEngine;
 public class SelectionMenus : MonoBehaviour {
 
     public static bool gameIsPaused = false;
-    // public static bool menuOpen = false;
 
     public GameObject selectionUI;
     public GameObject gunSelectionUI;
@@ -28,20 +27,26 @@ public class SelectionMenus : MonoBehaviour {
         if (GunSelection.onCheckpoint) {
             gunSelectionOpen = !gunSelectionOpen;
             gunSelectionUI.SetActive(gunSelectionOpen);
+
+            mapOpen = false;
+            mapUI.SetActive(mapOpen);
         }
     }
 
     public void mapClicked() {
         mapOpen = !mapOpen;
         mapUI.SetActive(mapOpen);
+
+        gunSelectionOpen = false;
+        gunSelectionUI.SetActive(gunSelectionOpen);
     }
 
     public void Resume() {
+        Cursor.visible = false;
         selectionUI.SetActive(false);
         gunSelectionUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
-        // menuOpen = false;
     }
 
     void Pause() {
@@ -49,6 +54,5 @@ public class SelectionMenus : MonoBehaviour {
         selectionUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
-        // menuOpen = true;
     }
 }
