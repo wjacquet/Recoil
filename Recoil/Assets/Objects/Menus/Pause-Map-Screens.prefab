@@ -2744,8 +2744,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7555396207914246854}
-        m_MethodName: GunSelected
+      - m_Target: {fileID: 3236838802259201473}
+        m_MethodName: magnetClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3476,8 +3476,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7555396207914246854}
-        m_MethodName: GunSelected
+      - m_Target: {fileID: 3236838802259201473}
+        m_MethodName: flowerClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6801,6 +6801,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityBox0: {fileID: 2055236191928813338}
   abilityBox1: {fileID: 2499342439238511702}
+  selectedImage: {fileID: 6421097911634228361}
+  magnetSprite: {fileID: 21300000, guid: acc439f188961554992703772b54b77b, type: 3}
+  flowerSprite: {fileID: 21300000, guid: f1f9c336e85bae34b9a2ecc776d7432d, type: 3}
 --- !u!1 &4266475598898969121
 GameObject:
   m_ObjectHideFlags: 0
