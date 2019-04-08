@@ -8,13 +8,15 @@ public class SelectionMenus : MonoBehaviour {
 
     public GameObject selectionUI;
     public GameObject gunSelectionUI;
+    public GameObject abilitesUI;
     public GameObject mapUI;
 
     public static bool gunSelectionOpen = false;
+    public static bool abilitiesOpen = false;
     public static bool mapOpen = false;
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.G)) {
+        if (Input.GetKeyDown(KeyCode.M)) {
             if (gameIsPaused) {
                 Resume();
             } else {
@@ -25,20 +27,38 @@ public class SelectionMenus : MonoBehaviour {
 
     public void gunSelectionClicked() {
         if (GunSelection.onCheckpoint) {
+            removeAllUI();
+
             gunSelectionOpen = !gunSelectionOpen;
             gunSelectionUI.SetActive(gunSelectionOpen);
-
-            mapOpen = false;
-            mapUI.SetActive(mapOpen);
         }
     }
 
     public void mapClicked() {
-        mapOpen = !mapOpen;
-        mapUI.SetActive(mapOpen);
+        removeAllUI();
 
+        mapOpen = !mapOpen;
+        mapUI.SetActive(mapOpen);        
+    }
+
+    public void abilitiesClick() {
+        if (GunSelection.onCheckpoint) {
+            removeAllUI();
+
+            abilitiesOpen = !abilitiesOpen;
+            abilitesUI.SetActive(abilitiesOpen);
+        }
+    }
+
+    void removeAllUI() {
         gunSelectionOpen = false;
         gunSelectionUI.SetActive(gunSelectionOpen);
+
+        abilitiesOpen = false;
+        abilitesUI.SetActive(abilitiesOpen);
+            
+        mapOpen = false;
+        mapUI.SetActive(mapOpen);
     }
 
     public void Resume() {

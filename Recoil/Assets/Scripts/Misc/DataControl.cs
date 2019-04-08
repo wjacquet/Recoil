@@ -85,8 +85,8 @@ public class DataControl : MonoBehaviour
                                     new bool[6] {true, false, false, false, false, false},
                                     new int[2] {0, 0},
                                     0,
-                                    false,
-                                    false);
+                                    true,
+                                    true);
 
         
         BinaryFormatter binaryFormatter = new BinaryFormatter();
