@@ -83,20 +83,18 @@ public class Map : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.M)) {
-            if (gameIsPaused) {
-                Resume();
-            } else {
+        if (SelectionMenus.mapOpen) {
+            if (SelectionMenus.gameIsPaused) {
                 Pause();
             }
         }
     }
 
-    public void Resume() {
-        mapUI.SetActive(false);
-        Time.timeScale = 1f;
-        gameIsPaused = false;
-    }
+    // public void Resume() {
+    //     mapUI.SetActive(false);
+    //     Time.timeScale = 1f;
+    //     gameIsPaused = false;
+    // }
 
     public void Pause() {
         // Set basic map scene to disapear and gold scene to appear
@@ -110,9 +108,9 @@ public class Map : MonoBehaviour {
             }
         }
 
-        mapUI.SetActive(true);
-        Time.timeScale = 0f;
-        gameIsPaused = true;
+        // mapUI.SetActive(true);
+        // Time.timeScale = 0f;
+        // gameIsPaused = true;
     }
 
     public string GetSceneFromIndex(int index) {
