@@ -10,7 +10,7 @@ public class FlowerBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(1) && PlayerAbilities.flower && flowerReady) {
+        if(Input.GetMouseButtonDown(1) && PlayerAbilities.flower && flowerReady && AbilitySelection.currentAbility == "flower") {
             // Get location of cursor
             GameObject cursor = GameObject.Find("obj_cursor");
             Instantiate(block, cursor.transform.position, cursor.transform.rotation);

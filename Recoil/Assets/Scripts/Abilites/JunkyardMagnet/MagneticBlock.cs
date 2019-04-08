@@ -14,7 +14,7 @@ public class MagneticBlock : MonoBehaviour {
 
     void OnMouseOver(){
         // If Right clicked, flip bool
-        if(Input.GetMouseButtonDown(1)) {
+        if(Input.GetMouseButtonDown(1) && AbilitySelection.currentAbility == "magnet") {
             magnet = !magnet;
         }
     }

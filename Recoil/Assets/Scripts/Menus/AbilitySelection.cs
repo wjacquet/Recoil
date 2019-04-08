@@ -17,9 +17,9 @@ public class AbilitySelection : MonoBehaviour {
     public static string currentAbility = "";
 
     void Update() {
-        // if (SelectionMenus.abilitiesOpen) 
-        //     if (SelectionMenus.gameIsPaused) 
-                // ShowAbilitesUnlocked();
+        if (SelectionMenus.abilitiesOpen) 
+            if (SelectionMenus.gameIsPaused) 
+                ShowAbilitesUnlocked();
     }
 
     void ShowAbilitesUnlocked() {
