@@ -20,6 +20,7 @@ public class SelectionMenus : MonoBehaviour {
             if (gameIsPaused) {
                 Resume();
             } else {
+                removeAllUI();
                 Pause();
             }
         }
