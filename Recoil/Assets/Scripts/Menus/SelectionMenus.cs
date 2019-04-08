@@ -10,7 +10,7 @@ public class SelectionMenus : MonoBehaviour {
     public GameObject gunSelectionUI;
     public GameObject abilitesUI;
     public GameObject mapUI;
-
+    
     public static bool gunSelectionOpen = false;
     public static bool abilitiesOpen = false;
     public static bool mapOpen = false;

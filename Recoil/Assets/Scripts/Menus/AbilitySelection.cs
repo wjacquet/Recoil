@@ -9,12 +9,19 @@ public class AbilitySelection : MonoBehaviour {
 
     public GameObject abilityBox0;
     public GameObject abilityBox1;
+    public GameObject selection;
 
     public Image selectedImage;
     public Sprite magnetSprite;
     public Sprite flowerSprite;
 
+    public TextMeshProUGUI abilityText;
+
     public static string currentAbility = "";
+
+    void Start() {
+        selection.SetActive(false);
+    }
 
     void Update() {
         if (SelectionMenus.abilitiesOpen) 
@@ -38,18 +45,22 @@ public class AbilitySelection : MonoBehaviour {
             selectedImage.sprite = magnetSprite;
         else if (currentAbility == "flower")
             selectedImage.sprite = flowerSprite;
-    }
 
+        selection.SetActive(true);
+    }
 
     public void magnetClicked() {
         currentAbility = "magnet";
+        abilityText.text = "This ability allows you to right click on a magnet block and it will then magnet towards you.";
 
         updateCurrentSelection();
     }
 
     public void flowerClicked() {
         currentAbility = "flower";
+        abilityText.text = "This ability allows you to place a temporary magic block any where you left click.";
 
         updateCurrentSelection();
     }
+
 }
