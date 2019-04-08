@@ -18,8 +18,6 @@ public class Map : MonoBehaviour {
 
     public static bool gameIsPaused = false;
 
-    public GameObject mapUI;
-
     public GameObject StartingArea;
     public GameObject StartingAreaGold;
 
@@ -83,19 +81,11 @@ public class Map : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.M)) {
-            if (gameIsPaused) {
-                Resume();
-            } else {
+        if (SelectionMenus.mapOpen) {
+            if (SelectionMenus.gameIsPaused) {
                 Pause();
             }
         }
-    }
-
-    public void Resume() {
-        mapUI.SetActive(false);
-        Time.timeScale = 1f;
-        gameIsPaused = false;
     }
 
     public void Pause() {
@@ -109,10 +99,6 @@ public class Map : MonoBehaviour {
                 HideScene(sceneName);
             }
         }
-
-        mapUI.SetActive(true);
-        Time.timeScale = 0f;
-        gameIsPaused = true;
     }
 
     public string GetSceneFromIndex(int index) {
