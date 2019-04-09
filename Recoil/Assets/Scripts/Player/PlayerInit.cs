@@ -30,6 +30,7 @@ public class PlayerInit : MonoBehaviour
         PlayerCurrency.wealth = data.wealth;
         PlayerAbilities.magnet = data.magnet;
         PlayerAbilities.flower = data.flower;
+        AbilitySelection.currentAbility = data.currentAbility;
     }
 
     static void OnSceneLoaded(Scene scene, LoadSceneMode mode) {

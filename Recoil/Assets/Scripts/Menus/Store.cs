@@ -12,7 +12,7 @@ using TMPro;
 // TODO Only Show the guns not already bought
 public class Store : MonoBehaviour {
 
-    public GameObject playerUI;
+    public GameObject player;
    
     // void Update() {
     //     if (SelectionMenus.storeOpen) 
@@ -34,8 +34,8 @@ public class Store : MonoBehaviour {
             Debug.Log(PlayerCurrency.wealth);
             
             PlayerCurrency.wealth = PlayerCurrency.wealth - price;
-            PlayerCurrency playerCurrency = playerUI.GetComponent<PlayerCurrency>();
-            // playerCurrency.setCoinText();
+            PlayerCurrency playerCurrency = player.GetComponent<PlayerCurrency>();
+            playerCurrency.coinText.text = "" + PlayerCurrency.wealth;
             // coinText.text = "" + PlayerCurrency.wealth;
 
             Debug.Log(PlayerCurrency.wealth);   
