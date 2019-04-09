@@ -30,15 +30,9 @@ public class Store : MonoBehaviour {
    
         int price = int.Parse(EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TextMeshProUGUI>().text);
         
-        if ((PlayerCurrency.wealth - price) > 0) {
-            Debug.Log(PlayerCurrency.wealth);
-            
-            PlayerCurrency.wealth = PlayerCurrency.wealth - price;
+        if ((PlayerCurrency.wealth - price) >= 0) {            
             PlayerCurrency playerCurrency = player.GetComponent<PlayerCurrency>();
-            playerCurrency.coinText.text = "" + PlayerCurrency.wealth;
-            // coinText.text = "" + PlayerCurrency.wealth;
-
-            Debug.Log(PlayerCurrency.wealth);   
+            playerCurrency.UpdateCurrency(PlayerCurrency.wealth - price);
         }
 
     }

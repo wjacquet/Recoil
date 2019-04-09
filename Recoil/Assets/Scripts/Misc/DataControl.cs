@@ -78,7 +78,7 @@ public class DataControl : MonoBehaviour
         PlayerMetaData player = new PlayerMetaData(
                                     10,
                                     10,
-                                    0,
+                                    10000,
                                     "Scenes/GrassyZoneScenes/GrassyZoneEntrance",
                                     new[] { 9.6f, -4.1f, 0f },
                                     new bool[SceneManager.sceneCountInBuildSettings],
