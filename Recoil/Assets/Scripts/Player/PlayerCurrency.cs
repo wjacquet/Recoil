@@ -19,5 +19,5 @@ public class PlayerCurrency : MonoBehaviour
         coinText.text = "" + wealth;
     }
 
-    void setCoinText() {coinText.text = "" + wealth;}
+    public void setCoinText() {coinText.text = "" + wealth;}
 }
