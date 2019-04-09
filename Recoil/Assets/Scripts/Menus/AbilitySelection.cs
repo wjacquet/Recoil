@@ -10,8 +10,11 @@ public class AbilitySelection : MonoBehaviour {
     public GameObject abilityBox0;
     public GameObject abilityBox1;
     public GameObject selection;
+    public GameObject ability;
 
     public Image selectedImage;
+    public Image selectedAbility;
+
     public Sprite magnetSprite;
     public Sprite flowerSprite;
 
@@ -21,6 +24,7 @@ public class AbilitySelection : MonoBehaviour {
 
     void Start() {
         selection.SetActive(false);
+        ability.SetActive(false);
     }
 
     void Update() {
@@ -41,12 +45,16 @@ public class AbilitySelection : MonoBehaviour {
     }
 
     void updateCurrentSelection() {
-        if (currentAbility == "magnet")
+        if (currentAbility == "magnet") {
             selectedImage.sprite = magnetSprite;
-        else if (currentAbility == "flower")
+            selectedAbility.sprite = magnetSprite;
+        } else if (currentAbility == "flower") {
             selectedImage.sprite = flowerSprite;
+            selectedAbility.sprite = flowerSprite;
+        }
 
         selection.SetActive(true);
+        ability.SetActive(true);
     }
 
     public void magnetClicked() {
