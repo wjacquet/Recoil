@@ -54,25 +54,6 @@ public class Laser : MonoBehaviour{
                 line.SetPosition(1, ray.GetPoint(20000));
             }
         }
-
-
-        //     if (!(hits[i].collider.gameObject.tag == "Enemy")) {
-        //         if (hits[i].collider.gameObject.tag == "Player") {
-        //             playerHP.TakeDamage();
-        //             line.SetPosition(1, hits[i].point);
-        //             break;
-
-        //         } else if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Ground") {
-        //             line.SetPosition(1, hits[i].point);
-        //         } else {
-        //             // line.SetPosition(1, hits[i].point);
-        //             break;
-        //         }
-        //     } else {
-        //         line.SetPosition(1, ray.GetPoint(20000));
-        //     }
-        // }
-
     }
 
     public void SetAngle(int newAngle) {
