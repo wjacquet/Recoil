@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-// TODO Only Show the guns not already bought
-
 // TODO Allow them to buy 
     // Should add to health 
 public class Store : MonoBehaviour {
@@ -49,10 +47,17 @@ public class Store : MonoBehaviour {
    
         int price = int.Parse(EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TextMeshProUGUI>().text);
         
-        if ((PlayerCurrency.wealth - price) >= 0) {            
-            PlayerCurrency playerCurrency = player.GetComponent<PlayerCurrency>();
-            playerCurrency.UpdateCurrency(PlayerCurrency.wealth - price);
-            PlayerInit.gunsFound[index] = true;
+        if ((PlayerCurrency.wealth - price) >= 0) { 
+            // Buying a Gun           
+            if (index != 6) {
+                PlayerCurrency playerCurrency = player.GetComponent<PlayerCurrency>();
+                playerCurrency.UpdateCurrency(PlayerCurrency.wealth - price);
+                PlayerInit.gunsFound[index] = true;
+            // Buying Health Upgrade
+            } else {
+                PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+                playerHealth.BuyHP();
+            }
         }
 
     }

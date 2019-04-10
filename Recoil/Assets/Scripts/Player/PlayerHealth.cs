@@ -26,16 +26,16 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage() 
     {
-        // if (iFrames != 0) return;
+        if (iFrames != 0) return;
 
-        // if (--currHP <= 0) {
-        //     setHealthText(currHP);
-        //     // Dead
-        //     Die();
-        //     return;
-        // }
-        // setHealthText(currHP);
-        // iFrames = 60;
+        if (--currHP <= 0) {
+            setHealthText(currHP);
+            // Dead
+            Die();
+            return;
+        }
+        setHealthText(currHP);
+        iFrames = 60;
     }
 
     public void UpgradeHP() 
@@ -44,7 +44,12 @@ public class PlayerHealth : MonoBehaviour
         currHP++;
         setHealthText(currHP);
         sceneIDForUpgrade = SceneManager.GetActiveScene().buildIndex;
+    }
 
+    public void BuyHP() {
+        maxHP++;
+        currHP++;
+        setHealthText(currHP);
     }
 
     public void Heal() 
@@ -64,7 +69,6 @@ public class PlayerHealth : MonoBehaviour
         healthText.text = "H P : " + health +" / " + maxHP;
         healthSlider.maxValue = maxHP;
         healthSlider.value = health;
-        
     }
 
 }
