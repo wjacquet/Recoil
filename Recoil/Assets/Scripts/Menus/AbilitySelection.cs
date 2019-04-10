@@ -24,7 +24,7 @@ public class AbilitySelection : MonoBehaviour {
 
     void Start() {
         selection.SetActive(false);
-        ability.SetActive(false);
+        updateCurrentSelection();
     }
 
     void Update() {
@@ -51,6 +51,10 @@ public class AbilitySelection : MonoBehaviour {
         } else if (currentAbility == "flower") {
             selectedImage.sprite = flowerSprite;
             selectedAbility.sprite = flowerSprite;
+        } else {
+            selection.SetActive(false);
+            ability.SetActive(false);
+            return;
         }
 
         selection.SetActive(true);
