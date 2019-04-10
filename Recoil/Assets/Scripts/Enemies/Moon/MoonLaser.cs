@@ -2,68 +2,70 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laser : MonoBehaviour{
+public class MoonLaser : MonoBehaviour {
 
-    public bool isWarning = false;
+    public float timer = 2.0f;
+
+    private bool stopLaser = false;
+
     private LineRenderer line;
     private PlayerHealth playerHP;
     private Vector2 rotateVector = new Vector2(0, 0); 
-    private int angle = 45;
 
     void Start() {
         GameObject player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
 
         line = gameObject.transform.GetComponent<LineRenderer>();
+        rotateVector = Quaternion.AngleAxis(90, Vector3.forward) * Vector3.right;
 
-        StartCoroutine(LaserPattern());
+        StartCoroutine(LaserRoutine());
     }
 
-    IEnumerator LaserPattern() {
+    void Update() {
+        DetectHits();
+    }
+
+    IEnumerator LaserRoutine() {
         while (true) {
-            yield return FireLaser();
+            stopLaser = !stopLaser;
+            yield return new WaitForSeconds(timer);
         }
     }
 
-    IEnumerator FireLaser(){
+    void DetectHits() {
  
         Ray2D ray = new Ray2D(transform.position, transform.right);
         RaycastHit2D[] hits;
       
-        rotateVector = Quaternion.AngleAxis(angle++, Vector3.forward) * Vector3.right;
         hits = Physics2D.RaycastAll(ray.origin, rotateVector, 20000);
        
-        angle = ResetAngle(angle);
+        GiveDamage(hits, line, ray);
         HandleCollisions(hits, line, ray);
-
-        yield return new WaitForSeconds(0.03f); 
     }
 
-    // TODO Only if hits ground
+    void GiveDamage(RaycastHit2D[] hits, LineRenderer line,  Ray2D ray) {
+        for (int i = 0; i < hits.Length; ++i) 
+            if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Player")
+                playerHP.TakeDamage();
+    }
+
     void HandleCollisions(RaycastHit2D[] hits, LineRenderer line,  Ray2D ray) {
 
         line.SetPosition(0, ray.origin);
+
+        if (stopLaser) {
+            line.SetPosition(1, ray.origin);
+            return;
+        }
 
         for (int i = 0; i < hits.Length; ++i) {
             if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Ground") {
                 line.SetPosition(1, hits[i].point);
                 break;
-            } else if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Player" && !isWarning) {
-                playerHP.TakeDamage();
             } else {
                 line.SetPosition(1, ray.GetPoint(20000));
             }
         }
-    }
-
-    public void SetAngle(int newAngle) {
-        angle = newAngle;
-        angle = newAngle % 360;
-    }
-
-    int ResetAngle(int angle) {
-        if (angle >= 360)
-            angle = 0;
-        return angle;
     }
 }
