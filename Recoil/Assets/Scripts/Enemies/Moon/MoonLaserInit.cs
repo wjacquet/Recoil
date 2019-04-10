@@ -7,7 +7,7 @@ public class MoonLaserInit : MonoBehaviour {
     public GameObject laser; 
 
     void Start() {
-        Instantiate(laser, transform.position, transform.rotation);
+        // Instantiate(laser, transform.position, transform.rotation);
     }
 
 }

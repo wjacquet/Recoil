@@ -5,8 +5,15 @@ using UnityEngine;
 public class MoonLaser : MonoBehaviour {
 
     public float timer = 2.0f;
+    public float warningTimer = 1.0f;
+
+    public bool floor = false;
+    public bool leftWall = true;
+    public bool cieling = false;
+    public bool rightWall = false;
 
     private bool stopLaser = false;
+    private bool warning = false;
 
     private LineRenderer line;
     private PlayerHealth playerHP;
@@ -17,9 +24,20 @@ public class MoonLaser : MonoBehaviour {
         playerHP = player.GetComponent<PlayerHealth>();
 
         line = gameObject.transform.GetComponent<LineRenderer>();
-        rotateVector = Quaternion.AngleAxis(90, Vector3.forward) * Vector3.right;
+        SetSide();
 
         StartCoroutine(LaserRoutine());
+    }
+
+    void SetSide() {
+        if (floor)
+            rotateVector = Quaternion.AngleAxis(90, Vector3.forward) * Vector3.right;
+        else if (leftWall)
+            rotateVector = Quaternion.AngleAxis(0, Vector3.forward) * Vector3.right;
+        else if (cieling)
+            rotateVector = Quaternion.AngleAxis(270, Vector3.forward) * Vector3.right;
+        else if (rightWall)
+            rotateVector = Quaternion.AngleAxis(180, Vector3.forward) * Vector3.right;         
     }
 
     void Update() {
@@ -28,7 +46,12 @@ public class MoonLaser : MonoBehaviour {
 
     IEnumerator LaserRoutine() {
         while (true) {
-            stopLaser = !stopLaser;
+            stopLaser = true;
+            yield return new WaitForSeconds(timer);
+            stopLaser = false;
+            warning = true;
+            yield return new WaitForSeconds(warningTimer);
+            warning = false;
             yield return new WaitForSeconds(timer);
         }
     }
@@ -40,19 +63,18 @@ public class MoonLaser : MonoBehaviour {
       
         hits = Physics2D.RaycastAll(ray.origin, rotateVector, 20000);
        
-        GiveDamage(hits, line, ray);
         HandleCollisions(hits, line, ray);
-    }
-
-    void GiveDamage(RaycastHit2D[] hits, LineRenderer line,  Ray2D ray) {
-        for (int i = 0; i < hits.Length; ++i) 
-            if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Player")
-                playerHP.TakeDamage();
     }
 
     void HandleCollisions(RaycastHit2D[] hits, LineRenderer line,  Ray2D ray) {
 
         line.SetPosition(0, ray.origin);
+
+        if (warning) {
+            line.SetWidth(1, 1);
+        } else {
+            line.SetWidth(5, 5);
+        }
 
         if (stopLaser) {
             line.SetPosition(1, ray.origin);
@@ -63,6 +85,8 @@ public class MoonLaser : MonoBehaviour {
             if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Ground") {
                 line.SetPosition(1, hits[i].point);
                 break;
+            } else if (LayerMask.LayerToName(hits[i].collider.gameObject.layer) == "Player" && !warning) {
+                playerHP.TakeDamage();
             } else {
                 line.SetPosition(1, ray.GetPoint(20000));
             }
