@@ -33,6 +33,7 @@ public class Store : MonoBehaviour {
         if ((PlayerCurrency.wealth - price) >= 0) {            
             PlayerCurrency playerCurrency = player.GetComponent<PlayerCurrency>();
             playerCurrency.UpdateCurrency(PlayerCurrency.wealth - price);
+            PlayerInit.gunsFound[index] = true;
         }
 
     }
