@@ -8236,6 +8236,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
+  box1: {fileID: 724978995516706629}
+  box2: {fileID: 7060963408070183500}
+  box3: {fileID: 6099394925457960875}
+  box4: {fileID: 4612159365943020603}
+  box5: {fileID: 8951279850741027817}
+  box6: {fileID: 4389812923127714408}
 --- !u!1 &4266475598898969121
 GameObject:
   m_ObjectHideFlags: 0
