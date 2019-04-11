@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FishMovement : MonoBehaviour {
 
-    public float speed = 50.0f;
+    public float speed = 30.0f;
 
     GameObject player;
     PlayerHealth playerHP;
@@ -24,7 +24,6 @@ public class FishMovement : MonoBehaviour {
             StandardFireFunctions.FireRight(gameObject, speed);
             gameObject.transform.localScale = new Vector2(-1, gameObject.transform.localScale.y);        
         }
-
     }
 
     void FlipFish() {
