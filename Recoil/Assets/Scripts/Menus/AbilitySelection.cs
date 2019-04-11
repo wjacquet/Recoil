@@ -53,11 +53,11 @@ public class AbilitySelection : MonoBehaviour {
         if (currentAbility == "magnet") {
             selectedImage.sprite = magnetSprite;
             selectedAbility.sprite = magnetSprite;
-            ResetPlayerSpeed();
+            ResetPlayerSpeed(70);
         } else if (currentAbility == "flower") {
             selectedImage.sprite = flowerSprite;
             selectedAbility.sprite = flowerSprite;
-            ResetPlayerSpeed();
+            ResetPlayerSpeed(70);
         } else if (currentAbility == "speed") {
             selectedImage.sprite = speedSprite;
             selectedAbility.sprite = speedSprite;
@@ -71,9 +71,9 @@ public class AbilitySelection : MonoBehaviour {
         ability.SetActive(true);
     }
 
-    void ResetPlayerSpeed() {
+    void ResetPlayerSpeed(int speed) {
         PlayerMovement playerMovement = GameObject.Find("obj_player").GetComponent<PlayerMovement>(); 
-        playerMovement.speedLimit = 70;
+        playerMovement.speedLimit = speed;
     }
 
     public void magnetClicked() {
@@ -93,6 +93,7 @@ public class AbilitySelection : MonoBehaviour {
     public void speedClicked() {
         currentAbility = "speed";
         abilityText.text = "This ability raises the speed limit allowing you to have a faster maximum speed";
+        ResetPlayerSpeed(250);
 
         updateCurrentSelection();
     }
