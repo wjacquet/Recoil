@@ -30,6 +30,7 @@ public class PlayerInit : MonoBehaviour
         PlayerCurrency.wealth = data.wealth;
         PlayerAbilities.magnet = data.magnet;
         PlayerAbilities.flower = data.flower;
+        PlayerAbilities.speed = data.speed;
         AbilitySelection.currentAbility = data.currentAbility;
     }
 

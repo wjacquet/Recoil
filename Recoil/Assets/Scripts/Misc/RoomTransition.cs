@@ -33,6 +33,7 @@ public class RoomTransition : MonoBehaviour
                 PlayerInit.currentGunIndex,
                 PlayerAbilities.magnet,
                 PlayerAbilities.flower,
+                PlayerAbilities.speed,
                 AbilitySelection.currentAbility
             );
 

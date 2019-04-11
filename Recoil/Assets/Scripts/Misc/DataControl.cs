@@ -36,6 +36,7 @@ public class DataControl : MonoBehaviour
                         PlayerInit.currentGunIndex,
                         PlayerAbilities.magnet,
                         PlayerAbilities.flower,
+                        PlayerAbilities.speed,
                         AbilitySelection.currentAbility
         );
 
@@ -86,6 +87,7 @@ public class DataControl : MonoBehaviour
                                     new bool[6] {true, false, false, false, false, false},
                                     new int[2] {0, 0},
                                     0,
+                                    false,
                                     false,
                                     false,
                                     "");
