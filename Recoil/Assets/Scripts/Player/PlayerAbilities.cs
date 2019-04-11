@@ -6,6 +6,7 @@ public class PlayerAbilities : MonoBehaviour {
 
     public static bool magnet = false;
     public static bool flower = false;
+    public static bool speed = false;
    
     public void SetMagnet(bool value) {
         magnet = value;
@@ -13,6 +14,10 @@ public class PlayerAbilities : MonoBehaviour {
 
     public void SetFlower(bool value) {
         flower = value;
+    }
+
+    public void SetSpeed(bool value) {
+        speed = value;
     }
 
 }
