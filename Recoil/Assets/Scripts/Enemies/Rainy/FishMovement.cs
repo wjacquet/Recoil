@@ -45,4 +45,11 @@ public class FishMovement : MonoBehaviour {
             FlipFish();
         } 
     }
+
+    void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if (LayerMask.LayerToName(collision.gameObject.layer) == "Ground") {
+            Debug.Log("GROUNDDDDDD");
+        }
+    }
 }
