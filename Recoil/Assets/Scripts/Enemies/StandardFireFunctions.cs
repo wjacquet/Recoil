@@ -46,6 +46,20 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     } 
 
+    public static void FireLeft(GameObject projectile, float speed) 
+    {
+        Vector2 direction = new Vector2(-180, 0);
+        direction.y = 0;
+        SetVelocityWithSpeed(direction, projectile, speed);
+    } 
+
+    public static void FireRight(GameObject projectile, float speed) 
+    {
+        Vector2 direction = new Vector2(180, 0);
+        direction.y = 0;
+        SetVelocityWithSpeed(direction, projectile, speed);
+    } 
+
     public static void FireVerticallyFakeGravity(GameObject projectile, float speed) {
 
         Vector2 direction = new Vector2(0, 180);

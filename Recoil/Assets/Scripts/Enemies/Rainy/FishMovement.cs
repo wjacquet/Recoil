@@ -4,52 +4,39 @@ using UnityEngine;
 
 public class FishMovement : MonoBehaviour {
 
+    public float speed = 50.0f;
+
     GameObject player;
     PlayerHealth playerHP;
 
-    private Vector2 center;
-    private int distance = 1;
-    private bool left = false;
+    private bool left = true;
 
     void Start() {
         player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
-
-        center = transform.position;
     }
 
-    void Update() {
-        Fly(distance);
-        
-        if (left) distance++;
-        else distance--;
-    }
+    void Update() {        
+        if (left) {
+            StandardFireFunctions.FireLeft(gameObject, speed);
+            gameObject.transform.localScale = new Vector2(1, gameObject.transform.localScale.y);        
+        } else {
+            StandardFireFunctions.FireRight(gameObject, speed);
+            gameObject.transform.localScale = new Vector2(-1, gameObject.transform.localScale.y);        
+        }
 
-    void Fly(int distance) { 
-        var offset = new Vector2(distance, 0);
-        transform.position = offset;
     }
 
     void FlipFish() {
-        Debug.Log("FLIPPING FISH");
         left = !left;
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log(LayerMask.LayerToName(collision.gameObject.layer));
+    void OnTriggerEnter2D(Collider2D collision) {
         if (LayerMask.LayerToName(collision.gameObject.layer) == "Player") {
             playerHP.TakeDamage();   
         } 
-        
         if (LayerMask.LayerToName(collision.gameObject.layer) == "Ground") {
             FlipFish();
         } 
-    }
-
-    void OnTriggerEnter2D(Collider2D collision) 
-    {
-        if (LayerMask.LayerToName(collision.gameObject.layer) == "Ground") {
-            Debug.Log("GROUNDDDDDD");
-        }
     }
 }
