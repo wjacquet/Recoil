@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 9160995773792458960}
   - component: {fileID: 7309068659461352144}
   - component: {fileID: 5012073905056952329}
-  m_Layer: 0
+  - component: {fileID: 3467613030303482125}
+  m_Layer: 11
   m_Name: obj_fish_bomber
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d1cc21fda1d4536aaa4eb1dd77d81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 50
+--- !u!114 &3467613030303482125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6025062538444130302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6acc8e357e1b4ab0920d868c90e724f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
+  timeBetweenShoots: 2
 --- !u!1001 &1666901625832478111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,6 +138,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f685b87093257c24cbfc9008c74de689, type: 3}
       propertyPath: m_Name
       value: fish_bomber
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f685b87093257c24cbfc9008c74de689, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f685b87093257c24cbfc9008c74de689, type: 3}
       propertyPath: m_LocalPosition.x

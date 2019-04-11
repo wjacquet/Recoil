@@ -67,7 +67,7 @@ public class StandardFireFunctions : MonoBehaviour
 
         SetVelocityWithSpeed(direction, projectile, speed);
     }
-
+    
     public static void FireDown(GameObject projectile) 
     {
         Vector2 direction = new Vector2(0, -180);
