@@ -8223,7 +8223,7 @@ MonoBehaviour:
   selectedAbility: {fileID: 361425387896259521}
   magnetSprite: {fileID: 21300000, guid: acc439f188961554992703772b54b77b, type: 3}
   flowerSprite: {fileID: 21300000, guid: f1f9c336e85bae34b9a2ecc776d7432d, type: 3}
-  speedSprite: {fileID: 21300000, guid: ec65ea2a406803a488551410f471064d, type: 3}
+  speedSprite: {fileID: 21300000, guid: 15dded94a995f5d4195f0e43ca1ec75e, type: 3}
   abilityText: {fileID: 3740940619872104624}
 --- !u!114 &2821652946574849510
 MonoBehaviour:
@@ -10872,7 +10872,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ec65ea2a406803a488551410f471064d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15dded94a995f5d4195f0e43ca1ec75e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
