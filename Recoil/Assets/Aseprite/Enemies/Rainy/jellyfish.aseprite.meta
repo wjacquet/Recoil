@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 0effac01542205844a2b6249de08a34a
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: _main/jellyfish
+    400000: _main/jellyfish/Transform
+    2800000: tex2d_0
+    7400000: anim_Untagged
+    9500000: _main/jellyfish/Animator
+    21200000: _main/jellyfish/SpriteRenderer
+    21300000: sprite_0
+    100100000: _main
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b1577cdc41d01fa4dbf68ad51122a765, type: 3}
+  pixelsPerUnit: 1
+  spriteAtlas: {instanceID: 0}
+  frameRate: 60
+  sortingLayerName: 
+  sortingOrder: 0
+  animatorCullingMode: 0
+  animatorController: {instanceID: 0}
+  errors: []

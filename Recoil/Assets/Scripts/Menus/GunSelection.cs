@@ -10,7 +10,6 @@ public class GunSelection : MonoBehaviour {
 
     public static bool gameIsPaused = false;
     public static bool onCheckpoint = false;
-    public GameObject gunSelectionUI;
 
     public Image firstImage;
     public Image secondImage;
@@ -68,14 +67,10 @@ public class GunSelection : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.M) && onCheckpoint) {
-            if (gameIsPaused) {
-                Resume();
-            } else {
+
+        if (SelectionMenus.gunSelectionOpen) 
+            if (SelectionMenus.gameIsPaused) 
                 ShowGunsUnlocked();
-                Pause();
-            }
-        }
 
         if (Input.GetKeyDown(KeyCode.S)) {  
             SwitchGuns();
@@ -195,19 +190,6 @@ public class GunSelection : MonoBehaviour {
             GameObject tmp = player.transform.GetChild(0).GetChild(i).gameObject;
             tmp.SetActive(false);  
         }
-    }
-
-    public void Resume() {
-        gunSelectionUI.SetActive(false);
-        Time.timeScale = 1f;
-        gameIsPaused = false;
-    }
-
-    void Pause() {
-        Cursor.visible = true;
-        gunSelectionUI.SetActive(true);
-        Time.timeScale = 0f;
-        gameIsPaused = true;
     }
 
     // Switch between 0 and 1

@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
-    public static bool gameIsPaused = false;
+    // public static bool SelectionMenus.gameIsPaused = false;
 
     public GameObject pauseMenuUI;
 
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) {
-            if (gameIsPaused) {
+            if (SelectionMenus.gameIsPaused) {
                 Resume();
             } else {
                 Pause();
@@ -22,14 +22,14 @@ public class PauseMenu : MonoBehaviour {
     public void Resume() {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        gameIsPaused = false;
+        SelectionMenus.gameIsPaused = false;
     }
 
     void Pause() {
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        gameIsPaused = true;
+        SelectionMenus.gameIsPaused = true;
     }
 
     public void LoadMenu() {

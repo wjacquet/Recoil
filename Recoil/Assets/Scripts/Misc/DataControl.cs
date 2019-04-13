@@ -35,7 +35,9 @@ public class DataControl : MonoBehaviour
                         PlayerInit.selectedGuns,
                         PlayerInit.currentGunIndex,
                         PlayerAbilities.magnet,
-                        PlayerAbilities.flower
+                        PlayerAbilities.flower,
+                        PlayerAbilities.speed,
+                        AbilitySelection.currentAbility
         );
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -86,7 +88,9 @@ public class DataControl : MonoBehaviour
                                     new int[2] {0, 0},
                                     0,
                                     false,
-                                    false);
+                                    false,
+                                    false,
+                                    "");
 
         
         BinaryFormatter binaryFormatter = new BinaryFormatter();
