@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8487635350011167137}
+  - component: {fileID: 8487635351532392251}
   m_Layer: 0
   m_Name: obj_ufo_grabber
   m_TagString: Untagged
@@ -31,6 +32,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &8487635351532392251
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487635350011167150}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.7336578, y: 6.831787}
+      - {x: -5.8576517, y: 4.7201233}
+      - {x: -6.795554, y: 3.6305847}
+      - {x: -6.7199297, y: 2.7721558}
+      - {x: -10.604895, y: 2.798706}
+      - {x: -15.844231, y: -0.3875122}
+      - {x: -14.876681, y: -1.5355835}
+      - {x: -9.881014, y: -1.6956787}
+      - {x: -9.882234, y: -2.9048462}
+      - {x: -3.7524023, y: -2.796875}
+      - {x: -3.9662695, y: -3.6817627}
+      - {x: -1.8306141, y: -4.953644}
+      - {x: 1.940937, y: -4.9746094}
+      - {x: 3.81946, y: -3.7306519}
+      - {x: 4.2494354, y: -2.6999512}
+      - {x: 9.791113, y: -2.6314697}
+      - {x: 9.684862, y: -1.6347351}
+      - {x: 14.598446, y: -1.537262}
+      - {x: 15.55983, y: -0.41171265}
+      - {x: 10.8265705, y: 2.6627502}
+      - {x: 7.453129, y: 2.8613281}
+      - {x: 5.655512, y: 4.831421}
+      - {x: 4.32378, y: 4.7033386}
+      - {x: 2.864624, y: 6.869812}
 --- !u!1001 &8487635350560512130
 PrefabInstance:
   m_ObjectHideFlags: 0

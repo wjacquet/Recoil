@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4626191662138732017}
+  - component: {fileID: 4626191661067855517}
   m_Layer: 0
   m_Name: obj_space_egg
   m_TagString: Untagged
@@ -31,6 +32,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &4626191661067855517
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4626191662138732018}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06088257, y: 5.434662}
+  m_Size: {x: 20.021912, y: 27.145119}
+  m_Direction: 0
 --- !u!1001 &4626191661630767089
 PrefabInstance:
   m_ObjectHideFlags: 0
