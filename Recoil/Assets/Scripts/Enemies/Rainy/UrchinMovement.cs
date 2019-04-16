@@ -22,7 +22,6 @@ public class UrchinMovement : MonoBehaviour {
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
     }
 
-
     IEnumerator HoverPattern() {
         while (true) {
             yield return Hover(180);
@@ -31,14 +30,13 @@ public class UrchinMovement : MonoBehaviour {
     }
 
     IEnumerator Hover(int yValue) {
-        // Debug.Log(Vector2.Distance(transform.position, center));
         Vector2 movement = new Vector2(0, yValue);
         rigidBody.velocity = movement * 1/fractionSpeed;
 
         yield return new WaitForSeconds(timeBetween);
     }
-
-     void OnTriggerEnter2D(Collider2D collision) {
+     
+    void OnTriggerEnter2D(Collider2D collision) {
         if (LayerMask.LayerToName(collision.gameObject.layer) == "Player") {
             playerHP.TakeDamage();   
         } 
