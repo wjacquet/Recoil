@@ -139,7 +139,7 @@ public class StandardFireFunctions : MonoBehaviour
         rigidBody.velocity = direction * speed;
     }
 
-    static void SetVelocityWithSpeed(Vector2 direction, GameObject projectile, float mySpeed) {
+    public static void SetVelocityWithSpeed(Vector2 direction, GameObject projectile, float mySpeed) {
         Rigidbody2D rigidBody = projectile.GetComponent<Rigidbody2D>();
         direction.Normalize();
         rigidBody.velocity = direction * mySpeed;

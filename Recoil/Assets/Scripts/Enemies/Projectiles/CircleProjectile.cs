@@ -5,52 +5,58 @@ using UnityEngine;
 public class CircleProjectile : MonoBehaviour {
 
     PlayerHealth playerHP;
+    UrchinShoot urchin;
 
-    public float speed = 50.0f;
-    public float timeCounter = 0;
-
-    private float angle = 0.0f;
-    private float radius = 10.0f;
+    // private float timeCounter = 0;
+    private float speed = 25.0f;
+    // private Vector2 center;
+// 
+    private bool oneBool = false;
+    private bool twoBool = false;
+    private bool threeBool = false;
+    private bool fourBool = false;
 
     void Start() {
         GameObject player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
+        
+        urchin = GameObject.Find("obj_urchin").GetComponent<UrchinShoot>();
+        // center = transform.position;
     }
 
-    void CircleFire() {
-        // StartCoroutine(CirclePattern());
+    void one() {
+        oneBool = true;
     }
 
-    void Update() {
-        timeCounter += Time.deltaTime;
-        radius += 0.1f;
-
-        float x = Mathf.Cos(timeCounter) * radius;
-        float y =  Mathf.Sin(timeCounter) * radius;
-        float z = 0;
-
-        transform.position = new Vector3(x, y, z);
+    void two() {
+        twoBool = true;
     }
 
-    // IEnumerator CirclePattern() {
-    //     while (true) {
-    //         angle = angle + 1.0f;
-    //         ResetAngle();
-    //         yield return Shoot();
-    //     }
-    // }
+    void three() {
+        threeBool = true;
+    }
 
-    // IEnumerator Shoot() {
-    //     StandardFireFunctions.FireInCircle(gameObject, speed, angle, radius);
+    void four() {
+        fourBool = true;
+    }
 
-    //     yield return new WaitForSeconds(0.01f);
-    // }
+    void FixedUpdate() {
+        // timeCounter += Time.deltaTime;
+        Vector2 offset;
+        if (oneBool) {
+            offset = new Vector3(Mathf.Cos(urchin.timeCounter1) * urchin.radius, Mathf.Sin(urchin.timeCounter1) * urchin.radius);
+        } else if (twoBool) {
+            offset = new Vector3(Mathf.Cos(urchin.timeCounter2) * urchin.radius, Mathf.Sin(urchin.timeCounter2) * urchin.radius);
+        } else if (threeBool) {
+            offset = new Vector3(Mathf.Cos(urchin.timeCounter3) * urchin.radius, Mathf.Sin(urchin.timeCounter3) * urchin.radius);
+        } else if (fourBool) {
+            offset = new Vector3(Mathf.Cos(urchin.timeCounter4) * urchin.radius, Mathf.Sin(urchin.timeCounter4) * urchin.radius);
+        } else {
+            offset = new Vector3(0,0,0);
+        }
 
-    // void ResetAngle() {
-    //     if (angle >= 360.0f) {
-    //         angle = 0.0f;
-    //     }
-    // }
+        transform.position = urchin.center + offset;
+    }
 
     // Once the projectile hits a wall
     void OnTriggerEnter2D(Collider2D collision) {

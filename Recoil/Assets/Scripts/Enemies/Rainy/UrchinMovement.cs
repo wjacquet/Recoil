@@ -18,7 +18,7 @@ public class UrchinMovement : MonoBehaviour {
         playerHP = player.GetComponent<PlayerHealth>();
 
         center = transform.position;
-        StartCoroutine(HoverPattern());
+        // StartCoroutine(HoverPattern());
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
     }
 
