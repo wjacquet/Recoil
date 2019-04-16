@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 2121976696335257294}
-  hoverDistance: 20
-  distanceFromCenter: 30
+  fractionSpeed: 25
+  timeBetween: 1
 --- !u!50 &2121976696335257294
 Rigidbody2D:
   serializedVersion: 4

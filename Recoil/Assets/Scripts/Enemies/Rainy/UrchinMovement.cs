@@ -8,7 +8,7 @@ public class UrchinMovement : MonoBehaviour {
     PlayerHealth playerHP;
 
     public Rigidbody2D rigidBody;
-    public int fractionSpeed = 1/25;
+    public int fractionSpeed = 25;
     public float timeBetween = 1.0f;
 
     private Vector2 center;
@@ -33,7 +33,7 @@ public class UrchinMovement : MonoBehaviour {
     IEnumerator Hover(int yValue) {
         // Debug.Log(Vector2.Distance(transform.position, center));
         Vector2 movement = new Vector2(0, yValue);
-        rigidBody.velocity = movement * fractionSpeed;
+        rigidBody.velocity = movement * 1/fractionSpeed;
 
         yield return new WaitForSeconds(timeBetween);
     }
