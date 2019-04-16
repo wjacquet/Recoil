@@ -118,6 +118,13 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     }
 
+    public static void FireInCircle(GameObject projectile, float speed, float angle, float radius) {
+
+        Vector2 direction = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
+
+        SetVelocityWithSpeed(direction, projectile, speed);
+    }
+
     static Vector2 GetVectorToPlayer(GameObject projectile) 
     {
         // Find player and find the direction vector

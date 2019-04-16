@@ -5,20 +5,21 @@ using UnityEngine;
 public class UrchinShoot : MonoBehaviour {
 
     public GameObject bullet;
-    public float timeBetweenShoots = 1.0f;
+    public float timeBetweenShoots = 10.0f;
 
     void Start() {
-        StartCoroutine(UrchinFirePattern());
+        // StartCoroutine(UrchinFirePattern());
+        Shoot();
     }
 
-    IEnumerator UrchinFirePattern() {
-        while(true) {
-            yield return Shoot();
-        }
-    }
+    // IEnumerator UrchinFirePattern() {
+    //     while(true) {
+    //         yield return Shoot();
+    //     }
+    // }
 
-    IEnumerator Shoot() {
-        Instantiate(bullet, transform.position, transform.rotation).SendMessage("Fire");
-        yield return new WaitForSeconds(timeBetweenShoots);
+    void Shoot() {
+        Instantiate(bullet, transform.position, transform.rotation).SendMessage("CircleFire");
+        // yield return new WaitForSeconds(timeBetweenShoots);
     }
 }
