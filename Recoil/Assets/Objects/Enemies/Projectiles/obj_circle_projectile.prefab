@@ -42,7 +42,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420198269858897451}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aed4ce84ffc44e838ebf77d09d41374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 0.5
+  center: {x: 0, y: 0}
 --- !u!1001 &7847784779713817034
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,55 +7,42 @@ public class CircleProjectile : MonoBehaviour {
     PlayerHealth playerHP;
     UrchinShoot urchin;
 
-    // private float timeCounter = 0;
+    private float timeCounter = 0;
     private float speed = 25.0f;
-    // private Vector2 center;
-// 
-    private bool oneBool = false;
-    private bool twoBool = false;
-    private bool threeBool = false;
-    private bool fourBool = false;
+
+    public float radius = 0.5f;
+    public Vector2 center;
+
 
     void Start() {
         GameObject player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
         
         urchin = GameObject.Find("obj_urchin").GetComponent<UrchinShoot>();
-        // center = transform.position;
+        center = transform.position;
     }
 
     void one() {
-        oneBool = true;
+        timeCounter = 60;    
     }
 
     void two() {
-        twoBool = true;
+        timeCounter = -60;
     }
 
     void three() {
-        threeBool = true;
+        timeCounter = 60;
     }
 
     void four() {
-        fourBool = true;
+        timeCounter = -60;
     }
 
-    void FixedUpdate() {
-        // timeCounter += Time.deltaTime;
-        Vector2 offset;
-        if (oneBool) {
-            offset = new Vector3(Mathf.Cos(urchin.timeCounter1) * urchin.radius, Mathf.Sin(urchin.timeCounter1) * urchin.radius);
-        } else if (twoBool) {
-            offset = new Vector3(Mathf.Cos(urchin.timeCounter2) * urchin.radius, Mathf.Sin(urchin.timeCounter2) * urchin.radius);
-        } else if (threeBool) {
-            offset = new Vector3(Mathf.Cos(urchin.timeCounter3) * urchin.radius, Mathf.Sin(urchin.timeCounter3) * urchin.radius);
-        } else if (fourBool) {
-            offset = new Vector3(Mathf.Cos(urchin.timeCounter4) * urchin.radius, Mathf.Sin(urchin.timeCounter4) * urchin.radius);
-        } else {
-            offset = new Vector3(0,0,0);
-        }
-
-        transform.position = urchin.center + offset;
+    void Update() {
+        radius += 0.5f;
+        timeCounter += 0.8f * Time.deltaTime;
+        Vector2 offset = new Vector3(Mathf.Cos(timeCounter) * radius, Mathf.Sin(timeCounter) * radius);
+        transform.position = center + offset;
     }
 
     // Once the projectile hits a wall
