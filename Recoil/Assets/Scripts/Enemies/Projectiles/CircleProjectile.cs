@@ -23,19 +23,19 @@ public class CircleProjectile : MonoBehaviour {
     }
 
     void one() {
-        timeCounter = 60;    
+        timeCounter = 120;    
     }
 
     void two() {
-        timeCounter = -60;
-    }
-
-    void three() {
         timeCounter = 60;
     }
 
+    void three() {
+        timeCounter = 30;
+    }
+
     void four() {
-        timeCounter = -60;
+        timeCounter = 90;
     }
 
     void Update() {
