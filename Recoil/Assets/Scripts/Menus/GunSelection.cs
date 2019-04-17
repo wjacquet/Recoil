@@ -29,6 +29,10 @@ public class GunSelection : MonoBehaviour {
     public Sprite obj_photon_launcher;
     public Sprite obj_machine_blaster;
     public Sprite obj_cluster_gun_mkII;
+    public Sprite obj_ar;
+    public Sprite obj_railgun;
+    public Sprite obj_minigun;
+    public Sprite obj_hand_blaster;
 
     public GameObject gunBox1;
     public GameObject gunBox2;
@@ -36,7 +40,10 @@ public class GunSelection : MonoBehaviour {
     public GameObject gunBox4;
     public GameObject gunBox5;
     public GameObject gunBox6;
-
+    public GameObject gunBox7;
+    public GameObject gunBox8;
+    public GameObject gunBox9;
+    public GameObject gunBox10;
 
     private GameObject gun;
     private SpriteRenderer spriteRen;
@@ -50,11 +57,11 @@ public class GunSelection : MonoBehaviour {
     private int selection = 0;
 
     void Start() {
-        gunBoxes = new GameObject[6] {gunBox1, gunBox2, gunBox3, gunBox4, gunBox5, gunBox6};
-        sprites = new Sprite[6] {obj_gun, obj_bolt_gun, obj_fire_spitter, obj_photon_launcher, obj_machine_blaster, obj_cluster_gun_mkII};
-        damageVals = new int[6] { 50, 50, 100, 80, 20, 65};
-        fireRateVals = new int[6] {60, 50, 100, 30, 90, 40 };
-        projTypes = new string[6] { "Semi Auto", "Bolt Action", "Incendiary", "Launcher", "Rapid Fire", "Spread" };
+        gunBoxes = new GameObject[10] {gunBox1, gunBox2, gunBox3, gunBox4, gunBox5, gunBox6, gunBox7, gunBox8, gunBox9, gunBox10};
+        sprites = new Sprite[10] {obj_gun, obj_bolt_gun, obj_fire_spitter, obj_photon_launcher, obj_machine_blaster, obj_cluster_gun_mkII, obj_ar, obj_railgun, obj_minigun, obj_hand_blaster};
+        damageVals = new int[10] { 50, 50, 100, 80, 20, 65, 0, 0, 0, 0 };
+        fireRateVals = new int[10] {60, 50, 100, 30, 90, 40, 0, 0, 0, 0 };
+        projTypes = new string[10] { "Semi Auto", "Bolt Action", "Incendiary", "Launcher", "Rapid Fire", "Spread", "TODO", "TODO", "TODO", "TODO" };
 
         player = GameObject.Find("obj_player");
         gun = GameObject.Find("obj_gun_pivot");
@@ -68,9 +75,9 @@ public class GunSelection : MonoBehaviour {
 
     void Update() {
 
-        if (SelectionMenus.gunSelectionOpen) 
-            if (SelectionMenus.gameIsPaused) 
-                ShowGunsUnlocked();
+        // if (SelectionMenus.gunSelectionOpen) 
+        //     if (SelectionMenus.gameIsPaused) 
+                // ShowGunsUnlocked();
 
         if (Input.GetKeyDown(KeyCode.S)) {  
             SwitchGuns();
@@ -186,7 +193,7 @@ public class GunSelection : MonoBehaviour {
 
     // Removes all guns from players hand
     void RemoveGuns() {
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 10; i++) {
             GameObject tmp = player.transform.GetChild(0).GetChild(i).gameObject;
             tmp.SetActive(false);  
         }

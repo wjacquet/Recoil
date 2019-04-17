@@ -15,22 +15,30 @@ public class PivotGun : MonoBehaviour {
     Transform gunSprite;
 
 
-    private Vector3[] gunPlacementsNeg = new Vector3[6] {
+    private Vector3[] gunPlacementsNeg = new Vector3[10] {
                                                             new Vector3(-5.0f, 1f, 0f),
                                                             new Vector3(-6.0f, 1f, 0f),
                                                             new Vector3(-8.0f, 2f, 0f),
                                                             new Vector3(-8.0f, 0f, 0f),
                                                             new Vector3(-4.0f, 1f, 0f),
                                                             new Vector3(-8.0f, 1f, 0f),
+                                                            new Vector3(-7.0f, 3f, 1f),
+                                                            new Vector3(-8.0f, 2f, 1f),
+                                                            new Vector3(-11.0f, -8f, 1f),
+                                                            new Vector3(-7.0f, 1f, 1f)
                                                         };
 
-    private Vector3[] gunPlacementsPos = new Vector3[6] {
+    private Vector3[] gunPlacementsPos = new Vector3[10] {
                                                             new Vector3(5.0f, 1f, 0f),
                                                             new Vector3(6.0f, 1f, 0f),
                                                             new Vector3(8.0f, 2f, 0f),
                                                             new Vector3(8.0f, 0f, 0f),
                                                             new Vector3(4.0f, 1f, 0f),
                                                             new Vector3(8.0f, 1f, 0f),
+                                                            new Vector3(7.0f, 3f, 1f),
+                                                            new Vector3(8.0f, 2f, 1f),
+                                                            new Vector3(11.0f, -8f, 1f),
+                                                            new Vector3(7.0f, 0f, 1f)                                                            
                                                         };
 
 

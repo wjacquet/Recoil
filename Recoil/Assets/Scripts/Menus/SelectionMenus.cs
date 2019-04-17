@@ -28,12 +28,12 @@ public class SelectionMenus : MonoBehaviour {
     }
 
     public void gunSelectionClicked() {
-        if (GunSelection.onCheckpoint) {
-            removeAllUI();
+        // if (GunSelection.onCheckpoint) {
+        //     removeAllUI();
 
             gunSelectionOpen = !gunSelectionOpen;
             gunSelectionUI.SetActive(gunSelectionOpen);
-        }
+        // }
     }
 
     public void abilitiesClick() {

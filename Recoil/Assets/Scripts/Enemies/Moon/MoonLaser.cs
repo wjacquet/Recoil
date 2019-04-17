@@ -71,9 +71,13 @@ public class MoonLaser : MonoBehaviour {
         line.SetPosition(0, ray.origin);
 
         if (warning) {
-            line.SetWidth(1, 1);
+            line.startWidth = 1;
+            line.endWidth = 1;
+            // line.SetWidth(1, 1);
         } else {
-            line.SetWidth(5, 5);
+            // line.SetWidth(5, 5);
+            line.startWidth = 5;
+            line.endWidth = 5;
         }
 
         if (stopLaser) {
