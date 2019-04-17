@@ -5,10 +5,9 @@ using UnityEngine;
 public class CircleProjectile : MonoBehaviour {
 
     PlayerHealth playerHP;
-    UrchinShoot urchin;
+    // UrchinShoot urchinShoot;
 
     private float timeCounter = 0;
-    private float speed = 25.0f;
 
     public float radius = 0.5f;
     public Vector2 center;
@@ -18,7 +17,7 @@ public class CircleProjectile : MonoBehaviour {
         GameObject player = GameObject.Find("obj_player");
         playerHP = player.GetComponent<PlayerHealth>();
         
-        urchin = GameObject.Find("obj_urchin").GetComponent<UrchinShoot>();
+        // urchinShoot = GameObject.Find("obj_urchin").GetComponent<UrchinShoot>();
         center = transform.position;
     }
 
