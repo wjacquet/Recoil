@@ -5,10 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-// TODO Allow them to buy 
-    // Should add to health 
 public class Store : MonoBehaviour {
 
+    PlayerHealth playerHealth;
     public GameObject player;
     
     public GameObject box1;
@@ -21,6 +20,8 @@ public class Store : MonoBehaviour {
     private GameObject[] gunBoxes;
 
     void Start() {
+        playerHealth = player.GetComponent<PlayerHealth>();
+
         gunBoxes = new GameObject[6] {null, box1, box2, box3, box4, box5};
 
     }
@@ -39,6 +40,8 @@ public class Store : MonoBehaviour {
                 gunBoxes[i].SetActive(true);
             }
         }
+
+        if (PlayerHealth.numberOfHealthUpgrades >= 3) box6.SetActive(false);
     }
 
     public void itemSelected() {
@@ -55,7 +58,6 @@ public class Store : MonoBehaviour {
                 PlayerInit.gunsFound[index] = true;
             // Buying Health Upgrade
             } else {
-                PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
                 playerHealth.BuyHP();
             }
         }

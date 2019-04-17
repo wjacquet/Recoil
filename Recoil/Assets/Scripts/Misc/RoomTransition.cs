@@ -34,7 +34,8 @@ public class RoomTransition : MonoBehaviour
                 PlayerAbilities.magnet,
                 PlayerAbilities.flower,
                 PlayerAbilities.speed,
-                AbilitySelection.currentAbility
+                AbilitySelection.currentAbility,
+                PlayerHealth.numberOfHealthUpgrades
             );
 
             // Warp player to next scene
