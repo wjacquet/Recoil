@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     private int iFrames = 0;
     public static int sceneIDForUpgrade = -1;
     public static int numberOfHealthUpgrades = 0;
+    public int maxHealthBuys = 3;
 
     public Text healthText;
     public Slider healthSlider;
@@ -48,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void BuyHP() {
-        if ((numberOfHealthUpgrades++) < 3) {
+        if ((numberOfHealthUpgrades++) < maxHealthBuys) {
             maxHP++;
             currHP++;
             setHealthText(currHP);

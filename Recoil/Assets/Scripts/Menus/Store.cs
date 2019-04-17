@@ -41,7 +41,7 @@ public class Store : MonoBehaviour {
             }
         }
 
-        if (PlayerHealth.numberOfHealthUpgrades >= 3) box6.SetActive(false);
+        if (PlayerHealth.numberOfHealthUpgrades >= playerHealth.maxHealthBuys) box6.SetActive(false);
     }
 
     public void itemSelected() {
