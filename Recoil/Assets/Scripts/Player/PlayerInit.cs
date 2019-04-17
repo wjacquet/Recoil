@@ -32,6 +32,7 @@ public class PlayerInit : MonoBehaviour
         PlayerAbilities.flower = data.flower;
         PlayerAbilities.speed = data.speed;
         AbilitySelection.currentAbility = data.currentAbility;
+        PlayerHealth.numberOfHealthUpgrades = data.numberOfHealthUpgrades;
     }
 
     static void OnSceneLoaded(Scene scene, LoadSceneMode mode) {

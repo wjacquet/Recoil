@@ -37,7 +37,8 @@ public class DataControl : MonoBehaviour
                         PlayerAbilities.magnet,
                         PlayerAbilities.flower,
                         PlayerAbilities.speed,
-                        AbilitySelection.currentAbility
+                        AbilitySelection.currentAbility,
+                        PlayerHealth.numberOfHealthUpgrades
         );
 
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -90,7 +91,8 @@ public class DataControl : MonoBehaviour
                                     false,
                                     false,
                                     false,
-                                    "");
+                                    "", 
+                                    0);
 
         
         BinaryFormatter binaryFormatter = new BinaryFormatter();
