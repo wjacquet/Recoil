@@ -75,9 +75,9 @@ public class GunSelection : MonoBehaviour {
 
     void Update() {
 
-        // if (SelectionMenus.gunSelectionOpen) 
-        //     if (SelectionMenus.gameIsPaused) 
-                // ShowGunsUnlocked();
+        if (SelectionMenus.gunSelectionOpen) 
+            if (SelectionMenus.gameIsPaused) 
+                ShowGunsUnlocked();
 
         if (Input.GetKeyDown(KeyCode.S)) {  
             SwitchGuns();

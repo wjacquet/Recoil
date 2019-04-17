@@ -80,7 +80,6 @@ public class PivotGun : MonoBehaviour {
 
     public void SetSprite(Transform sprite) {
         gunSprite = sprite;
-
     }
 
     public void FlipGun(bool flip) {

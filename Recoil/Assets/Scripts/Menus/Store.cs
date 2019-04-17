@@ -16,14 +16,17 @@ public class Store : MonoBehaviour {
     public GameObject box4;
     public GameObject box5;
     public GameObject box6;
+    public GameObject box7;
+    public GameObject box8;
+    public GameObject box9;
+    public GameObject box10;
 
     private GameObject[] gunBoxes;
 
     void Start() {
         playerHealth = player.GetComponent<PlayerHealth>();
 
-        gunBoxes = new GameObject[6] {null, box1, box2, box3, box4, box5};
-
+        gunBoxes = new GameObject[10] {null, box1, box2, box3, box4, box5, box6, box7, box8, box9};
     }
 
     void Update() {
@@ -36,12 +39,12 @@ public class Store : MonoBehaviour {
         for (int i = 1; i < gunBoxes.Length; i++) {
             if (PlayerInit.gunsFound[i]) {
                 gunBoxes[i].SetActive(false);
-            } else {
+        } else {
                 gunBoxes[i].SetActive(true);
             }
         }
 
-        if (PlayerHealth.numberOfHealthUpgrades >= playerHealth.maxHealthBuys) box6.SetActive(false);
+        if (PlayerHealth.numberOfHealthUpgrades >= playerHealth.maxHealthBuys) box10.SetActive(false);
     }
 
     public void itemSelected() {
@@ -52,7 +55,7 @@ public class Store : MonoBehaviour {
         
         if ((PlayerCurrency.wealth - price) >= 0) { 
             // Buying a Gun           
-            if (index != 6) {
+            if (index != 10) {
                 PlayerCurrency playerCurrency = player.GetComponent<PlayerCurrency>();
                 playerCurrency.UpdateCurrency(PlayerCurrency.wealth - price);
                 PlayerInit.gunsFound[index] = true;
