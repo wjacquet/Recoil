@@ -18,10 +18,10 @@ public class UrchinShoot : MonoBehaviour {
     }
 
     IEnumerator Shoot() {
-        Instantiate(bullet, new Vector2(transform.position.x + 5 , transform.position.y + 5), transform.rotation).SendMessage("one");
-        Instantiate(bullet, new Vector2(transform.position.x - 5, transform.position.y - 5), transform.rotation).SendMessage("two");
-        Instantiate(bullet, new Vector2(transform.position.x + 5, transform.position.y - 5), transform.rotation).SendMessage("three");
-        Instantiate(bullet, new Vector2(transform.position.x - 5 , transform.position.y + 5), transform.rotation).SendMessage("four");
+        Instantiate(bullet, new Vector2(transform.position.x + 5 , transform.position.y + 5), transform.rotation).SendMessage("topRight");
+        Instantiate(bullet, new Vector2(transform.position.x - 5, transform.position.y - 5), transform.rotation).SendMessage("bottomLeft");
+        Instantiate(bullet, new Vector2(transform.position.x + 5, transform.position.y - 5), transform.rotation).SendMessage("bottomRight");
+        Instantiate(bullet, new Vector2(transform.position.x - 5 , transform.position.y + 5), transform.rotation).SendMessage("topLeft");
 
         yield return new WaitForSeconds(timeBetweenShoots);
     }
