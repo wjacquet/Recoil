@@ -10,9 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5843028483918441004}
   - component: {fileID: 4095171399211542922}
-  m_Layer: 0
+  - component: {fileID: 7009543943613076298}
+  - component: {fileID: 7131124443343496864}
+  - component: {fileID: 5237717291316543615}
+  - component: {fileID: 7081251416760074091}
+  m_Layer: 11
   m_Name: obj_space_chaser
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,6 +158,68 @@ PolygonCollider2D:
       - {x: 1.968029, y: 3.031518}
       - {x: 1.939434, y: 0.94544697}
       - {x: 1.0809212, y: 0.92587566}
+--- !u!114 &7009543943613076298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843028483918441003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHP: 32
+--- !u!114 &7131124443343496864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843028483918441003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52835962b9ceb8f4ca34d33df565b65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 1383589517549857606, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
+  amount: 3
+--- !u!50 &5237717291316543615
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843028483918441003}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &7081251416760074091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843028483918441003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846413d4e6fdb4ba384b1787e351cd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hatcher: {fileID: 5843028483918441003}
+  speed: 100
 --- !u!1001 &5843028483168992471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,10 +227,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5843028483918441004}
     m_Modifications:
-    - target: {fileID: 100000, guid: 76226c7d45fe98649aa729666c007379, type: 3}
-      propertyPath: m_Name
-      value: SpaceChaser
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 76226c7d45fe98649aa729666c007379, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -208,6 +270,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 76226c7d45fe98649aa729666c007379, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 76226c7d45fe98649aa729666c007379, type: 3}
+      propertyPath: m_Name
+      value: SpaceChaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 76226c7d45fe98649aa729666c007379, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76226c7d45fe98649aa729666c007379, type: 3}

@@ -10,6 +10,8 @@ public class HatcherMovement : MonoBehaviour {
     Rigidbody2D rigidBody;
 
     private bool jump = false;
+
+    public int speed = 70;
     
     // Start is called before the first frame update
     void Start() {
@@ -27,7 +29,7 @@ public class HatcherMovement : MonoBehaviour {
   
         // Move towards player
         if (!jump)  
-            StandardFireFunctions.FireAtPlayer(hatcher);
+            StandardFireFunctions.FireAtPlayerWithSetSpeed(hatcher, speed);
     }
 
     IEnumerator Timer() {
