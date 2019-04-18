@@ -2,13 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+    How to use the snake in unity
+
+    1. Put the obj_snake_head into scene
+    2. Put 4 obj_snake_bodies into the scene
+    3. On each body, there is a distance from head to set.
+        a. Set the first body (The one directly bethind the head) = 20
+        b. Second body = 40
+        c. Third Body = 60
+ */
+
 public class SnakeBody : MonoBehaviour {
  
-    public GameObject head;
     public int followDistance;
+    private GameObject head;
     private List<Vector3> storedPositions;
  
     void Awake() {
+        head = GameObject.Find("obj_snake_head");
+
         storedPositions = new List<Vector3>();
         gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
 
