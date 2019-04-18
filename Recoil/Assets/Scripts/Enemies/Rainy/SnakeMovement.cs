@@ -8,15 +8,10 @@ public class SnakeMovement : MonoBehaviour {
     PlayerHealth playerHP;
 
     public Rigidbody2D rigidBody;
-    public int fractionSpeed = 25;
-    public float timeBetween = 1.0f;
 
-    private bool left;
-
-    float amplitudeY = 50.0f;
-    float omegaY = 5.0f;
-    float index;
-
+    private float amplitudeY = 50.0f;
+    private float omegaY = 5.0f;
+    private float index;
     private bool flip = false;
 
     void Start() {

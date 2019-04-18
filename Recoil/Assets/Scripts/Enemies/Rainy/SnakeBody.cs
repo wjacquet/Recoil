@@ -8,7 +8,6 @@ public class SnakeBody : MonoBehaviour {
     public int followDistance;
     private List<Vector3> storedPositions;
  
- 
     void Awake() {
         storedPositions = new List<Vector3>();
         gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
@@ -24,11 +23,9 @@ public class SnakeBody : MonoBehaviour {
     void Update() {
         if (head == null) Destroy(gameObject);
         if(storedPositions.Count == 0) {
-            Debug.Log("blank list");
             storedPositions.Add(head.transform.position); //store the heads currect position
             return;
         } else if (storedPositions[storedPositions.Count -1] != head.transform.position) {
-            //Debug.Log("Add to list");
             storedPositions.Add(head.transform.position); //store the position every frame
         }
  
