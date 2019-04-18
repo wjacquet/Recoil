@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5285692630570619814}
   - component: {fileID: 2483491001063069822}
+  - component: {fileID: 9111204124426793368}
+  - component: {fileID: 8079113950053085091}
+  - component: {fileID: 177308078629322842}
   m_Layer: 13
   m_Name: obj_snake_body
   m_TagString: Trap
@@ -48,6 +51,55 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.037994385}
   serializedVersion: 2
   m_Radius: 6.578781
+--- !u!50 &9111204124426793368
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3779200436142402935}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &8079113950053085091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3779200436142402935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f37e6c8f6bbec845bf5e7c089c6c38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidBody: {fileID: 9111204124426793368}
+  fractionSpeed: 25
+  timeBetween: 1
+--- !u!114 &177308078629322842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3779200436142402935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9e2e488241b0141869d1d141f02bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
 --- !u!1001 &6048938838959201906
 PrefabInstance:
   m_ObjectHideFlags: 0
