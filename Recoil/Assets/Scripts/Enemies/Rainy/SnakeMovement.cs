@@ -13,9 +13,7 @@ public class SnakeMovement : MonoBehaviour {
 
     private bool left;
 
-    float amplitudeX = 20.0f;
     float amplitudeY = 50.0f;
-    float omegaX = 5.0f;
     float omegaY = 5.0f;
     float index;
 
@@ -26,6 +24,7 @@ public class SnakeMovement : MonoBehaviour {
         playerHP = player.GetComponent<PlayerHealth>();
 
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+        gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = !flip;
     }
 
     void Update() {
@@ -49,6 +48,7 @@ public class SnakeMovement : MonoBehaviour {
     }
 
     void FlipSnake() {
+        gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = flip;
         flip = !flip;
     }
 

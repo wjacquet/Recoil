@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9111204124426793368}
   - component: {fileID: 8079113950053085091}
   - component: {fileID: 177308078629322842}
+  - component: {fileID: 4586681759220866363}
   m_Layer: 13
   m_Name: obj_snake_body
   m_TagString: Trap
@@ -65,8 +66,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -100,6 +101,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
+--- !u!114 &4586681759220866363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3779200436142402935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06924151a934c47ae8bef9fec8b51324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6048938838959201906
 PrefabInstance:
   m_ObjectHideFlags: 0
