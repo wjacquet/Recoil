@@ -5,7 +5,6 @@ using UnityEngine;
 public class BugRoamer : MonoBehaviour
 {
     public GameObject bullet;
-    public GameObject player;
     public int recharge;
     private int rechargeCounter = 0;
 
