@@ -64,7 +64,7 @@ public class Chaser : MonoBehaviour
             StandardFireFunctions.FireDegreeOffsetFromPlayer(hatcher, 180);
             StartCoroutine(Timer());
         }
-        if (collision.gameObject.layer == 10) { // Layer 10 == Ground
+        if (collision.gameObject.layer == 10 && rotating) { // Layer 10 == Ground
             rotationVector = new Vector3(0,0,-rotationVector.z);
         } 
     }
