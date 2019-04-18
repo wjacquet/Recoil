@@ -144,4 +144,10 @@ public class StandardFireFunctions : MonoBehaviour
         direction.Normalize();
         rigidBody.velocity = direction * mySpeed;
     }
+
+    public static void FireClusterAtPlayer(GameObject projectile) 
+    {
+        Vector2 direction = GetVectorToPlayer(projectile);
+        SetVelocity(direction, projectile);
+    }
 }
