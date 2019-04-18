@@ -21,26 +21,26 @@ public class CircleProjectile : MonoBehaviour {
         center = transform.position;
     }
 
-    void one() {
-        timeCounter = 120;    
+    void topRight() {
+        timeCounter = 0;    
     }
 
-    void two() {
-        timeCounter = 60;
+    void topLeft() {
+        timeCounter = 3.14159f/2.0f;
     }
 
-    void three() {
-        timeCounter = 30;
+    void bottomLeft() {
+        timeCounter = 3.14159f;
     }
 
-    void four() {
-        timeCounter = 90;
+    void bottomRight() {
+        timeCounter = 3.0f * 3.14159f / 2.0f;
     }
 
     void Update() {
         radius += 0.5f;
         timeCounter += 0.8f * Time.deltaTime;
-        Vector2 offset = new Vector3(Mathf.Cos(timeCounter) * radius, Mathf.Sin(timeCounter) * radius);
+        Vector2 offset = new Vector2(Mathf.Cos(timeCounter) * radius, Mathf.Sin(timeCounter) * radius);
         transform.position = center + offset;
     }
 

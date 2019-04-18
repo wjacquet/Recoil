@@ -11,14 +11,16 @@ public class SnakeMovement : MonoBehaviour {
     public int fractionSpeed = 25;
     public float timeBetween = 1.0f;
 
-    private Vector2 center;
+    // private Vector2 center;
     private bool left;
 
-    float amplitudeX = 5.0f;
+    float amplitudeX = 20.0f;
     float amplitudeY = 20.0f;
     float omegaX = 5.0f;
-    float omegaY = 10.0f;
+    float omegaY = 5.0f;
     float index;
+
+    private Vector2 center;
 
     void Start() {
         player = GameObject.Find("obj_player");
@@ -26,13 +28,29 @@ public class SnakeMovement : MonoBehaviour {
 
         // StartCoroutine(HoverPattern());
         rigidBody = gameObject.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+        center = transform.localPosition;
     }
 
     void Update() {
+        if (Mathf.Abs(center.x - transform.localPosition.x) <= 50) {
+            MoveRight();
+        } else {
+            MoveLeft();
+        }
+    }
+
+    void MoveRight() {
         index += Time.deltaTime;
-        // float x = amplitudeX*Mathf.Cos (omegaX*index);
-        float y = Mathf.Abs (amplitudeY*Mathf.Sin (omegaY*index));
-        transform.localPosition= new Vector3(0,y,0);
+        float x = 3.14159f * amplitudeX * index;
+        float y = (amplitudeY * Mathf.Sin(omegaY * index));
+        transform.localPosition = new Vector2(x, y);
+    }
+
+    void MoveLeft() {
+        index += Time.deltaTime;
+        float x = -3.14159f * amplitudeX * index;
+        float y = (amplitudeY * Mathf.Sin(omegaY * index));
+        transform.localPosition = new Vector2(x, y);
     }
 
     // void Update() {        
@@ -44,10 +62,6 @@ public class SnakeMovement : MonoBehaviour {
     //         gameObject.transform.localScale = new Vector2(-1, gameObject.transform.localScale.y);        
     //     }
     // }
-
-    void FlipSnake() {
-        left = !left;
-    }
 
     // IEnumerator HoverPattern() {
     //     while (true) {
@@ -66,10 +80,6 @@ public class SnakeMovement : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision) {
         if (LayerMask.LayerToName(collision.gameObject.layer) == "Player") {
             playerHP.TakeDamage();   
-        } 
-
-        if (LayerMask.LayerToName(collision.gameObject.layer) == "Ground") {
-            FlipSnake();
         } 
     }
 
