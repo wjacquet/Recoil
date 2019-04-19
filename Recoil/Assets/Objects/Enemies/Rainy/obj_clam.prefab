@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8017131340392751639}
   - component: {fileID: 8334764368643088446}
   - component: {fileID: 3633392616132455199}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: obj_clam
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e867818549647c5b13ac2ca917cc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
 --- !u!1001 &6672295493484218793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -172,6 +173,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2cbb51ac546f0e94ba426a65bff3b4ac, type: 3}
       propertyPath: m_Name
       value: clam
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2cbb51ac546f0e94ba426a65bff3b4ac, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2cbb51ac546f0e94ba426a65bff3b4ac, type: 3}
       propertyPath: m_LocalPosition.x

@@ -118,6 +118,20 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     }
 
+    public static void FireDegreeOffset(GameObject projectile, int angleOffset) 
+    {
+        Vector2 direction = new Vector2(90, 0);
+
+        float angleToPlayer = Mathf.Atan2(direction.x, direction.y);
+        angleToPlayer = Mathf.Rad2Deg * angleToPlayer;
+        angleToPlayer += angleOffset;
+
+        direction.x = Mathf.Sin(Mathf.Deg2Rad * angleToPlayer);
+        direction.y = Mathf.Cos(Mathf.Deg2Rad * angleToPlayer);
+
+        SetVelocity(direction, projectile);
+    }
+
     public static void FireInCircle(GameObject projectile, float speed, float angle, float radius) {
 
         Vector2 direction = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
