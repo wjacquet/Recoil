@@ -5091,6 +5091,47 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1429072254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8487635350011167150, guid: 467af17b3bc2f1e4abc38f27ff3cf01e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8487635351532392249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1429072256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429072254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb0ca9a9e0b0e24fab106f279db4d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidBody: {fileID: 1429072257}
+  hoverDistance: 100
+--- !u!50 &1429072257
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429072254}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1434112528
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,15 +6173,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: obj_ufo_grabber
       objectReference: {fileID: 0}
+    - target: {fileID: 8487635350011167150, guid: 467af17b3bc2f1e4abc38f27ff3cf01e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487635350011167150, guid: 467af17b3bc2f1e4abc38f27ff3cf01e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8487635350011167137, guid: 467af17b3bc2f1e4abc38f27ff3cf01e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712
+      value: -688
       objectReference: {fileID: 0}
     - target: {fileID: 8487635350011167137, guid: 467af17b3bc2f1e4abc38f27ff3cf01e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 72
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 8487635350011167137, guid: 467af17b3bc2f1e4abc38f27ff3cf01e,
         type: 3}
@@ -6185,6 +6236,16 @@ PrefabInstance:
     - target: {fileID: 8487635350011167137, guid: 467af17b3bc2f1e4abc38f27ff3cf01e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487635351532392251, guid: 467af17b3bc2f1e4abc38f27ff3cf01e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487635351532392251, guid: 467af17b3bc2f1e4abc38f27ff3cf01e,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -20,7 +20,7 @@ public class TractorBeam : MonoBehaviour
     void Update() 
     {
         if (allowMove)
-            playerTrans.position = Vector2.MoveTowards(playerTrans.position, transform.position, 100 * Time.deltaTime);
+            playerTrans.position = Vector2.MoveTowards(playerTrans.position, transform.position, 200 * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D collision) 
@@ -29,6 +29,11 @@ public class TractorBeam : MonoBehaviour
         {
             allowMove = true;
             //allowMove = false;
+        }
+        
+        if (collision.gameObject.layer == 10) // Hits the wall 
+        {
+            transform.parent.gameObject.GetComponent<UFOHover>().NewHoverPos();
         }
     }
 
