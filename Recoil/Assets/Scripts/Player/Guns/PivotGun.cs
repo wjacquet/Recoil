@@ -23,7 +23,7 @@ public class PivotGun : MonoBehaviour {
                                                             new Vector3(-4.0f, 1f, 0f),
                                                             new Vector3(-8.0f, 1f, 0f),
                                                             new Vector3(-8.0f, 4f, 1f),
-                                                            new Vector3(-8.0f, 2f, 1f),
+                                                            new Vector3(-10.0f, 3f, 1f),
                                                             new Vector3(-11.0f, -8f, 1f),
                                                             new Vector3(-7.0f, 1f, 1f)
                                                         };
@@ -36,7 +36,7 @@ public class PivotGun : MonoBehaviour {
                                                             new Vector3(4.0f, 1f, 0f),
                                                             new Vector3(8.0f, 1f, 0f),
                                                             new Vector3(8.0f, 4f, 1f),
-                                                            new Vector3(8.0f, 2f, 1f),
+                                                            new Vector3(10.0f, 3f, 1f),
                                                             new Vector3(11.0f, -8f, 1f),
                                                             new Vector3(7.0f, 0f, 1f)                                                            
                                                         };
