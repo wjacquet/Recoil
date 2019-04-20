@@ -10,6 +10,7 @@ public class FireWeapon : MonoBehaviour {
     public int damage;
     public int knockback = 30;
     private int reloadCounter = 0;
+    public int speed = 100;
 
     void Start() 
     {
@@ -35,6 +36,7 @@ public class FireWeapon : MonoBehaviour {
     {
         GameObject newBull = Instantiate(bullet, transform.position, transform.rotation);
         newBull.GetComponent<BulletMovement>().SetDamage(damage);
+        newBull.GetComponent<BulletMovement>().SetSpeed(speed);
         
         Vector2 recoil = newBull.GetComponent<BulletMovement>().FireBullet() * knockback;
         player.GetComponent<PlayerMovement>().Recoil(recoil);
