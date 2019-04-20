@@ -12,7 +12,7 @@ public class PlayerInit : MonoBehaviour
     public static Vector3 playerPos;
     public static bool[] loadedUpgradesFound = new bool[SceneManager.sceneCountInBuildSettings];
     public static bool[] scenesVisited = new bool[SceneManager.sceneCountInBuildSettings];
-    public static bool[] gunsFound = new bool[6];
+    public static bool[] gunsFound = new bool[10];
     public static int[] selectedGuns = new int[2];
     public static int currentGunIndex = 0;
     public static void SetPlayer(PlayerMetaData data) 
@@ -32,6 +32,7 @@ public class PlayerInit : MonoBehaviour
         PlayerAbilities.flower = data.flower;
         PlayerAbilities.speed = data.speed;
         AbilitySelection.currentAbility = data.currentAbility;
+        PlayerHealth.numberOfHealthUpgrades = data.numberOfHealthUpgrades;
     }
 
     static void OnSceneLoaded(Scene scene, LoadSceneMode mode) {

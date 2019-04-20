@@ -14,6 +14,7 @@ public class GenericMovement : MonoBehaviour
     public bool cieling = false;
     public bool right = false;
     public bool left = false;
+    public int lineLength = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -40,8 +41,8 @@ public class GenericMovement : MonoBehaviour
             Debug.DrawLine(lineCastPos, lineCastPos + Vector2.up * 10);
             isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.up * 10, enemyMask);
         } else {
-            Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down * 10);
-            isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down * 10, enemyMask);
+            Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down * lineLength);
+            isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down * lineLength, enemyMask);
         } 
 
         bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - transRightV2, enemyMask);

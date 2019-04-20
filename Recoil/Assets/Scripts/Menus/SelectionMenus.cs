@@ -17,8 +17,11 @@ public class SelectionMenus : MonoBehaviour {
     public static bool storeOpen = false;
     public static bool mapOpen = false;
 
+    public static bool selectionOpen = false;
+    public static bool pauseOpen = false;
+
     void Update() {
-        if (Input.GetKeyDown(KeyCode.M)) {
+        if (Input.GetKeyDown(KeyCode.M) && !pauseOpen) {
             if (gameIsPaused) {
                 Resume();
             } else {
@@ -76,6 +79,7 @@ public class SelectionMenus : MonoBehaviour {
     }
 
     public void Resume() {
+        selectionOpen = false;
         Cursor.visible = false;
         selectionUI.SetActive(false);
         gunSelectionUI.SetActive(false);
@@ -85,6 +89,7 @@ public class SelectionMenus : MonoBehaviour {
 
     void Pause() {
         removeAllUI();
+        selectionOpen = true;
         Cursor.visible = true;
         selectionUI.SetActive(true);
         Time.timeScale = 0f;

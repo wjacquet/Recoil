@@ -118,6 +118,27 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     }
 
+    public static void FireDegreeOffset(GameObject projectile, int angleOffset) 
+    {
+        Vector2 direction = new Vector2(90, 0);
+
+        float angleToPlayer = Mathf.Atan2(direction.x, direction.y);
+        angleToPlayer = Mathf.Rad2Deg * angleToPlayer;
+        angleToPlayer += angleOffset;
+
+        direction.x = Mathf.Sin(Mathf.Deg2Rad * angleToPlayer);
+        direction.y = Mathf.Cos(Mathf.Deg2Rad * angleToPlayer);
+
+        SetVelocity(direction, projectile);
+    }
+
+    public static void FireInCircle(GameObject projectile, float speed, float angle, float radius) {
+
+        Vector2 direction = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * radius;
+
+        SetVelocityWithSpeed(direction, projectile, speed);
+    }
+
     static Vector2 GetVectorToPlayer(GameObject projectile) 
     {
         // Find player and find the direction vector
@@ -132,9 +153,23 @@ public class StandardFireFunctions : MonoBehaviour
         rigidBody.velocity = direction * speed;
     }
 
-    static void SetVelocityWithSpeed(Vector2 direction, GameObject projectile, float mySpeed) {
+    public static void SetVelocityWithSpeed(Vector2 direction, GameObject projectile, float mySpeed) {
         Rigidbody2D rigidBody = projectile.GetComponent<Rigidbody2D>();
         direction.Normalize();
         rigidBody.velocity = direction * mySpeed;
+    }
+
+    public static void FireClusterAtPlayer(GameObject projectile) 
+    {
+        Vector2 direction = GetVectorToPlayer(projectile);
+        SetVelocity(direction, projectile);
+
+
+        float spreadAngle = Random.Range(-15f, 15f);
+        float speedModifier = Random.Range(0.65f, 1f);
+        float rotateAngle = spreadAngle + (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+        direction = new Vector2(Mathf.Cos(rotateAngle * Mathf.Deg2Rad), Mathf.Sin(rotateAngle * Mathf.Deg2Rad));
+
+        SetVelocityWithSpeed(direction, projectile, speed * speedModifier);
     }
 }
