@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7355339384083349694}
   - component: {fileID: 7355339384695148201}
-  m_Layer: 0
+  - component: {fileID: 1915302797}
+  - component: {fileID: 1915302798}
+  - component: {fileID: 1915302799}
+  m_Layer: 11
   m_Name: ojb_floater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,6 +109,49 @@ PolygonCollider2D:
       - {x: 5.671112, y: 3.220665}
       - {x: 4.4028015, y: 2.0500755}
       - {x: 4.2139893, y: 3.4088135}
+--- !u!114 &1915302797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355339384083349695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8136c89fa81b46448860debde6df25f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity_proj: {fileID: 4876611980070325166, guid: 4e673b8fcce809448a41bc759819e762,
+    type: 3}
+  photon_proj: {fileID: 1456329276465682433, guid: 67fc678bb393344479517faf34f2bc2f,
+    type: 3}
+--- !u!114 &1915302798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355339384083349695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52835962b9ceb8f4ca34d33df565b65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 1383589517549857606, guid: 9914a4d12a5d5fa429506c42f05511f2, type: 3}
+  amount: 5
+--- !u!114 &1915302799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355339384083349695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHP: 65
 --- !u!1001 &7355339383972962537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,10 +159,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7355339384083349694}
     m_Modifications:
-    - target: {fileID: 100000, guid: 525b19d9a56e45543b90f708a11f20cd, type: 3}
-      propertyPath: m_Name
-      value: Floater
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 525b19d9a56e45543b90f708a11f20cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -160,6 +202,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 525b19d9a56e45543b90f708a11f20cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 525b19d9a56e45543b90f708a11f20cd, type: 3}
+      propertyPath: m_Name
+      value: Floater
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 525b19d9a56e45543b90f708a11f20cd, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525b19d9a56e45543b90f708a11f20cd, type: 3}
