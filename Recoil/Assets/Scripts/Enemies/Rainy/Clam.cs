@@ -6,12 +6,12 @@ public class Clam : MonoBehaviour {
 
     public GameObject bullet;
     public float timeInBetweenBursts = 0.5f;
-    public float burstTime = 0.45;
+    public float burstTime = 0.45f;
 
     GameObject player;
     PlayerHealth playerHP;
 
-    private float speed = 50.0f;
+    //private float speed = 50.0f;
     
     void Start() {
         player = GameObject.Find("obj_player");
