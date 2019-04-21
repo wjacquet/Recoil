@@ -428,27 +428,22 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 1554448284}
-    - target: {fileID: 7755780319438194399, guid: 4f770c16140c66a4d919231ee1123759,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2327155424291428755, guid: 4f770c16140c66a4d919231ee1123759,
+    - target: {fileID: 147570304611368767, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 2327155424291428755, guid: 4f770c16140c66a4d919231ee1123759,
+    - target: {fileID: 147570304611368767, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: -7
       objectReference: {fileID: 0}
-    - target: {fileID: 575725531471183604, guid: 4f770c16140c66a4d919231ee1123759,
+    - target: {fileID: 4231871051138804576, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7557208998733583087, guid: 4f770c16140c66a4d919231ee1123759,
+    - target: {fileID: 575725531471183604, guid: 4f770c16140c66a4d919231ee1123759,
         type: 3}
       propertyPath: m_IsActive
       value: 0
