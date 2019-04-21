@@ -565,6 +565,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Gun
       objectReference: {fileID: 0}
+    - target: {fileID: 7755780319048573232, guid: 3edc421dfddedec45b0aa5afeafe8580,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6975702468314320811, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
       propertyPath: m_Layer
@@ -681,20 +686,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: obj_railgun
       objectReference: {fileID: 0}
-    - target: {fileID: 115903948426912199, guid: 77c2ac10e5cb9664a877820ab9109f35,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2750875647918786208, guid: 77c2ac10e5cb9664a877820ab9109f35,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2750875647918786208, guid: 77c2ac10e5cb9664a877820ab9109f35,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2750875647918786208, guid: 77c2ac10e5cb9664a877820ab9109f35,
         type: 3}
