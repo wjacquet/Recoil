@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8595561334696883618}
   - component: {fileID: 3116874261904596476}
-  - component: {fileID: 3249395714603585931}
+  - component: {fileID: 3301470274463290709}
   m_Layer: 9
   m_Name: obj_minigun
   m_TagString: Gun
@@ -54,7 +54,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3249395714603585931
+--- !u!114 &3301470274463290709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,14 +63,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5764457283670123005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12a7498f4d9ada40848359e32c23d38, type: 3}
+  m_Script: {fileID: 11500000, guid: cb913391a8f9b07418523a03b037688f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8375615038144249892, guid: 274d6ecb6c1ddec4a8fa3405018daf83, type: 3}
-  reload: 10
-  damage: 5
+  reload: 4
+  damage: 8
   knockback: 30
-  speed: 100
+  speed: 185
 --- !u!1001 &3975980988257393438
 PrefabInstance:
   m_ObjectHideFlags: 0
