@@ -35,6 +35,21 @@ public class BulletMovement : MonoBehaviour
         return new Vector2(-direction.x, -direction.y);
     }
 
+    public Vector2 FireMiniBullet() {
+        
+        Rigidbody2D rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        float spreadAngle = Random.Range(-4.2f, 4.2f);
+        // Find the cursor and find the direction vector
+        GameObject cursor = GameObject.Find("obj_cursor");
+        Vector2 direction = cursor.transform.position - transform.position;
+        float rotateAngle = spreadAngle + (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+        direction = new Vector2(Mathf.Cos(rotateAngle * Mathf.Deg2Rad), Mathf.Sin(rotateAngle * Mathf.Deg2Rad));
+        direction.Normalize();
+        rigidBody.velocity = direction * speed;
+
+        return new Vector2(-direction.x, -direction.y);
+    }
+
     // Once the projectile hits a wall
     void OnCollisionEnter2D(Collision2D collision) 
     {

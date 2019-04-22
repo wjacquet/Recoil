@@ -66,10 +66,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12a7498f4d9ada40848359e32c23d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2600662282960497286, guid: 891e40f96dcee08438dcd786e1235dda, type: 3}
-  reload: 10
-  damage: 5
+  bullet: {fileID: 319305772351050149, guid: 7ed6a718cce9ea74288ee1cab1058866, type: 3}
+  reload: 20
+  damage: 20
   knockback: 30
+  speed: 225
 --- !u!1001 &3770406335415974861
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: c0bdeb52afad6ae4dafc5ec665d06bde
+guid: 8224ff76948519744ae9f53bb0cce383
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: _main/AR-Bullet
-    400000: _main/AR-Bullet/Transform
+    100000: _main/water_tile
+    400000: _main/water_tile/Transform
     2800000: tex2d_0
     7400000: anim_Untagged
-    9500000: _main/AR-Bullet/Animator
-    21200000: _main/AR-Bullet/SpriteRenderer
+    9500000: _main/water_tile/Animator
+    21200000: _main/water_tile/SpriteRenderer
     21300000: sprite_0
     100100000: _main
   externalObjects: {}

@@ -7,8 +7,8 @@ using System;
 
 // TODO : Make an EDITOR load so that save file loads when the editor starts playing, except don't load a different scene
 
-public class PlayerInit : MonoBehaviour
-{
+public class PlayerInit : MonoBehaviour {
+
     public static Vector3 playerPos;
     public static bool[] loadedUpgradesFound = new bool[SceneManager.sceneCountInBuildSettings];
     public static bool[] scenesVisited = new bool[SceneManager.sceneCountInBuildSettings];
@@ -61,7 +61,21 @@ public class PlayerInit : MonoBehaviour
             Destroy(flowerAbility);
         }
 
+        GameObject speedAbility = GameObject.Find("obj_speed_upgrade");
+        if (PlayerAbilities.speed) {
+            Destroy(speedAbility);
+        }
+
         CheckForGuns();
+
+        if (PlayerAbilities.speed) {
+            Debug.Log("SPEED");
+            PlayerMovement playerMovement = GameObject.Find("obj_player").GetComponent<PlayerMovement>();             
+            playerMovement.speedLimit = 250;
+        } else {
+            PlayerMovement playerMovement = GameObject.Find("obj_player").GetComponent<PlayerMovement>();             
+            playerMovement.speedLimit = 80;
+        }
     }
 
     static void CheckForGuns() 

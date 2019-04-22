@@ -568,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 7755780319048573232, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6975702468314320811, guid: 3edc421dfddedec45b0aa5afeafe8580,
         type: 3}
@@ -686,20 +686,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: obj_railgun
       objectReference: {fileID: 0}
-    - target: {fileID: 115903948426912199, guid: 77c2ac10e5cb9664a877820ab9109f35,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2750875647918786208, guid: 77c2ac10e5cb9664a877820ab9109f35,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2750875647918786208, guid: 77c2ac10e5cb9664a877820ab9109f35,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2750875647918786208, guid: 77c2ac10e5cb9664a877820ab9109f35,
         type: 3}
@@ -774,12 +769,12 @@ PrefabInstance:
     - target: {fileID: 3489281163079284968, guid: 3f67f50e8517ce6498f92b4bd0cfbb6d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3489281163079284968, guid: 3f67f50e8517ce6498f92b4bd0cfbb6d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3489281163079284968, guid: 3f67f50e8517ce6498f92b4bd0cfbb6d,
         type: 3}
@@ -1176,11 +1171,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4622435536438671911, guid: 850ba7cb53f3e4ee7b46c5ff7fe780d9,
-        type: 3}
-      propertyPath: flame
-      value: 
-      objectReference: {fileID: 6829263373803403826}
     - target: {fileID: 2010465717454483754, guid: 850ba7cb53f3e4ee7b46c5ff7fe780d9,
         type: 3}
       propertyPath: m_TagString
@@ -1188,12 +1178,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 850ba7cb53f3e4ee7b46c5ff7fe780d9, type: 3}
---- !u!1 &6829263373803403826 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2010465717454483754, guid: 850ba7cb53f3e4ee7b46c5ff7fe780d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 4981246376481032984}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8158098989251487711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3753630436741639367, guid: 850ba7cb53f3e4ee7b46c5ff7fe780d9,
@@ -1292,16 +1276,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5030223471111358597}
     m_Modifications:
-    - target: {fileID: 5764457283670123005, guid: 924e2813749174b449da4dfdb42463d9,
-        type: 3}
-      propertyPath: m_Name
-      value: obj_minigun
-      objectReference: {fileID: 0}
-    - target: {fileID: 5764457283670123005, guid: 924e2813749174b449da4dfdb42463d9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8595561334696883618, guid: 924e2813749174b449da4dfdb42463d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1355,6 +1329,16 @@ PrefabInstance:
     - target: {fileID: 8595561334696883618, guid: 924e2813749174b449da4dfdb42463d9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764457283670123005, guid: 924e2813749174b449da4dfdb42463d9,
+        type: 3}
+      propertyPath: m_Name
+      value: obj_minigun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764457283670123005, guid: 924e2813749174b449da4dfdb42463d9,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireWeapon : MonoBehaviour {
-    
+public class FireMiniGun : MonoBehaviour
+{ 
     public GameObject bullet;
     private GameObject player;
     public int reload;
@@ -11,6 +11,7 @@ public class FireWeapon : MonoBehaviour {
     public int knockback = 30;
     private int reloadCounter = 0;
     public int speed = 100;
+    private int fireTime = 0;
 
     void Start() 
     {
@@ -23,14 +24,24 @@ public class FireWeapon : MonoBehaviour {
         if (reloadCounter > 0) {
             reloadCounter--;
         }
-
         // Fire on mouse click and reset reloadTimer
-        if (Input.GetMouseButton(0) && reloadCounter == 0) {
-            reloadCounter = reload;
-            Shoot();
+        if (Input.GetMouseButton(0)) {
+            fireTime++;
+            if (fireTimeReady() && reloadCounter == 0) {
+                reloadCounter = reload;
+                Shoot();
+            }
+        }
+
+        if (!Input.GetMouseButton(0)) {
+            fireTime = 0;
         }
     }
 
+    bool fireTimeReady() 
+    {
+        return fireTime >= 45 ? true : false;
+    }
 
     void Shoot()
     {
@@ -38,7 +49,7 @@ public class FireWeapon : MonoBehaviour {
         newBull.GetComponent<BulletMovement>().SetDamage(damage);
         newBull.GetComponent<BulletMovement>().SetSpeed(speed);
         
-        Vector2 recoil = newBull.GetComponent<BulletMovement>().FireBullet() * knockback;
+        Vector2 recoil = newBull.GetComponent<BulletMovement>().FireMiniBullet() * knockback;
         player.GetComponent<PlayerMovement>().Recoil(recoil);
     }
 }

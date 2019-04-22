@@ -67,8 +67,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2600662282960497286, guid: 891e40f96dcee08438dcd786e1235dda, type: 3}
-  player: {fileID: 189614201881019751, guid: 4f770c16140c66a4d919231ee1123759, type: 3}
   reload: 25
+  damage: 1
+  knockback: 30
 --- !u!1001 &6975702468314351883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,10 +77,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7755780319048573234}
     m_Modifications:
-    - target: {fileID: 100000, guid: 5670370b50279b54c85ce1a3682e582a, type: 3}
-      propertyPath: m_Name
-      value: gun
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5670370b50279b54c85ce1a3682e582a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -123,6 +120,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 5670370b50279b54c85ce1a3682e582a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5670370b50279b54c85ce1a3682e582a, type: 3}
+      propertyPath: m_Name
+      value: gun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5670370b50279b54c85ce1a3682e582a, type: 3}
