@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 647012162851460451}
   - component: {fileID: 5003768867152800674}
-  - component: {fileID: 6186634374441121210}
   - component: {fileID: 2033958347416240620}
   m_Layer: 9
   m_Name: obj_hand_blaster
@@ -55,23 +54,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6186634374441121210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3680651953257530988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12a7498f4d9ada40848359e32c23d38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 2600662282960497286, guid: 891e40f96dcee08438dcd786e1235dda, type: 3}
-  reload: 10
-  damage: 5
-  knockback: 30
-  speed: 100
 --- !u!114 &2033958347416240620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +66,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0373410b58c03e4a9c27e746855a42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shot1: {fileID: 3863833617539783603, guid: 1486f58302d34e94c8d7e3547fb503e4, type: 3}
+  shot2: {fileID: 921375818615817609, guid: f1cc1ec82c164914b81582c85de93b24, type: 3}
+  shot3: {fileID: 7884112549147919575, guid: d1b15fae97dfecb42a6bfd24a6c1e75a, type: 3}
+  shot4: {fileID: 1705527614161165482, guid: c2dd4eb430e623a47b713b387d7d596c, type: 3}
+  reload: 10
+  damage: 5
+  knockback: 10
+  speed: 100
+  chargeTimePerLevel: 30
 --- !u!1001 &7315917524332767764
 PrefabInstance:
   m_ObjectHideFlags: 0
