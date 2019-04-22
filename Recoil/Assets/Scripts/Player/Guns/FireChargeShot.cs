@@ -35,7 +35,7 @@ public class FireChargeShot : MonoBehaviour
 
     void Shoot()
     {
-        GameObject newBull = Instantiate(bullet, transform.position, transform.rotation);
+        GameObject newBull = Instantiate(shot1, transform.position, transform.rotation);
         newBull.GetComponent<BulletMovement>().SetDamage(damage);
         newBull.GetComponent<BulletMovement>().SetSpeed(speed);
         
