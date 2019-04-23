@@ -10,6 +10,7 @@ public class AbilitySelection : MonoBehaviour {
     public GameObject abilityBox0;
     public GameObject abilityBox1;
     public GameObject abilityBox2;
+    public GameObject abilityBox3;
     public GameObject selection;
     public GameObject ability;
 
@@ -19,6 +20,7 @@ public class AbilitySelection : MonoBehaviour {
     public Sprite magnetSprite;
     public Sprite flowerSprite;
     public Sprite speedSprite;
+    public Sprite bubbleSprite;
 
     public TextMeshProUGUI abilityText;
 
@@ -39,14 +41,17 @@ public class AbilitySelection : MonoBehaviour {
         bool magnet = false;
         bool flower = false;
         bool speed = false;
+        bool bubble = false;
 
         if (PlayerAbilities.magnet) magnet = true;
         if (PlayerAbilities.flower) flower = true;
         if (PlayerAbilities.speed) speed = true;
+        if (PlayerAbilities.bubble) bubble = true;
 
         abilityBox0.SetActive(magnet);
         abilityBox1.SetActive(flower);
         abilityBox2.SetActive(speed);
+        abilityBox3.SetActive(bubble);
     }
 
     void updateCurrentSelection() {
@@ -61,6 +66,9 @@ public class AbilitySelection : MonoBehaviour {
         } else if (currentAbility == "speed") {
             selectedImage.sprite = speedSprite;
             selectedAbility.sprite = speedSprite;
+        } else if (currentAbility == "bubble") {
+            selectedImage.sprite = bubbleSprite;
+            selectedAbility.sprite = bubbleSprite;
         } else {
             selection.SetActive(false);
             ability.SetActive(false);
@@ -94,6 +102,13 @@ public class AbilitySelection : MonoBehaviour {
         currentAbility = "speed";
         abilityText.text = "This ability raises the speed limit allowing you to have a faster maximum speed";
         ResetPlayerSpeed(250);
+
+        updateCurrentSelection();
+    }
+
+    public void bubbleClicked() {
+        currentAbility = "bubble";
+        abilityText.text = "Nick: Go to AbilitySelection.cs ~line 111 and say what it does";
 
         updateCurrentSelection();
     }

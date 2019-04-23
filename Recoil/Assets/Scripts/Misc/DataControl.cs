@@ -85,7 +85,7 @@ public class DataControl : MonoBehaviour
                                     new[] { 9.6f, -4.1f, 0f },
                                     new bool[SceneManager.sceneCountInBuildSettings],
                                     new bool[SceneManager.sceneCountInBuildSettings],
-                                    new bool[10] {true, true, true, true, true, true, true, true, true, true},
+                                    new bool[10] {true, false, false, false, false, false, false, false, false, false},
                                     new int[2] {0, 0},
                                     0,
                                     false,
