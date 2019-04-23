@@ -15,10 +15,15 @@ public class PlayerHealth : MonoBehaviour
 
     public Text healthText;
     public Slider healthSlider;
+    private AbilitySelection abilitySelection;
+    private BubbleController bubbleController;
+    private bool hasBubbleInvincibilty = true;
 
     void Start()
     {
         setHealthText(currHP);
+        abilitySelection = GameObject.Find("Pause-Map-Screens").GetComponent<AbilitySelection>();
+        bubbleController = GameObject.Find("obj_player").GetComponent<BubbleController>(); 
     }   
 
     void Update() 
@@ -30,6 +35,12 @@ public class PlayerHealth : MonoBehaviour
     {
         if (iFrames != 0) return;
 
+        // Bubble invincibility
+        if (AbilitySelection.currentAbility == "bubble" && hasBubbleInvincibilty) {
+            StartCoroutine(BubbleRecharge());
+            return;
+        }
+
         if (--currHP <= 0) {
             setHealthText(currHP);
             // Dead
@@ -38,6 +49,16 @@ public class PlayerHealth : MonoBehaviour
         }
         setHealthText(currHP);
         iFrames = 60;
+    }
+
+    IEnumerator BubbleRecharge() {
+        hasBubbleInvincibilty = false;
+        bubbleController.EnableBubble(false);
+
+        yield return new WaitForSeconds(5.0f);
+        
+        hasBubbleInvincibilty = true;
+        bubbleController.EnableBubble(true);
     }
 
     public void UpgradeHP() 

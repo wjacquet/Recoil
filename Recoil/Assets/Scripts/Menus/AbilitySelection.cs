@@ -75,6 +75,13 @@ public class AbilitySelection : MonoBehaviour {
             return;
         }
 
+        BubbleController bubbleController = GameObject.Find("obj_player").GetComponent<BubbleController>(); 
+        if (currentAbility == "bubble") {
+            bubbleController.EnableBubble(true);
+        } else {
+            bubbleController.EnableBubble(false);
+        }
+
         selection.SetActive(true);
         ability.SetActive(true);
     }
@@ -108,7 +115,7 @@ public class AbilitySelection : MonoBehaviour {
 
     public void bubbleClicked() {
         currentAbility = "bubble";
-        abilityText.text = "Nick: Go to AbilitySelection.cs ~line 111 and say what it does";
+        abilityText.text = "This ability gives you a shield that blocks damage and allows you to swim in water.";
 
         updateCurrentSelection();
     }
