@@ -16,11 +16,11 @@ using UnityEngine;
 public class SnakeBody : MonoBehaviour {
  
     public int followDistance;
-    private GameObject head;
+    public GameObject head;
     private List<Vector3> storedPositions;
  
     void Awake() {
-        head = GameObject.Find("obj_snake_head");
+        // head = GameObject.Find("obj_snake_head");
 
         storedPositions = new List<Vector3>();
         gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
