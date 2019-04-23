@@ -25,7 +25,7 @@ public class FireMiniGun : MonoBehaviour
             reloadCounter--;
         }
         // Fire on mouse click and reset reloadTimer
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0) && !SelectionMenus.gameIsPaused) {
             fireTime++;
             if (fireTimeReady() && reloadCounter == 0) {
                 reloadCounter = reload;

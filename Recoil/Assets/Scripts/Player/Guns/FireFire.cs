@@ -20,7 +20,7 @@ public class FireFire : MonoBehaviour
     void Update()
     {
         // Fire on mouse click and reset reloadTimer
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0) && !SelectionMenus.gameIsPaused) {
             flame.SetActive(true);
             AddRecoil();
         } else {
