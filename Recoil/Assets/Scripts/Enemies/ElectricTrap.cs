@@ -10,6 +10,9 @@ public class ElectricTrap : MonoBehaviour
     void Start()
     {
         StartCoroutine(Toggle());
+        if (!activated) {
+            beam.SetActive(false);
+        }
     }
 
     IEnumerator Toggle() {
