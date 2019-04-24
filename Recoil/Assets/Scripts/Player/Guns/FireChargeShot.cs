@@ -47,7 +47,7 @@ public class FireChargeShot : MonoBehaviour
         }
 
         // Fire on mouse click and reset reloadTimer
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0)  && !SelectionMenus.gameIsPaused) {
             shotCharging = true;
             currCharge++;
         }

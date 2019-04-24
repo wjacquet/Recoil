@@ -28,7 +28,7 @@ public class FireBeam : MonoBehaviour
         }
 
         // Fire on mouse click and reset reloadTimer
-        if (Input.GetMouseButton(0) && reloadCounter == 0) {
+        if (Input.GetMouseButton(0) && reloadCounter == 0 && !SelectionMenus.gameIsPaused) {
             reloadCounter = reload;
             Shoot();
         }

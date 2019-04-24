@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHP: 2
+  initialHP: 30
 --- !u!114 &1145437125389345931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1420198269858897451, guid: 0cc51a9aae54a4021a30aa72bf872e3e, type: 3}
-  timeBetweenShoots: 1
 --- !u!1001 &6117155485384243667
 PrefabInstance:
   m_ObjectHideFlags: 0
