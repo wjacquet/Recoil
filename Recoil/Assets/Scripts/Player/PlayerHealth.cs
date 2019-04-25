@@ -38,6 +38,7 @@ public class PlayerHealth : MonoBehaviour
         // Bubble invincibility
         if (AbilitySelection.currentAbility == "bubble" && hasBubbleInvincibilty) {
             StartCoroutine(BubbleRecharge());
+            iFrames = 30;
             return;
         }
 
