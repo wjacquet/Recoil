@@ -27,8 +27,8 @@ public class MoonTrigger : MonoBehaviour
         }
     }
 
-    void SpawnFinalPhase() 
+    public void SpawnFinalPhase() 
     {
-        
+
     }
 }

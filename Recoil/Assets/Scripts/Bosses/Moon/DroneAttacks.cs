@@ -11,6 +11,7 @@ public class DroneAttacks : MonoBehaviour
     private Vector3 blasterPos;
     ShipMovement DroneMovement;
     EnemyHealth DroneHealth;
+    MoonTrigger moonTrig;
     private int prevDest;
 
     GameObject tempProj;
@@ -20,6 +21,7 @@ public class DroneAttacks : MonoBehaviour
         blasterPos.y = blasterPos.y - 18;
         DroneMovement = gameObject.GetComponent<ShipMovement>();
         DroneHealth = gameObject.GetComponent<EnemyHealth>();
+        moonTrig = GameObject.Find("BossTrigger").GetComponent<MoonTrigger>();
         StartCoroutine(AttackDecider());
         StartCoroutine(MovementDecider());
         DroneMovement.TriggerLeftMovement();
@@ -39,7 +41,7 @@ public class DroneAttacks : MonoBehaviour
         }
 
         if (DroneHealth.getCurrHP() < 5000) {
-            // Spawn the second phase
+            moonTrig.SpawnFinalPhase();
         }
     }
 

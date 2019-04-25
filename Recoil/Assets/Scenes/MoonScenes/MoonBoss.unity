@@ -18243,8 +18243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossWalls: {fileID: 39174513}
-  drone: {fileID: 5009273022668923435, guid: d724cc2b53f340e4089d2523552865f9, type: 3}
-  ship: {fileID: 1565280162082666752, guid: 6092daa747a76b342b95e62a0be60c1a, type: 3}
+  drone: {fileID: 2139307046}
+  ship: {fileID: 1623354505}
 --- !u!1 &1611930417
 GameObject:
   m_ObjectHideFlags: 0
@@ -18423,6 +18423,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1623354505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1565280162082666752, guid: 6092daa747a76b342b95e62a0be60c1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4482570695212655084}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1998454819
 GameObject:
   m_ObjectHideFlags: 0
@@ -18652,6 +18658,12 @@ MonoBehaviour:
   m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2139307046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5009273022668923435, guid: d724cc2b53f340e4089d2523552865f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8070195588721946311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1565280162082666755 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1565280162082666755, guid: 6092daa747a76b342b95e62a0be60c1a,
