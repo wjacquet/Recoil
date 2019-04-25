@@ -104,6 +104,19 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
     }
 
+    public static void FireDownDegreeOffset(GameObject projectile, int angleOffset, float speed) 
+    {
+        Vector2 direction = new Vector2(0, -180);
+
+        float angleToPlayer = Mathf.Atan2(direction.x, direction.y);
+        angleToPlayer = Mathf.Rad2Deg * angleToPlayer;
+        angleToPlayer += angleOffset;
+
+        direction.x = Mathf.Sin(Mathf.Deg2Rad * angleToPlayer);
+        direction.y = Mathf.Cos(Mathf.Deg2Rad * angleToPlayer);
+        SetVelocityWithSpeed(direction, projectile, speed);
+    }
+
     public static void FireDegreeOffsetFromPlayer(GameObject projectile, int angleOffset) 
     {
         Vector2 direction = GetVectorToPlayer(projectile);
@@ -172,4 +185,20 @@ public class StandardFireFunctions : MonoBehaviour
 
         SetVelocityWithSpeed(direction, projectile, speed * speedModifier);
     }
+
+    public static void FireClusterDown(GameObject projectile) 
+    {
+        Vector2 direction = new Vector2(0, -180);
+        direction.x = 0;
+        SetVelocity(direction, projectile);
+
+
+        float spreadAngle = Random.Range(-15f, 15f);
+        float speedModifier = Random.Range(0.65f, 1f);
+        float rotateAngle = spreadAngle + (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+        direction = new Vector2(Mathf.Cos(rotateAngle * Mathf.Deg2Rad), Mathf.Sin(rotateAngle * Mathf.Deg2Rad));
+
+        SetVelocityWithSpeed(direction, projectile, speed * speedModifier);
+    }
+
 }

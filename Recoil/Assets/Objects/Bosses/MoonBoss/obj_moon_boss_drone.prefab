@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 5009273022668923433}
   - component: {fileID: 5009273022668923434}
   - component: {fileID: 5940325492382612469}
-  m_Layer: 0
+  - component: {fileID: 2139307047}
+  - component: {fileID: 2139307048}
+  - component: {fileID: 2139307052}
+  m_Layer: 11
   m_Name: obj_moon_boss_drone
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,12 +169,55 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2139307047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5009273022668923435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f4dbc7b3de67c408e8b1fe02ac01f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {x: 2044, y: 390, z: 0}
+  right: {x: 2420, y: 390, z: 0}
+  mid: {x: 2232, y: 390, z: 0}
+--- !u!114 &2139307048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5009273022668923435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHP: 5380
+--- !u!114 &2139307052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5009273022668923435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b856dd9c46c364f88402f2d9c92c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proj: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
+  photonProj: {fileID: 2069269300673616015, guid: 4820e3ac0ab66514490cb1001c70291c,
+    type: 3}
 --- !u!1001 &5009273022634130705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,6 +228,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1ade958593f2e144f99fcd9a502e66a6, type: 3}
       propertyPath: m_Name
       value: MoonBossPhase1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1ade958593f2e144f99fcd9a502e66a6, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ade958593f2e144f99fcd9a502e66a6, type: 3}
       propertyPath: m_LocalPosition.x

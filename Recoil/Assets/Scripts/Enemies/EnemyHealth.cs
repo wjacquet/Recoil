@@ -25,4 +25,6 @@ public class EnemyHealth : MonoBehaviour
         Destroy(gameObject);
         dropCurr.DropCoins();
     }
+
+    public int getCurrHP() {return currHP;}
 }

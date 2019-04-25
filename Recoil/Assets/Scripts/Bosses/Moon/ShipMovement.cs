@@ -5,10 +5,10 @@ using UnityEngine;
 public class ShipMovement : MonoBehaviour
 {
 
-    private bool moveLeft = false, moveRight = false, moveMid = false;
+    private bool moveLeft = false, moveRight = false, moveMid = false, pausedLeft, pausedRight, pausedMid;
     public Vector3 left, right, mid; 
 
-    private int baseMultiplier = 100;
+    private int baseMultiplier = 70;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -30,16 +30,22 @@ public class ShipMovement : MonoBehaviour
     public void TriggerLeftMovement() 
     {
         moveLeft = true;
+        moveMid = false;
+        moveRight = false;
     }
 
     public void TriggerRightMovement() 
     {
         moveRight = true;
+        moveLeft = false;
+        moveMid = false;
     }
 
     public void TriggerMidMovement() 
     {
         moveMid = true;
+        moveLeft = false;
+        moveRight = false;
     }
 
     public void ChangeMultiplier(int newMult) 
@@ -47,11 +53,41 @@ public class ShipMovement : MonoBehaviour
         baseMultiplier = newMult;
     }
 
-    public void StopMovement() 
+    public Vector3 GetLeft() 
+    {    
+        return left;
+    }
+
+    public Vector3 GetRight() 
+    {    
+        return right;
+    }
+
+    public Vector3 GetMid() 
+    {    
+        return mid;
+    }
+
+    public void PauseMovement() 
     {
+        pausedLeft = moveLeft;
+        pausedRight = moveRight;
+        pausedMid = moveMid;
+        
         moveLeft = false;
         moveRight = false; 
         moveMid = false;
     }
+    
+    public void ResumeMovement() 
+    {
+        moveLeft = pausedLeft;
+        moveRight = pausedRight;
+        moveMid = pausedMid;
+    }
 
+    public bool isStationary() 
+    {
+        return (transform.position == left || transform.position == mid || transform.position == right); 
+    }
 }
