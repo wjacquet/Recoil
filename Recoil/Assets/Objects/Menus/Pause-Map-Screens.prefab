@@ -10158,8 +10158,8 @@ MonoBehaviour:
   Moon4Gold: {fileID: 6964403530944350296}
   Moon5: {fileID: 2957314446776344963}
   Moon5Gold: {fileID: 3193794317135006781}
-  Hub: {fileID: 0}
-  HubGold: {fileID: 0}
+  Hub: {fileID: 3321792779640870701}
+  HubGold: {fileID: 787639760885762793}
 --- !u!114 &7555396207914246854
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class SelectionMenus : MonoBehaviour {
     }
 
     public void storeClicked() {
-        if (GunSelection.onCheckpoint) {
+        if (GunSelection.onStore) {
             removeAllUI();
 
             storeOpen = !storeOpen;
