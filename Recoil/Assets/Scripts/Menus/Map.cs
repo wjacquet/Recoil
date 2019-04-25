@@ -92,6 +92,15 @@ public class Map : MonoBehaviour {
 
     public GameObject Moon5;
     public GameObject Moon5Gold;
+   
+    // public GameObject Rainy1;
+    // public GameObject Rainy1Gold;
+ 
+    // public GameObject Rainy2;
+    // public GameObject Rainy2Gold;
+
+    // public GameObject RainyBoss;
+    // public GameObject RainyBossGold;
 
     // Update is called once per frame
     void Update() {
@@ -213,7 +222,18 @@ public class Map : MonoBehaviour {
 
         } else if (level.Equals(Moon5.name)) {
             return  (new[] {Moon5, Moon5Gold});
+         
+        // else if (level.Equals(Rainy1.name)) {
+        //     return  (new[] {Rainy1, Rainy1Gold});
 
+        // } else if (level.Equals(Rainy2.name)) {
+        //     return  (new[] {Rainy2, Rainy2Gold});
+
+        // } else if (level.Equals(RainyBoss.name)) {
+        //     return  (new[] {RainyBoss, RainyBossGold});
+
+        // } 
+        
         } else {
            return null;
         }
