@@ -93,6 +93,9 @@ public class Map : MonoBehaviour {
     public GameObject Moon5;
     public GameObject Moon5Gold;
    
+    public GameObject Hub;
+    public GameObject HubGold;
+
     // public GameObject Rainy1;
     // public GameObject Rainy1Gold;
  
@@ -223,6 +226,10 @@ public class Map : MonoBehaviour {
         } else if (level.Equals(Moon5.name)) {
             return  (new[] {Moon5, Moon5Gold});
          
+        } else if (level.Equals(Hub.name)) {
+            return  (new[] {Hub, HubGold});
+
+        
         // else if (level.Equals(Rainy1.name)) {
         //     return  (new[] {Rainy1, Rainy1Gold});
 
