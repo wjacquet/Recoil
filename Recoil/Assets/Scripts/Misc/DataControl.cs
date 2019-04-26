@@ -80,9 +80,9 @@ public class DataControl : MonoBehaviour
         PlayerMetaData player = new PlayerMetaData(
                                     10,
                                     10,
-                                    0,
-                                    "Scenes/GrassyZoneScenes/GrassyZoneEntrance",
-                                    new[] { 9.6f, -4.1f, 0f },
+                                    25000,
+                                    "Scenes/GrassyZoneScenes/Hub",
+                                    new[] { -460f, 56f, 0f },
                                     new bool[SceneManager.sceneCountInBuildSettings],
                                     new bool[SceneManager.sceneCountInBuildSettings],
                                     new bool[10] {true, false, false, false, false, false, false, false, false, false},
