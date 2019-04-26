@@ -206,7 +206,7 @@ public class StandardFireFunctions : MonoBehaviour
         SetVelocity(direction, projectile);
 
 
-        float spreadAngle = Random.Range(-15f, 15f);
+        float spreadAngle = Random.Range(-12f, 12f);
         float speedModifier = Random.Range(0.65f, 1f);
         float rotateAngle = spreadAngle + (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
         direction = new Vector2(Mathf.Cos(rotateAngle * Mathf.Deg2Rad), Mathf.Sin(rotateAngle * Mathf.Deg2Rad));

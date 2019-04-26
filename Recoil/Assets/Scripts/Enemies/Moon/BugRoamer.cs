@@ -25,7 +25,7 @@ public class BugRoamer : MonoBehaviour
     void Shoot()
     {   
         GameObject newBull;
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 8; i++) {
             newBull = Instantiate(bullet, transform.position, transform.rotation);
 
             StandardFireFunctions.FireClusterAtPlayer(newBull);
