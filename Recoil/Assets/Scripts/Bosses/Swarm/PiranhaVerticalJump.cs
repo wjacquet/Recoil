@@ -23,7 +23,7 @@ public class PiranhaVerticalJump : MonoBehaviour
         rigidBody.velocity += Vector2.down * 1.0f;
         
         // kill if below water
-        if (transform.position.y < -200) {
+        if (transform.position.y < -600) {
             Destroy(gameObject);
         }
     }

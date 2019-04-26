@@ -24,7 +24,6 @@ public class SwarmController : MonoBehaviour
         Instantiate(swarm, swarmPosition, transform.rotation);
         yield return new WaitForSeconds(2.0f);
         StartCoroutine(SpawnVerticalPiranhas());
-        yield break;
     }
 
     // Randomly spawn vertically jumping fish

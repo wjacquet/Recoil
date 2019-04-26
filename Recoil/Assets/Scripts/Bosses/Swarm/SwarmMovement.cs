@@ -23,6 +23,10 @@ public class SwarmMovement : MonoBehaviour
         
     }
 
+    void OnDestroy() {
+        Destroy(GameObject.Find("obj_liquid"));
+    }
+
     IEnumerator SwarmAttacks() {
         // initial left movement
         StandardFireFunctions.FireLeft(gameObject, 48.0f);

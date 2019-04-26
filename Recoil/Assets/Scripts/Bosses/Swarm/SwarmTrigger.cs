@@ -11,10 +11,25 @@ public class SwarmTrigger : MonoBehaviour
     public Camera bossCamera;
     public GameObject swarmController;
     private bool triggered = false;
+    private bool defeated = false;
     // Start is called before the first frame update
     void Start()
     {
         bossCamera.enabled = false;
+    }
+
+    void Update() {
+        if (triggered && !defeated && GameObject.Find("obj_liquid") == null) {
+            defeated = true;
+            // Enable Main Camera
+            mainCamera.enabled = true;
+            // Disable Boss Camera
+            bossCamera.enabled = false;
+            // Move Boss Walls
+            bossWalls.transform.position = new Vector3(0, 300, 0);
+            // Destroy swarm controller
+            Destroy(GameObject.Find("obj_swarm_controller(Clone)"));
+        }
     }
 
     // Update is called once per frame
