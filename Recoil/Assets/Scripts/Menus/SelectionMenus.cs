@@ -6,6 +6,10 @@ public class SelectionMenus : MonoBehaviour {
 
     public static bool gameIsPaused = false;
 
+    public GameObject GunSelectionTab;
+    public GameObject AbilityTab;
+    public GameObject StoreTab;
+
     public GameObject selectionUI;
     public GameObject gunSelectionUI;
     public GameObject abilitesUI;
@@ -90,6 +94,21 @@ public class SelectionMenus : MonoBehaviour {
     void Pause() {
         removeAllUI();
         selectionOpen = true;
+
+        if (GunSelection.onCheckpoint) {
+            GunSelectionTab.SetActive(true);
+            AbilityTab.SetActive(true);
+        } else {
+            GunSelectionTab.SetActive(false);
+            AbilityTab.SetActive(false);
+        }
+
+        if (GunSelection.onStore) {
+            StoreTab.SetActive(true);
+        } else {
+            StoreTab.SetActive(false);
+        }
+
         Cursor.visible = true;
         selectionUI.SetActive(true);
         Time.timeScale = 0f;

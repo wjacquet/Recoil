@@ -10446,6 +10446,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1012aff9596048fa96961f08e624030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GunSelectionTab: {fileID: 989931344523120843}
+  AbilityTab: {fileID: 4139675193714558724}
+  StoreTab: {fileID: 5646986984101257979}
   selectionUI: {fileID: 707079249274609632}
   gunSelectionUI: {fileID: 7721897219682540309}
   abilitesUI: {fileID: 4845120500022502200}
