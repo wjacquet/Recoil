@@ -8,7 +8,8 @@ public class ShipAttacks : MonoBehaviour
     public GameObject photonProj;
     // Start is called before the first frame update
 
-    private Vector3 blasterPos;
+    private Vector3 blasterPos, leftCannonPos, rightCannonPos;
+    
     ShipMovement DroneMovement;
     EnemyHealth DroneHealth;
     private int prevDest;
@@ -17,8 +18,7 @@ public class ShipAttacks : MonoBehaviour
 
     void OnEnable()
     {
-        blasterPos = transform.position;
-        blasterPos.y = blasterPos.y - 18;
+        SetWeaponPositions();
         DroneMovement = gameObject.GetComponent<ShipMovement>();
         DroneHealth = gameObject.GetComponent<EnemyHealth>();
         StartCoroutine(AttackDecider());
@@ -28,8 +28,7 @@ public class ShipAttacks : MonoBehaviour
 
     void Start()
     {
-        blasterPos = transform.position;
-        blasterPos.y = blasterPos.y - 18;
+        SetWeaponPositions();
         DroneMovement = gameObject.GetComponent<ShipMovement>();
         DroneHealth = gameObject.GetComponent<EnemyHealth>();
         StartCoroutine(AttackDecider());
@@ -40,8 +39,7 @@ public class ShipAttacks : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        blasterPos = transform.position;
-        blasterPos.y = blasterPos.y - 18;   
+        SetWeaponPositions();   
 
         if (transform.position == DroneMovement.GetLeft()) {
             DroneMovement.TriggerRightMovement();
@@ -161,5 +159,17 @@ public class ShipAttacks : MonoBehaviour
 
             StandardFireFunctions.FireClusterDown(tempProj);
         }
+    }
+
+    void SetWeaponPositions() 
+    {
+        blasterPos = transform.position;
+        blasterPos.y = blasterPos.y - 31;
+        rightCannonPos = transform.position;
+        rightCannonPos.y = rightCannonPos.y - 33;
+        rightCannonPos.x = rightCannonPos.x + 34;
+        leftCannonPos = transform.position;
+        leftCannonPos.y = leftCannonPos.y - 33;
+        leftCannonPos.x = leftCannonPos.x - 34;
     }
 }
