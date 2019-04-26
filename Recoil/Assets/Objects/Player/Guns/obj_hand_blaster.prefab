@@ -71,7 +71,7 @@ MonoBehaviour:
   shot3: {fileID: 7884112549147919575, guid: d1b15fae97dfecb42a6bfd24a6c1e75a, type: 3}
   shot4: {fileID: 1705527614161165482, guid: c2dd4eb430e623a47b713b387d7d596c, type: 3}
   reload: 10
-  damage: 5
+  damage: 7
   knockback: 10
   speed: 100
   chargeTimePerLevel: 30

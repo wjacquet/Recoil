@@ -68,7 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 8375615038144249892, guid: 274d6ecb6c1ddec4a8fa3405018daf83, type: 3}
   reload: 4
-  damage: 8
+  damage: 6
   knockback: 30
   speed: 185
 --- !u!1001 &3975980988257393438

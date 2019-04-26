@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static int maxHP = 10;
-    public static int currHP = 10;
+    public static int maxHP = 20;
+    public static int currHP = 20;
     private int iFrames = 0;
     public static int sceneIDForUpgrade = -1;
     public static int numberOfHealthUpgrades = 0;
