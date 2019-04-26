@@ -96,14 +96,17 @@ public class Map : MonoBehaviour {
     public GameObject Hub;
     public GameObject HubGold;
 
-    // public GameObject Rainy1;
-    // public GameObject Rainy1Gold;
+    public GameObject Rainy1;
+    public GameObject Rainy1Gold;
  
-    // public GameObject Rainy2;
-    // public GameObject Rainy2Gold;
+    public GameObject Rainy2;
+    public GameObject Rainy2Gold;
 
-    // public GameObject RainyBoss;
-    // public GameObject RainyBossGold;
+    public GameObject Rainy3;
+    public GameObject Rainy3Gold;
+
+    public GameObject RainyBoss;
+    public GameObject RainyBossGold;
 
     // Update is called once per frame
     void Update() {
@@ -229,17 +232,17 @@ public class Map : MonoBehaviour {
         } else if (level.Equals(Hub.name)) {
             return  (new[] {Hub, HubGold});
 
-        
-        // else if (level.Equals(Rainy1.name)) {
-        //     return  (new[] {Rainy1, Rainy1Gold});
+        } else if (level.Equals(Rainy1.name)) {
+            return  (new[] {Rainy1, Rainy1Gold});
 
-        // } else if (level.Equals(Rainy2.name)) {
-        //     return  (new[] {Rainy2, Rainy2Gold});
+        } else if (level.Equals(Rainy2.name)) {
+            return  (new[] {Rainy2, Rainy2Gold});
 
-        // } else if (level.Equals(RainyBoss.name)) {
-        //     return  (new[] {RainyBoss, RainyBossGold});
+        } else if (level.Equals(Rainy3.name)) {
+            return  (new[] {Rainy3, Rainy3Gold});
 
-        // } 
+        } else if (level.Equals(RainyBoss.name)) {
+            return  (new[] {RainyBoss, RainyBossGold});
         
         } else {
            return null;
