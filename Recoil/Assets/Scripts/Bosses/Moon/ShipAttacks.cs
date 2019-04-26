@@ -81,7 +81,11 @@ public class ShipAttacks : MonoBehaviour
                     allowMovement = true;
                     break;
                 case 6:
+                    allowMovement = false;
+                    DroneMovement.PauseMovement();
+                    yield return new WaitForSeconds(1.0f);
                     StartCoroutine(LockWaves());
+                    allowMovement = true;
                     break;
             }
             yield return new WaitForSeconds(3.0f);
@@ -211,9 +215,13 @@ public class ShipAttacks : MonoBehaviour
             tempProj = Instantiate(proj, blasterPos, transform.rotation);
             StandardFireFunctions.FireDownDegreeOffset(tempProj, -10, 100);
             tempProj = Instantiate(proj, blasterPos, transform.rotation);
-            StandardFireFunctions.FireDownDegreeOffset(tempProj, 28, 100);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, 30, 100);
             tempProj = Instantiate(proj, blasterPos, transform.rotation);
-            StandardFireFunctions.FireDownDegreeOffset(tempProj, -28, 100);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, -30, 100);
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, 50, 100);
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, -50, 100);
             yield return new WaitForSeconds(0.2f);
         }
     }
