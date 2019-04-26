@@ -86,4 +86,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RainyScenes/RainyBoss.unity
     guid: 5a664e897aa8e7e41b31e582aefe8b7a
+  - enabled: 1
+    path: Assets/Scenes/MoonScenes/Moon1.unity
+    guid: b7cb34b55a3c3e2468cf40fc6b8746a9
+  - enabled: 1
+    path: Assets/Scenes/MoonScenes/Moon2.unity
+    guid: 7274b0eba3421094b8d2e529f1ffa0b4
+  - enabled: 1
+    path: Assets/Scenes/MoonScenes/Moon3.unity
+    guid: 962ce39b56dbb9c4882ed7a7983ea6f8
+  - enabled: 1
+    path: Assets/Scenes/MoonScenes/Moon4.unity
+    guid: 3be4aaef6cbca9b42a571f56c1233326
+  - enabled: 1
+    path: Assets/Scenes/MoonScenes/Moon5.unity
+    guid: 824b8cc85dee83346a084a1129a942cb
+  - enabled: 1
+    path: Assets/Scenes/MoonScenes/MoonBoss.unity
+    guid: 72bcd34f4c2ba4446b73f5cc7457920f
   m_configObjects: {}
