@@ -53,7 +53,7 @@ public class DroneAttacks : MonoBehaviour
             DroneMovement.TriggerLeftMovement();
         }
 
-        if (DroneHealth.getCurrHP() < 5350) {
+        if (DroneHealth.getCurrHP() < 5000) {
             DroneMovement.PauseMovement();
             StopCoroutine(AttackDecider());
             StopCoroutine(MovementDecider());
