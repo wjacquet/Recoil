@@ -78,8 +78,8 @@ public class DataControl : MonoBehaviour
         string dataPath = BuildPath();   
         
         PlayerMetaData player = new PlayerMetaData(
-                                    10,
-                                    10,
+                                    30,
+                                    30,
                                     25000,
                                     "Scenes/GrassyZoneScenes/Hub",
                                     new[] { -460f, 56f, 0f },
