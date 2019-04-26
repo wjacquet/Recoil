@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
     public Text healthText;
     public Slider healthSlider;
+    public SpriteRenderer spriteRenderer;
     private AbilitySelection abilitySelection;
     private BubbleController bubbleController;
     private bool hasBubbleInvincibilty = true;
@@ -28,7 +29,12 @@ public class PlayerHealth : MonoBehaviour
 
     void Update() 
     {
-        if (iFrames > 0) iFrames--;
+        if (iFrames > 0) {
+            iFrames--;
+            spriteRenderer.color=new Color(0.8f, 0, 0, 1);
+        } else {
+            spriteRenderer.color=new Color(1, 1, 1, 1);
+        }
     }
 
     public void TakeDamage() 

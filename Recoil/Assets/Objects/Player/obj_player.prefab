@@ -120,6 +120,7 @@ MonoBehaviour:
   maxHealthBuys: 3
   healthText: {fileID: 0}
   healthSlider: {fileID: 0}
+  spriteRenderer: {fileID: 189614202612184666}
 --- !u!114 &2047555795353223369
 MonoBehaviour:
   m_ObjectHideFlags: 0
