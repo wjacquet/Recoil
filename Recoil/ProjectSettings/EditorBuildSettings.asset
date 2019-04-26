@@ -74,4 +74,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JunkyardScenes/JunkyardEntrance.unity
     guid: 8400d0f0748130d45bb504862d26529a
+  - enabled: 1
+    path: Assets/Scenes/RainyScenes/Rainy1.unity
+    guid: 11f44f85d069c744d968ec33078cdb7e
+  - enabled: 1
+    path: Assets/Scenes/RainyScenes/Rainy2.unity
+    guid: d2be2a68e0417044799a41fa4d28eb98
+  - enabled: 1
+    path: Assets/Scenes/RainyScenes/Rainy3.unity
+    guid: 122d2e1c9e695e24bbe3a46b2516b077
+  - enabled: 1
+    path: Assets/Scenes/RainyScenes/RainyBoss.unity
+    guid: 5a664e897aa8e7e41b31e582aefe8b7a
   m_configObjects: {}

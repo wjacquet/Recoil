@@ -11,7 +11,7 @@ public class SwarmController : MonoBehaviour
     void Start()
     {
         StartCoroutine(SwarmAttacks());
-        Instantiate(swarm, swarmPosition, transform.rotation);
+        // Instantiate(swarm, swarmPosition, transform.rotation);
     }
 
     // Update is called once per frame
@@ -22,8 +22,7 @@ public class SwarmController : MonoBehaviour
 
     IEnumerator SwarmAttacks() {
         StartCoroutine(SpawnVerticalPiranhas());
-        while (true) {
-        }
+        return null;
     }
 
     // Randomly spawn vertically jumping fish

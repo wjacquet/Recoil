@@ -44083,12 +44083,17 @@ PrefabInstance:
     - target: {fileID: 6659150092604363151, guid: 15a4b3418af7d424ea3f35427f7ca14c,
         type: 3}
       propertyPath: warpPosition.x
-      value: 1
+      value: -281
       objectReference: {fileID: 0}
     - target: {fileID: 6659150092604363151, guid: 15a4b3418af7d424ea3f35427f7ca14c,
         type: 3}
       propertyPath: warpScene
-      value: RainyZoneEntrance
+      value: Rainy1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659150092604363151, guid: 15a4b3418af7d424ea3f35427f7ca14c,
+        type: 3}
+      propertyPath: warpPosition.y
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 2479924862151360473, guid: 15a4b3418af7d424ea3f35427f7ca14c,
         type: 3}
