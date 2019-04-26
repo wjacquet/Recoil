@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1286718502289422237}
   - component: {fileID: 6418655622797758011}
-  - component: {fileID: 3883098340678641819}
   - component: {fileID: 7252184309325700462}
   - component: {fileID: 1015774130666869973}
+  - component: {fileID: 55568931491878003}
   m_Layer: 11
   m_Name: obj_swarm
   m_TagString: Enemy
@@ -82,19 +82,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
---- !u!114 &3883098340678641819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919764389568503004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55a4c50e59673f64287135d3c05ee952, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialHP: 400
 --- !u!50 &7252184309325700462
 Rigidbody2D:
   serializedVersion: 4
@@ -142,6 +129,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 96, y: 64}
   m_EdgeRadius: 0
+--- !u!114 &55568931491878003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919764389568503004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a918a20eaefc04eb9d9d8bf9a6d735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHP: 300
 --- !u!1001 &95429760393093610
 PrefabInstance:
   m_ObjectHideFlags: 0

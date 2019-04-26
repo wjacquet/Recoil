@@ -20,9 +20,11 @@ public class SwarmController : MonoBehaviour
     }
 
     IEnumerator SwarmAttacks() {
+        yield return new WaitForSeconds(2.0f);
         Instantiate(swarm, swarmPosition, transform.rotation);
+        yield return new WaitForSeconds(2.0f);
         StartCoroutine(SpawnVerticalPiranhas());
-        return null;
+        yield break;
     }
 
     // Randomly spawn vertically jumping fish
