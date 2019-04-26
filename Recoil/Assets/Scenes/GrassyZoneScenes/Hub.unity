@@ -706,11 +706,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6808366960727207239, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
-        type: 3}
-      propertyPath: mapUI
-      value: 
-      objectReference: {fileID: 971221471}
     - target: {fileID: 6778037884185861050, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -726,6 +721,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -3.591919
       objectReference: {fileID: 0}
+    - target: {fileID: 6808366960727207239, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: mapUI
+      value: 
+      objectReference: {fileID: 971221471}
+    - target: {fileID: 2821652946574849510, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1153908111}
     - target: {fileID: 4815572684821114291, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -766,16 +771,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.2000122
       objectReference: {fileID: 0}
-    - target: {fileID: 2144547237446164731, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144547237446164731, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7733659815894842559, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -802,6 +797,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3469639408917145698, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144547237446164731, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144547237446164731, guid: 32fad6a87bd18ef4bb67c08e7cc8b802,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1

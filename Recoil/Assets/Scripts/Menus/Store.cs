@@ -52,7 +52,7 @@ public class Store : MonoBehaviour {
         int index = int.Parse(indexStr);
    
         int price = int.Parse(EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TextMeshProUGUI>().text);
-        
+
         if ((PlayerCurrency.wealth - price) >= 0) { 
             // Buying a Gun           
             if (index != 10) {

@@ -21,7 +21,7 @@ public class PlayerCurrency : MonoBehaviour
 
     public void UpdateCurrency(int coins) {
         wealth = coins;
-        // coinText.text = "" + wealth;
+        coinText.text = "" + wealth;
     }
 
     void setCoinText() {coinText.text = "" + wealth;}
