@@ -82,6 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2582683149453926816, guid: 564e7c6a4e5e4e24fa02db02fd7674bb, type: 3}
+  electricity: {fileID: 6277846208928705415, guid: 7139c584c4d57664788ee3f0e540cbce,
+    type: 3}
 --- !u!50 &7252184309325700462
 Rigidbody2D:
   serializedVersion: 4
