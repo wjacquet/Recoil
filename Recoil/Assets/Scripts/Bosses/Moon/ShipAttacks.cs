@@ -46,7 +46,7 @@ public class ShipAttacks : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         while (true) {
-            int atkSelector = Random.Range(0,6);
+            int atkSelector = Random.Range(0,7);
 
             switch(atkSelector) {
                 case 0:
@@ -75,10 +75,13 @@ public class ShipAttacks : MonoBehaviour
                     DroneMovement.PauseMovement();
                     yield return new WaitForSeconds(1.0f);
                     DroneMovement.PauseMovement();
-                    StartCoroutine(FireLeftWave(leftCannonPos));
-                    StartCoroutine(FireRightWave(rightCannonPos));
+                    StartCoroutine(FireLeftWave());
+                    StartCoroutine(FireRightWave());
                     yield return new WaitForSeconds(4.0f);
                     allowMovement = true;
+                    break;
+                case 6:
+                    StartCoroutine(LockWaves());
                     break;
             }
             yield return new WaitForSeconds(3.0f);
@@ -117,11 +120,11 @@ public class ShipAttacks : MonoBehaviour
         }
     }
 
-    IEnumerator FireLeftWave(Vector3 pos) 
+    IEnumerator FireLeftWave() 
     {
         int angle = 90;
         while (angle != 0) {
-            tempProj = Instantiate(proj, pos, transform.rotation);
+            tempProj = Instantiate(proj, leftCannonPos, transform.rotation);
             StandardFireFunctions.FireDownDegreeOffset(tempProj, angle, 100); 
             angle -= 5;
             yield return new WaitForSeconds(0.2f);
@@ -129,11 +132,11 @@ public class ShipAttacks : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator FireRightWave(Vector3 pos) 
+    IEnumerator FireRightWave() 
     {
         int angle = -90;
         while (angle != 0) {
-            tempProj = Instantiate(proj, pos, transform.rotation);
+            tempProj = Instantiate(proj, rightCannonPos, transform.rotation);
             StandardFireFunctions.FireDownDegreeOffset(tempProj, angle, 100); 
             angle += 5;
             yield return new WaitForSeconds(0.2f);
@@ -189,9 +192,29 @@ public class ShipAttacks : MonoBehaviour
                 StartCoroutine(FirePhotonRight());              
                 break;
             case 1:
+                StartCoroutine(FireThreeDRoundBurstRight());
+                StartCoroutine(FireThreeDRoundBurstLeft());
                 break;
             case 2:
+                StartCoroutine(FireLeftWave());
+                StartCoroutine(FireRightWave());
                 break;
+        }
+    }
+
+    IEnumerator LockWaves() 
+    {
+        for (int i = 0; i < 20; i++) {
+                
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, 10, 100);
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, -10, 100);
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, 28, 100);
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, -28, 100);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
