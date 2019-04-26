@@ -10,6 +10,7 @@ public class GunSelection : MonoBehaviour {
 
     public static bool gameIsPaused = false;
     public static bool onCheckpoint = false;
+    public static bool onStore = false;
 
     public Image firstImage;
     public Image secondImage;
@@ -212,6 +213,10 @@ public class GunSelection : MonoBehaviour {
 
     public void FlipCheckpoint(bool value) {
         onCheckpoint = value;
+    }
+
+    public void FlipStore(bool value) {
+        onStore = value;
     }
 
 }
