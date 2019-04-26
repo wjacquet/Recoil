@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerCurrency : MonoBehaviour
 {
     public Text coinText;
-    public static int wealth = 0;
+    public static int wealth = 25000;
 
     void Start() 
     {
