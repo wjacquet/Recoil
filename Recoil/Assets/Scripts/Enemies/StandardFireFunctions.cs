@@ -130,6 +130,19 @@ public class StandardFireFunctions : MonoBehaviour
 
         SetVelocity(direction, projectile);
     }
+    public static void FireDegreeOffsetFromPlayerSpeed(GameObject projectile, int angleOffset, int speed) 
+    {
+        Vector2 direction = GetVectorToPlayer(projectile);
+
+        float angleToPlayer = Mathf.Atan2(direction.x, direction.y);
+        angleToPlayer = Mathf.Rad2Deg * angleToPlayer;
+        angleToPlayer += angleOffset;
+
+        direction.x = Mathf.Sin(Mathf.Deg2Rad * angleToPlayer);
+        direction.y = Mathf.Cos(Mathf.Deg2Rad * angleToPlayer);
+
+        SetVelocityWithSpeed(direction, projectile,speed);
+    }
 
     public static void FireDegreeOffset(GameObject projectile, int angleOffset) 
     {

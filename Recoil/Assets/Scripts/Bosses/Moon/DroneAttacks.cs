@@ -28,17 +28,17 @@ public class DroneAttacks : MonoBehaviour
         DroneMovement.TriggerLeftMovement();
     }
 
-    void Start()
-    {
-        blasterPos = transform.position;
-        blasterPos.y = blasterPos.y - 18;
-        DroneMovement = gameObject.GetComponent<ShipMovement>();
-        DroneHealth = gameObject.GetComponent<EnemyHealth>();
-        moonTrig = GameObject.Find("BossTrigger").GetComponent<MoonTrigger>();
-        StartCoroutine(AttackDecider());
-        StartCoroutine(MovementDecider());
-        DroneMovement.TriggerLeftMovement();
-    }
+    // void Start()
+    // {
+    //     blasterPos = transform.position;
+    //     blasterPos.y = blasterPos.y - 18;
+    //     DroneMovement = gameObject.GetComponent<ShipMovement>();
+    //     DroneHealth = gameObject.GetComponent<EnemyHealth>();
+    //     moonTrig = GameObject.Find("BossTrigger").GetComponent<MoonTrigger>();
+    //     StartCoroutine(AttackDecider());
+    //     StartCoroutine(MovementDecider());
+    //     DroneMovement.TriggerLeftMovement();
+    // }
 
     // Update is called once per frame
     void FixedUpdate()

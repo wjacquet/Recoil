@@ -6,6 +6,9 @@ public class ShipAttacks : MonoBehaviour
 {
     public GameObject proj;
     public GameObject photonProj;
+    public GameObject bombProj;
+    public GameObject laserProj;
+    public GameObject warningLaserProj;
     // Start is called before the first frame update
 
     private Vector3 blasterPos, leftCannonPos, rightCannonPos;
@@ -13,6 +16,7 @@ public class ShipAttacks : MonoBehaviour
     ShipMovement DroneMovement;
     EnemyHealth DroneHealth;
     private int prevDest;
+    private bool allowMovement = true;
 
     GameObject tempProj;
 
@@ -23,17 +27,6 @@ public class ShipAttacks : MonoBehaviour
         DroneHealth = gameObject.GetComponent<EnemyHealth>();
         StartCoroutine(AttackDecider());
         StartCoroutine(MovementDecider());
-        DroneMovement.TriggerLeftMovement();
-    }
-
-    void Start()
-    {
-        SetWeaponPositions();
-        DroneMovement = gameObject.GetComponent<ShipMovement>();
-        DroneHealth = gameObject.GetComponent<EnemyHealth>();
-        StartCoroutine(AttackDecider());
-        StartCoroutine(MovementDecider());
-        DroneMovement.TriggerLeftMovement();
     }
 
     // Update is called once per frame
@@ -51,22 +44,41 @@ public class ShipAttacks : MonoBehaviour
 
     IEnumerator AttackDecider() 
     {
+        yield return new WaitForSeconds(2.0f);
         while (true) {
-            int atkSelector = Random.Range(0,4);
+            int atkSelector = Random.Range(0,6);
 
             switch(atkSelector) {
                 case 0:
-                    StartCoroutine(FireThreeDRoundBurst());
+                    StartCoroutine(FireThreeWaveBurstCenter());
                     break;
                 case 1:
                     StartCoroutine(FireWaves());
+                    StartCoroutine(FireThreeDRoundBurstRight());
+                    StartCoroutine(FireThreeDRoundBurstLeft());
                     break;
                 case 2:
-                    StartCoroutine(FirePhoton());
+                    StartCoroutine(FirePhotonLeft());
+                    StartCoroutine(FirePhotonRight());
                     break;
                 case 3:
-                    StartCoroutine(FireClusterBlast());
+                    StartCoroutine(FireClusterBlastLeft());
+                    StartCoroutine(FireClusterBlastRight());
                     yield return new WaitForSeconds(2.0f);
+                    break;
+                case 4:
+                    StartCoroutine(ShootExplosionPattern());
+                    yield return new WaitForSeconds(4.0f);
+                    break;
+                case 5: 
+                    allowMovement = false;
+                    DroneMovement.PauseMovement();
+                    yield return new WaitForSeconds(1.0f);
+                    DroneMovement.PauseMovement();
+                    StartCoroutine(FireLeftWave(leftCannonPos));
+                    StartCoroutine(FireRightWave(rightCannonPos));
+                    yield return new WaitForSeconds(4.0f);
+                    allowMovement = true;
                     break;
             }
             yield return new WaitForSeconds(3.0f);
@@ -83,6 +95,8 @@ public class ShipAttacks : MonoBehaviour
             if (movSelector == 3 && DroneMovement.isStationary()) {
                 movSelector = Random.Range(0,3);
             }
+
+            if (!allowMovement) movSelector = 3;
 
             switch(movSelector) {
                 case 0:
@@ -103,16 +117,82 @@ public class ShipAttacks : MonoBehaviour
         }
     }
 
-    IEnumerator FireThreeDRoundBurst() 
+    IEnumerator FireLeftWave(Vector3 pos) 
     {
-        tempProj = Instantiate(proj, blasterPos, transform.rotation);
+        int angle = 90;
+        while (angle != 0) {
+            tempProj = Instantiate(proj, pos, transform.rotation);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, angle, 100); 
+            angle -= 5;
+            yield return new WaitForSeconds(0.2f);
+        }
+        yield return null;
+    }
+
+    IEnumerator FireRightWave(Vector3 pos) 
+    {
+        int angle = -90;
+        while (angle != 0) {
+            tempProj = Instantiate(proj, pos, transform.rotation);
+            StandardFireFunctions.FireDownDegreeOffset(tempProj, angle, 100); 
+            angle += 5;
+            yield return new WaitForSeconds(0.2f);
+        }
+        yield return null;
+    }
+
+    IEnumerator FireThreeWaveBurstCenter() 
+    {
+        for (int i = 0; i < 3; i++) {
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+            StandardFireFunctions.FireDegreeOffsetFromPlayerSpeed(tempProj, 20, 100);
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+            StandardFireFunctions.FireDegreeOffsetFromPlayerSpeed(tempProj, -20, 100);
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+            StandardFireFunctions.FireAtPlayerWithSetSpeed(tempProj, 100);
+            yield return new WaitForSeconds(0.75f);
+        }
+    }
+
+    IEnumerator FireThreeDRoundBurstRight() 
+    {
+        tempProj = Instantiate(proj, rightCannonPos, transform.rotation);
         StandardFireFunctions.FireAtPlayerWithSetSpeed(tempProj, 100);
         yield return new WaitForSeconds(0.25f);
-        tempProj = Instantiate(proj, blasterPos, transform.rotation);
+        tempProj = Instantiate(proj, rightCannonPos, transform.rotation);
         StandardFireFunctions.FireAtPlayerWithSetSpeed(tempProj, 100);
         yield return new WaitForSeconds(0.25f);
-        tempProj = Instantiate(proj, blasterPos, transform.rotation);
+        tempProj = Instantiate(proj, rightCannonPos, transform.rotation);
         StandardFireFunctions.FireAtPlayerWithSetSpeed(tempProj, 100);
+    }
+
+    IEnumerator FireThreeDRoundBurstLeft() 
+    {
+        tempProj = Instantiate(proj, leftCannonPos, transform.rotation);
+        StandardFireFunctions.FireAtPlayerWithSetSpeed(tempProj, 100);
+        yield return new WaitForSeconds(0.25f);
+        tempProj = Instantiate(proj, leftCannonPos, transform.rotation);
+        StandardFireFunctions.FireAtPlayerWithSetSpeed(tempProj, 100);
+        yield return new WaitForSeconds(0.25f);
+        tempProj = Instantiate(proj, leftCannonPos, transform.rotation);
+        StandardFireFunctions.FireAtPlayerWithSetSpeed(tempProj, 100);
+    }
+
+    IEnumerator ShootExplosionPattern() {
+        Instantiate(bombProj, blasterPos, transform.rotation);
+        yield return new WaitForSeconds(2.0f);
+
+        int selector = Random.Range(0,2);
+        switch (selector) {
+            case 0:
+                StartCoroutine(FirePhotonLeft());
+                StartCoroutine(FirePhotonRight());              
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+        }
     }
 
     IEnumerator FireWaves() 
@@ -141,6 +221,18 @@ public class ShipAttacks : MonoBehaviour
         StandardFireFunctions.FireDownFakeGravity(tempProj, 85);
         yield return new WaitForSeconds(0.75f);
     }
+    IEnumerator FirePhotonLeft() 
+    {        
+        GameObject tempProj = Instantiate(photonProj, leftCannonPos, transform.rotation);
+        StandardFireFunctions.FireDownFakeGravity(tempProj, 85);
+        yield return new WaitForSeconds(0.75f);
+    }
+    IEnumerator FirePhotonRight() 
+    {        
+        GameObject tempProj = Instantiate(photonProj, rightCannonPos, transform.rotation);
+        StandardFireFunctions.FireDownFakeGravity(tempProj, 85);
+        yield return new WaitForSeconds(0.75f);
+    }
 
     IEnumerator FireClusterBlast() 
     {
@@ -155,7 +247,45 @@ public class ShipAttacks : MonoBehaviour
     {
         GameObject tempProj;
         for (int i = 0; i < 12; i++) {
-            tempProj = Instantiate(proj, transform.position, transform.rotation);
+            tempProj = Instantiate(proj, blasterPos, transform.rotation);
+
+            StandardFireFunctions.FireClusterDown(tempProj);
+        }
+    }
+    
+    IEnumerator FireClusterBlastLeft() 
+    {
+        GenerateClusterLeft();
+        yield return new WaitForSeconds(0.85f);
+        GenerateClusterLeft();
+        yield return new WaitForSeconds(0.85f);
+        GenerateClusterLeft();
+    }
+
+    void GenerateClusterLeft() 
+    {
+        GameObject tempProj;
+        for (int i = 0; i < 12; i++) {
+            tempProj = Instantiate(proj, leftCannonPos, transform.rotation);
+
+            StandardFireFunctions.FireClusterDown(tempProj);
+        }
+    }
+    
+    IEnumerator FireClusterBlastRight() 
+    {
+        GenerateClusterRight();
+        yield return new WaitForSeconds(0.85f);
+        GenerateClusterRight();
+        yield return new WaitForSeconds(0.85f);
+        GenerateClusterRight();
+    }
+
+    void GenerateClusterRight() 
+    {
+        GameObject tempProj;
+        for (int i = 0; i < 12; i++) {
+            tempProj = Instantiate(proj, rightCannonPos, transform.rotation);
 
             StandardFireFunctions.FireClusterDown(tempProj);
         }
