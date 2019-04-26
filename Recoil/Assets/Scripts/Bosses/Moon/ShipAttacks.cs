@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DroneAttacks : MonoBehaviour
+public class ShipAttacks : MonoBehaviour
 {
     public GameObject proj;
     public GameObject photonProj;
@@ -11,7 +11,6 @@ public class DroneAttacks : MonoBehaviour
     private Vector3 blasterPos;
     ShipMovement DroneMovement;
     EnemyHealth DroneHealth;
-    MoonTrigger moonTrig;
     private int prevDest;
 
     GameObject tempProj;
@@ -22,7 +21,6 @@ public class DroneAttacks : MonoBehaviour
         blasterPos.y = blasterPos.y - 18;
         DroneMovement = gameObject.GetComponent<ShipMovement>();
         DroneHealth = gameObject.GetComponent<EnemyHealth>();
-        moonTrig = GameObject.Find("BossTrigger").GetComponent<MoonTrigger>();
         StartCoroutine(AttackDecider());
         StartCoroutine(MovementDecider());
         DroneMovement.TriggerLeftMovement();
@@ -34,7 +32,6 @@ public class DroneAttacks : MonoBehaviour
         blasterPos.y = blasterPos.y - 18;
         DroneMovement = gameObject.GetComponent<ShipMovement>();
         DroneHealth = gameObject.GetComponent<EnemyHealth>();
-        moonTrig = GameObject.Find("BossTrigger").GetComponent<MoonTrigger>();
         StartCoroutine(AttackDecider());
         StartCoroutine(MovementDecider());
         DroneMovement.TriggerLeftMovement();
@@ -51,14 +48,6 @@ public class DroneAttacks : MonoBehaviour
         }
         else if (transform.position == DroneMovement.GetRight()) {
             DroneMovement.TriggerLeftMovement();
-        }
-
-        if (DroneHealth.getCurrHP() < 5350) {
-            DroneMovement.PauseMovement();
-            StopCoroutine(AttackDecider());
-            StopCoroutine(MovementDecider());
-            StartCoroutine(moonTrig.SpawnFinalPhase());
-
         }
     }
 

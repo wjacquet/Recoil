@@ -8,7 +8,7 @@ public class ShipMovement : MonoBehaviour
     private bool moveLeft = false, moveRight = false, moveMid = false, pausedLeft, pausedRight, pausedMid;
     public Vector3 left, right, mid; 
 
-    private int baseMultiplier = 70;
+    private int baseMultiplier = 60;
 
     // Update is called once per frame
     void FixedUpdate()
