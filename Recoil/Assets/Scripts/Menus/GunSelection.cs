@@ -60,9 +60,9 @@ public class GunSelection : MonoBehaviour {
     void Start() {
         gunBoxes = new GameObject[10] {gunBox1, gunBox2, gunBox3, gunBox4, gunBox5, gunBox6, gunBox7, gunBox8, gunBox9, gunBox10};
         sprites = new Sprite[10] {obj_gun, obj_bolt_gun, obj_fire_spitter, obj_photon_launcher, obj_machine_blaster, obj_cluster_gun_mkII, obj_ar, obj_railgun, obj_minigun, obj_hand_blaster};
-        damageVals = new int[10] { 50, 50, 100, 80, 20, 65, 0, 0, 0, 0 };
-        fireRateVals = new int[10] {60, 50, 100, 30, 90, 40, 0, 0, 0, 0 };
-        projTypes = new string[10] { "Semi Auto", "Bolt Action", "Incendiary", "Launcher", "Rapid Fire", "Spread", "TODO", "TODO", "TODO", "TODO" };
+        damageVals = new int[10] { 50, 50, 100, 80, 20, 65, 80, 95, 10, 75 };
+        fireRateVals = new int[10] {60, 50, 100, 30, 90, 40, 70, 5, 100, 50};
+        projTypes = new string[10] { "Semi Auto", "Bolt Action", "Incendiary", "Launcher", "Rapid Fire", "Spread", "Auto", "Linear", "Auto", "Launcher" };
 
         player = GameObject.Find("obj_player");
         gun = GameObject.Find("obj_gun_pivot");
