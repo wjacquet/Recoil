@@ -5,10 +5,13 @@ using UnityEngine;
 public class SwarmController : MonoBehaviour
 {
     public GameObject verticalPiranha;
+    public GameObject swarm;
+    public Vector3 swarmPosition;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SwarmAttacks());
+        Instantiate(swarm, swarmPosition, transform.rotation);
     }
 
     // Update is called once per frame
@@ -18,19 +21,21 @@ public class SwarmController : MonoBehaviour
     }
 
     IEnumerator SwarmAttacks() {
+        StartCoroutine(SpawnVerticalPiranhas());
         while (true) {
-            yield return SpawnVerticalPiranhas();
-            yield return new WaitForSeconds(2.0f);
         }
     }
 
     // Randomly spawn vertically jumping fish
     IEnumerator SpawnVerticalPiranhas() {
-        // randomly choose x position
-        int xPosition = (Random.Range(0, 17) * 16) - 128;
-        Vector3 newPosition = new Vector3(xPosition, -144, transform.position.z);
-        
-        Instantiate(verticalPiranha, newPosition, Quaternion.Euler(0, 0, 270));
-        return null;
+        while (true) {
+            // randomly choose x position
+            int xPosition = (Random.Range(0, 17) * 16) - 128;
+            Vector3 newPosition = new Vector3(xPosition, -144, transform.position.z);
+            
+            Instantiate(verticalPiranha, newPosition, Quaternion.Euler(0, 0, 270));
+
+            yield return new WaitForSeconds(2.0f);
+        }       
     }
 }
