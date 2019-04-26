@@ -46,4 +46,4 @@ MonoBehaviour:
   verticalPiranha: {fileID: 2698585408968087820, guid: 46067b4a28f642e498aa647e5d876805,
     type: 3}
   swarm: {fileID: 919764389568503004, guid: 3eacbca272dc36a49848a59df05ac9a0, type: 3}
-  swarmPosition: {x: 200, y: -111, z: 0}
+  swarmPosition: {x: 200, y: -111, z: 1}
